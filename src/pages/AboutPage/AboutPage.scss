@@ -1,0 +1,10 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.about {
+    padding: 1rem;
+    
+    &__subheader {
+        @include m-sub-header($white);
+    }
+}
