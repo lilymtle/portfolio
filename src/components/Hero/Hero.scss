@@ -1,0 +1,47 @@
+// import styling
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.hero {
+    &__container {
+        @include flex-box(row);
+        align-items: center;
+        padding: 1rem;
+    }
+
+    &__wrapper {
+        width: 50%;
+        height: auto;
+    }
+
+    &__header {
+        @include m-page-header($white);
+        margin: 0;
+    }
+
+    &__subheader {
+        @include m-sub-header($white);
+        margin-top: 0;
+    }
+
+    &__text {
+        @include m-body($white);
+
+        &--teal {
+            @include m-body($teal);
+        }
+    }
+
+    &__img {
+        width: 80%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+}
+
+.circle-container {
+    width: 50%;
+    height: 18vh;
+    background-color: $white;
+    border-radius: 50%;
+}
