@@ -1,4 +1,5 @@
 // import styling
+import { BasicTabs } from "../../components/Tabs/Tabs";
 import "./AboutPage.scss";
 
 export function AboutPage() {
@@ -7,6 +8,8 @@ export function AboutPage() {
             <h2 className="about__subheader">
                 About Me
             </h2>
+            
+            <BasicTabs />
         </section>
     );
 };
