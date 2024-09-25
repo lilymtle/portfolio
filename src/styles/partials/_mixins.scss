@@ -19,6 +19,12 @@
     }
 }
 
+/* mobile text style mixins */
+@mixin m-body($color) {
+    font-size: .75rem;
+    color: $color;
+}
+
 /* flex-box mixin */
 @mixin flex-box ($direction) {
     display: flex;
