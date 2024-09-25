@@ -1,0 +1,9 @@
+@use "./partials/fonts.scss" as *;
+@use "./partials/variables.scss" as *;
+
+body {
+    background-color: $medium-black;
+    color: $global-text;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
