@@ -11,11 +11,12 @@ export function ProjectPage() {
             <section className="project__cards">
                 <ul className="card__list">
                     <li className="card">
-
-                        <img
-                            className="card__img"
-                            src="src/assets/images/mood-compass-img.png"
-                            alt="screenshot of moodcompass project" />
+                        <div className="card__overlay">
+                            <img
+                                className="card__img"
+                                src="src/assets/images/mood-compass-img.png"
+                                alt="screenshot of moodcompass project" />
+                        </div>
                     </li>
                 </ul>
             </section>

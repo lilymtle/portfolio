@@ -12,13 +12,41 @@
 
 .card {
     background-color: $light-black;
-    background-image: url("/src/assets/images/laptop-screen.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 20vh;
-    padding: 1rem;
-    border-radius: .25rem;
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../../assets/images/laptop-screen.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scale(.95);
+        transform-origin: center;
+        z-index: 2;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        overflow: hidden;
+        height: 24vh;
+    }
 
     &__list {
         list-style-type: none;
@@ -26,7 +54,8 @@
     }
 
     &__img {
-        width: 10%;
+        width: 81%;
         height: auto;
+        transform: translateY(32%);
     }
 }
