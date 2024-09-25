@@ -9,6 +9,7 @@ import { Hero } from "./components/Hero/Hero";
 
 // import pages
 import { AboutPage } from "./pages/AboutPage/AboutPage";
+import { ProjectPage } from "./pages/ProjectPage/ProjectPage";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Hero />
       <AboutPage />
+      <ProjectPage />
       <Footer />
     </BrowserRouter>
   )
