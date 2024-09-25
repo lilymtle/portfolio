@@ -1,3 +1,7 @@
+/* import styling */
+@use "./fonts.scss" as *;
+@use "./variables.scss" as *;
+
 /* mobile media query mixin */
 @mixin mobile {
     @media (max-width: 320px) {
@@ -20,6 +24,16 @@
 }
 
 /* mobile text style mixins */
+@mixin m-page-header($color) {
+    font-size: 1.5rem;
+    color: $color;
+}
+
+@mixin m-sub-header($color) {
+    font-size: 1rem;
+    color: $color;
+}
+
 @mixin m-body($color) {
     font-size: .75rem;
     color: $color;
