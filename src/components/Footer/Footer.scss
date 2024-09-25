@@ -1,0 +1,9 @@
+// import styling
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+footer { 
+    @include m-body($white);
+    text-align: center;
+    padding: 1rem;
+}
