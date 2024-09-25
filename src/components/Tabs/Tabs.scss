@@ -1,0 +1,77 @@
+// import styling
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.tab {
+    color: $white !important;
+    font-size: .875rem !important;
+
+    &.Mui-selected {
+        @include m-body($white);
+        background-color: $teal;
+        border-bottom: .0625rem solid $white;
+        border-radius: .25rem;
+    }
+
+    &:hover {
+        background-color: $light-black;
+        border-bottom: .0625rem solid $white;
+        border-radius: .25rem;
+    }
+
+    &__panel {
+        background-color: $light-black;
+        @include m-body($white);
+        opacity: 80%;
+        padding: 1rem;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__item {
+        &--second {
+            margin-top: 2rem;
+        }
+        
+        &--description-text {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title-year-container {
+        @include flex-box(row);
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__text {
+        &--title {
+            color: $teal;
+            margin: 0;
+        }
+
+        &--year {
+            margin: 0;
+        }
+
+        &--description {
+            margin-block: 0.5rem;
+            margin-inline: 1.5rem;
+        }
+
+    }
+}
+
+.tabs {
+    &-container {
+        width: 100%;
+    }
+}
+
+.italics {
+    color: $teal;
+    font-style: italic;
+}
