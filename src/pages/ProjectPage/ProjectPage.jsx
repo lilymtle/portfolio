@@ -36,7 +36,7 @@ export function ProjectPage() {
 
                         <div className="card__back">
                             <h3 className="project__subheader--small">
-                                Details
+                                Casestudy
                             </h3>
                         </div>
                         </div>
