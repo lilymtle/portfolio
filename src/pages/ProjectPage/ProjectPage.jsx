@@ -1,7 +1,14 @@
 // import styling
 import "./ProjectPage.scss";
 
+import { Carousel } from "../../components/Carousel/Carousel.jsx";
+
 export function ProjectPage() {
+    const OPTIONS = { loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
+
     return (
         <section className="projects">
             <h2 className="project__subheader">
@@ -11,6 +18,12 @@ export function ProjectPage() {
             <p className="project__text">
                 Hover over the images for more details!
             </p>
+
+            <section>
+                <div className="carousel">
+                    <Carousel slides={SLIDES} options={OPTIONS} />
+                </div>
+            </section>
 
             <section className="project__cards">
                 <ul className="card__list">
@@ -23,14 +36,14 @@ export function ProjectPage() {
 
                             <div className="card__img">
                                 <img className="card__img--laptop" 
-                            src="/src/assets/images/laptop-screen.png" />
+                                src="/src/assets/images/laptop-screen.png" />
 
-                            <div className="card__overlay">
-                                <img
-                                    className="card__img--project"
-                                    src="src/assets/images/mood-compass-img.png"
-                                    alt="screenshot of moodcompass project" />
-                            </div>
+                                <div className="card__overlay">
+                                    <img
+                                        className="card__img--project"
+                                        src="src/assets/images/mood-compass-img.png"
+                                        alt="screenshot of moodcompass project" />
+                                </div>
                             </div>
                         </div>
 
