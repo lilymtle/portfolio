@@ -34,6 +34,11 @@
     color: $color;
 }
 
+@mixin m-sub-header-sm($color) {
+    font-size: .875rem;
+    color: $color;
+}
+
 @mixin m-body($color) {
     font-size: .75rem;
     color: $color;
