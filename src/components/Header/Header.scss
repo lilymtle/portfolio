@@ -3,15 +3,31 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 header {
-    background-color: $light-black;
+    width: 100%;
     height: auto;
-    font-size: 12px;
-    text-align: center;
+    @include flex-box(column);
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 1rem;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    @include tablet {
+        @include flex-box(row);
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
 }
 
 .portfolio-logo {
     width: auto;
     height: 3.125rem;
-    margin: 0 auto;
+    order: 1;
+}
+
+.nav-bar {
+    order: 2;
 }
