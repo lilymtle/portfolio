@@ -20,6 +20,13 @@ header {
         align-items: center;
         padding: 2rem;
     }
+
+    @include desktop {
+        @include flex-box(row);
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem;
+    }
 }
 
 .portfolio-logo {
