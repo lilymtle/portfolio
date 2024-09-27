@@ -18,7 +18,7 @@ export function NavBar() {
                 <li className="nav-bar__item">
                     <Link className="nav-bar__link" to="/">
                         <p className="nav-bar__text">
-                            Project
+                            Projects
                         </p>
                     </Link>
                 </li>
