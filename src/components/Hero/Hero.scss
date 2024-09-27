@@ -2,46 +2,123 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
-.hero {
-    &__container {
-        @include flex-box(row);
-        align-items: center;
-        padding: 1rem;
-    }
+// .hero {
+//     &__container {
+//         @include flex-box(row);
+//         align-items: center;
+//         padding: 1rem;
+//     }
 
-    &__wrapper {
-        width: 50%;
-        height: auto;
-    }
+//     &__wrapper {
+//         width: 50%;
+//         height: auto;
+//     }
 
-    &__header {
-        @include m-page-header($white);
-        margin: 0;
-    }
+//     &__header {
+//         @include m-page-header($white);
+//         margin: 0;
+//     }
 
-    &__subheader {
-        @include m-sub-header($white);
-        margin-top: 0;
-    }
+//     &__subheader {
+//         @include m-sub-header($white);
+//         margin-top: 0;
+//     }
 
-    &__text {
-        @include m-body($white);
+//     &__text {
+//         @include m-body($white);
 
-        &--teal {
-            @include m-body($teal);
-        }
-    }
+//         &--teal {
+//             @include m-body($teal);
+//         }
+//     }
 
-    &__img {
-        width: 80%;
-        height: auto;
-        padding: 2rem 1rem;
-    }
+//     &__img {
+//         width: 80%;
+//         height: auto;
+//         padding: 2rem 1rem;
+//     }
+// }
+
+// .circle-container {
+//     width: 50%;
+//     height: 18vh;
+//     background-color: $white;
+//     border-radius: 50%;
+// }
+
+
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+
+  .hero {
+    position: relative;
+  }
+
+
+  .hero__background-container{
+	position: relative;
+	top: 0;
+	left:0;
+	bottom: 0;
+	right: 0;
+    z-index: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.circle-container {
-    width: 50%;
-    height: 18vh;
-    background-color: $white;
-    border-radius: 50%;
+.stars {
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: 0;
+}
+
+.twinkling{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    animation:move-background 70s linear infinite;
+}
+
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+
+  animation:move-background 150s linear infinite;
+}
+
+.hero {
+
+    &__img {
+        height: 70vh;
+        width:70vh;
+        position: absolute;
+        top: 9rem;
+        z-index: 3;
+        right: 20px;
+    }
 }
