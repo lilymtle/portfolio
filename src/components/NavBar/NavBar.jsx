@@ -9,25 +9,25 @@ export function NavBar() {
         <section className="nav-bar">
             <ul className="nav-bar__list">
                 <li className="nav-bar__item">
-                    <Link className="nav-bar__link" to="/">
+                    <a className="nav-bar__link" href="#about">
                         <p className="nav-bar__text">
                             About
                         </p>
-                    </Link>
+                    </a>
                 </li>
                 <li className="nav-bar__item">
-                    <Link className="nav-bar__link" to="/">
+                <a className="nav-bar__link" href="#projects">
                         <p className="nav-bar__text">
                             Projects
                         </p>
-                    </Link>
+                    </a>
                 </li>
                 <li className="nav-bar__item">
-                    <Link className="nav-bar__link" to="/">
+                <a className="nav-bar__link" href="#work">
                         <p className="nav-bar__text">
                             Work
                         </p>
-                    </Link>
+                    </a>
                 </li>
                 <li className="nav-bar__item">
                     <Link className="nav-bar__link" to="/">
