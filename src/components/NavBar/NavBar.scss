@@ -25,13 +25,16 @@
     }
 
     &__text { 
+        @include m-body($white);
         margin: 0;
+
     }
 
     &__btn {
         background-color: $teal;
+        @include m-body($white);
         border-radius: 1.25rem;
-        padding: 0.5rem 0.5rem;
+        padding: 0.25rem 0.5rem;
         margin: 0;
 
         &:hover {
