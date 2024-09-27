@@ -2,51 +2,6 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
-// .hero {
-//     &__container {
-//         @include flex-box(row);
-//         align-items: center;
-//         padding: 1rem;
-//     }
-
-//     &__wrapper {
-//         width: 50%;
-//         height: auto;
-//     }
-
-//     &__header {
-//         @include m-page-header($white);
-//         margin: 0;
-//     }
-
-//     &__subheader {
-//         @include m-sub-header($white);
-//         margin-top: 0;
-//     }
-
-//     &__text {
-//         @include m-body($white);
-
-//         &--teal {
-//             @include m-body($teal);
-//         }
-//     }
-
-//     &__img {
-//         width: 80%;
-//         height: auto;
-//         padding: 2rem 1rem;
-//     }
-// }
-
-// .circle-container {
-//     width: 50%;
-//     height: 18vh;
-//     background-color: $white;
-//     border-radius: 50%;
-// }
-
-
 
 @keyframes move-background {
     from {
@@ -55,10 +10,6 @@
       to { 
           -webkit-transform: translate3d(1000px, 0px, 0px);
       }
-  }
-
-  .hero {
-    position: relative;
   }
 
 
@@ -112,6 +63,7 @@
 }
 
 .hero {
+    position: relative;
 
     &__img {
         height: 70vh;
@@ -120,5 +72,27 @@
         top: 9rem;
         z-index: 3;
         right: 20px;
+    }
+
+    &__content-container {
+        width: 100%;
+        @include flex-box(row);
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: absolute;
+        bottom: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    &__text {
+        @include m-body($white);
+    }
+
+    &__icon {
+        width: 1rem;
+        height: 1rem;
     }
 }

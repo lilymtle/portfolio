@@ -15,28 +15,19 @@ export function Hero() {
                 <div className="clouds"></div>
             </div>
 
-            {/* <div className="hero__container">
-                <div className="hero__wrapper">
-                    <h1 className="hero__header">
-                        Hi there 👋🏻,
-                    </h1>
+            <section className="hero__content-container">
+                <p className="hero__text">Let's connect: </p>
 
-                    <h2 className="hero__subheader">
-                        I'm Lily!
-                    </h2>
+                <img 
+                    className="hero__icon"
+                    src="src/assets/logos/linkedin-logo.png"
+                    alt="linkedin icon" />
 
-                    <p className="hero__text">
-                        A registered nurse turned <span className="hero__text--teal">software engineer</span>!
-                    </p>
-                </div>
-
-                <div className="circle-container">
-                    <img 
-                        className="hero__img"
-                        src="/src/assets/images/hero-img.svg"
-                        alt="illustration of a woman on a laptop" />
-                </div>
-            </div> */}
+                <img
+                    className="hero__icon"
+                    src="src/assets/logos/github-logo.svg"
+                    alt="github icon" />
+            </section>
         </main>
     );
 };
