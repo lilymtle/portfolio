@@ -12,7 +12,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 
     return (
-        <section className="projects">
+        <section className="projects" id="projects">
             <h2 className="project__subheader">
                 Projects
             </h2>
