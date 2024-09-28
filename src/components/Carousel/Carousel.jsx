@@ -164,7 +164,7 @@ export function Carousel(props) {
 
                                         <img
                                             className="card__img"
-                                            src="src/assets/images/instock-project.png"
+                                            src="src/assets/images/instock.png"
                                             alt="screenshot of instock in a macbook frame" />                                     
                                 </div>
 
@@ -306,6 +306,11 @@ export function Carousel(props) {
                                         Bandsite
                                     </h3>
 
+                                    <img
+                                        className="card__img"
+                                        src="src/assets/images/bandsite.png"
+                                        alt="screenshot of telus what your preference is in a macbook frame" />    
+
 
                                 </div>
 
@@ -340,6 +345,12 @@ export function Carousel(props) {
 
 
 
+                                    <img
+                                        className="card__img"
+                                        src="src/assets/images/coffeeshop.png"
+                                        alt="screenshot of telus what your preference is in a macbook frame" />    
+
+
 
                                 </div>
 
@@ -371,6 +382,11 @@ export function Carousel(props) {
                                     <h3 className="card__subheader--small">
                                         CINEMATICATS
                                     </h3>
+
+                                    <img
+                                        className="card__img"
+                                        src="src/assets/images/cinematicats.png"
+                                        alt="screenshot of telus what your preference is in a macbook frame" />    
 
 
                                 </div>
