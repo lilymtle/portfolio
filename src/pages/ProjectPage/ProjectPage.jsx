@@ -18,7 +18,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
             </h2>
 
             <p className="project__text">
-                Hover over the images for more details!
+                Hover over the images for more details.
             </p>
 
             <section className="project__carousel">
