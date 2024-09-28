@@ -268,6 +268,10 @@ export function Carousel(props) {
 
 
 
+                                    <img
+                                        className="card__img"
+                                        src="src/assets/images/brainflix.png"
+                                        alt="screenshot of telus what your preference is in a macbook frame" />    
 
 
 
