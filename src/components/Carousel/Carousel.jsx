@@ -35,7 +35,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 MoodCompass
                             </h3>
 
@@ -53,9 +53,72 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
-                                Casestudy
+                            <h3 className="card__subheader--small">
+                                Overview
                             </h3>
+
+                            <p className="card__text">
+                                MoodCompass is dedicated to mental health, providing a safe space 
+                                for managing negative moods through education. Resources are 
+                                available without an account, but users need to sign up to 
+                                favorite them. A mood tracker and log will be added in the future.
+                            </p>
+
+                            <h3 className="card__subheader--small">
+                                Tools Used
+                            </h3>
+
+                            <ul className="card__list">
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        React
+                                    </p>
+                                </li>
+
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        SCSS
+                                    </p>
+                                </li>
+
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        Node.js
+                                    </p>
+                                </li>
+
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        MySQL
+                                    </p>
+                                </li>
+
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        Express.js
+                                    </p>
+                                </li>
+
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        Knex.js
+                                    </p>
+                                </li>
+
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        Firebase
+                                    </p>
+                                </li>
+
+                                <li className="card__item">
+                                    <p className="card__text">
+                                        Material UI
+                                    </p>
+                                </li>
+
+                            </ul>
+
                         </div>
                         </div>
                     </li>
@@ -66,7 +129,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 TELUS What Your Preference Is
                             </h3>
 
@@ -84,7 +147,7 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 Casestudy
                             </h3>
                         </div>
@@ -96,7 +159,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 InStock
                             </h3>
 
@@ -114,7 +177,7 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 Casestudy
                             </h3>
                         </div>
@@ -128,7 +191,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 BrainFlix
                             </h3>
 
@@ -146,7 +209,7 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 Casestudy
                             </h3>
                         </div>
@@ -159,7 +222,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 Bandsite
                             </h3>
 
@@ -177,7 +240,7 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 Casestudy
                             </h3>
                         </div>
@@ -190,7 +253,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 CoffeeShop
                             </h3>
 
@@ -208,7 +271,7 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 Casestudy
                             </h3>
                         </div>
@@ -221,7 +284,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 CINEMATICATS
                             </h3>
 
@@ -239,39 +302,7 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
-                                Casestudy
-                            </h3>
-                        </div>
-                        </div>
-                    </li>
-                
-            </div>
-
-
-            <div className="carousel__slide">
-            <li className="card">
-                    <div className="card__inner">
-                        <div className="card__front">
-                            <h3 className="project__subheader--small">
-                                CINEMATICATS
-                            </h3>
-
-                            <div className="card__img">
-                                <img className="card__img--laptop" 
-                                src="/src/assets/images/laptop-screen.png" />
-
-                                <div className="card__overlay">
-                                    <img
-                                        className="card__img--project"
-                                        src="src/assets/images/mood-compass-img.png"
-                                        alt="screenshot of moodcompass project" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card__back">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 Casestudy
                             </h3>
                         </div>
@@ -285,7 +316,7 @@ export function Carousel(props) {
             <li className="card">
                     <div className="card__inner">
                         <div className="card__front">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
                                 CINEMATICATS
                             </h3>
 
@@ -303,7 +334,39 @@ export function Carousel(props) {
                         </div>
 
                         <div className="card__back">
-                            <h3 className="project__subheader--small">
+                            <h3 className="card__subheader--small">
+                                Casestudy
+                            </h3>
+                        </div>
+                        </div>
+                    </li>
+                
+            </div>
+
+
+            <div className="carousel__slide">
+            <li className="card">
+                    <div className="card__inner">
+                        <div className="card__front">
+                            <h3 className="card__subheader--small">
+                                CINEMATICATS
+                            </h3>
+
+                            <div className="card__img">
+                                <img className="card__img--laptop" 
+                                src="/src/assets/images/laptop-screen.png" />
+
+                                <div className="card__overlay">
+                                    <img
+                                        className="card__img--project"
+                                        src="src/assets/images/mood-compass-img.png"
+                                        alt="screenshot of moodcompass project" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="card__back">
+                            <h3 className="card__subheader--small">
                                 Casestudy
                             </h3>
                         </div>
