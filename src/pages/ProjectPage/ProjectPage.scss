@@ -5,6 +5,16 @@
 .projects {
     padding-block: 4rem;
     padding-inline: 1rem;
+
+    @include tablet {
+        padding-block: 4rem;
+        padding-inline: 4rem;
+    }
+
+    @include desktop {
+        padding-block: 4rem;
+        padding-inline: 12rem;
+    }
 }
 
 .project {
