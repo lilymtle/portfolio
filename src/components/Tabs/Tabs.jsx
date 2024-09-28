@@ -65,6 +65,7 @@ export function BasicTabs() {
                     <Tab label="Fun" className="tab" {...a11yProps(2)} />
                 </Tabs>
             </Box>
+
             <CustomTabPanel value={value} index={0}>
                 <ul className="tab__list">
                     <li className="tab__item">

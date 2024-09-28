@@ -20,8 +20,8 @@
     }
 
     &__panel {
-        background-color: $light-black;
-        @include m-body($white);
+        background-color: $white;
+        @include m-body($tab-text);
         opacity: 80%;
         padding: 1rem;
     }
@@ -86,10 +86,9 @@
     font-style: italic;
 }
 
-.box {
-    background-color: white;
-    text-align: center;
-    padding: 1rem;
-    opacity: 80%;
-    border-radius: .25rem;
-}
+// .box {
+//     background-color: white;
+//     text-align: center;
+//     padding: 1rem;
+//     opacity: 80%;
+// }
