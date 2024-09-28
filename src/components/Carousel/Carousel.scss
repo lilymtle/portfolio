@@ -2,13 +2,16 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .carousel {
+  --slide-spacing: 1rem;
+
   &__viewport {
     overflow: hidden;
   }
 
   &__container {
-      display: flex;
-      touch-action: pan-y pinch-zoom;
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
   }
 
   &__slide {
@@ -16,6 +19,7 @@
     flex: 0 0 100%;
     min-width: 0;
     height: 50vh;
+    padding-left: var(--slide-spacing);
   }
 
   &__controls {
@@ -191,7 +195,7 @@
         align-items: center;
         z-index: 1;
         overflow: hidden;
-        height: 17vh;
+        height: 20vh;
     }
 
     &__list {
@@ -226,9 +230,9 @@
         }
 
         &--project {
-            width: 87%;
+            width: 88%;
             height: auto;
-            transform: translateY(28%);
+            transform: translateY(26%);
             z-index: 4;
         }
     }
