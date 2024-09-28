@@ -2,7 +2,7 @@
 @use "./partials/variables.scss" as *;
 
 body {
-    background-color: $medium-black;
+    background-color: $global-background;
     color: $global-text;
     font-family: "Garet Book", sans-serif;
     margin: 0;
