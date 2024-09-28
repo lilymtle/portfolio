@@ -6,6 +6,8 @@
 
   &__viewport {
     overflow: hidden;
+    width: 100%; // Add this
+    position: relative; // Optional, for better containment
   }
 
   &__container {
@@ -20,6 +22,15 @@
     min-width: 0;
     height: 50vh;
     padding-left: var(--slide-spacing);
+
+    @include tablet {
+      width: 50vw;
+      height: 75vh;
+    }
+
+    @include desktop {
+      height: 75vh;
+    }
   }
 
   &__controls {
@@ -107,134 +118,146 @@
     }
   }
 
-} 
-
-
-// .carousel__slide__number {
-//   border-radius: 1.8rem;
-//   font-size: 4rem;
-//   font-weight: 600;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   user-select: none;
-// }
-
-
-
-  .card {
-    background-color: $card-background;
-    @include flex-box(row);
-    padding: 1rem;
-    height: 85%;
-    border-radius: 0.25rem;
-    perspective: 1000px;
-    margin-bottom: 1rem;
-    opacity: 100%;
-
-    &__subheader {
-        @include m-sub-header($card-text);
-        text-align: center;
-
-        &--small {
-            @include m-sub-header-sm($card-text);
-            text-align: center;
-        }
-    }
-  
-    &__text {
-        @include m-body($card-text);
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-
-    &__inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-
-        &:hover {
-            transform: rotateY(180deg);
-        }
-    }
-
-    &__front, &__back {
-      @include flex-box(column);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-    }
-
-    &__front {
-      justify-content: center;
-        z-index: 2;
-    }
-
-    
-    &__back {
-        transform: rotateY(180deg);
-        border-radius: 0.25rem;
-        @include m-body($white);
-        z-index: 3;
-    }
-
-    &__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        overflow: hidden;
-        height: 20vh;
-    }
-
-    &__list {
-      @include flex-box(row);
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    &__item {
-      background-color: $teal;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-    }
-
-    &__laptop {
-        position: relative;
-    }
-
-    &__img {
-
-        position: relative;
-
-        &--laptop {
-            position: relative;
-            width: 100%;
-            height: auto;
-            z-index: 5;
-        }
-
-        &--project {
-            width: 88%;
-            height: auto;
-            transform: translateY(26%);
-            z-index: 4;
-        }
-    }
 }
 
+.card {
+  background-color: $card-background;
+  @include flex-box(row);
+  padding: 1rem;
+  height: 85%;
+  border-radius: 0.25rem;
+  perspective: 1000px;
+  margin-bottom: 1rem;
+  opacity: 100%;
+
+  &__subheader {
+    @include m-sub-header($card-text);
+    text-align: center;
+
+    &--small {
+      @include m-sub-header-sm($card-text);
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include m-body($card-text);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__front,
+  &__back {
+    @include flex-box(column);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  &__front {
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+
+  &__back {
+    transform: rotateY(180deg);
+    border-radius: 0.25rem;
+    @include m-body($white);
+    z-index: 3;
+  }
+
+  // &__overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   z-index: 2;
+  //   overflow: hidden;
+  //   width: 72vw;
+  //   height: 50vh;
+
+  //   @include tablet {
+  //     width: 72vw;
+  //     height: 55vh;
+  //   }
+  // }
+
+  &__list {
+    @include flex-box(row);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    background-color: $teal;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  &__laptop {
+    position: relative;
+  }
+
+  &__img {
+    // background-image: url("/src/assets/images/laptop-screen.png");
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 4;
+
+    @include desktop {
+      width: 80%;
+    }
+
+    // &--laptop {
+    //   position: relative;
+    //   width: 100%;
+    //   height: auto;
+    //   z-index: 5;
+    //   overflow: hidden;
+
+    //   @include tablet {
+    //     width: 90%;
+    //   }
+    // }
+
+    // &--project {
+    //   width: 100%;
+    //   height: auto;
+    //   display: block;
+    //   transform: translate(13%) translateY(19%);
+    //   z-index: 1;
+
+    //   @include tablet {
+    //     width: 90%;
+    //     transform: translateX(8%) translateY(31%);
+    //   }
+    // }
+  }
+}
