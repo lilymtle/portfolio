@@ -2,9 +2,20 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .about {
-    padding: 1rem;
+    padding-block: 4rem;
+    padding-inline: 1rem;
+
+    @include tablet {
+        padding: 7rem;
+    }
     
     &__subheader {
-        @include m-sub-header($white);
+        @include m-sub-header($teal);
+        text-align: center;
+    }
+
+    &__text {
+        @include m-body($global-text);
+        padding-bottom: 1rem;
     }
 }
