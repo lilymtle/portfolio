@@ -28,6 +28,13 @@
         @include m-body($white);
         margin: 0;
 
+        @include tablet {
+            @include td-body($white);
+        }
+        
+        @include desktop {
+            @include td-body($white);
+        }
     }
 
     &__btn {
@@ -36,6 +43,14 @@
         border-radius: 1.25rem;
         padding: 0.25rem 0.5rem;
         margin: 0;
+
+        @include tablet {
+            @include td-body($white);
+        }
+
+        @include desktop {
+            @include td-body($white);
+        }
 
         &:hover {
             background-color: $white;
