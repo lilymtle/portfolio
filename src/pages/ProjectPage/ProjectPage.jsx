@@ -17,9 +17,9 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
     return (
         <ScrollAnimation animateIn="fadeInRight" duration={2}>
             <section className="projects" id="projects">
-                <h2 className="project__subheader">
+                <h1 className="project__header">
                     Projects
-                </h2>
+                </h1>
 
                 <p className="project__text">
                     Hover over the images for more details.

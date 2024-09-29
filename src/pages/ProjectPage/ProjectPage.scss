@@ -8,29 +8,40 @@
 
     @include tablet {
         padding-block: 4rem;
-        padding-inline: 4rem;
+        padding-inline: 10rem;
     }
 
     @include desktop {
-        padding-block: 4rem;
-        padding-inline: 10rem;
+        padding-block: 2rem;
+        padding-inline: 20rem;
     }
 }
 
-// .project {
-//     &__subheader {
-//         @include m-sub-header($global-text);
-//         text-align: center;
+.project {
+    &__header {
+        @include m-page-header($global-header);
+        text-align: center;
 
-//         &--small {
-//             @include m-sub-header-sm($global-text);
-//             text-align: center;
-//         }
-//     }
+        @include tablet {
+            @include td-page-header($global-header);
+        }
 
-//     &__text {
-//         @include m-body($global-text);
-//         font-style: italic;
-//         text-align: center;
-//     }
-// }
+        @include desktop {
+            @include td-page-header($global-header);
+        }
+    }
+
+    &__text {
+        @include m-body($global-text);
+        font-style: italic;
+        text-align: center;
+
+        @include tablet {
+            @include td-body($global-text);
+        }
+
+        @include desktop {
+            @include td-body($global-text);
+        }
+    }
+}
