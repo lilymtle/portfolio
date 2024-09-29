@@ -32,7 +32,13 @@ header {
 .portfolio-logo {
     width: auto;
     height: 3.125rem;
+    transition: opacity 0.3s ease;
     order: 1;
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
 }
 
 .nav-bar {

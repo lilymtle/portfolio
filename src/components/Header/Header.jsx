@@ -2,13 +2,17 @@
 import { NavBar } from "../NavBar/NavBar";
 import "./Header.scss";
 
+import { Link } from "react-router-dom";
+
 export function Header() {
     return (
         <header>
-            <img
+            <Link to="/">
+                <img
                 className="portfolio-logo"
                 src="/src/assets/logos/portfolio-logo.png"
                 alt="portfolio logo" />
+            </Link>
 
             <NavBar />
         </header>
