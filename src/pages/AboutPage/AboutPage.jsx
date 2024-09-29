@@ -8,9 +8,9 @@ export function AboutPage() {
     return (
         <ScrollAnimation animateIn="fadeInLeft" duration={2}>
             <section className="about" id="about">
-                <h2 className="about__subheader">
+                <h1 className="about__header">
                     About
-                </h2>
+                </h1>
 
                 <p className="about__text">
                     As a former nurse transitioning to software engineering, I bring a unique 
