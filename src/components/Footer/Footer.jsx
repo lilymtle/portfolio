@@ -1,11 +1,13 @@
 // import styling
 import "./Footer.scss";
 
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+
 export function Footer() {
     return (
         <footer>
             <p className="footer__text">
-                This portfolio was coded with love by me. 🩵
+                ✨ Made with love by Lily ✨
             </p>
         </footer>
     );
