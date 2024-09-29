@@ -15,11 +15,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
-      <Hero />
-      <AboutPage />
-      <ProjectPage />
-      <Footer />
+        <Header />
+        <Hero />
+        <div className="app-container">
+          <AboutPage />
+          <ProjectPage />
+        </div>
+        <Footer />
     </BrowserRouter>
   )
 };
