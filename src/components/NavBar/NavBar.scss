@@ -38,15 +38,17 @@
         @include m-body($white);
         text-decoration: none;
         border-radius: 1.25rem;
-        padding: 0.25rem 0.5rem;
+        padding: 0.25rem 1rem;
         margin: 0;
 
         @include tablet {
             @include td-body($white);
+            padding-inline: 1rem;
         }
 
         @include desktop {
             @include td-body($white);
+            padding-inline: 1rem;
         }
 
         &:hover {
