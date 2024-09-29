@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export function Hero() {
     return (
-        <>
+        <section className="hero">
             <div className="hero__background-container">
                 <img 
                 className="hero__img"
@@ -16,7 +16,7 @@ export function Hero() {
                 <div className="clouds"></div>
             </div>
 
-            <section className="hero__content-container">
+            <div className="hero__content-container">
                 <p className="hero__text">Let's connect: </p>
 
                 <Link to="https://linkedin.com/in/lilymtle">
@@ -32,7 +32,7 @@ export function Hero() {
                         src="src/assets/logos/github-logo.svg"
                         alt="github icon" />
                 </Link>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
