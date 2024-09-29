@@ -61,79 +61,122 @@ export function Carousel(props) {
                                         favorite them. A mood tracker and log will be added in the future.
                                     </p>
 
+                                    <p className="card__text--features-title">
+                                        Features include:
+                                        <ul className="card__list--features">
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    User services (registration, login, and logout)
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    User authentication and authorization
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Protected routes
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Favoriting and unfavoriting items
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Dynamic data stored and retirved from a database
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Form validation
+                                                </p>
+                                            </li>
+                                            
+                                        </ul>
+                                    </p>
+
+
                                     <h3 className="card__subheader--small">
                                         Tools Used
                                     </h3>
 
                                     <ul className="card__list">
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Node.js
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 MySQL
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Express.js
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Knex.js
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
-                                                Database-Integrated RESTful API Development
+                                            <p className="card__text--tools">
+                                                RESTful API Development
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Firebase
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Material UI
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
@@ -165,10 +208,42 @@ export function Carousel(props) {
                                     </h3>
 
                                     <p className="card__text">
-                                        MoodCompass is dedicated to mental health, providing a safe space
-                                        for managing negative moods through education. Resources are
-                                        available without an account, but users need to sign up to
-                                        favorite them. A mood tracker and log will be added in the future.
+                                        TELUS What Your Preference Is an interactive quiz new and existing
+                                        TELUS users can use to receive their personalized TV bundle. The
+                                        quiz is engaging and short in order to reduce option paralysis and
+                                        decision fatigue.
+                                    </p>
+
+                                    <p className="card__text--features-title">
+                                        Features include:
+                                        <ul className="card__list--features">
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Carousel hero banner
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Personalized quiz
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </p>
+
+                                    <p className="card__text">
+                                        This was a group project for TELUS x BrainStation industry
+                                        challenge/hackathon, and we were given 24-hours to present a solution
+                                        to a problem. Jira was used throughout the process to develop, 
+                                        communicate, and organize the project until completion.
+                                    </p>
+
+                                    <h3 className="card__subheader--small">
+                                        Role
+                                    </h3>
+
+                                    <p className="card__text">
+                                        Front-End Developer
                                     </p>
 
                                     <h3 className="card__subheader--small">
@@ -177,49 +252,55 @@ export function Carousel(props) {
 
                                     <ul className="card__list">
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 RESTful API Development
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
+                                                JSON
+                                            </p>
+                                        </li>
+
+                                        <li className="card__item">
+                                            <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Agile (Scrum)
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Jira
                                             </p>
                                         </li>
@@ -249,10 +330,48 @@ export function Carousel(props) {
                                     </h3>
 
                                     <p className="card__text">
-                                        MoodCompass is dedicated to mental health, providing a safe space
-                                        for managing negative moods through education. Resources are
-                                        available without an account, but users need to sign up to
-                                        favorite them. A mood tracker and log will be added in the future.
+                                        InStock is a fully responsive full-stack web application that delivers an inventory
+                                        Management System for a Fortune 500 client. It features a list of the
+                                        client's warehouses inventory items.
+                                    </p>
+
+                                    <p className="card__text--features-title">
+                                        Features include:
+                                        <ul className="card__list--features">
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Adding, modifying, and/or deleting a warehouse and/or inventory
+                                                    item
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Dynamic data stored and retrieved from a database
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Form validation
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </p>
+
+                                    <p className="card__text">
+                                        This was a group project that incorporated Agile methodologies, particularly Scrum.
+                                        Jira was used for project development and management, enhancing
+                                        efficiency, communication, and organization. Each member took turns
+                                        being the Scrum Master.
+                                    </p>
+
+                                    <h3 className="card__subheader--small">
+                                        Roles
+                                    </h3>
+
+                                    <p className="card__text">
+                                        Full-Stack Developer, Scrum Master
                                     </p>
 
                                     <h3 className="card__subheader--small">
@@ -261,82 +380,82 @@ export function Carousel(props) {
 
                                     <ul className="card__list">
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Node.js
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 MySQL
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Express.js
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Knex.js
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
-                                                Database-Integrated RESTful API Development
+                                            <p className="card__text--tools">
+                                                RESTful API Development
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
 
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Agile (Scrum)
                                             </p>
                                         </li>
 
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Jira
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Postman
                                             </p>
                                         </li>
@@ -356,14 +475,10 @@ export function Carousel(props) {
                                         BrainFlix
                                     </h3>
 
-
-
                                     <img
                                         className="card__img"
                                         src="src/assets/images/brainflix.png"
                                         alt="screenshot of telus what your preference is in a macbook frame" />    
-
-
 
                                 </div>
 
@@ -373,10 +488,26 @@ export function Carousel(props) {
                                     </h3>
 
                                     <p className="card__text">
-                                        MoodCompass is dedicated to mental health, providing a safe space
-                                        for managing negative moods through education. Resources are
-                                        available without an account, but users need to sign up to
-                                        favorite them. A mood tracker and log will be added in the future.
+                                        BrainFlix is a fully responsive video streaming platform 
+                                        with its own API service.
+                                    </p>
+
+                                    <p className="card__text--features-title">
+                                        Features include:
+                                        <ul className="card__list--features">
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Adding a video
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Form validation
+                                                </p>
+                                            </li>
+
+                                        </ul>
                                     </p>
 
                                     <h3 className="card__subheader--small">
@@ -385,43 +516,49 @@ export function Carousel(props) {
 
                                     <ul className="card__list">
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 RESTful API Development
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
+                                                JSON
+                                            </p>
+                                        </li>
+
+                                        <li className="card__item">
+                                            <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Postman
                                             </p>
                                         </li>
@@ -454,11 +591,28 @@ export function Carousel(props) {
                                     </h3>
 
                                     <p className="card__text">
-                                        This is a fully responsive website for a trendy band group. There
-                                        are two pages: landing page and shows page. The landing page is the
-                                        main page with information about the band, photo gallery, and comment
-                                        section. The shows page provides additional details about upcoming shows
-                                        by the band. 
+                                        This is a fully responsive website for an up-and-coming band.
+                                        It consists of two pages, the main page and shows page. The main
+                                        page has information about the band and a photo gallery, whereas the
+                                        shows page has a list of their upcoming shows.
+                                    </p>
+
+                                    <p className="card__text--features-title">
+                                        Features include:
+                                        <ul className="card__list--features">
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Adding a comment
+                                                </p>
+                                            </li>
+
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Form validation
+                                                </p>
+                                            </li>
+
+                                        </ul>
                                     </p>
 
                                     <h3 className="card__subheader--small">
@@ -467,37 +621,43 @@ export function Carousel(props) {
 
                                     <ul className="card__list">
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 HTML
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 JavaScript
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
+                                                API Integration
+                                            </p>
+                                        </li>
+
+                                        <li className="card__item">
+                                            <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
@@ -533,7 +693,7 @@ export function Carousel(props) {
                                     </h3>
 
                                     <p className="card__text">
-                                        This project is a static web app that is broken down into two
+                                        Coffee Shop is a static multi-page web application that is broken down into two
                                         pages: landing page and menu page. The landing page has product information,
                                         and the menu page provides further details about the coffee shop's offerings.
                                     </p>
@@ -544,25 +704,25 @@ export function Carousel(props) {
 
                                     <ul className="card__list">
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 HTML
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
@@ -595,8 +755,25 @@ export function Carousel(props) {
                                     </h3>
 
                                     <p className="card__text">
-                                        This project is part of a hackathon and was created by a team
-                                        of three people. CINEMATICATs is powered by two APIs: <Link className="card__link" to="https://www.omdbapi.com/">OMDb API</Link> and <Link className="card__link" to="https://thecatapi.com/">The Cat API</Link>.
+                                        CINEMATICATs is a static web application that help users
+                                        find movie recommendations with a cat companion.
+                                    </p>
+
+                                    <p className="card__text--features-title">
+                                        Features include:
+                                        <ul className="card__list--features">
+                                            <li className="card__item--features">
+                                                <p className="card__text--features">
+                                                    Randomly generates a movie with a cat friend
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </p>
+
+                                    <p className="card__text">
+                                        This was a group project for the first BrainStation hackathon. 
+                                        Figma was used during the brainstorming stage, and Slack was used for
+                                        team communication.
                                     </p>
 
                                     <h3 className="card__subheader--small">
@@ -604,7 +781,7 @@ export function Carousel(props) {
                                     </h3>
 
                                     <p className="card__text">
-                                        Front-end developer
+                                        Front-End developer
                                     </p>
 
                                     <h3 className="card__subheader--small">
@@ -613,45 +790,51 @@ export function Carousel(props) {
 
                                     <ul className="card__list">
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 HTML
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 JavaScript
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 RESTful API Integration
                                             </p>
                                         </li>
 
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
                                     
                                         <li className="card__item">
-                                            <p className="card__text">
+                                            <p className="card__text--tools">
                                                 GitHub
+                                            </p>
+                                        </li>
+
+                                        <li className="card__item">
+                                            <p className="card__text--tools">
+                                                Figma
                                             </p>
                                         </li>
                                     </ul>

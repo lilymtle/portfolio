@@ -22,6 +22,7 @@
     min-width: 0;
     height: 50vh;
     padding-left: var(--slide-spacing);
+    box-sizing: border-box;
 
     @include tablet {
       width: 50vw;
@@ -131,28 +132,18 @@
   opacity: 100%;
 
   &__subheader {
-    @include m-sub-header($card-text);
-    text-align: center;
+    @include m-sub-header($card-subheader);
 
     &--small {
-      @include m-sub-header-sm($card-text);
-      text-align: center;
+      @include m-sub-header-sm($card-subheader);
+      margin-top: 0.5rem;
     }
   }
-
-  &__text {
-    @include m-body($card-text);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
 
   &__inner {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 
@@ -168,6 +159,7 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    box-sizing: border-box;
   }
 
   &__front {
@@ -181,33 +173,14 @@
     transform: rotateY(180deg);
     border-radius: 0.25rem;
     @include m-body($white);
+    overflow: auto;
+    scroll-behavior: smooth;
     z-index: 3;
   }
-
-  // &__overlay {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   z-index: 2;
-  //   overflow: hidden;
-  //   width: 72vw;
-  //   height: 50vh;
-
-  //   @include tablet {
-  //     width: 72vw;
-  //     height: 55vh;
-  //   }
-  // }
 
   &__list {
     @include flex-box(row);
     flex-wrap: wrap;
-    justify-content: center;
     gap: 0.5rem;
     list-style-type: none;
     padding: 0;
@@ -218,6 +191,26 @@
     background-color: $teal;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
+  }
+
+  &__text {
+    @include m-body($card-text);
+    margin: 0 0 1rem 0;
+    padding: 0;
+
+    &--features-title {
+      @include m-body($card-subheader);
+      margin: 0;
+    }
+
+    &--features {
+      @include m-body($card-text);
+    }
+
+    &--tools {
+      @include m-body($card-tools-text);
+      margin-block: 0.25rem;
+    }
   }
 
   &__laptop {
@@ -234,30 +227,5 @@
     @include desktop {
       width: 80%;
     }
-
-    // &--laptop {
-    //   position: relative;
-    //   width: 100%;
-    //   height: auto;
-    //   z-index: 5;
-    //   overflow: hidden;
-
-    //   @include tablet {
-    //     width: 90%;
-    //   }
-    // }
-
-    // &--project {
-    //   width: 100%;
-    //   height: auto;
-    //   display: block;
-    //   transform: translate(13%) translateY(19%);
-    //   z-index: 1;
-
-    //   @include tablet {
-    //     width: 90%;
-    //     transform: translateX(8%) translateY(31%);
-    //   }
-    // }
   }
 }
