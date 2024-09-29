@@ -89,10 +89,28 @@
 
     &__text {
         @include m-body($white);
+
+        @include tablet {
+            @include td-body($white);
+        }
+
+        @include desktop {
+            @include td-body($white);
+        }
     }
 
     &__icon {
         width: 1rem;
         height: 1rem;
+
+        @include tablet {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        @include desktop {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
