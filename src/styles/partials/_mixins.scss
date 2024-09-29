@@ -44,6 +44,23 @@
     color: $color;
 }
 
+/* tablet and desktop text style mixins */
+@mixin td-page-header($color) {
+    font-size: 2rem;
+    color: $color;
+    margin-bottom: 0;
+}
+
+@mixin td-sub-header($color) {
+    font-size: 1.125rem;
+    color: $color;
+}
+
+@mixin td-body($color) {
+    font-size: .875rem;
+    color: $color;
+}
+
 /* flex-box mixin */
 @mixin flex-box ($direction) {
     display: flex;
