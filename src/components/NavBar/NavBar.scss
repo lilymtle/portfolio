@@ -50,8 +50,7 @@
         }
 
         &:hover {
-            background-color: $white;
-            color: $medium-black;
+            opacity: 0.6;
             transition: 0.3s ease-in-out;
         }
     }
