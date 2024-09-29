@@ -22,8 +22,8 @@
     &__panel {
         background-color: $white;
         @include m-body($tab-text);
-        opacity: 80%;
         padding: 1rem;
+        border-radius: 0.25rem;
     }
 
     &__list {
@@ -85,10 +85,3 @@
     color: $teal;
     font-style: italic;
 }
-
-// .box {
-//     background-color: white;
-//     text-align: center;
-//     padding: 1rem;
-//     opacity: 80%;
-// }
