@@ -6,8 +6,8 @@
 
   &__viewport {
     overflow: hidden;
-    width: 100%; // Add this
-    position: relative; // Optional, for better containment
+    width: 100%;
+    position: relative;
   }
 
   &__container {
@@ -20,17 +20,16 @@
     transform: translate3d(0, 0, 0);
     flex: 0 0 100%;
     min-width: 0;
-    height: 50vh;
+    height: 40vh;
     padding-left: var(--slide-spacing);
     box-sizing: border-box;
 
     @include tablet {
-      width: 50vw;
-      height: 75vh;
+      height: 55vh;
     }
 
     @include desktop {
-      height: 75vh;
+      height: 65vh;
     }
   }
 
@@ -38,6 +37,16 @@
     @include flex-box(row);
     gap: 4rem;
     padding-inline: 1rem;
+
+    @include tablet {
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    @include desktop {
+      justify-content: space-between;
+      padding: 0;
+    }
   }
 
   &__buttons {
@@ -124,19 +133,22 @@
 .card {
   background-color: $card-background;
   @include flex-box(row);
-  padding: 1rem;
-  height: 85%;
+  box-sizing: border-box;
+  height: 89%;
   border-radius: 0.25rem;
   perspective: 1000px;
   margin-bottom: 1rem;
-  opacity: 100%;
 
   &__subheader {
     @include m-sub-header($card-subheader);
+    margin-top: 0;
 
-    &--small {
-      @include m-sub-header-sm($card-subheader);
-      margin-top: 0.5rem;
+    @include tablet {
+      @include td-sub-header($card-subheader);
+    }
+
+    @include desktop {
+      @include td-sub-header($card-subheader);
     }
   }
 
@@ -160,6 +172,18 @@
     height: 100%;
     backface-visibility: hidden;
     box-sizing: border-box;
+    padding: 1rem;
+
+    @include tablet {
+      @include td-body($white);
+      padding: 2rem;
+    }
+
+    @include desktop {
+      @include td-body($white);
+      padding: 2.5rem;
+    }
+
   }
 
   &__front {
@@ -173,8 +197,9 @@
     transform: rotateY(180deg);
     border-radius: 0.25rem;
     @include m-body($white);
-    overflow: auto;
+    height: 100%;
     scroll-behavior: smooth;
+    overflow: auto;
     z-index: 3;
   }
 
@@ -198,34 +223,67 @@
     margin: 0 0 1rem 0;
     padding: 0;
 
+    @include tablet {
+      @include td-body($card-text);
+    }
+
+    @include desktop {
+      @include td-body($card-text);
+    }
+
     &--features-title {
       @include m-body($card-subheader);
       margin: 0;
+
+      @include tablet {
+        @include td-body($card-text);
+      }
+
+      @include desktop {
+        @include td-body($card-text);
+      }
     }
 
     &--features {
       @include m-body($card-text);
+
+      @include tablet {
+        @include td-body($card-text);
+      }
+
+      @include desktop {
+        @include td-body($card-text);
+      }
     }
 
     &--tools {
       @include m-body($card-tools-text);
       margin-block: 0.25rem;
+
+      @include tablet {
+        @include td-body($card-text);
+      }
+
+      @include desktop {
+        @include td-body($card-tools-text);
+      }
     }
   }
 
-  &__laptop {
-    position: relative;
-  }
-
   &__img {
-    // background-image: url("/src/assets/images/laptop-screen.png");
-    width: 100%;
-    height: auto;
     position: relative;
     z-index: 4;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 
-    @include desktop {
-      width: 80%;
+    &-wrapper {
+      @include flex-box(row);
+      justify-content: center;
+      overflow: hidden;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 }

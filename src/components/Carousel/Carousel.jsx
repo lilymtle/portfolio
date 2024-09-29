@@ -39,20 +39,22 @@ export function Carousel(props) {
                         <li className="card">
                             <div className="card__inner">
                                 <div className="card__front">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         MoodCompass
-                                    </h3>
+                                    </h2>
 
+                                <div className="card__img-wrapper">
                                     <img
                                         className="card__img"
                                         src="src/assets/images/mood-compass.png"
                                         alt="screenshot of mood-compass in a macbook frame" /> 
                                 </div>
+                                </div>
 
                                 <div className="card__back">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Overview
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         MoodCompass is dedicated to mental health, providing a safe space
@@ -104,9 +106,9 @@ export function Carousel(props) {
                                     </p>
 
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Tools Used
-                                    </h3>
+                                    </h2>
 
                                     <ul className="card__list">
                                         <li className="card__item">
@@ -192,20 +194,22 @@ export function Carousel(props) {
                         <li className="card">
                             <div className="card__inner">
                                 <div className="card__front">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         TELUS What Your Preference Is
-                                    </h3>
+                                    </h2>
 
+                                    <div className="card__img-wrapper">
                                     <img
                                         className="card__img"
                                         src="src/assets/images/telus.png"
                                         alt="screenshot of telus what your preference is in a macbook frame" />    
+                                    </div>
                                 </div>
 
                                 <div className="card__back">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Overview
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         TELUS What Your Preference Is an interactive quiz new and existing
@@ -238,17 +242,17 @@ export function Carousel(props) {
                                         communicate, and organize the project until completion.
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Role
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         Front-End Developer
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Tools Used
-                                    </h3>
+                                    </h2>
 
                                     <ul className="card__list">
                                         <li className="card__item">
@@ -314,9 +318,9 @@ export function Carousel(props) {
                         <li className="card">
                             <div className="card__inner">
                                 <div className="card__front">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         InStock
-                                    </h3>
+                                    </h2>
 
                                         <img
                                             className="card__img"
@@ -325,9 +329,9 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Overview
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         InStock is a fully responsive full-stack web application that delivers an inventory
@@ -366,17 +370,17 @@ export function Carousel(props) {
                                         being the Scrum Master.
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Roles
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         Full-Stack Developer, Scrum Master
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Tools Used
-                                    </h3>
+                                    </h2>
 
                                     <ul className="card__list">
                                         <li className="card__item">
@@ -471,21 +475,22 @@ export function Carousel(props) {
                         <li className="card">
                             <div className="card__inner">
                                 <div className="card__front">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         BrainFlix
-                                    </h3>
+                                    </h2>
 
+                                    <div className="card__img-wrapper">
                                     <img
                                         className="card__img"
                                         src="src/assets/images/brainflix.png"
                                         alt="screenshot of telus what your preference is in a macbook frame" />    
-
+                                    </div>
                                 </div>
 
                                 <div className="card__back">
-                                <h3 className="card__subheader--small">
+                                <h2 className="card__subheader">
                                         Overview
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         BrainFlix is a fully responsive video streaming platform 
@@ -510,9 +515,9 @@ export function Carousel(props) {
                                         </ul>
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Tools Used
-                                    </h3>
+                                    </h2>
 
                                     <ul className="card__list">
                                         <li className="card__item">
@@ -573,22 +578,22 @@ export function Carousel(props) {
                         <li className="card">
                             <div className="card__inner">
                                 <div className="card__front">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Bandsite
-                                    </h3>
-
+                                    </h2>
+                                    <div className="card__img-wrapper">
                                     <img
                                         className="card__img"
                                         src="src/assets/images/bandsite.png"
                                         alt="screenshot of telus what your preference is in a macbook frame" />    
-
+</div>
 
                                 </div>
 
                                 <div className="card__back">
-                                <h3 className="card__subheader--small">
+                                <h2 className="card__subheader">
                                         Overview
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         This is a fully responsive website for an up-and-coming band.
@@ -615,9 +620,9 @@ export function Carousel(props) {
                                         </ul>
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Tools Used
-                                    </h3>
+                                    </h2>
 
                                     <ul className="card__list">
                                         <li className="card__item">
@@ -672,25 +677,24 @@ export function Carousel(props) {
                         <li className="card">
                             <div className="card__inner">
                                 <div className="card__front">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         CoffeeShop
-                                    </h3>
+                                    </h2>
 
 
-
+                                    <div className="card__img-wrapper">
                                     <img
                                         className="card__img"
                                         src="src/assets/images/coffeeshop.png"
                                         alt="screenshot of telus what your preference is in a macbook frame" />    
-
-
+</div>
 
                                 </div>
 
                                 <div className="card__back">
-                                <h3 className="card__subheader--small">
+                                <h2 className="card__subheader">
                                         Overview
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         Coffee Shop is a static multi-page web application that is broken down into two
@@ -698,9 +702,9 @@ export function Carousel(props) {
                                         and the menu page provides further details about the coffee shop's offerings.
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Tools Used
-                                    </h3>
+                                    </h2>
 
                                     <ul className="card__list">
                                         <li className="card__item">
@@ -737,22 +741,23 @@ export function Carousel(props) {
                         <li className="card">
                             <div className="card__inner">
                                 <div className="card__front">
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         CINEMATICATS
-                                    </h3>
+                                    </h2>
 
+                                    <div className="card__img-wrapper">
                                     <img
                                         className="card__img"
                                         src="src/assets/images/cinematicats.png"
                                         alt="screenshot of telus what your preference is in a macbook frame" />    
-
+</div>
 
                                 </div>
 
                                 <div className="card__back">
-                                <h3 className="card__subheader--small">
+                                <h2 className="card__subheader">
                                         Overview
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         CINEMATICATs is a static web application that help users
@@ -776,17 +781,17 @@ export function Carousel(props) {
                                         team communication.
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Role
-                                    </h3>
+                                    </h2>
 
                                     <p className="card__text">
                                         Front-End developer
                                     </p>
 
-                                    <h3 className="card__subheader--small">
+                                    <h2 className="card__subheader">
                                         Tools Used
-                                    </h3>
+                                    </h2>
 
                                     <ul className="card__list">
                                         <li className="card__item">
