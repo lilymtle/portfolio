@@ -15,17 +15,8 @@
     }
 
     &__link {
-        color: $white;
-        text-decoration: none;
-
-        &:hover {
-            color: $teal;
-            transition: 0.3s ease-in-out;
-        }
-    }
-
-    &__text { 
         @include m-body($white);
+        text-decoration: none;
         margin: 0;
 
         @include tablet {
@@ -35,11 +26,17 @@
         @include desktop {
             @include td-body($white);
         }
+
+        &:hover {
+            color: $teal;
+            transition: 0.3s ease-in-out;
+        }
     }
 
     &__btn {
         background-color: $teal;
         @include m-body($white);
+        text-decoration: none;
         border-radius: 1.25rem;
         padding: 0.25rem 0.5rem;
         margin: 0;
