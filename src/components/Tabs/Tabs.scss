@@ -3,11 +3,11 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .tab {
-    color: $white !important;
+    color: $global-text !important;
     font-size: .875rem !important;
 
     &.Mui-selected {
-        @include m-body($white);
+        @include m-body($white !important);
         background-color: $teal;
         border-bottom: .0625rem solid $white;
         border-radius: .25rem;
@@ -15,12 +15,13 @@
 
     &:hover {
         background-color: $light-black;
+        color: $white !important;
         border-bottom: .0625rem solid $white;
         border-radius: .25rem;
     }
 
     &__panel {
-        background-color: $white;
+        background-color: #EEEEEE;
         @include m-body($tab-text);
         padding: 1rem;
         border-radius: 0.25rem;
