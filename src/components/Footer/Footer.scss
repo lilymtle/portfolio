@@ -3,7 +3,17 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 footer { 
-    @include m-body($white);
+    @include m-body($global-text);
     text-align: center;
     padding: 1rem;
+
+    @include tablet {
+        @include td-body($global-text);
+        padding: 2rem;
+    }
+
+    @include desktop {
+        @include td-body($global-text);
+        padding: 2.5rem;
+    }
 }
