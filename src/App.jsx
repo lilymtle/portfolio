@@ -16,11 +16,13 @@ function App() {
   return (
     <BrowserRouter>
         <Header />
-        <Hero />
-        <div className="app-container">
-          <AboutPage />
-          <ProjectPage />
-        </div>
+        <main>
+          <Hero />
+          <div className="app-container">
+            <AboutPage />
+            <ProjectPage />
+          </div>
+        </main>
         <Footer />
     </BrowserRouter>
   )
