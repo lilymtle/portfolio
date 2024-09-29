@@ -5,69 +5,69 @@
 
 @keyframes move-background {
     from {
-          -webkit-transform: translate3d(0px, 0px, 0px);
-      }
-      to { 
-          -webkit-transform: translate3d(1000px, 0px, 0px);
-      }
-  }
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
 
-
-  .hero__background-container{
-	position: relative;
-	top: 0;
-	left:0;
-	bottom: 0;
-	right: 0;
-    z-index: 0;
-    height: 100vh;
-    overflow: hidden;
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
 }
 
 .stars {
- background: black url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png") repeat;
- position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: block;
-  	z-index: 0;
+    background: black url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png") repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
 }
 
-.twinkling{
-	width:10000px;
-	height: 100%;
-	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-	background-size: 1000px 1000px;
+.twinkling {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background-size: 1000px 1000px;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     z-index: 2;
-    animation:move-background 70s linear infinite;
+    animation: move-background 70s linear infinite;
 }
 
-.clouds{
-	width:10000px;
-	height: 100%;
-	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
-	background-size: 1000px 1000px;
+.clouds {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+    background-size: 1000px 1000px;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     z-index: 3;
 
-  animation:move-background 150s linear infinite;
+    animation: move-background 150s linear infinite;
 }
 
 .hero {
     position: relative;
 
+    &__background-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
     &__img {
         height: 70vh;
-        width:70vh;
+        width: 70vh;
         position: absolute;
         top: 9rem;
         z-index: 3;
@@ -85,6 +85,14 @@
         padding: 1rem;
         box-sizing: border-box;
         z-index: 1000;
+
+        @include tablet {
+            gap: 1rem;
+        }
+
+        @include desktop {
+            gap: 1rem;
+        }
     }
 
     &__text {
@@ -102,15 +110,5 @@
     &__icon {
         width: 1rem;
         height: 1rem;
-
-        @include tablet {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-
-        @include desktop {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
     }
 }

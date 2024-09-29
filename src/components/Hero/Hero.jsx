@@ -1,11 +1,12 @@
 // import styling
 import "./Hero.scss";
 
-import { Header } from "../Header/Header.jsx";
+// import component
+import { Link } from "react-router-dom";
 
 export function Hero() {
     return (
-        <main className="hero">
+        <>
             <div className="hero__background-container">
                 <img 
                 className="hero__img"
@@ -18,16 +19,20 @@ export function Hero() {
             <section className="hero__content-container">
                 <p className="hero__text">Let's connect: </p>
 
-                <img 
-                    className="hero__icon"
-                    src="src/assets/logos/linkedin-logo.png"
-                    alt="linkedin icon" />
+                <Link to="https://linkedin.com/in/lilymtle">
+                    <img 
+                        className="hero__icon"
+                        src="src/assets/logos/linkedin-logo.png"
+                        alt="linkedin icon" />
+                </Link>
 
-                <img
-                    className="hero__icon"
-                    src="src/assets/logos/github-logo.svg"
-                    alt="github icon" />
+                <Link to="https://github.com/lilymtle">
+                    <img
+                        className="hero__icon"
+                        src="src/assets/logos/github-logo.svg"
+                        alt="github icon" />
+                </Link>
             </section>
-        </main>
+        </>
     );
 };
