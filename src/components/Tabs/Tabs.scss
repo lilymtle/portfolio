@@ -24,6 +24,11 @@
         @include m-body($tab-text);
         padding: 1rem;
         border-radius: 0.25rem;
+
+        @include tablet {
+            @include td-body($tab-text);
+            padding: 2rem;
+        }
     }
 
     &__list {
