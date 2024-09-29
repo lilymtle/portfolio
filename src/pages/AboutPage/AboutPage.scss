@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .about {
+    background-color: white;
     padding-block: 4rem;
     padding-inline: 1rem;
 
@@ -11,7 +12,7 @@
     }
 
     @include desktop {
-        padding-block: 8rem;
+        padding-block: 4.5rem;
         padding-inline: 20rem;
     }
     
