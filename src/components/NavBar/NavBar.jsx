@@ -1,10 +1,11 @@
 // import styling
 import "./NavBar.scss";
 
-// import component
-import { Link } from "react-router-dom";
-
 export function NavBar() {
+    const handleNavigate = (path) => {
+        window.open(path, "_blank");
+    };
+
     return (
         <section className="nav-bar">
             <ul className="nav-bar__list">
@@ -18,10 +19,8 @@ export function NavBar() {
                         Projects
                     </a>
                 </li>
-                <li className="nav-bar__item">
-                    <Link className="nav-bar__btn" to="/images/lily-le-resume.pdf">
-                        Resume
-                    </Link>
+                <li className="nav-bar__item nav-bar__btn" onClick={() => handleNavigate("/images/lily-le-resume.pdf")}>
+                    Resume
                 </li>
             </ul>
         </section>
