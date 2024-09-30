@@ -1,5 +1,3 @@
-import { useCallback, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import useEmblaCarousel from 'embla-carousel-react'
 import {
     NextButton,
@@ -10,6 +8,10 @@ import { DotButton, useDotButton } from './CourselDotButton/CarouselDotButton.js
 
 import "./Carousel.scss";
 
+import Button from '@mui/material/Button';
+import BasicModal from '../Modal/Modal.jsx';
+
+import { useState } from 'react';
 
 
 export function Carousel(props) {
@@ -28,6 +30,15 @@ export function Carousel(props) {
         onPrevButtonClick,
         onNextButtonClick
     } = usePrevNextButtons(emblaApi)
+
+    const [openModal, setOpenModal] = useState({ open: false, title: "", videoPath: "" });
+
+    const handleOpen = (title, videoPath) => {
+        setOpenModal({ open: true, title, videoPath });
+    };
+
+    const handleClose = () => setOpenModal({ ...openModal, open: false });
+
 
     return (
         <section className="carousel">
@@ -65,6 +76,8 @@ export function Carousel(props) {
 
                                     <p className="card__text--features-title">
                                         Features include:
+                                    </p>
+
                                         <ul className="card__list--features">
                                             <li className="card__item--features">
                                                 <p className="card__text--features">
@@ -101,10 +114,7 @@ export function Carousel(props) {
                                                     Form validation
                                                 </p>
                                             </li>
-                                            
                                         </ul>
-                                    </p>
-
 
                                     <h2 className="card__subheader">
                                         Tools Used
@@ -220,6 +230,8 @@ export function Carousel(props) {
 
                                     <p className="card__text--features-title">
                                         Features include:
+                                    </p>
+
                                         <ul className="card__list--features">
                                             <li className="card__item--features">
                                                 <p className="card__text--features">
@@ -233,7 +245,6 @@ export function Carousel(props) {
                                                 </p>
                                             </li>
                                         </ul>
-                                    </p>
 
                                     <p className="card__text">
                                         This was a group project for TELUS x BrainStation industry
@@ -341,6 +352,8 @@ export function Carousel(props) {
 
                                     <p className="card__text--features-title">
                                         Features include:
+                                    </p>
+
                                         <ul className="card__list--features">
                                             <li className="card__item--features">
                                                 <p className="card__text--features">
@@ -361,7 +374,6 @@ export function Carousel(props) {
                                                 </p>
                                             </li>
                                         </ul>
-                                    </p>
 
                                     <p className="card__text">
                                         This was a group project that incorporated Agile methodologies, particularly Scrum.
@@ -488,6 +500,15 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
+
+                                <Button onClick={() => handleOpen("BrainFlix", "/videos/brainflix.mp4")}>Preview</Button>
+                                <BasicModal 
+                                open={openModal.open} 
+                                handleClose={handleClose}
+                                title={openModal.title}
+                                videoPath={openModal.videoPath} />
+
+
                                 <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -499,6 +520,8 @@ export function Carousel(props) {
 
                                     <p className="card__text--features-title">
                                         Features include:
+                                    </p>
+
                                         <ul className="card__list--features">
                                             <li className="card__item--features">
                                                 <p className="card__text--features">
@@ -513,7 +536,6 @@ export function Carousel(props) {
                                             </li>
 
                                         </ul>
-                                    </p>
 
                                     <h2 className="card__subheader">
                                         Tools Used
@@ -604,6 +626,8 @@ export function Carousel(props) {
 
                                     <p className="card__text--features-title">
                                         Features include:
+                                    </p>
+
                                         <ul className="card__list--features">
                                             <li className="card__item--features">
                                                 <p className="card__text--features">
@@ -618,7 +642,7 @@ export function Carousel(props) {
                                             </li>
 
                                         </ul>
-                                    </p>
+
 
                                     <h2 className="card__subheader">
                                         Tools Used
@@ -692,6 +716,14 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
+
+                                <Button onClick={() => handleOpen("CoffeeShop", "/videos/coffeeshop.mp4")}>Preview</Button>
+                                <BasicModal 
+                                open={openModal.open} 
+                                handleClose={handleClose}
+                                title={openModal.title}
+                                videoPath={openModal.videoPath} />
+
                                 <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -755,6 +787,15 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
+
+                                <Button onClick={() => handleOpen("CINEMATICATS", "/videos/cinematicats.mp4")}>Preview</Button>
+                                <BasicModal 
+                                open={openModal.open} 
+                                handleClose={handleClose}
+                                title={openModal.title}
+                                videoPath={openModal.videoPath} />
+
+
                                 <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -766,6 +807,7 @@ export function Carousel(props) {
 
                                     <p className="card__text--features-title">
                                         Features include:
+                                    </p>
                                         <ul className="card__list--features">
                                             <li className="card__item--features">
                                                 <p className="card__text--features">
@@ -773,7 +815,7 @@ export function Carousel(props) {
                                                 </p>
                                             </li>
                                         </ul>
-                                    </p>
+
 
                                     <p className="card__text">
                                         This was a group project for the first BrainStation hackathon. 
