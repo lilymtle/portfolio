@@ -11,7 +11,7 @@ import CloseIcon from '@mui/icons-material/Close';
 export default function BasicModal({ open, handleClose, title, videoPath }) {
 
     return (
-        <div>
+        <div className="modal">
             <Modal
                 open={open}
                 onClose={handleClose}
