@@ -29,4 +29,4 @@ export default function BasicModal({ open, handleClose, title, videoPath }) {
             </Modal>
         </div>
     );
-}
+};
