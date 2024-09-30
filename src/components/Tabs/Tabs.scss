@@ -30,15 +30,21 @@
             @include td-body($tab-text);
             padding: 2rem;
         }
+
+        @include desktop {
+            @include td-body($tab-text);
+            padding: 2.5rem;
+        }
     }
 
     &__list {
         list-style-type: none;
         padding: 0;
+        margin: 0;
     }
 
     &__item {
-        &--second {
+        &--education {
             margin-top: 2rem;
         }
 
@@ -59,6 +65,12 @@
         gap: 0.5rem;
     }
 
+    &__description-container {
+        @include flex-box(column);
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
     &__text {
         &--box {
             color: $black;
@@ -73,11 +85,10 @@
             margin: 0;
         }
 
-        &--description {
-            margin-block: 0.5rem;
-            margin-inline: 1.5rem;
+        &--school, &--field, &--grade {
+            padding-left: 1.5rem;
+            margin: 0;
         }
-
     }
 }
 

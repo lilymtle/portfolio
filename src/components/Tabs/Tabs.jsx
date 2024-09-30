@@ -83,28 +83,31 @@ export function BasicTabs() {
                                 2024
                             </p>
                         </div>
+                        
+                        <div className="tab__description-container">
+                            <p className="tab__text--school">
+                                BrainStation
+                            </p>
 
-                        <p className="tab__text--description">
-                            BrainStation
-                        </p>
+                            <p className="tab__text--field">
+                                Field of Study:
+                            </p>
 
-                        <p className="tab__text--description">
-                            Field of Study:
-                        </p>
+                            <ul className="tab__list--field">
+                                <li className="tab__item--field">
+                                    <p className="tab__text--field">
+                                        Full-Stack Engineer
+                                    </p>
+                                </li>
+                            </ul>
 
-                        <ul className="tab__list--studies">
-                            <li className="tab__item--description-text">
-                                <p className="tab__text--description-list">
-                                    Full-Stack Engineer
-                                </p>
-                            </li>
-                        </ul>
-
-                        <p className="tab__text--description">
-                            GPA: 4.0
-                        </p>
+                            <p className="tab__text--grade">
+                                GPA: 4.0
+                            </p>
+                        </div>
                     </li>
-                    <li className="tab__item--second">
+
+                    <li className="tab__item--education">
                         <div className="tab__title-year-container">
 
                             <div className="tab__emoji">
@@ -120,26 +123,27 @@ export function BasicTabs() {
                                 </p>
                         </div>
 
-                        <p className="tab__text--description">
-                            Toronto Metropolitan University
-                        </p>
+                        <div className="tab__description-container">
+                            <p className="tab__text--school">
+                                Toronto Metropolitan University
+                            </p>
 
+                            <p className="tab__text--field">
+                                Field of Study:
+                            </p>
 
-                        <p className="tab__text--description">
-                            Field of Study:
-                        </p>
+                            <ul className="tab__list--field">
+                                <li className="tab__item--field">
+                                    <p className="tab__text--field">
+                                        Leadership in Health Policy and Education
+                                    </p>
+                                </li>
+                            </ul>
 
-                        <ul className="tab__list--studies">
-                            <li className="tab__item--description-text">
-                                <p className="tab__text--description-list">
-                                    Leadership in Health Policy and Education
-                                </p>
-                            </li>
-                        </ul>
-
-                        <p className="tab__text--description">
-                            GPA: 4.0
-                        </p>
+                            <p className="tab__text--grade">
+                                GPA: 4.0
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </CustomTabPanel>
@@ -184,11 +188,6 @@ export function BasicTabs() {
 
 
             <CustomTabPanel value={value} index={2}>
-                <p className="tab__text">
-                    Although understanding my education and skills are important,
-                    getting to know me as a <span className="italics">person</span> is also vital!
-                </p>
-
                 <ul className="tab__list">
                     <li className="tab__item--fun">
                         <div className="tab__emoji">
@@ -228,15 +227,6 @@ export function BasicTabs() {
 
                     <li className="tab__item--fun">
                         <div className="tab__emoji">
-                            💬
-                        </div>
-                        <p className="tab__text">
-                            I am greedy for languages. I am learning Korean, Japanese, and French.
-                        </p>
-                    </li>
-
-                    <li className="tab__item--fun">
-                        <div className="tab__emoji">
                             🍟
                         </div>
                         <p className="tab__text">
@@ -249,8 +239,7 @@ export function BasicTabs() {
                             ✈️
                         </div>
                         <p className="tab__text">
-                            I've been to: Seoul, Busan, Hanoi, Saigon, Nha Trang, Da Nang, Hội An, 
-                            and more. I will be visiting England and Scotland in October 2024!
+                            I like traveling and learning new languages!
                         </p>
                     </li>
 
