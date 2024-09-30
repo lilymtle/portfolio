@@ -24,7 +24,7 @@ export default function AccordionUsage() {
                     </p>
                     <p className="accordion__text">
                         HTML, CSS, SASS, JavaScript, React, Node.js, Express.js, Knex.js, and
-                        MySQL.
+                        MySQL
                     </p>
 
                     <p className="accordion__text--bold accordion__text--tools">
@@ -32,8 +32,9 @@ export default function AccordionUsage() {
                     </p>
 
                     <p className="accordion__text">
-                        Firebase, Git, GitHub, Agile Methodologies, Scrum, Jira, Postman, Material UI,
-                        Microsoft Office, Articulate 360.
+                        REST API Development, REST API Integration, Axios, Firebase, Git, GitHub, 
+                        Agile Methodologies, Scrum, Jira, Postman, Material UI,
+                        Microsoft Office, Articulate 360
                     </p>
                 </AccordionDetails>
             </Accordion>
@@ -47,11 +48,11 @@ export default function AccordionUsage() {
                 </AccordionSummary>
                 <AccordionDetails>
                     Leadership, communication, collaboration, prioritization, organization, project management,
-                    time management, attention to detail, critical thinking, problem-solving, multi-tasking,
+                    attention to detail, critical thinking, problem-solving, multi-tasking,
                     education/teaching/mentoring, user-centered thinking, adaptability, documentation, reporting,
-                    and data analysis.
+                    and data analysis
                 </AccordionDetails>
             </Accordion>
         </div>
     );
-}
+};
