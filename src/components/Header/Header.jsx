@@ -1,7 +1,8 @@
 // import styling
-import { NavBar } from "../NavBar/NavBar";
 import "./Header.scss";
 
+// import components
+import { NavBar } from "../NavBar/NavBar";
 import { Link } from "react-router-dom";
 
 export function Header() {
