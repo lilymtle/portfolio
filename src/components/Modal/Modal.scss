@@ -37,4 +37,34 @@
             padding: 2rem;
         }
     }
+
+    &__title {
+        font-family: "Garet Book", sans-serif !important;
+        @include m-body($teal !important);
+        margin-bottom: 0.5rem;
+        text-align: center;
+
+        @include tablet {
+            @include td-sub-header($teal !important);
+        }
+
+        @include desktop {
+            @include td-sub-header($teal !important);
+        }
+    }
+
+    &__close-btn {
+        font-family: "Garet Book", sans-serif !important;
+        @include m-body($teal !important);
+        display: block;
+        margin: 0 auto;
+        
+        @include tablet {
+            @include td-body($teal !important);
+        }
+
+        @include desktop {
+            @include td-body($teal !important);
+        }
+    }
 }

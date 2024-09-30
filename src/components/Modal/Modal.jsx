@@ -18,13 +18,13 @@ export default function BasicModal({ open, handleClose, title, videoPath }) {
                 aria-describedby="modal-modal-description"
             >
                 <Box className="modal__box">
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                    <Typography id="modal-modal-title" variant="h6" component="h2" className="modal__title">
                         {title}
                     </Typography>
                     <video controls width="100%">
                         <source src={videoPath} type="video/mp4" />
                     </video>
-                    <Button onClick={handleClose}>Close</Button>
+                    <Button onClick={handleClose} className="modal__close-btn">Close</Button>
                 </Box>
             </Modal>
         </div>
