@@ -46,7 +46,7 @@
 
     @include tablet {
       justify-content: space-around;
-            padding: 0;
+      padding: 0;
     }
 
     @include desktop {
@@ -88,7 +88,7 @@
   &__button:disabled {
     color: var(--detail-high-contrast);
   }
-  
+
   &__button-svg {
     width: 30%;
     height: 30%;
@@ -133,7 +133,8 @@
   }
 
   &__dot--selected:after {
-    box-shadow: inset 0 0 0 0.2rem $teal;;
+    box-shadow: inset 0 0 0 0.2rem $teal;
+    ;
   }
 }
 
@@ -143,7 +144,7 @@
   box-sizing: border-box;
   height: 89%;
   border-radius: 0.25rem;
-  perspective: 1000px;
+  perspective: 62.5rem;
   margin-bottom: 1rem;
 
   &__subheader {
@@ -300,11 +301,11 @@
   font-family: "Garet Book", sans-serif !important;
   @include m-body($global-text !important);
   margin-top: 1rem !important;
-  
+
   @include tablet {
     font-size: 1rem !important;
   }
-  
+
   &:hover {
     color: $teal;
   }
