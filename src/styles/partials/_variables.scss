@@ -1,26 +1,27 @@
-$light-grey: #EEEEEE;
-$teal: #76ABAE;
-$medium-black: #222831;
-$light-black: #31363F;
 $navy: #2C394B;
 $space-navy: #334756;
 $orange-red: #FF4C29;
 $white: #FFFFFF;
 $black: #000000;
+$black-medium: #222831;
+$black-light: #31363F;
+$light-grey: #EEEEEE;
+$teal: #76ABAE;
 
 /* global descriptive variables */
 $global-background: $black;
 $global-header: $teal;
 $global-subheader: $teal;
-$global-text: $medium-black;
+$global-text: $black-medium;
 
 /* tab descriptive variables */
-$tab-text: $medium-black;
+$tab-text: $black-medium;
+$tab-hover: $black-light;
 
 /* card slide descriptive variables */
 $card-background: $white;
 $card-subheader: $teal;
-$card-text: $medium-black;
+$card-text: $black-medium;
 $card-tools-text: $white;
-$slide-btn-border: $medium-black;
-$slide-dot-border: $medium-black;
+$slide-btn-border: $black-medium;
+$slide-dot-border: $black-medium;
