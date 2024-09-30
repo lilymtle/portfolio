@@ -130,73 +130,73 @@ export function Carousel(props) {
                                     </h2>
 
                                     <ul className="card__list">
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Node.js
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 MySQL
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Express.js
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Knex.js
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 RESTful API Development
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Firebase
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Material UI
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 GitHub
                                             </p>
@@ -284,55 +284,55 @@ export function Carousel(props) {
                                     </h2>
 
                                     <ul className="card__list">
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 RESTful API Development
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 JSON
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Agile (Scrum)
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Jira
                                             </p>
@@ -422,80 +422,80 @@ export function Carousel(props) {
                                     </h2>
 
                                     <ul className="card__list">
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Node.js
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 MySQL
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Express.js
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Knex.js
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 RESTful API Development
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
 
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Agile (Scrum)
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Jira
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Postman
                                             </p>
@@ -567,49 +567,49 @@ export function Carousel(props) {
                                     </h2>
 
                                     <ul className="card__list">
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 React
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 RESTful API Development
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 JSON
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Postman
                                             </p>
@@ -680,43 +680,43 @@ export function Carousel(props) {
                                     </h2>
 
                                     <ul className="card__list">
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 HTML
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 JavaScript
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 API Integration
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 GitHub
                                             </p>
@@ -769,25 +769,25 @@ export function Carousel(props) {
                                     </h2>
 
                                     <ul className="card__list">
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 HTML
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 GitHub
                                             </p>
@@ -864,50 +864,50 @@ export function Carousel(props) {
                                     </h2>
 
                                     <ul className="card__list">
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 HTML
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 SASS
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 JavaScript
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Axios
                                             </p>
                                         </li>
 
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 RESTful API Integration
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Git
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 GitHub
                                             </p>
                                         </li>
 
-                                        <li className="card__item">
+                                        <li className="card__item--tools">
                                             <p className="card__text--tools">
                                                 Figma
                                             </p>

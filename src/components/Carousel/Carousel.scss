@@ -224,9 +224,11 @@
   }
 
   &__item {
-    background-color: $teal;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    &--tools {
+      background-color: $card-tools-bg;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
   }
 
   &__text {
@@ -300,7 +302,7 @@
 }
 
 .preview-btn {
-  background-color: #EEEEEE !important;
+  background-color: $card-preview-btn-bg !important;
   font-family: "Garet Book", sans-serif !important;
   @include m-body($global-text !important);
   margin-bottom: 1rem !important;
@@ -309,13 +311,17 @@
     font-size: 1rem !important;
   }
 
+  @include desktop {
+    font-size: 1rem !important;
+  }
+
   &:hover {
-    color: $teal;
+    color: $card-preview-btn-hover;
   }
 }
 
 .live-btn {
-  background-color: $teal !important;
+  background-color: $card-live-btn-bg !important;
   font-family: "Garet Book", sans-serif !important;
   @include m-body($white !important);
   margin-bottom: 1rem !important;
@@ -324,7 +330,11 @@
     font-size: 1rem !important;
   }
 
+  @include desktop {
+    font-size: 1rem !important;
+  }
+
   &:hover {
-    color: $teal;
+    color: $card-live-btn-hover;
   }
 }
