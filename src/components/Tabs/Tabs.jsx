@@ -206,18 +206,20 @@ export function BasicTabs() {
                             🐱
                         </div>
 
-                        <p className="tab__text">
-                            I have two cats, Catrick and Bib.
-                        </p>
-
-                        <span className="tab__text">Here's a <span
-                            className="tab__text--cat-pic"
-                            onClick={() => handleOpen("Meet Catrick and Bib")}>picture</span>!</span>
-                        <BasicModal
-                            open={openModal.open}
-                            handleClose={handleClose}
-                            title={openModal.title}
-                            imagePath={catsImage}/>
+                        <div className="tab__cat-wrapper">
+                            <p className="tab__text--cat">
+                                I have two cats, Catrick and Bib.
+                            </p>
+                            
+                            <span className="tab__text">Here's a <span
+                                className="tab__text--cat-pic"
+                                onClick={() => handleOpen("Meet Catrick and Bib")}>picture</span>!</span>
+                            <BasicModal
+                                open={openModal.open}
+                                handleClose={handleClose}
+                                title={openModal.title}
+                                imagePath={catsImage}/>
+                        </div>
                     </li>
 
                     <li className="tab__item--fun">

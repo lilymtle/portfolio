@@ -71,6 +71,26 @@
         margin-top: 0.5rem;
     }
 
+    &__cat-wrapper {
+        @media (min-width: 392px) {
+            @include flex-box(row);
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        @include tablet {
+            @include flex-box(row);
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            align-items: center;
+            gap: 0.3rem;
+        }
+    }
+
     &__text {
         &--title {
             color: $tab-text-title;
@@ -84,6 +104,16 @@
         &--school, &--field, &--grade {
             padding-left: 1.5rem;
             margin: 0;
+        }
+
+        &--cat {
+            @include mobile {
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 321px) and (max-width: 391px) {
+                margin-bottom: 0;
+            }
         }
 
         &--cat-pic {
