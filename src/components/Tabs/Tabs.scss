@@ -56,7 +56,9 @@
             @include flex-box(row);
             gap: 0.5rem;
             align-items: center;
+
         }
+        
     }
 
     &__title-year-container {
@@ -71,23 +73,9 @@
         margin-top: 0.5rem;
     }
 
-    &__cat-wrapper {
-        @media (min-width: 392px) {
-            @include flex-box(row);
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        @include tablet {
-            @include flex-box(row);
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        @include desktop {
-            @include flex-box(row);
-            align-items: center;
-            gap: 0.3rem;
+    &__emoji {
+        &--cat {
+            margin-top: 0.5rem;
         }
     }
 
@@ -107,13 +95,7 @@
         }
 
         &--cat {
-            @include mobile {
-                margin-bottom: 0;
-            }
-
-            @media (min-width: 321px) and (max-width: 391px) {
-                margin-bottom: 0;
-            }
+            margin-bottom: 0;
         }
 
         &--cat-pic {

@@ -202,24 +202,25 @@ export function BasicTabs() {
             <CustomTabPanel value={value} index={2}>
                 <ul className="tab__list">
                     <li className="tab__item--fun">
-                        <div className="tab__emoji">
+                        <div className="tab__emoji--cat">
                             🐱
                         </div>
 
-                        <div className="tab__cat-wrapper">
                             <p className="tab__text--cat">
-                                I have two cats, Catrick and Bib.
+                                I have two cats, Catrick (orange) and Bib (black).
                             </p>
-                            
-                            <span className="tab__text">Here's a <span
-                                className="tab__text--cat-pic"
-                                onClick={() => handleOpen("Meet Catrick and Bib")}>picture</span>!</span>
-                            <BasicModal
-                                open={openModal.open}
-                                handleClose={handleClose}
-                                title={openModal.title}
-                                imagePath={catsImage}/>
-                        </div>
+                    </li>
+
+                    <li className="tab__item--fun-cat-pic">
+                        <Button
+                                className="modal__cat-btn"
+                                onClick={() => handleOpen("Meet Catrick and Bib")}>Cat Tax!</Button>
+                        <BasicModal
+                            open={openModal.open}
+                            handleClose={handleClose}
+                            title={openModal.title}
+                            imagePath={catsImage}
+                            imageAlt="catrick (orange) and bib (black) sleeping on a couch" />
                     </li>
 
                     <li className="tab__item--fun">
@@ -236,7 +237,7 @@ export function BasicTabs() {
                             🎮 
                         </div>
                         <p className="tab__text">
-                            I love videogames, anime, and manga!
+                            I love video games, anime, and manga!
                         </p>
                     </li>
 
