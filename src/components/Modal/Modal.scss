@@ -79,4 +79,20 @@
             @include td-body($teal !important);
         }
     }
+
+    &__cat-btn {
+        font-family: "Garet Book", sans-serif !important;
+        background-color: $modal-close-btn-bg !important;
+        @include m-body($teal !important);
+        margin-left: 1rem !important;
+        text-transform: none; 
+
+        @include tablet {
+            @include td-body($teal !important);
+        }
+
+        @include desktop {
+            @include td-body($teal !important);
+        }
+    }
 }
