@@ -58,7 +58,7 @@ export function Carousel(props) {
                                         <img
                                             className="card__img"
                                             src="src/assets/images/mood-compass.png"
-                                            alt="screenshot of mood-compass in a macbook frame" />
+                                            alt="screenshot of moodcompass website in a macbook frame" />
                                     </div>
                                 </div>
 
@@ -221,7 +221,7 @@ export function Carousel(props) {
                                         <img
                                             className="card__img"
                                             src="src/assets/images/telus.png"
-                                            alt="screenshot of telus what your preference is in a macbook frame" />
+                                            alt="screenshot of telus what your preference is website in a macbook frame" />
                                     </div>
                                 </div>
 
@@ -355,7 +355,7 @@ export function Carousel(props) {
                                     <img
                                         className="card__img"
                                         src="src/assets/images/instock.png"
-                                        alt="screenshot of instock in a macbook frame" />
+                                        alt="screenshot of instock website in a macbook frame" />
                                 </div>
 
                                 <div className="card__back">
@@ -524,7 +524,7 @@ export function Carousel(props) {
                                         <img
                                             className="card__img"
                                             src="src/assets/images/brainflix.png"
-                                            alt="screenshot of telus what your preference is in a macbook frame" />
+                                            alt="screenshot of brainflix website in a macbook frame" />
                                     </div>
                                 </div>
 
@@ -637,7 +637,7 @@ export function Carousel(props) {
                                         <img
                                             className="card__img"
                                             src="src/assets/images/bandsite.png"
-                                            alt="screenshot of telus what your preference is in a macbook frame" />
+                                            alt="screenshot of bandsite website in a macbook frame" />
                                     </div>
 
                                 </div>
@@ -750,7 +750,7 @@ export function Carousel(props) {
                                         <img
                                             className="card__img"
                                             src="src/assets/images/coffeeshop.png"
-                                            alt="screenshot of telus what your preference is in a macbook frame" />
+                                            alt="screenshot of coffeeshop website in a macbook frame" />
                                     </div>
 
                                 </div>
@@ -823,7 +823,7 @@ export function Carousel(props) {
                                         <img
                                             className="card__img"
                                             src="src/assets/images/cinematicats.png"
-                                            alt="screenshot of telus what your preference is in a macbook frame" />
+                                            alt="screenshot of cinematicats website in a macbook frame" />
                                     </div>
 
                                 </div>
