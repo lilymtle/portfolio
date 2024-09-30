@@ -28,13 +28,13 @@
         }
 
         &:hover {
-            color: $teal;
+            color: $navbar-link-hover;
             transition: 0.3s ease-in-out;
         }
     }
 
     &__btn {
-        background-color: $teal;
+        background-color: $navbar-btn-bg;
         @include m-body($white);
         text-decoration: none;
         border-radius: 1.25rem;

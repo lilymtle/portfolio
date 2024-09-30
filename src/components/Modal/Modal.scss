@@ -5,7 +5,7 @@
 
 .modal {
     &__box {
-        background-color: white;
+        background-color: $modal-bg;
         border-radius: 0.25rem;
         padding: 1rem;
         position: absolute;
@@ -54,7 +54,7 @@
 
     &__close-btn {
         font-family: "Garet Book", sans-serif !important;
-        background-color: #EEE !important;
+        background-color: $modal-close-btn-bg !important;
         @include m-body($teal !important);
         display: block;
         margin: 0 auto;

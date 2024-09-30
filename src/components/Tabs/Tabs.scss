@@ -9,7 +9,7 @@
     &.Mui-selected {
         @include m-body($white !important);
         background-color: $teal;
-        border-bottom: .0625rem solid $white;
+        border-bottom: .0625rem solid $tab-hover-border;
         border-radius: .25rem;
     }
 
@@ -21,7 +21,7 @@
     }
 
     &__panel {
-        background-color: #EEEEEE;
+        background-color: $tab-panel-bg;
         @include m-body($tab-text);
         padding: 1rem;
         border-radius: 0.25rem;
@@ -72,12 +72,8 @@
     }
 
     &__text {
-        &--box {
-            color: $black;
-        }
-
         &--title {
-            color: $teal;
+            color: $tab-text-title;
             margin: 0;
         }
 
@@ -99,6 +95,6 @@
 }
 
 .italics {
-    color: $teal;
+    color: $tab-text-italics;
     font-style: italic;
 }
