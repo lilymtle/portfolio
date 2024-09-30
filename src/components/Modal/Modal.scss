@@ -28,11 +28,15 @@
         }
     }
 
+    &__wrapper {
+        @include flex-box(row);
+        justify-content: space-between;
+    }
+
     &__title {
         font-family: "Garet Book", sans-serif !important;
         @include m-body($teal !important);
         margin-bottom: 0.5rem;
-        text-align: center;
 
         @include tablet {
             @include td-sub-header($teal !important);
@@ -45,6 +49,7 @@
 
     &__close-btn {
         font-family: "Garet Book", sans-serif !important;
+        background-color: #EEE !important;
         @include m-body($teal !important);
         display: block;
         margin: 0 auto;
