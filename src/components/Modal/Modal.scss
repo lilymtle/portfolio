@@ -52,6 +52,18 @@
         }
     }
 
+    &__img {
+        width: 100%;
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+
     &__close-btn {
         font-family: "Garet Book", sans-serif !important;
         background-color: $modal-close-btn-bg !important;
