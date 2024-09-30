@@ -191,7 +191,6 @@
       @include td-body($white);
       padding: 2.5rem;
     }
-
   }
 
   &__front {
@@ -199,7 +198,6 @@
     align-items: center;
     z-index: 2;
   }
-
 
   &__back {
     transform: rotateY(180deg);
@@ -218,6 +216,11 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+
+    &--features {
+      list-style: disc;
+      color: $teal;
+    }
   }
 
   &__item {
