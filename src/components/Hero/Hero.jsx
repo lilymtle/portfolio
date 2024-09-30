@@ -5,6 +5,9 @@ import "./Hero.scss";
 import linkedinLogo from "../../assets/logos/linkedin-logo.png";
 import githubLogo from "../../assets/logos/github-logo.svg";
 
+// importi mages
+import moonImage from "../../assets/images/moon2.png";
+
 // import component
 import { Link } from "react-router-dom";
 
@@ -14,7 +17,7 @@ export function Hero() {
             <div className="hero__background-container">
                 <img 
                 className="hero__img"
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" />
+                src={moonImage} />
                 <div className="stars"></div>
                 <div className="twinkling"></div>
                 <div className="clouds"></div>

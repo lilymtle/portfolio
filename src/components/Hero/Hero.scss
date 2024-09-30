@@ -13,7 +13,7 @@
 }
 
 .stars {
-    background: black url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png") repeat;
+    background: black url("../../assets/images/stars.png") repeat;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -26,7 +26,7 @@
 .twinkling {
     width: 625rem;
     height: 100%;
-    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background: transparent url("../../assets/images/twinkling.png") repeat;
     background-size: 62.5rem 62.5rem;
     position: absolute;
     right: 0;
@@ -39,7 +39,7 @@
 .clouds {
     width: 625rem;
     height: 100%;
-    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+    background: transparent url("../../assets/images/clouds_repeat.png") repeat;
     background-size: 62.5rem 62.5rem;
     position: absolute;
     right: 0;
