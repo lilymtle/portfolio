@@ -7,7 +7,6 @@
     from {
         -webkit-transform: translate3d(0rem, 0rem, 0rem);
     }
-
     to {
         -webkit-transform: translate3d(62.5rem, 0rem, 0rem);
     }
@@ -47,7 +46,6 @@
     top: 0;
     bottom: 0;
     z-index: 3;
-
     animation: move-background 150s linear infinite;
 }
 
