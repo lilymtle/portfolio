@@ -19,7 +19,7 @@ export function NavBar() {
                         Projects
                     </a>
                 </li>
-                <li className="nav-bar__item nav-bar__btn" onClick={() => handleNavigate("/images/lily-le-resume.pdf")}>
+                <li className="nav-bar__item nav-bar__btn" onClick={() => handleNavigate("/files/lily-le-resume.pdf")}>
                     Resume
                 </li>
             </ul>
