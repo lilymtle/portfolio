@@ -19,7 +19,7 @@ export function NavBar() {
                     </a>
                 </li>
                 <li className="nav-bar__item">
-                    <Link className="nav-bar__btn" to="/">
+                    <Link className="nav-bar__btn" to="/images/lily-le-resume.pdf">
                         Resume
                     </Link>
                 </li>
