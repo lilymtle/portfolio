@@ -1,6 +1,10 @@
 // import styling
 import "./Hero.scss";
 
+// import logos
+import linkedinLogo from "../../assets/logos/linkedin-logo.png";
+import githubLogo from "../../assets/logos/github-logo.svg";
+
 // import component
 import { Link } from "react-router-dom";
 
@@ -22,14 +26,14 @@ export function Hero() {
                 <Link to="https://linkedin.com/in/lilymtle">
                     <img 
                         className="hero__icon"
-                        src="src/assets/logos/linkedin-logo.png"
+                        src={linkedinLogo}
                         alt="linkedin icon" />
                 </Link>
 
                 <Link to="https://github.com/lilymtle">
                     <img
                         className="hero__icon"
-                        src="src/assets/logos/github-logo.svg"
+                        src={githubLogo}
                         alt="github icon" />
                 </Link>
             </div>
