@@ -40,6 +40,11 @@ export function Carousel(props) {
 
     const handleClose = () => setOpenModal({ ...openModal, open: false });
 
+    const handleNavigate = (path) => {
+        window.open(path, "_blank");
+    };
+
+
     return (
         <section className="carousel">
             <div className="carousel__viewport" ref={emblaRef}>
@@ -63,6 +68,10 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
+                                    <Button
+                                        className="live-btn"
+                                        onClick={() => handleNavigate("https://mood-compass.vercel.app/")}>Live</Button>
+
                                     <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -193,16 +202,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
-                                    <Button
-                                        className="preview-btn"
-                                        onClick={() => handleOpen("MoodCompass", "/videos/moodcompass.mp4")}>Preview</Button>
-                                    <BasicModal
-                                        open={openModal.open}
-                                        handleClose={handleClose}
-                                        title={openModal.title}
-                                        videoPath={openModal.videoPath} />
-
                                 </div>
                             </div>
                         </li>
@@ -226,6 +225,16 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
+                                    <Button
+                                        className="preview-btn"
+                                        onClick={() => handleOpen("TELUS What Your Preference Is", "/videos/telus.mp4")}>Preview</Button>
+                                    <BasicModal
+                                        open={openModal.open}
+                                        handleClose={handleClose}
+                                        title={openModal.title}
+                                        videoPath={openModal.videoPath} />
+
+
                                     <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -329,16 +338,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
-
-                                    <Button
-                                        className="preview-btn"
-                                        onClick={() => handleOpen("TELUS What Your Preference Is", "/videos/telus.mp4")}>Preview</Button>
-                                    <BasicModal
-                                        open={openModal.open}
-                                        handleClose={handleClose}
-                                        title={openModal.title}
-                                        videoPath={openModal.videoPath} />
                                 </div>
                             </div>
                         </li>
@@ -359,6 +358,15 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
+                                    <Button
+                                        className="preview-btn"
+                                        onClick={() => handleOpen("InStock", "/videos/instock.mp4")}>Preview</Button>
+                                    <BasicModal
+                                        open={openModal.open}
+                                        handleClose={handleClose}
+                                        title={openModal.title}
+                                        videoPath={openModal.videoPath} />
+
                                     <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -468,7 +476,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
 
-
                                         <li className="card__item">
                                             <p className="card__text--tools">
                                                 GitHub
@@ -482,7 +489,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
 
-
                                         <li className="card__item">
                                             <p className="card__text--tools">
                                                 Jira
@@ -495,16 +501,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
-
-                                    <Button
-                                        className="preview-btn"
-                                        onClick={() => handleOpen("InStock", "/videos/instock.mp4")}>Preview</Button>
-                                    <BasicModal
-                                        open={openModal.open}
-                                        handleClose={handleClose}
-                                        title={openModal.title}
-                                        videoPath={openModal.videoPath} />
                                 </div>
                             </div>
                         </li>
@@ -529,6 +525,15 @@ export function Carousel(props) {
                                 </div>
 
                                 <div className="card__back">
+                                    <Button
+                                        className="preview-btn"
+                                        onClick={() => handleOpen("BrainFlix", "/videos/brainflix.mp4")}>Preview</Button>
+                                    <BasicModal
+                                        open={openModal.open}
+                                        handleClose={handleClose}
+                                        title={openModal.title}
+                                        videoPath={openModal.videoPath} />
+
                                     <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -610,16 +615,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
-
-                                    <Button
-                                        className="preview-btn"
-                                        onClick={() => handleOpen("BrainFlix", "/videos/brainflix.mp4")}>Preview</Button>
-                                    <BasicModal
-                                        open={openModal.open}
-                                        handleClose={handleClose}
-                                        title={openModal.title}
-                                        videoPath={openModal.videoPath} />
                                 </div>
                             </div>
                         </li>
@@ -639,10 +634,18 @@ export function Carousel(props) {
                                             src="src/assets/images/bandsite.png"
                                             alt="screenshot of bandsite website in a macbook frame" />
                                     </div>
-
                                 </div>
 
                                 <div className="card__back">
+                                    <Button
+                                        className="preview-btn"
+                                        onClick={() => handleOpen("BandSite", "/videos/bandsite.mp4")}>Preview</Button>
+                                    <BasicModal
+                                        open={openModal.open}
+                                        handleClose={handleClose}
+                                        title={openModal.title}
+                                        videoPath={openModal.videoPath} />
+
                                     <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -670,9 +673,7 @@ export function Carousel(props) {
                                                 Form validation
                                             </p>
                                         </li>
-
                                     </ul>
-
 
                                     <h2 className="card__subheader">
                                         Tools Used
@@ -721,16 +722,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
-
-                                    <Button
-                                        className="preview-btn"
-                                        onClick={() => handleOpen("BandSite", "/videos/bandsite.mp4")}>Preview</Button>
-                                    <BasicModal
-                                        open={openModal.open}
-                                        handleClose={handleClose}
-                                        title={openModal.title}
-                                        videoPath={openModal.videoPath} />
                                 </div>
                             </div>
                         </li>
@@ -745,17 +736,24 @@ export function Carousel(props) {
                                         CoffeeShop
                                     </h2>
 
-
                                     <div className="card__img-wrapper">
                                         <img
                                             className="card__img"
                                             src="src/assets/images/coffeeshop.png"
                                             alt="screenshot of coffeeshop website in a macbook frame" />
                                     </div>
-
                                 </div>
 
                                 <div className="card__back">
+                                    <Button
+                                        className="preview-btn"
+                                        onClick={() => handleOpen("CoffeeShop", "/videos/coffeeshop.mp4")}>Preview</Button>
+                                    <BasicModal
+                                        open={openModal.open}
+                                        handleClose={handleClose}
+                                        title={openModal.title}
+                                        videoPath={openModal.videoPath} />
+
                                     <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -795,16 +793,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
-                                    <Button
-                                        className="preview-btn"
-                                        onClick={() => handleOpen("CoffeeShop", "/videos/coffeeshop.mp4")}>Preview</Button>
-                                    <BasicModal
-                                        open={openModal.open}
-                                        handleClose={handleClose}
-                                        title={openModal.title}
-                                        videoPath={openModal.videoPath} />
-
                                 </div>
                             </div>
                         </li>
@@ -825,10 +813,18 @@ export function Carousel(props) {
                                             src="src/assets/images/cinematicats.png"
                                             alt="screenshot of cinematicats website in a macbook frame" />
                                     </div>
-
                                 </div>
 
                                 <div className="card__back">
+                                    <Button
+                                        className="preview-btn"
+                                        onClick={() => handleOpen("CINEMATICATS", "/videos/cinematicats.mp4")}>Preview</Button>
+                                    <BasicModal
+                                        open={openModal.open}
+                                        handleClose={handleClose}
+                                        title={openModal.title}
+                                        videoPath={openModal.videoPath} />
+
                                     <h2 className="card__subheader">
                                         Overview
                                     </h2>
@@ -848,7 +844,6 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
 
                                     <p className="card__text">
                                         This was a group project for the first BrainStation hackathon.
@@ -918,25 +913,10 @@ export function Carousel(props) {
                                             </p>
                                         </li>
                                     </ul>
-
-
-                                    <Button
-                                        className="preview-btn"
-                                        onClick={() => handleOpen("CINEMATICATS", "/videos/cinematicats.mp4")}>Preview</Button>
-                                    <BasicModal
-                                        open={openModal.open}
-                                        handleClose={handleClose}
-                                        title={openModal.title}
-                                        videoPath={openModal.videoPath} />
-
-
                                 </div>
                             </div>
                         </li>
-
                     </div>
-
-
                 </div>
             </div>
 

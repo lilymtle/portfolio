@@ -272,7 +272,7 @@
       margin-block: 0.25rem;
 
       @include tablet {
-        @include td-body($card-text);
+        @include td-body($card-tools-text);
       }
 
       @include desktop {
@@ -303,7 +303,22 @@
   background-color: #EEEEEE !important;
   font-family: "Garet Book", sans-serif !important;
   @include m-body($global-text !important);
-  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+
+  @include tablet {
+    font-size: 1rem !important;
+  }
+
+  &:hover {
+    color: $teal;
+  }
+}
+
+.live-btn {
+  background-color: $teal !important;
+  font-family: "Garet Book", sans-serif !important;
+  @include m-body($white !important);
+  margin-bottom: 1rem !important;
 
   @include tablet {
     font-size: 1rem !important;
