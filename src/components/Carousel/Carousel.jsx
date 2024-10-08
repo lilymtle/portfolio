@@ -1,6 +1,15 @@
 // import styling
 import "./Carousel.scss";
 
+// import images
+import moodCompassImage from "../../assets/images/mood-compass.png";
+import telusImage from "../../assets/images/telus.png";
+import instockImage from "../../assets/images/instock.png";
+import brainflixImage from "../../assets/images/brainflix.png";
+import bandsiteImage from "../../assets/images/bandsite.png";
+import coffeeshopImage from "../../assets/images/coffeeshop.png";
+import cinematicatsImage from "../../assets/images/cinematicats.png";
+
 // import hooks
 import { useState } from "react";
 import useEmblaCarousel from "embla-carousel-react"
@@ -62,7 +71,7 @@ export function Carousel(props) {
                                     <div className="card__img-wrapper">
                                         <img
                                             className="card__img"
-                                            src="src/assets/images/mood-compass.png"
+                                            src={moodCompassImage}
                                             alt="screenshot of moodcompass website in a macbook frame" />
                                     </div>
                                 </div>
@@ -219,7 +228,7 @@ export function Carousel(props) {
                                     <div className="card__img-wrapper">
                                         <img
                                             className="card__img"
-                                            src="src/assets/images/telus.png"
+                                            src={telusImage}
                                             alt="screenshot of telus what your preference is website in a macbook frame" />
                                     </div>
                                 </div>
@@ -353,7 +362,7 @@ export function Carousel(props) {
 
                                     <img
                                         className="card__img"
-                                        src="src/assets/images/instock.png"
+                                        src={instockImage}
                                         alt="screenshot of instock website in a macbook frame" />
                                 </div>
 
@@ -519,7 +528,7 @@ export function Carousel(props) {
                                     <div className="card__img-wrapper">
                                         <img
                                             className="card__img"
-                                            src="src/assets/images/brainflix.png"
+                                            src={brainflixImage}
                                             alt="screenshot of brainflix website in a macbook frame" />
                                     </div>
                                 </div>
@@ -631,7 +640,7 @@ export function Carousel(props) {
                                     <div className="card__img-wrapper">
                                         <img
                                             className="card__img"
-                                            src="src/assets/images/bandsite.png"
+                                            src={bandsiteImage}
                                             alt="screenshot of bandsite website in a macbook frame" />
                                     </div>
                                 </div>
@@ -739,7 +748,7 @@ export function Carousel(props) {
                                     <div className="card__img-wrapper">
                                         <img
                                             className="card__img"
-                                            src="src/assets/images/coffeeshop.png"
+                                            src={coffeeshopImage}
                                             alt="screenshot of coffeeshop website in a macbook frame" />
                                     </div>
                                 </div>
@@ -810,7 +819,7 @@ export function Carousel(props) {
                                     <div className="card__img-wrapper">
                                         <img
                                             className="card__img"
-                                            src="src/assets/images/cinematicats.png"
+                                            src={cinematicatsImage}
                                             alt="screenshot of cinematicats website in a macbook frame" />
                                     </div>
                                 </div>

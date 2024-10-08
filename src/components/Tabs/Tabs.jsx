@@ -1,6 +1,9 @@
 // import styling
 import "./Tabs.scss";
 
+// import image
+import catsImage from "../../assets/images/catrick-and-bib.png";
+
 // import hook
 import { useState } from "react";
 
@@ -10,6 +13,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import AccordionUsage from "../Accordion/Accordion.jsx";
+import Button from "@mui/material/Button";
+import BasicModal from "../Modal/Modal.jsx";
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -43,10 +48,17 @@ function a11yProps(index) {
 
 export function BasicTabs() {
     const [value, setValue] = useState(0);
+    const [openModal, setOpenModal] = useState({ open: false, title: "", imagePath: "" });
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    const handleOpen = (title, imagePath) => {
+        setOpenModal({ open: true, title, imagePath });
+    };
+
+    const handleClose = () => setOpenModal({ ...openModal, open: false });
 
     return (
         <Box className="tabs__container">
@@ -190,12 +202,25 @@ export function BasicTabs() {
             <CustomTabPanel value={value} index={2}>
                 <ul className="tab__list">
                     <li className="tab__item--fun">
-                        <div className="tab__emoji">
+                        <div className="tab__emoji--cat">
                             🐱
                         </div>
-                        <p className="tab__text">
-                            I have two cats, Catrick (orange tabby) and Bib (black). 
-                        </p>
+
+                            <p className="tab__text--cat">
+                                I have two cats, Catrick (orange) and Bib (black).
+                            </p>
+                    </li>
+
+                    <li className="tab__item--fun-cat-pic">
+                        <Button
+                                className="modal__cat-btn"
+                                onClick={() => handleOpen("Meet Catrick and Bib")}>Cat Tax!</Button>
+                        <BasicModal
+                            open={openModal.open}
+                            handleClose={handleClose}
+                            title={openModal.title}
+                            imagePath={catsImage}
+                            imageAlt="catrick (orange) and bib (black) sleeping on a couch" />
                     </li>
 
                     <li className="tab__item--fun">
@@ -212,16 +237,7 @@ export function BasicTabs() {
                             🎮 
                         </div>
                         <p className="tab__text">
-                            I am a PC and console gamer. I love games like ACNH and SDV!
-                        </p>
-                    </li>
-
-                    <li className="tab__item--fun">
-                        <div className="tab__emoji">
-                            👀
-                        </div>
-                        <p className="tab__text">
-                            I love anime and manga.
+                            I love video games, anime, and manga!
                         </p>
                     </li>
 

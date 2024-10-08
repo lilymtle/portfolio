@@ -8,7 +8,7 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function BasicModal({ open, handleClose, title, videoPath }) {
+export default function BasicModal({ open, handleClose, title, imagePath, imageAlt, videoPath }) {
 
     return (
         <div className="modal">
@@ -25,9 +25,17 @@ export default function BasicModal({ open, handleClose, title, videoPath }) {
                         </Typography>
                         <Button onClick={handleClose} className="modal__close-btn"><CloseIcon /></Button>
                     </div>
-                    <video controls width="100%">
-                        <source src={videoPath} type="video/mp4" />
-                    </video>
+
+                    {videoPath ? (
+                        <video controls width="100%">
+                            <source src={videoPath} type="video/mp4" />
+                        </video>
+                    ) : (
+                        <img
+                            className="modal__img"
+                            src={imagePath}
+                            alt={imageAlt} />
+                    )}
                 </Box>
             </Modal>
         </div>
