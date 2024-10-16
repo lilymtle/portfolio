@@ -9,7 +9,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 export function AboutPage() {
     return (
         <section className="about" id="about">
-            <ScrollAnimation animateIn="fadeInLeft" duration={2}>
+            {/* <ScrollAnimation animateIn="fadeInLeft" duration={2}> */}
                 <h1 className="about__header">
                     About
                 </h1>
@@ -23,7 +23,7 @@ export function AboutPage() {
                 </p>
 
                 <BasicTabs />
-            </ScrollAnimation>
+            {/* </ScrollAnimation> */}
         </section>
     );
 };
