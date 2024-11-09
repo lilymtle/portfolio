@@ -14,7 +14,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
     return (
             <section className="projects" id="projects">
-                {/* <ScrollAnimation animateIn="fadeInRight" duration={2}> */}
+                <ScrollAnimation animateIn="fadeInRight" duration={2}>
                     <h1 className="project__header">
                         Projects
                     </h1>
@@ -26,7 +26,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
                     <section className="project__carousel">
                         <Carousel slides={SLIDES} options={OPTIONS} />
                     </section>
-                {/* </ScrollAnimation> */}
+                </ScrollAnimation>
             </section>
     );
 };
