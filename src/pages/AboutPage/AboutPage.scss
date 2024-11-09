@@ -3,22 +3,23 @@
 
 .about {
     background-color: transparent;
-    padding-block: 3rem;
+    padding-block: 1rem;
     padding-inline: 1rem;
 
     @include tablet {
-        padding-block: 3rem;
+        padding-block: 2rem;
         padding-inline: 10rem;
     }
 
     @include desktop {
-        padding-block: 4.5rem;
+        padding-block: 2.5rem;
         padding-inline: 20rem;
     }
 
     &__header {
         @include m-page-header($global-header);
         text-align: center;
+        margin-top: 0;
 
         @include tablet {
             @include td-page-header($global-header);

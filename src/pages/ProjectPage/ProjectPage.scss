@@ -3,16 +3,16 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .projects {
-    padding-block: 4rem;
+    padding-block: 0.25rem;
     padding-inline: 1rem;
 
     @include tablet {
-        padding-block: 4rem;
+        padding-block: 0.25rem;
         padding-inline: 10rem;
     }
 
     @include desktop {
-        padding-block: 2rem;
+        padding-block: 0.25rem;
         padding-inline: 20rem;
     }
 }
@@ -21,6 +21,7 @@
     &__header {
         @include m-page-header($global-header);
         text-align: center;
+        margin-top: 0;
 
         @include tablet {
             @include td-page-header($global-header);
