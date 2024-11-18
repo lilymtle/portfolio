@@ -29,17 +29,26 @@ export function Hero() {
 
                     <p className="hero__text">
                         My name is <span className="hero__text--lavender">Lily</span>, and it's so
-                        awesome to meet you.
+                        awesome to meet you. 😄
                     </p>
 
                     <p className="hero__text hero__text--cta">
                         Let's get in touch!
                     </p>
+
+                    <div className="hero__cta">
+                        <p className="hero__button hero__button--linkedin">
+                            LinkedIn
+                        </p>
+
+                        <p className="hero__button hero__button--github">
+                            GitHub
+                        </p>
+                    </div>
                 </div>
 
                 <ArrowDownwardIcon 
                     className="hero__arrow-icon"
-                    sx={{color: "#6962AD"}}
                 />
             </div>
         </section>
