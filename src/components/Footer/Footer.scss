@@ -16,7 +16,7 @@ footer {
 
 .footer {
     &__text {
-        color: white;
+        color: $footer-text;
         font-size: 0.75rem;
         margin: 0;
 
@@ -27,15 +27,19 @@ footer {
         }
 
         &--credits {
-            background-color: white;
-            color: $black-medium;
+            background-color: $footer-button;
+            color: $footer-button-text;
             font-family: "Gaegu", sans-serif;
             font-size: 1rem;
+            border: .0625rem solid $footer-button;
+            border-radius: 1.25rem;
             padding-block: 0.25rem;
             padding-inline: 1rem;
-            border-radius: 1.25rem;
 
             &:hover {
+                color: $footer-hover-text;
+                border: .0625rem solid $footer-hover-border;
+                transition: 0.5s ease-in-out;
                 cursor: pointer;
             }
         }
