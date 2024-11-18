@@ -17,7 +17,7 @@ $global-header: $teal;
 $global-subheader: $teal;
 $global-text: $black-medium;
 
-/* nav bar descriptive variables */
+/* header navbar descriptive variables */
 $navbar-primary-text: $black-medium;
 $navbar-accent-text: $pale-orange;
 $navbar-link-hover: $pale-orange;
@@ -25,6 +25,13 @@ $navbar-secondary-link-hover: $black-medium;
 
 /* hero descriptive variable */
 $hero-header: $dark-lavender;
+
+/* footer descriptive variable */
+$footer-text: $white;
+$footer-button-text: $black-medium;
+$footer-button: $white;
+$footer-hover-text: $light-blue;
+$footer-hover-border: $light-blue;
 
 /* button descriptive variables */
 $button-primary-color: $dark-lavender;
