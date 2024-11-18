@@ -66,14 +66,43 @@
 
     &__text {
         font-size: 1rem;
-        margin: 0;
+        margin-bottom: 0;
 
         &--lavender {
             color: $dark-lavender;
         }
 
         &--cta {
-            margin-top: 0.5rem;
+            margin-block: 1rem;
+        }
+    }
+
+    &__cta {
+        @include flex-box(row);
+        gap: 1rem;
+    }
+
+    &__button {
+        font-family: "Gaegu", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+
+        &--linkedin {
+            background-color: $button-secondary-color;
+            color: $button-primary-text;
+            padding-block: 0.25rem;
+            padding-inline: 1rem;
+            border-radius: 1.25rem;
+        }
+
+        &--github {
+            background-color: $button-primary-color;
+            color: $button-primary-text;
+            padding-block: 0.25rem;
+            padding-inline: 1rem;
+            border-radius: 1.25rem;
         }
     }
 
