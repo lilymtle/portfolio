@@ -1,10 +1,6 @@
 // import styling
 import "./Hero.scss";
 
-// import logos
-import linkedinLogo from "../../assets/logos/linkedin-logo.png";
-import githubLogo from "../../assets/logos/github-logo.svg";
-
 // import images
 import heroImage from "../../assets/images/hero-character.png";
 
