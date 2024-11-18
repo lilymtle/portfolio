@@ -29,11 +29,16 @@
     }
 
     &__link {
+        color: $navbar-primary-text;
         font-family: "Gaegu", sans-serif;
         font-size: 1.5rem;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: bold;
         margin: 0;
+
+        &--resume {
+            color: $navbar-accent-text;
+        }
     }
 }
