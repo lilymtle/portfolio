@@ -3,6 +3,7 @@ import "./styles/global.scss";
 
 // import components
 import { BrowserRouter } from "react-router-dom";
+import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 
 
@@ -10,7 +11,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Hero />
+      <Header />
+      <main>
+        <Hero />
+      </main>
     </BrowserRouter>
   )
 };
