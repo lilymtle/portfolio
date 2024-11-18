@@ -1,6 +1,7 @@
 /* import styling */
 @use "./fonts.scss" as *;
 @use "./variables.scss" as *;
+@use "./fonts.scss" as *;
 
 /* mobile media query mixin */
 @mixin mobile {
@@ -25,13 +26,18 @@
 
 /* mobile text style mixins */
 @mixin m-page-header($color) {
-    font-size: 1.5rem;
+    font-family: "Gaegu", sans-serif;
+    font-size: 2.5rem;
     color: $color;
+    line-height: 0;
 }
 
 @mixin m-sub-header($color) {
-    font-size: 1rem;
+    font-family: "Gaegu", sans-serif;
+    font-size: 1.5rem;
     color: $color;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 @mixin m-sub-header-sm($color) {
