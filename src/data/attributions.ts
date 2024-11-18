@@ -23,5 +23,11 @@ export const attributions: Attribution[] = [
         name: "Abstract Simple Memphis Background",
         creator: "rawpixel.com",
         link: "https://www.freepik.com/free-vector/abstract-simple-memphis-background_16326606.htm"
+    },
+    {
+        id: 4,
+        name: "Skill Icons",
+        creator: "Thijs",
+        link: "https://skillicons.dev/"
     }
 ];
