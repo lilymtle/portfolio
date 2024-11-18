@@ -8,6 +8,7 @@ $black-light: #31363F;
 $light-grey: #EEEEEE;
 $teal: #76ABAE;
 $dark-lavender: #6962AD;
+$light-blue: #789DBC;
 
 /* global descriptive variables */
 $global-background: $black;
@@ -21,6 +22,12 @@ $navbar-btn-bg: $teal;
 
 /* hero descriptive variable */
 $hero-header: $dark-lavender;
+
+/* button descriptive variables */
+$button-primary-color: $dark-lavender;
+$button-secondary-color: $light-blue;
+$button-primary-text: $white;
+$button-secondary-text: $black;
 
 /* tab descriptive variables */
 $tab-panel-bg: $light-grey;
