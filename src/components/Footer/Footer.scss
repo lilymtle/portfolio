@@ -2,3 +2,27 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 @use "../../styles/partials/fonts.scss" as *;
+
+footer {
+    background-image: url("../../assets/images/footer-background.png");
+    background-size: cover;
+    background-position: center;
+    @include flex-box(column);
+    align-items: center;
+    padding-block: 0.25rem;
+    padding-inline: 1rem;
+}
+
+.footer {
+    &__text {
+        color: white;
+        font-size: 0.75rem;
+        margin: 0;
+
+        &--bold {
+            font-family: "Gaegu", sans-serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+}
