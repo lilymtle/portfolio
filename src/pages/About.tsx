@@ -1,5 +1,5 @@
 // import styling
-import "./About.scss"
+import "./About.scss";
 
 export function AboutPage() {
     return (
