@@ -9,6 +9,7 @@ $light-grey: #EEEEEE;
 $teal: #76ABAE;
 $dark-lavender: #6962AD;
 $light-blue: #789DBC;
+$pale-orange: #FFB26F;
 
 /* global descriptive variables */
 $global-background: $black;
@@ -17,6 +18,8 @@ $global-subheader: $teal;
 $global-text: $black-medium;
 
 /* nav bar descriptive variables */
+$navbar-primary-text: $black-medium;
+$navbar-accent-text: $pale-orange;
 $navbar-link-hover: $teal;
 $navbar-btn-bg: $teal;
 
