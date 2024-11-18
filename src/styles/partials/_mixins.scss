@@ -34,20 +34,23 @@
 
 @mixin m-sub-header($color) {
     font-family: "Gaegu", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: $color;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-@mixin m-sub-header-sm($color) {
-    font-size: .875rem;
-    color: $color;
-}
-
 @mixin m-body($color) {
     font-size: .75rem;
     color: $color;
+}
+
+@mixin m-label($color) {
+    font-family: "Gaegu", sans-serif;
+    font-size: 1.3rem;
+    color: $color;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* tablet and desktop text style mixins */
