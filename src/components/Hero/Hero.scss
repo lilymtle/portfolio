@@ -51,7 +51,7 @@
     &__container {
         height: 100%;
         @include flex-box(column);
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         flex-wrap: no-wrap;
         padding: 1.5rem;
@@ -65,7 +65,7 @@
     }
 
     &__text {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin: 0;
 
         &--lavender {
@@ -81,6 +81,7 @@
         width: auto;
         height: 40%;
         animation: levitate 3s ease-in-out infinite;
+        margin-top: 5rem;
     }
 
     &__arrow-icon {
