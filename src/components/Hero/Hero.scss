@@ -126,17 +126,33 @@
         &--linkedin {
             background-color: $button-secondary-color;
             color: $button-primary-text;
+            border: .0625rem solid $button-secondary-color;
+            border-radius: 1.25rem;
             padding-block: 0.25rem;
             padding-inline: 1rem;
-            border-radius: 1.25rem;
+
+            &:hover {
+                background-color: transparent;
+                color: $button-hover-text;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
         }
 
         &--github {
             background-color: $button-primary-color;
             color: $button-primary-text;
+            border: .0625rem solid $button-primary-color;
+            border-radius: 1.25rem;
             padding-block: 0.25rem;
             padding-inline: 1rem;
-            border-radius: 1.25rem;
+
+            &:hover {
+                background-color: transparent;
+                color: $button-hover-text;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
         }
     }
 
