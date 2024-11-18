@@ -1,0 +1,39 @@
+// import partials
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+.header {
+    width: 100%;
+    @include flex-box(row);
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+
+    
+    &__icon {
+        width: auto;
+        height: 60px;
+    }
+}
+
+.navbar {
+    width: 50%;
+    @include flex-box(row);
+    justify-content: space-evenly;
+    
+    @include tablet {
+        padding-block: 0.5rem;
+        padding-inline: 2rem;
+    }
+
+    &__link {
+        font-family: "Gaegu", sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0;
+    }
+}
