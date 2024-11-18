@@ -4,15 +4,12 @@ import "./Header.scss";
 // import components
 import { Link } from "react-router-dom";
 
-// import image
-import catIcon from "../../assets/icons/cat-icon.gif";
-
 export function Header() {
     return (
         <header className="header">
                 <img
                     className="header__icon"
-                    src={catIcon}
+                    src="assets/icons/cat-icon.gif"
                 />
 
             <nav className="navbar">

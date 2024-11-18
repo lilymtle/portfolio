@@ -1,12 +1,8 @@
 // import styling
 import "./Hero.scss";
 
-// import images
-import heroImage from "../../assets/images/hero-character.png";
-
 // import components
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { Link } from "react-router-dom";
 
 export function Hero() {
     return (
@@ -14,7 +10,7 @@ export function Hero() {
             <div className="hero__container">
                 <img
                     className="hero__character"
-                    src={heroImage}
+                    src="/assets/images/hero-character.png"
                     alt="illustration of a woman sitting on a beanbag with her hands in her pockets"
                 />
 

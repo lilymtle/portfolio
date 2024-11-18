@@ -1,8 +1,3 @@
-// import images
-import brainstationLogo from "../assets/logos/brainstation.png";
-import tmuLogo from "../assets/logos/tmu.jpg";
-import theVerseLogo from "../assets/logos/the-verse.jpeg";
-
 interface EducationExperience {
     index: number;
     institution: string;
@@ -29,7 +24,7 @@ export const educationExperience: EducationExperience[] = [
         qualification: "Diploma",
         discipline: "Software Engineering",
         gpa: 4.0,
-        logo: brainstationLogo
+        logo: "/assets/logos/brainstation.png"
     },
     {
         index: 2,
@@ -38,7 +33,7 @@ export const educationExperience: EducationExperience[] = [
         qualification: "Master's Degree",
         discipline: "Nursing",
         gpa: 4.0,
-        logo: tmuLogo
+        logo: "/assets/logos/tmu.jpg"
     }
 ];
 
@@ -48,6 +43,6 @@ export const professionalExperience: ProfessionalExperience[] = [
         company: "The Verse",
         date: "Nov 2024 - Present",
         role: "Web Developer Intern",
-        logo: theVerseLogo
+        logo: "/assets/logos/the-verse.jpeg"
     }
 ];
