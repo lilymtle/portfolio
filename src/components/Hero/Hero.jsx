@@ -27,14 +27,12 @@ export function Hero() {
                         Hi, there!
                     </h1>
 
-                    <p className="hero__text">
-                        My name is <span className="hero__text--lavender">Lily</span>, and it's so
-                        awesome to meet you. 😄
-                    </p>
-
-                    <p className="hero__text hero__text--cta">
-                        Let's get in touch!
-                    </p>
+                    <div className="hero__overlay">
+                        <p className="hero__text">
+                            My name is <span className="hero__text--lavender">Lily</span>, and it's so
+                            awesome to meet you. 😄 Let's get in touch!
+                        </p>
+                    </div>
 
                     <div className="hero__cta">
                         <p className="hero__button hero__button--linkedin">
@@ -49,6 +47,11 @@ export function Hero() {
 
                 <ArrowDownwardIcon 
                     className="hero__arrow-icon"
+                    sx={{
+                        fontSize: {
+                            sm: "2.5rem"
+                        }
+                    }}
                 />
             </div>
         </section>
