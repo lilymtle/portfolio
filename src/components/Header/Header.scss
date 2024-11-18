@@ -12,6 +12,7 @@
     padding-inline: 1rem;
 
     @include tablet {
+        justify-content: space-between;
         gap: 0;
         padding-block: 0.5rem;
         padding-inline: 2rem;
@@ -31,7 +32,7 @@
 .navbar {
     width: 100%;
     @include flex-box(row);
-    justify-content: space-around;
+    justify-content: space-between;
     
     @include tablet {
         width: 50%;
