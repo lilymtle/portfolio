@@ -7,9 +7,10 @@ footer {
     background-image: url("../../assets/images/footer-background.png");
     background-size: cover;
     background-position: center;
-    @include flex-box(column);
+    @include flex-box(row);
+    justify-content: space-between;
     align-items: center;
-    padding-block: 0.25rem;
+    padding-block: 0.5rem;
     padding-inline: 1rem;
 }
 
@@ -24,5 +25,42 @@ footer {
             font-size: 1.3rem;
             font-weight: bold;
         }
+
+        &--credits {
+            background-color: white;
+            color: $black-medium;
+            font-family: "Gaegu", sans-serif;
+            font-size: 1rem;
+            padding-block: 0.25rem;
+            padding-inline: 1rem;
+            border-radius: 1.25rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__modal {
+        font-size: 0.8rem;
+
+    }
+}
+
+.modal {
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        &-item {
+            @include flex-box(row);
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+    
+    &__link {
+        color: $modal-text-link;
+        text-decoration: none;
     }
 }
