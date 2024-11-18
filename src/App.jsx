@@ -5,7 +5,7 @@ import "./styles/global.scss";
 import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
-import { Footer } from "./components/Footer/Footer";
+import { Footer } from "./components/Footer/Footer.tsx";
 
 function App() {
 
