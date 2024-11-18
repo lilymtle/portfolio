@@ -134,6 +134,7 @@
             &:hover {
                 background-color: transparent;
                 color: $button-hover-text;
+                border: .0625rem solid $button-hover-border;
                 transition: 0.5s ease-in-out;
                 cursor: pointer;
             }
@@ -150,6 +151,7 @@
             &:hover {
                 background-color: transparent;
                 color: $button-hover-text;
+                border: .0625rem solid $button-hover-border;
                 transition: 0.5s ease-in-out;
                 cursor: pointer;
             }
