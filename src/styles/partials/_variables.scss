@@ -7,6 +7,7 @@ $black-medium: #222831;
 $black-light: #31363F;
 $light-grey: #EEEEEE;
 $teal: #76ABAE;
+$dark-lavender: #6962AD;
 
 /* global descriptive variables */
 $global-background: $black;
@@ -14,9 +15,12 @@ $global-header: $teal;
 $global-subheader: $teal;
 $global-text: $black-medium;
 
-/* nav bar descriptive varibales */
+/* nav bar descriptive variables */
 $navbar-link-hover: $teal;
 $navbar-btn-bg: $teal;
+
+/* hero descriptive variable */
+$hero-header: $dark-lavender;
 
 /* tab descriptive variables */
 $tab-panel-bg: $light-grey;
