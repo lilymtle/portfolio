@@ -5,4 +5,44 @@
 
 .about {
     padding: 1.5rem;
+
+    &__header {
+        @include m-page-header($global-header);
+    }
+
+    &__subheader {
+        @include m-sub-header($global-subheader);
+        margin-bottom: 1rem;
+    }
+
+    &__label {
+        @include m-label($global-label);
+        margin: 0;
+    }
+
+    &__text {
+        @include m-body($global-text);
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__item {
+        @include flex-box(row);
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        &-text {
+            @include m-body($global-text);
+            margin: 0.25rem;
+        }
+    }
+
+    &__logo {
+        width: auto;
+        height: 2.5rem;
+    }
 }
