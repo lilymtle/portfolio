@@ -4,26 +4,37 @@
 @use "../../styles/partials/fonts.scss" as *;
 
 .header {
-    width: 100%;
     @include flex-box(row);
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    gap: 1.5rem;
     padding-block: 0.5rem;
-    padding-inline: 2rem;
+    padding-inline: 1rem;
 
+    @include tablet {
+        gap: 0;
+        padding-block: 0.5rem;
+        padding-inline: 2rem;
+    }
     
     &__icon {
         width: auto;
-        height: 60px;
+        height: 40px;
+
+        @include tablet {
+            width: auto;
+            height: 60px;
+        }
     }
 }
 
 .navbar {
-    width: 50%;
+    width: 100%;
     @include flex-box(row);
-    justify-content: space-evenly;
+    justify-content: space-around;
     
     @include tablet {
+        width: 50%;
         padding-block: 0.5rem;
         padding-inline: 2rem;
     }
@@ -31,11 +42,15 @@
     &__link {
         color: $navbar-primary-text;
         font-family: "Gaegu", sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: bold;
         margin: 0;
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
 
         &:hover {
             color: $navbar-link-hover;
