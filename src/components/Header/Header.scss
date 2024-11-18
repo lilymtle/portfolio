@@ -37,8 +37,20 @@
         font-weight: bold;
         margin: 0;
 
+        &:hover {
+            color: $navbar-link-hover;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+
         &--resume {
             color: $navbar-accent-text;
+
+            &:hover {
+                color: $navbar-secondary-link-hover;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
         }
     }
 }
