@@ -147,6 +147,22 @@ export const projects: Projects[] = [
             "/assets/icons/github-shield.svg",
         ],
         image: "/assets/images/coffeeshop.png",
-        video: "/assets/videos/coffeeshop.m4"
+        video: "/assets/videos/coffeeshop.mp4"
+    },
+    {
+        id: 9,
+        name: "CINEMATICATS",
+        description: "CINEMATICATs is a static web application that help users find movie recommendations with a cat companion.",
+        tools: [
+            "../assets/icons/html-shield.svg",
+            "../assets/icons/sass-shield.svg",
+            "../assets/icons/javascript-shield.svg",
+            "../assets/icons/axios-shield.png",
+            "../assets/icons/git-shield.svg",
+            "../assets/icons/github-shield.svg",
+            "../assets/icons/figma-shield.svg"
+        ],
+        image: "/assets/images/cinematicats.png",
+        video: "/assets/videos/cinematicats.mp4"
     }
 ];
