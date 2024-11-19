@@ -13,7 +13,7 @@ export const projects: Projects[] = [
     {
         id: 1,
         name: "MoodCompass",
-        description: "MoodCompass is dedicated to mental health, providing a safe space for managing negative moods through education. Resources are available without an account, but users need to sign up to favorite them. A mood tracker and log will be added in the future.",
+        description: "MoodCompass offers a safe space for managing negative moods through educational resources. Users can access resources without an account, but must sign up to favorite them. A mood tracker and log will be added in the future.",
         features: [
             "User services (registration, login, and logout",
             "User authentication and authorization",
