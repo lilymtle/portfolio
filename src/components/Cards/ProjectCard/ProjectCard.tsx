@@ -30,9 +30,9 @@ export function ProjectCard({ image, title, description, tools, live, video, git
                     <section className="card__description">
                         <p className="card__description--text">{description}</p>
 
-                        <p className="card__description--text">{notes}</p>
+                        <p className="card__description--text-small">{notes}</p>
 
-                        <p className="card__label">Built with:</p>
+                        <p className="card__description--text-blue">Built with:</p>
 
                         <Marquee>
                             {tools}
