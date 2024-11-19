@@ -1,15 +1,12 @@
-$navy: #2C394B;
-$space-navy: #334756;
-$orange-red: #FF4C29;
 $white: #FFFFFF;
 $black: #000000;
 $black-medium: #222831;
 $black-light: #31363F;
 $light-grey: #EEEEEE;
-$teal: #76ABAE;
 $dark-lavender: #6962AD;
 $light-blue: #789DBC;
 $pale-orange: #FFB26F;
+$pale-red: #C5705D;
 
 /* global descriptive variables */
 $global-background: $black;
@@ -44,31 +41,8 @@ $button-secondary-text: $black;
 $button-hover-text: $black-medium;
 $button-hover-border: $black-medium;
 
-/* tab descriptive variables */
-$tab-panel-bg: $light-grey;
-$tab-text: $black-medium;
-$tab-text-title: $teal;
-$tab-text-italics: $teal;
-$tab-hover: $black-light;
-$tab-selected-bg: $teal;
-$tab-hover-border: $white;
-
-/* card slide descriptive variables */
-$card-background: $white;
-$card-subheader: $teal;
-$card-text: $black-medium;
-$card-tools-bg: $teal;
-$card-tools-text: $white;
-$card-preview-btn-bg: $light-grey;
-$card-preview-btn-hover: $teal;
-$card-live-btn-bg: $teal;
-$card-live-btn-hover: $light-grey;
-$slide-btn-border: $black-medium;
-$slide-dot-border: $black-medium;
-
 /* modal descriptive variables */
 $modal-bg: $white;
+$modal-title: $pale-red;
 $modal-close-btn-bg: $light-grey;
 $modal-text-link: $dark-lavender;
-
-/* icon descriptive variables */
