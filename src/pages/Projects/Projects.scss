@@ -1,0 +1,17 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.projects {
+    padding: 1.5rem; 
+
+    &__header {
+        @include m-page-header($global-header);
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+}
