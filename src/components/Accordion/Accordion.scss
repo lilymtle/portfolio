@@ -1,0 +1,7 @@
+// import partials
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.MuiAccordion-heading {
+    @include m-body($global-text);
+}
