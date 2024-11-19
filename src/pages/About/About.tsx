@@ -2,14 +2,14 @@
 import "./About.scss";
 
 // import data
-import { educationExperience } from "../data/experience";
-import { professionalExperience } from "../data/experience";
-import { techLanguages } from "../data/skills";
-import { techTools } from "../data/skills";
-import { softSkills } from "../data/skills";
+import { educationExperience } from "../../data/experience";
+import { professionalExperience } from "../../data/experience";
+import { techLanguages } from "../../data/skills";
+import { techTools } from "../../data/skills";
+import { softSkills } from "../../data/skills";
 
 // import component
-import AccordionBox from "../components/Accordion/Accordion";
+import AccordionBox from "../../components/Accordion/Accordion";
 
 export function AboutPage() {
     return (
