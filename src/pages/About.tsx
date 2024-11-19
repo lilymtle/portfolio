@@ -106,7 +106,7 @@ export function AboutPage() {
                 <div className="about__wrapper">
 
                 <AccordionBox
-                    title="Technical Languages"
+                    title="Technical"
                 >
                     <ul className="about__list about__list--tech-skills">
                         {techLanguages.map((techLanguage, index) => (
