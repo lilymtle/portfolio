@@ -1,10 +1,10 @@
 // import styling
 import { ReactNode } from "react";
 import "../ProjectCard/ProjectCard.scss"
-
-import AccordionBox from "../../Accordion/Accordion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+import BasicModal from "../../Modal/Modal";
 
 interface Card {
     image: string;
@@ -19,6 +19,10 @@ interface Card {
 }
 
 export function ProjectCard({ image, title, description, tools, live, video, github, notes }: Card): JSX.Element {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     return (
         <div className="card__container">
             <div className="card" style={{backgroundImage: `url(${image})`, backgroundSize: "cover"}}>
@@ -40,12 +44,22 @@ export function ProjectCard({ image, title, description, tools, live, video, git
 
                         <div className="card__wrapper--buttons">
                             {live && <Link className="card__link" to={live}>Live</Link>}
-                            {video && <Link className="card__link" to={video}>Preview</Link>}
+                            {video && <p className="card__button" onClick={handleOpen}>Preview</p>}
                             {github && <Link className="card__link" to={github}>GitHub</Link>}
                         </div>
                     </section>
                 </div>
             </div>
+            <BasicModal 
+                open={open} 
+                handleClose={handleClose} 
+                modalClassName="project__modal"
+                title={title}
+            >
+                <video controls width="100%">
+                    <source src={video} type="video/mp4" />
+                </video>
+            </BasicModal>
         </div>
     )
 };
