@@ -2,96 +2,85 @@ interface Projects {
     id: number;
     name: string;
     description: string;
-    features?: string[];
     tools: string[];
     image: string;
     video?: string;
     live?: string;
     github?: string;
+    notes?: string;
 };
 
 export const projects: Projects[] = [
     {
         id: 1,
         name: "MoodCompass",
-        description: "MoodCompass offers a safe space for managing negative moods through educational resources. Users can access resources without an account, but must sign up to favorite them. A mood tracker and log will be added in the future.",
-        features: [
-            "User services (registration, login, and logout",
-            "User authentication and authorization",
-            "Protected routes",
-            "Favoriting and unfavoriting items",
-            "Dynamic data stored and retrieved from a database",
-            "Form validation"
-        ],
+        description: "MoodCompass offers a safe space for managing negative moods through educational resources. Users can access resources without an account, but must sign up to favorite them.",
         tools: [
-            "React",
-            "SASS",
-            "Node.js",
-            "MySQL",
-            "Express",
-            "Knex.js",
-            "Axios",
-            "Restful API Development",
-            "Firebase",
-            "Material UI",
-            "Git",
-            "GitHub"
+            "/assets/icons/react-shield.svg",
+            "/assets/icons/nodejs-shield.svg",
+            "/assets/icons/mysql-shield.svg",
+            "/assets/icons/javascript-shield.svg",
+            "/assets/icons/express-shield.svg",
+            "/assets/icons/knex-shield.png",
+            "/assets/icons/axios-shield.png",
+            "/assets/icons/sass-shield.svg",
+            "/assets/icons/firebase-shield.svg",
+            "/assets/icons/material-ui-shield.svg",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg"
         ],
         image: "/assets/images/mood-compass.png",
         live: "https://mood-compass.vercel.app/",
-        github: "https://github.com/lilymtle/mood-compass"
+        github: "https://github.com/lilymtle/mood-compass",
+        notes: "MoodCompass is still a work in progress. Feel free to check the GitHub repo for updates."
     },
     {
         id: 2,
         name: "Koru",
-        description: "Koru",
+        description: "Koru connects you to the Māori concept of growth and renewal, inviting daily reflections to foster gratitude and mindfulness.",
         tools: [
-            "Next.js",
-            "Tailwind CSS",
-            "JavaScript",
-            "TypeScript",
-            "Knex.js",
-            "MySQL",
-            "Material UI",
-            "Firebase",
-            "Git",
-            "GitHub"
+            "/assets/icons/nextjs-shield.svg",
+            "/assets/icons/typescript-shield.svg",
+            "/assets/icons/mysql-shield.svg",
+            "/assets/icons/knex-shield.png",
+            "/assets/icons/tailwind-shield.svg",
+            "/assets/icons/firebase-shield.svg",
+            "/assets/icons/material-ui-shield.svg",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg"
         ],
         image: "/assets/images/koru.png",
-        video: "/assets/videos/koru.mp4",
-        github: "https://github.com/lilymtle/koru"
+        github: "https://github.com/lilymtle/koru",
+        notes: "Koru is still a work in progress. Feel free to check the GitHub repo for updates."
     },
     {
         id: 3,
         name: "Portfolio",
-        description: "My personal porfolio.",
+        description: "My personal portfolio, offering a glimpse into who I am and the projects I've worked on. The thumbnail and preview display the previous version of my porfolio.",
         tools: [
-            "React",
-            "JavaScript",
-            "TypeScript",
-            "SASS",
-            "Material UI"
+            "/assets/icons/react-shield.svg",
+            "/assets/icons/typescript-shield.svg",
+            "/assets/icons/sass-shield.svg",
+            "/assets/icons/material-ui-shield.svg",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg"
         ],
         image: "/assets/images/portfolio.png",
+        video: "/assets/videos/portfolio.mp4",
         github: "https://github.com/lilymtle/portfolio"
     },
     {
         id: 4,
         name: "TELUS",
-        description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle.The quiz is engaging and short in order to reduce option paralysis and decision fatigue.",
-        features: [
-            "Carousel hero banner",
-            "Personalized quiz"
-        ],
+        description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle. The quiz is engaging and short in order to reduce option paralysis and decision fatigue. Developed using Agile (Scrum) methodology.",
         tools: [
-            "React",
-            "SASS",
-            "Axios",
-            "RESTFUL API Development",
-            "Git",
-            "GitHub",
-            "Agile (Scrum)",
-            "Jira"
+            "/assets/icons/react-shield.svg",
+            "/assets/icons/javascript-shield.svg",
+            "/assets/icons/axios-shield.png",
+            "/assets/icons/sass-shield.svg",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg",
+            "/assets/icons/jira-shield.svg"
         ],
         image: "/assets/images/telus.png",
         video: "/assets/videos/telus.mp4"
@@ -99,26 +88,19 @@ export const projects: Projects[] = [
     {
         id: 5,
         name: "InStock",
-        description: "InStock is a fully responsive full-stack web application that delivers an inventory Management System for a Fortune 500 client. It features a list of the client's warehouses inventory items.",
-        features: [
-            "Adding, modifying, and/or deleting a warehouse and/or inventory item",
-            "Dynamic data stored and retrieved from a database",
-            "Form validation"
-        ],
+        description: "InStock is a fully responsive full-stack web application that delivers an inventory Management System for a Fortune 500 client. It features a list of the client's warehouses inventory items. Developed using Agile (Scrum) methodology.",
         tools: [
-            "React",
-            "SASS",
-            "Node.js",
-            "MySQL",
-            "Express",
-            "Knex.js",
-            "Axios",
-            "RESTFUL API Development",
-            "Git",
-            "GitHub",
-            "Agile (Scrum)",
-            "Jira",
-            "Postman"
+            "/assets/icons/react-shield.svg",
+            "/assets/icons/nodejs-shield.svg",
+            "/assets/icons/mysql-shield.svg",
+            "/assets/icons/express-shield.svg",
+            "/assets/icons/knex-shield.png",
+            "/assets/icons/axios-shield.png",
+            "/assets/icons/sass-shield.svg",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg",
+            "/assets/icons/jira-shield.svg",
+            "/assets/icons/postman-shield.svg"
         ],
         image: "/assets/images/instock.png",
         video: "/assets/videos/instock.mp4"
@@ -127,19 +109,14 @@ export const projects: Projects[] = [
         id: 6,
         name: "BrainFlix",
         description: "BrainFlix is a fully responsive video streaming platform with its own API service.",
-        features: [
-            "Adding a video",
-            "Form validation"
-        ],
         tools: [
-            "React",
-            "SASS",
-            "Axios",
-            "RESTful API Development",
-            "JSON",
-            "Git",
-            "GitHub",
-            "Postman"
+            "/assets/icons/react-shield.svg",
+            "/assets/icons/axios-shield.png",
+            "/assets/icons/sass-shield.svg",
+            "/assets/icons/json-shield.png",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg",
+            "/assets/icons/postman-shield.svg"
         ],
         image: "/assets/images/brainflix.png",
         video: "/assets/videos/brainflix.mp4"
@@ -148,18 +125,13 @@ export const projects: Projects[] = [
         id: 7,
         name: "BandSite",
         description: "This is a fully responsive website for an up-and-coming band. It consists of two pages, the main page and shows page. The main page has information about the band and a photo gallery, whereas the shows page has a list of their upcoming shows.",
-        features: [
-            "Adding a comment",
-            "Form validation"
-        ],
         tools: [
-            "HTML",
-            "SASS",
-            "JavaScript",
-            "Axios",
-            "RESTful API Integration",
-            "Git",
-            "GitHub"
+            "/assets/icons/html-shield.svg",
+            "/assets/icons/sass-shield.svg",
+            "/assets/icons/javascript-shield.svg",
+            "/assets/icons/axios-shield.png",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg",
         ],
         image: "/assets/images/bandsite.png",
         video: "/assets/videos/bandsite.mp4"
@@ -168,15 +140,11 @@ export const projects: Projects[] = [
         id: 8,
         name: "CoffeeShop",
         description: "Coffee Shop is a static multi-page web application that is broken down into two pages: landing page and menu page. The landing page has product information, and the menu page provides further details about the coffee shop's offerings.",
-        features: [
-            "Adding a comment",
-            "Form validation"
-        ],
         tools: [
-            "HTML",
-            "SASS",
-            "Git",
-            "GitHub"
+            "/assets/icons/html-shield.svg",
+            "/assets/icons/sass-shield.svg",
+            "/assets/icons/git-shield.svg",
+            "/assets/icons/github-shield.svg",
         ],
         image: "/assets/images/coffeeshop.png",
         video: "/assets/videos/coffeeshop.m4"
