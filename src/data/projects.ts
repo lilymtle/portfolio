@@ -5,6 +5,7 @@ interface Projects {
     features?: string[];
     tools: string[];
     image: string;
+    video?: string;
     live?: string;
     github?: string;
 };
@@ -56,9 +57,9 @@ export const projects: Projects[] = [
             "Git",
             "GitHub"
         ],
-        image: "/assets/images/mood-compass.png",
-        live: "https://mood-compass.vercel.app/",
-        github: "https://github.com/lilymtle/mood-compass"
+        image: "/assets/images/koru.png",
+        video: "/assets/videos/koru.mp4",
+        github: "https://github.com/lilymtle/koru"
     },
     {
         id: 3,
@@ -71,7 +72,7 @@ export const projects: Projects[] = [
             "SASS",
             "Material UI"
         ],
-        image: "/assets/images/mood-compass.png",
+        image: "/assets/images/portfolio.png",
         github: "https://github.com/lilymtle/portfolio"
     },
     {
@@ -92,8 +93,8 @@ export const projects: Projects[] = [
             "Agile (Scrum)",
             "Jira"
         ],
-        image: "/assets/images/mood-compass.png",
-        github: "https://github.com/lilymtle/portfolio"
+        image: "/assets/images/telus.png",
+        video: "/assets/videos/telus.mp4"
     },
     {
         id: 5,
@@ -119,7 +120,8 @@ export const projects: Projects[] = [
             "Jira",
             "Postman"
         ],
-        image: "/assets/images/mood-compass.png",
+        image: "/assets/images/instock.png",
+        video: "/assets/videos/instock.mp4"
     },
     {
         id: 6,
@@ -139,7 +141,8 @@ export const projects: Projects[] = [
             "GitHub",
             "Postman"
         ],
-        image: "/assets/images/mood-compass.png",
+        image: "/assets/images/brainflix.png",
+        video: "/assets/videos/brainflix.mp4"
     },
     {
         id: 7,
@@ -158,7 +161,8 @@ export const projects: Projects[] = [
             "Git",
             "GitHub"
         ],
-        image: "/assets/images/mood-compass.png",
+        image: "/assets/images/bandsite.png",
+        video: "/assets/videos/bandsite.mp4"
     },
     {
         id: 8,
@@ -174,6 +178,7 @@ export const projects: Projects[] = [
             "Git",
             "GitHub"
         ],
-        image: "/assets/images/mood-compass.png",
+        image: "/assets/images/coffeeshop.png",
+        video: "/assets/videos/coffeeshop.m4"
     }
 ];
