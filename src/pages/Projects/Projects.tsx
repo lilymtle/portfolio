@@ -19,14 +19,18 @@ export function ProjectsPage() {
                             image={project.image}
                             title={project.name} 
                             description={project.description}
-                            features={project.features?.map((feature, featureIndex) => (
-                                <li key={featureIndex}>{feature}</li>
+                            tools={project.tools?.map((tool, toolIndex) => (
+                                <img 
+                                    key={toolIndex}
+                                    className="card__tools" 
+                                    src={tool} 
+                                    alt={`Tool ${index}`} 
+                                />
                             )) || []}
-                            tools={project.tools.map((tool, toolIndex) => (
-                                <li key={toolIndex}>{tool}</li>
-                            ))}
                             live={project.live}
+                            video={project.video}
                             github={project.github}
+                            notes={project.notes}
                         />
                     </li>
                 ))}
