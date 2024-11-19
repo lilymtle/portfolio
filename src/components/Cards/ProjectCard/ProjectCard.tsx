@@ -16,7 +16,7 @@ interface Card {
     github?: string;
 }
 
-export function Card({ image, title, description, role, features, tools, live, github }: Card): JSX.Element {
+export function ProjectCard({ image, title, description, role, features, tools, live, github }: Card): JSX.Element {
     return (
         <div className="card__container">
             <div className="card" style={{backgroundImage: `url(${image})`, backgroundSize: "cover"}}>
