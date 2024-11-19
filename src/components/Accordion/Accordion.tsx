@@ -1,3 +1,6 @@
+// import styling
+import "./Accordion.scss";
+
 // import components
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
