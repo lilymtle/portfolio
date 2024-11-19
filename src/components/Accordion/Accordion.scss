@@ -3,5 +3,5 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .MuiAccordion-heading {
-    @include m-body($global-text);
+    font-size: 0.75rem !important;
 }
