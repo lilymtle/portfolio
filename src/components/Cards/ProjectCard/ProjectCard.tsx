@@ -4,19 +4,21 @@ import "../ProjectCard/ProjectCard.scss"
 
 import AccordionBox from "../../Accordion/Accordion";
 import { Link } from "react-router-dom";
+import Marquee from "react-fast-marquee";
 
 interface Card {
     image: string;
     title: string;
     description: string;
     role?: string;
-    features: ReactNode[];
     tools: ReactNode[];
     live?: string;
+    video?: string;
     github?: string;
+    notes?: string;
 }
 
-export function ProjectCard({ image, title, description, role, features, tools, live, github }: Card): JSX.Element {
+export function ProjectCard({ image, title, description, tools, live, video, github, notes }: Card): JSX.Element {
     return (
         <div className="card__container">
             <div className="card" style={{backgroundImage: `url(${image})`, backgroundSize: "cover"}}>
@@ -27,21 +29,18 @@ export function ProjectCard({ image, title, description, role, features, tools, 
 
                     <section className="card__description">
                         <p className="card__description--text">{description}</p>
-                        
-                        <div className="card__wrapper--accordion">
-                            {features && features.length > 0 && (
-                                <AccordionBox title="Features">
-                                    <ul>{features}</ul>
-                                </AccordionBox>
-                            )}
 
-                            <AccordionBox title="Tools Used">
-                                <ul>{tools}</ul>
-                            </AccordionBox>
-                        </div>
-                        
+                        <p className="card__description--text">{notes}</p>
+
+                        <p className="card__label">Built with:</p>
+
+                        <Marquee>
+                            {tools}
+                        </Marquee>
+
                         <div className="card__wrapper--buttons">
                             {live && <Link className="card__link" to={live}>Live</Link>}
+                            {video && <Link className="card__link" to={video}>Preview</Link>}
                             {github && <Link className="card__link" to={github}>GitHub</Link>}
                         </div>
                     </section>
