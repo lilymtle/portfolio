@@ -26,7 +26,7 @@ export function ProjectCard({ image, title, description, role, features, tools, 
                     </h3>
 
                     <section className="card__description">
-                        <p>{description}</p>
+                        <p className="card__description--text">{description}</p>
                         
                         <div className="card__wrapper--accordion">
                             {features && features.length > 0 && (
