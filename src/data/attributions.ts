@@ -29,5 +29,11 @@ export const attributions: Attribution[] = [
         name: "Skill Icons",
         creator: "Thijs",
         link: "https://skillicons.dev/"
+    },
+    {
+        id: 5,
+        name: "Markdown Badges",
+        creator: "Ileriayo Adebiyi",
+        link: "https://ileriayo.github.io/markdown-badges/"
     }
 ];
