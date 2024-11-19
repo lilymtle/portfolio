@@ -28,19 +28,22 @@ export function ProjectCard({ image, title, description, role, features, tools, 
                     <section className="card__description">
                         <p>{description}</p>
                         
-                        {features && features.length > 0 && (
-                            <AccordionBox title="Features">
-                                <ul>{features}</ul>
+                        <div className="card__wrapper--accordion">
+                            {features && features.length > 0 && (
+                                <AccordionBox title="Features">
+                                    <ul>{features}</ul>
+                                </AccordionBox>
+                            )}
+
+                            <AccordionBox title="Tools Used">
+                                <ul>{tools}</ul>
                             </AccordionBox>
-                        )}
-
-                        <AccordionBox title="Tools Used">
-                            <ul>{tools}</ul>
-                        </AccordionBox>
-
-                        {live && <Link className="card__link" to={live}>Live</Link>}
-                        {github && <Link className="card__link" to={github}>GitHub</Link>}
-
+                        </div>
+                        
+                        <div className="card__wrapper--buttons">
+                            {live && <Link className="card__link" to={live}>Live</Link>}
+                            {github && <Link className="card__link" to={github}>GitHub</Link>}
+                        </div>
                     </section>
                 </div>
             </div>
