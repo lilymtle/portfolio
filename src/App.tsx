@@ -6,7 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import { Footer } from "./components/Footer/Footer";
-import { AboutPage } from "./pages/About";
+import { AboutPage } from "./pages/About/About";
+import { ProjectsPage } from "./pages/Projects/Projects";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Hero />
         <AboutPage />
+        <ProjectsPage />
       </main>
       <Footer />
     </BrowserRouter>
