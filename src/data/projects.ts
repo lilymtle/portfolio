@@ -88,7 +88,7 @@ export const projects: Projects[] = [
     {
         id: 5,
         name: "InStock",
-        description: "InStock is a fully responsive full-stack web application that delivers an inventory Management System for a Fortune 500 client. It features a list of the client's warehouses inventory items. Developed using Agile (Scrum) methodology.",
+        description: "InStock is a fully responsive full-stack web app providing an inventory management system for a Fortune 500 client. It displays a list of warehouse inventory items and was developed using Agile (Scrum) methodology.",
         tools: [
             "/assets/icons/react-shield.svg",
             "/assets/icons/nodejs-shield.svg",
@@ -103,7 +103,8 @@ export const projects: Projects[] = [
             "/assets/icons/postman-shield.svg"
         ],
         image: "/assets/images/instock.png",
-        video: "/assets/videos/instock.mp4"
+        video: "/assets/videos/instock.mp4",
+        notes: "GitHub repo not publicly available per institution request."
     },
     {
         id: 6,
@@ -119,12 +120,14 @@ export const projects: Projects[] = [
             "/assets/icons/postman-shield.svg"
         ],
         image: "/assets/images/brainflix.png",
-        video: "/assets/videos/brainflix.mp4"
+        video: "/assets/videos/brainflix.mp4",
+        notes: "GitHub repo not publicly available per institution request."
+
     },
     {
         id: 7,
         name: "BandSite",
-        description: "This is a fully responsive website for an up-and-coming band. It consists of two pages, the main page and shows page. The main page has information about the band and a photo gallery, whereas the shows page has a list of their upcoming shows.",
+        description: "A fully responsive website for an emerging band, featuring two pages: the main page with band information and a photo gallery, and a shows page listing upcoming performances.",
         tools: [
             "/assets/icons/html-shield.svg",
             "/assets/icons/sass-shield.svg",
@@ -134,12 +137,13 @@ export const projects: Projects[] = [
             "/assets/icons/github-shield.svg",
         ],
         image: "/assets/images/bandsite.png",
-        video: "/assets/videos/bandsite.mp4"
+        video: "/assets/videos/bandsite.mp4",
+        notes: "GitHub repo not publicly available per institution request."
     },
     {
         id: 8,
         name: "CoffeeShop",
-        description: "Coffee Shop is a static multi-page web application that is broken down into two pages: landing page and menu page. The landing page has product information, and the menu page provides further details about the coffee shop's offerings.",
+        description: "CoffeeShop is a static, multi-page web app with two pages: a landing page featuring product information and a menu page detailing the shop's offerings.",
         tools: [
             "/assets/icons/html-shield.svg",
             "/assets/icons/sass-shield.svg",
@@ -147,7 +151,8 @@ export const projects: Projects[] = [
             "/assets/icons/github-shield.svg",
         ],
         image: "/assets/images/coffeeshop.png",
-        video: "/assets/videos/coffeeshop.mp4"
+        video: "/assets/videos/coffeeshop.mp4",
+        notes: "GitHub repo not publicly available per institution request."
     },
     {
         id: 9,
