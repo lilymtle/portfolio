@@ -10,6 +10,7 @@ import { AboutPage } from "./pages/About/About";
 import { ProjectsPage } from "./pages/Projects/Projects";
 import { ContactPage } from "./pages/Contact/Contact";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
+import ClickSpark from "./utils/clickSpark";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <ContactPage />
       </main>
       <Footer />
+      <click-spark />
     </BrowserRouter>
   )
 };
