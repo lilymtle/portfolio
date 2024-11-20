@@ -1,0 +1,154 @@
+// import partials
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.contact {
+    &__header {
+        @include m-page-header($global-header);
+    }
+
+    &__text {
+        @include m-body($global-text);
+        text-align: center;
+    }
+
+    &__buttons {
+        @include flex-box(row);
+        justify-content: flex-end;
+        gap: 0.5rem;
+        margin-bottom: 0;
+    }
+}
+
+.input {
+    &__wrapper {
+        margin-bottom: 15px;
+    }
+
+    &__field {
+        width: 100%;
+        font-family: "Garet", sans-serif;
+        @include m-body($global-text);
+        padding: 10px 0;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #666;
+        text-transform: uppercase;
+        outline: none;
+        transition: border-color .2s;
+
+        &::placeholder {
+            font-family: "Garet", sans-serif;
+        }
+    }
+}
+
+.button {
+    width: 100%;
+    font-family: "Gaegu", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1.25rem;
+    padding-block: 0.25rem;
+    padding-inline: 0.5rem;
+
+    &--cancel {
+        background-color: $light-grey;
+        color: $black-medium;
+        border: .0625rem solid $light-grey;
+    }
+
+    &--send {
+        background-color: $button-primary-color;
+        color: white;
+        border: .0625rem solid $button-secondary-color;
+    }
+}
+
+.container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.screen {
+    position: relative;
+    background: $oat;
+    border: .0625rem solid $light-grey;
+    border-radius: 15px;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+        z-index: -1;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: #4d4d4f;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        &--left {
+            margin-right: auto;
+        }
+
+        &--right {
+            display: flex;
+        }
+
+        &-button {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 3px;
+            border-radius: 8px;
+            background: white;
+
+            &--close {
+                background-color: $light-blue;
+            }
+
+            &--maximize {
+                background-color: $pale-orange;
+            }
+
+            &--minimize {
+                background-color: $pale-red;
+            }
+        }
+
+        &-ellipsis {
+            width: 3px;
+            height: 3px;
+            margin-left: 2px;
+            border-radius: 8px;
+            background: #999;
+        }
+    }
+
+    &__content {
+        @include flex-box(column);
+        padding: 1.5rem;
+
+        &-item {
+            flex: 1;
+            padding-block: 1.5625rem;
+
+            &--left {
+                @include flex-box(column);
+                align-items: center;
+            }
+        }
+    }
+}
