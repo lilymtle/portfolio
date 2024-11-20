@@ -2,6 +2,10 @@
 @use "./partials/variables.scss" as *;
 @use "./partials/mixins.scss" as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $global-background;
     color: $global-text;
