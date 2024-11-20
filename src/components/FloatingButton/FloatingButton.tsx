@@ -20,7 +20,7 @@ const FloatingButton = () => {
                 className="floating-button"
                 onClick={handleScrollToTop}>
                     <ArrowUpwardIcon
-                        sx={{fontSize: "1.5rem", color: "#FFFFFF"}} />
+                        sx={{fontSize: "1rem", color: "#FFFFFF"}} />
                 </div>
             )}
         </>
