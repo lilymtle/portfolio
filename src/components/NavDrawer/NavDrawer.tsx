@@ -59,8 +59,8 @@ export default function TemporaryDrawer() {
         <Box sx={{ width: 320 }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
                 {navDrawerLinks.map((navDrawerLink, index) => (
-                    <>
-                        <ListItem key={index} disablePadding>
+                    <div key={index}>
+                        <ListItem disablePadding>
                             <ListItemButton>
                                 {navDrawerLink.id === 3 ? (
                                         <ListItemText
@@ -87,7 +87,7 @@ export default function TemporaryDrawer() {
                         {index !== navDrawerLinks.length - 1 && (
                             <Divider sx={{ marginLeft: "2rem", marginRight: "2rem" }} />
                         )}
-                    </>
+                    </div>
                 ))}
             </List>
         </Box>
