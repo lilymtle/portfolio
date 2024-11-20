@@ -2,10 +2,13 @@
 import "./Header.scss";
 
 // import components
-import { Link } from "react-router-dom";
 import NavDrawer from "../NavDrawer/NavDrawer";
 
 export function Header() {
+    const handleNavigate = (path:string): void => {
+        window.open(path, "_blank");
+    };
+
     return (
         <header className="header">
                 <img
@@ -14,23 +17,26 @@ export function Header() {
                 />
 
             <nav className="navbar">
-                
                 <div className="navbar__hamburger">
                     <NavDrawer />
                 </div>
 
                 <div className="navbar__full">
-                    <Link className="navbar__link" to="/">
+                    <a className="navbar__link" href="#about">
                         About
-                    </Link>
+                    </a>
 
-                    <Link className="navbar__link" to="/">
+                    <a className="navbar__link" href="#projects">
                         Projects
-                    </Link>
+                    </a>
 
-                    <Link className="navbar__link navbar__link--resume" to="/">
+                    <a className="navbar__link navbar__link--resume" onClick={() => handleNavigate("/files/lily-le-resume.pdf")}>
                         Resume
-                    </Link>
+                    </a>
+
+                    <a className="navbar__link" href="#contact">
+                        Contact
+                    </a>
                 </div>
             </nav>
         </header>
