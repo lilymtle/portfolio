@@ -9,9 +9,11 @@ import EmailIcon from "@mui/icons-material/Email";
 import Joi from "joi";
 import { ChangeEvent, FormEvent, useState } from "react";
 
+import emailjs from "emailjs-com";
+
 const schema = Joi.object({
     name: Joi.string()
-        .alphanum()
+        .pattern(/^[A-Za-z\s]+$/)
         .min(3)
         .max(30)
         .required()
@@ -28,7 +30,6 @@ const schema = Joi.object({
             "string.email": "Please enter a valid email address"
         }),
     message: Joi.string()
-        .alphanum()
         .min(3)
         .max(300)
         .required()
@@ -51,6 +52,10 @@ interface Errors {
     message: string;
 }
 
+interface FormMessage {
+    message: string;
+}
+
 export function ContactPage() {
     const [formData, setFormData] = useState<FormData>({
         name: "",
@@ -65,12 +70,31 @@ export function ContactPage() {
 
     });
 
+    const [formMessage, setFormMessage] = useState<FormMessage>({
+        message: "Fill out this form to send me a message. 😊"
+    })
+
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
             ...prev,
             [name]: value
         }));
+
+        const { error } = schema.validate({ [name]: value }, { abortEarly: false });
+        
+        if (error) {
+            const fieldError = error.details.find(detail => detail.path[0] === name)?.message || "";
+            setErrors(prevErrors => ({
+                ...prevErrors,
+                [name]: fieldError
+            }));
+        } else {
+            setErrors(prevErrors => ({
+                ...prevErrors,
+                [name]: ""
+            }));
+        }
     };
 
     const handleSubmit = (e: FormEvent) => {
@@ -92,9 +116,23 @@ export function ContactPage() {
             setErrors(newErrors);
         } else {
             setErrors({ name: "", email: "", message: "" });
-            setFormData({ name: "", email: "", message: ""});
 
-            alert("Form submitted!");
+            const form = e.target as HTMLFormElement;
+
+            emailjs.sendForm(
+                "service_2cxmdzx",
+                "template_j211a9j",
+                form,
+                "tDdRLxrlqMtJXgleK"
+            )
+            .then((result) => {
+                console.log("Success:", result.text);
+                setFormData({ name: "", email: "", message: "" });
+                setFormMessage({ message: "Thank you for reaching out! I truly appreciate your message and will do my best to respond as soon as possible. 😁" });
+            }, (error) => {
+                console.error("Error:", error.text);
+                setFormMessage({ message: "Uh oh... Something went wrong! 😅 Please try again later, and we'll get it sorted." })
+            });
         }
     };
 
@@ -129,7 +167,7 @@ export function ContactPage() {
                                 </h2>
                             </div>
                             <p className="contact__text">
-                                Fill out this form to send me a message.
+                                {formMessage.message}
                             </p>
                         </div>
 
