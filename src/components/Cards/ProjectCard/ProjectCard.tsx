@@ -43,9 +43,9 @@ export function ProjectCard({ image, title, description, tools, live, video, git
                         </Marquee>
 
                         <div className="card__wrapper--buttons">
-                            {live && <Link className="card__link" to={live}>Live</Link>}
+                            {live && <a className="card__link" href={live} target="blank">Live</a>}
                             {video && <p className="card__button" onClick={handleOpen}>Preview</p>}
-                            {github && <Link className="card__link" to={github}>GitHub</Link>}
+                            {github && <a className="card__link" href={github} target="blank">GitHub</a>}
                         </div>
                     </section>
                 </div>
