@@ -6,6 +6,24 @@ import { TextField, InputAdornment } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 
+import Joi from "joi";
+
+const schema = Joi.object({
+    name: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(30)
+        .required(),
+    email: Joi.string()
+        .email({ minDomainSegments: 2, tlds: { allow: ["com", "ca", "net"]}})
+        .required,
+    message: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(30)
+        .required,
+})
+
 export function ContactPage() {
     return (
         <section id="contact" className="contact">
@@ -40,14 +58,15 @@ export function ContactPage() {
                             <div className="input__wrapper">
                                 <TextField
                                     className="input__field"
-                                    label="Name"
+                                    label="name"
+                                    variant="filled"
                                     slotProps={{
-                                    input: {
-                                        startAdornment: (
-                                            <InputAdornment position="start">
-                                                <PersonIcon sx={{fontSize: "1.2rem"}} />
-                                            </InputAdornment>
-                                        ),
+                                        input: {
+                                            startAdornment: (
+                                                <InputAdornment position="start">
+                                                    <PersonIcon sx={{fontSize: "1.2rem", paddingTop: "1rem", paddingBottom: "0.5rem"}} />
+                                                </InputAdornment>
+                                            ),
                                         },
                                     }}
                                 />
@@ -56,14 +75,15 @@ export function ContactPage() {
                             <div className="input__wrapper">
                                 <TextField
                                     className="input__field"
-                                    label="Email"
+                                    label="email"
+                                    variant="filled"
                                     slotProps={{
-                                    input: {
-                                        startAdornment: (
-                                            <InputAdornment position="start">
-                                                <EmailIcon sx={{fontSize: "1.2rem"}} />
-                                            </InputAdornment>
-                                        ),
+                                        input: {
+                                            startAdornment: (
+                                                <InputAdornment position="start">
+                                                    <EmailIcon sx={{fontSize: "1.2rem", paddingTop: "1rem", paddingBottom: "0.5rem"}} />
+                                                </InputAdornment>
+                                            ),
                                         },
                                     }}
                                 />
@@ -72,14 +92,17 @@ export function ContactPage() {
                             <div className="input__wrapper">
                                 <TextField
                                     className="input__field"
-                                    label="Message"
+                                    label="message"
+                                    id="message"
+                                    variant="filled"
                                     multiline
-                                    rows={4}
+                                    rows={2}
                                 />
                             </div>
 
                             <div className="contact__buttons">
                                 <button className="button button--cancel">CANCEL</button>
+                                
                                 <button className="button button--send">SEND</button>
                             </div>
                         </form>
