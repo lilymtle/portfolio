@@ -13,16 +13,13 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from "@mui/icons-material/Menu";
 
 interface navDrawerLinks {
     id: number;
     text: string;
-    link: string;
+    link?: string;
 }
 
 export default function TemporaryDrawer() {
@@ -32,10 +29,8 @@ export default function TemporaryDrawer() {
         setOpen(newOpen);
     };
 
-    const handleResumeClick = (): void => {
-        // Correct absolute path to the resume in the public folder
-        const resumePath = `${window.location.origin}/assets/files/lily-le-resume.pdf`;
-        window.open(resumePath, "_blank");  // Open the resume in a new tab
+    const handleResumeClick = (path:string): void => {
+        window.open(path, "_blank");
     };
 
     const navDrawerLinks: navDrawerLinks[] = [
@@ -52,7 +47,6 @@ export default function TemporaryDrawer() {
         {
             id: 3,
             text: "Resume",
-            link: "/assets/files/lily-le-resume.pdf"
         },
         {
             id: 4,
@@ -69,7 +63,6 @@ export default function TemporaryDrawer() {
                         <ListItem key={index} disablePadding>
                             <ListItemButton>
                                 {navDrawerLink.id === 3 ? (
-                                    // Special case for "Resume", use the custom onClick
                                         <ListItemText
                                             primary={navDrawerLink.text}
                                             className="navbar__text"
@@ -77,7 +70,7 @@ export default function TemporaryDrawer() {
                                                 color: "#FFB26F"
                                             }}
                                             disableTypography={true}
-                                            onClick={handleResumeClick}
+                                            onClick={() => handleResumeClick("/files/lily-le-resume.pdf")}
                                         />
                                 ) : (
                                     <a href={navDrawerLink.link}>
