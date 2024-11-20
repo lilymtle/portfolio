@@ -45,7 +45,7 @@ export function ContactPage() {
                                     input: {
                                         startAdornment: (
                                             <InputAdornment position="start">
-                                                <PersonIcon />
+                                                <PersonIcon sx={{fontSize: "1.2rem"}} />
                                             </InputAdornment>
                                         ),
                                         },
@@ -61,7 +61,7 @@ export function ContactPage() {
                                     input: {
                                         startAdornment: (
                                             <InputAdornment position="start">
-                                                <EmailIcon />
+                                                <EmailIcon sx={{fontSize: "1.2rem"}} />
                                             </InputAdornment>
                                         ),
                                         },
