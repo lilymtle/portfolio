@@ -8,6 +8,7 @@ import { Hero } from "./components/Hero/Hero";
 import { Footer } from "./components/Footer/Footer";
 import { AboutPage } from "./pages/About/About";
 import { ProjectsPage } from "./pages/Projects/Projects";
+import { ContactPage } from "./pages/Contact/Contact";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <AboutPage />
         <ProjectsPage />
+        <ContactPage />
       </main>
       <Footer />
     </BrowserRouter>
