@@ -9,12 +9,14 @@ import { Footer } from "./components/Footer/Footer";
 import { AboutPage } from "./pages/About/About";
 import { ProjectsPage } from "./pages/Projects/Projects";
 import { ContactPage } from "./pages/Contact/Contact";
+import FloatingButton from "./components/FloatingButton/FloatingButton";
 
 function App() {
 
   return (
     <BrowserRouter>
       <Header />
+      <FloatingButton />
       <main>
         <Hero />
         <AboutPage />
