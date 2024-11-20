@@ -5,6 +5,10 @@ import "./Hero.scss";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 export function Hero() {
+    const handleButtonClick = (path: string) => {
+        window.open(path, "_blank");
+    };
+
     return (
         <section className="hero">
             <div className="hero__container">
@@ -27,13 +31,17 @@ export function Hero() {
                     </div>
 
                     <div className="hero__cta">
-                        <p className="hero__button hero__button--linkedin">
-                            LinkedIn
-                        </p>
+                        <span className="hero__button-link" onClick={() => handleButtonClick("https://linkedin.com/in/lilymtle")}>
+                            <p className="hero__button hero__button--linkedin">
+                                LinkedIn
+                            </p>
+                        </span>
 
-                        <p className="hero__button hero__button--github">
-                            GitHub
-                        </p>
+                        <span className="hero__button-link" onClick={() => handleButtonClick("https://github.com/lilymtle")}>
+                            <p className="hero__button hero__button--github">
+                                GitHub
+                            </p>
+                        </span>
                     </div>
                 </div>
 
