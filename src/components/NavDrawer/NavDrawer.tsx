@@ -1,5 +1,10 @@
+// import styling
+import "./NavDrawer.scss";
+
 // import hook
 import { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -14,6 +19,12 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from "@mui/icons-material/Menu";
 
+interface navDrawerLinks {
+    id: number;
+    text: string;
+    link: string;
+}
+
 export default function TemporaryDrawer() {
     const [open, setOpen] = useState(false);
 
@@ -21,31 +32,69 @@ export default function TemporaryDrawer() {
         setOpen(newOpen);
     };
 
+    const handleResumeClick = (): void => {
+        // Correct absolute path to the resume in the public folder
+        const resumePath = `${window.location.origin}/assets/files/lily-le-resume.pdf`;
+        window.open(resumePath, "_blank");  // Open the resume in a new tab
+    };
+
+    const navDrawerLinks: navDrawerLinks[] = [
+        {
+            id: 1,
+            text: "About",
+            link: "#about"
+        },
+        {
+            id: 2,
+            text: "Projects",
+            link: "#projects"
+        },
+        {
+            id: 3,
+            text: "Resume",
+            link: "/assets/files/lily-le-resume.pdf"
+        },
+        {
+            id: 4,
+            text: "Contact",
+            link: "#contact"
+        }
+    ];
+
     const NavDrawer = (
-        <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+        <Box sx={{ width: 320 }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
+                {navDrawerLinks.map((navDrawerLink, index) => (
+                    <>
+                        <ListItem key={index} disablePadding>
+                            <ListItemButton>
+                                {navDrawerLink.id === 3 ? (
+                                    // Special case for "Resume", use the custom onClick
+                                        <ListItemText
+                                            primary={navDrawerLink.text}
+                                            className="navbar__text"
+                                            sx={{
+                                                color: "#FFB26F"
+                                            }}
+                                            disableTypography={true}
+                                            onClick={handleResumeClick}
+                                        />
+                                ) : (
+                                    <a href={navDrawerLink.link}>
+                                        <ListItemText
+                                            primary={navDrawerLink.text}
+                                            className="navbar__text"
+                                            disableTypography={true}
+                                        />
+                                    </a>
+                                )}
+                            </ListItemButton>
+                        </ListItem>
+
+                        {index !== navDrawerLinks.length - 1 && (
+                            <Divider sx={{ marginLeft: "2rem", marginRight: "2rem" }} />
+                        )}
+                    </>
                 ))}
             </List>
         </Box>
