@@ -37,14 +37,16 @@ export function Hero() {
                     </div>
                 </div>
 
-                <ArrowDownwardIcon 
-                    className="hero__arrow-icon"
-                    sx={{
-                        fontSize: {
-                            sm: "2.5rem"
-                        }
-                    }}
-                />
+                <a href="#about">
+                    <ArrowDownwardIcon 
+                        className="hero__arrow-icon"
+                        sx={{
+                            fontSize: {
+                                sm: "2.5rem"
+                            }
+                        }}
+                    />
+                </a>
             </div>
         </section>
     );
