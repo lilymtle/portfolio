@@ -98,9 +98,9 @@
         margin: 0;
 
         &:hover {
-            background-color: transparent;
-            color: $button-hover-text;
-            border: .0625rem solid $button-hover-border;
+            background-color: #4d4d4f;
+            color: $light-grey;
+            border: .0625rem solid #4d4d4f;
             transition: 0.5s ease-in-out;
             cursor: pointer;
         }
