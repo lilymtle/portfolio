@@ -4,6 +4,8 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .contact {
+    margin-bottom: 1rem;
+    
     &__header {
         @include m-page-header($global-header);
     }
@@ -69,7 +71,8 @@
 .container {
     flex: 0 1 700px;
     margin: auto;
-    padding: 1.5rem;
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
 }
 
 .screen {
