@@ -13,7 +13,7 @@ import AccordionBox from "../../components/Accordion/Accordion";
 
 export function AboutPage() {
     return (
-        <section className="about">
+        <section id="about" className="about">
             <h2 className="about__header">
                 About Me
             </h2>

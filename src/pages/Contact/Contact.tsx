@@ -8,7 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 export function ContactPage() {
     return (
-        <section className="contact">
+        <section id="contact" className="contact">
             <div className="container">
                 <div className="screen">
                     <div className="screen__header">

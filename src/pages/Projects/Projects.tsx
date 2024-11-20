@@ -7,7 +7,7 @@ import { ProjectCard } from "../../components/Cards/ProjectCard/ProjectCard";
 
 export function ProjectsPage() {
     return (
-        <section className="projects">
+        <section id="projects" className="projects">
             <h2 className="projects__header">
                 My Projects
             </h2>
