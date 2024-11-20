@@ -3,6 +3,7 @@ import "./Header.scss";
 
 // import components
 import { Link } from "react-router-dom";
+import NavDrawer from "../NavDrawer/NavDrawer";
 
 export function Header() {
     return (
@@ -13,17 +14,24 @@ export function Header() {
                 />
 
             <nav className="navbar">
-                <Link className="navbar__link" to="/">
-                    About
-                </Link>
+                
+                <div className="navbar__hamburger">
+                    <NavDrawer />
+                </div>
 
-                <Link className="navbar__link" to="/">
-                    Projects
-                </Link>
+                <div className="navbar__full">
+                    <Link className="navbar__link" to="/">
+                        About
+                    </Link>
 
-                <Link className="navbar__link navbar__link--resume" to="/">
-                    Resume
-                </Link>
+                    <Link className="navbar__link" to="/">
+                        Projects
+                    </Link>
+
+                    <Link className="navbar__link navbar__link--resume" to="/">
+                        Resume
+                    </Link>
+                </div>
             </nav>
         </header>
     )
