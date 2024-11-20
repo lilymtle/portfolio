@@ -18,7 +18,7 @@ export function Footer() {
         <>
             <footer>
                 <p className="footer__text">
-                    © Crafted with 💜 by <span className="footer__text--bold">Lily</span>
+                    © Crafted with 💜 (and also React, TypeScript + SASS) by Lily.
                 </p>
                 <p 
                     className="footer__text footer__text--credits"
