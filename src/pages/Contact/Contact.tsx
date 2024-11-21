@@ -183,7 +183,20 @@ export function ContactPage() {
                                         input: {
                                             startAdornment: (
                                                 <InputAdornment position="start">
-                                                    <PersonIcon sx={{fontSize: "1.2rem", paddingTop: "1rem", paddingBottom: "0.5rem"}} />
+                                                    <PersonIcon 
+                                                        sx={{
+                                                            fontSize: {
+                                                                xs: "1.2rem",
+                                                                sm: "1.5rem",
+                                                                md: "1.5rem",
+                                                                lg: "1.5rem",
+                                                                xl: "1.5rem"
+                                                            },
+                                                            paddingTop: {
+                                                                xs: "0.5rem",
+                                                                sm: "0.3rem"
+                                                            }
+                                                        }} />
                                                 </InputAdornment>
                                             ),
                                         },
@@ -205,7 +218,20 @@ export function ContactPage() {
                                         input: {
                                             startAdornment: (
                                                 <InputAdornment position="start">
-                                                    <EmailIcon sx={{fontSize: "1.2rem", paddingTop: "1rem", paddingBottom: "0.5rem"}} />
+                                                    <EmailIcon 
+                                                        sx={{
+                                                            fontSize: {
+                                                                xs: "1.2rem",
+                                                                sm: "1.4rem",
+                                                                md: "1.4rem",
+                                                                lg: "1.5rem",
+                                                                xl: "1.5rem"
+                                                            },
+                                                            paddingTop: {
+                                                                xs: "0.5rem",
+                                                                sm: "0.3rem"
+                                                            }
+                                                        }} />
                                                 </InputAdornment>
                                             ),
                                         },
