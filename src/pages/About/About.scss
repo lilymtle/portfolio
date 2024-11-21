@@ -31,7 +31,6 @@
         &--texts {
             @include tablet {
                 width: 50%;
-                // background: blue;
             }
 
             @include desktop {
@@ -53,7 +52,7 @@
             }
         }
 
-        &--avatar{
+        &--avatar {
             @include flex-box(column);
             align-items: center;
 
@@ -85,7 +84,7 @@
 
     &__header {
         @include m-page-header($global-header);
-        
+
         @include tablet {
             @include td-page-header($global-header);
         }
@@ -139,7 +138,6 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 gap: 1rem;
-                // background: red;
             }
         }
     }
