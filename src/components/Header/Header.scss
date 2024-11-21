@@ -6,8 +6,7 @@
 .header {
     @include flex-box(row);
     justify-content: space-between;
-    padding-block: 0.5rem;
-    padding-inline: 1rem;
+    padding: 0.5rem 1rem;
 
     @include tablet {
         @include flex-box(row);

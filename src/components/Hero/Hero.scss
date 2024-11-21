@@ -106,8 +106,7 @@
         font-size: 1rem;
         text-align: center;
         border-radius: 1.25rem;
-        padding-block: 0.25rem;
-        padding-inline: 1rem;
+        padding: 0.25rem 1rem;
         z-index: 2;
 
         &--lavender {
@@ -139,8 +138,7 @@
             color: $button-primary-text;
             border: .0625rem solid $button-secondary-color;
             border-radius: 1.25rem;
-            padding-block: 0.25rem;
-            padding-inline: 1rem;
+            padding: 0.25rem 1rem;
 
             &:hover {
                 background-color: transparent;
@@ -156,8 +154,7 @@
             color: $button-primary-text;
             border: .0625rem solid $button-primary-color;
             border-radius: 1.25rem;
-            padding-block: 0.25rem;
-            padding-inline: 1rem;
+            padding: 0.25rem 1rem;
 
             &:hover {
                 background-color: transparent;
