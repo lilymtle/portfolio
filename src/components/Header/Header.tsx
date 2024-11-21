@@ -1,7 +1,7 @@
 // import styling
 import "./Header.scss";
 
-// import components
+// import component
 import NavDrawer from "../NavDrawer/NavDrawer";
 
 export function Header() {
