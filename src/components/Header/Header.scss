@@ -21,6 +21,7 @@
     &__icon {
         width: auto;
         height: 3.125rem;
+        display: block;
 
         @include tablet {
             width: auto;
@@ -32,6 +33,10 @@
             width: auto;
             height: 3.125rem;
             margin-left: 2rem;
+        }
+
+        &-link {
+            width: 50%;
         }
     }
 }
