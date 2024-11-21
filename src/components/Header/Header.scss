@@ -11,16 +11,7 @@
 
     @include tablet {
         @include flex-box(row);
-        justify-content: space-around;
         align-items: center;
-        gap: 1.5rem;
-    }
-
-    @include tablet {
-        justify-content: space-between;
-        gap: 0;
-        padding-block: 0.5rem;
-        padding-inline: 2rem;
     }
     
     &__icon {
@@ -35,7 +26,11 @@
 }
 
 .navbar {
-    // width: 100%;
+    width: 100%;
+
+    @include tablet {
+        width: 60%;
+    }
 
     &__hamburger {
         @include tablet {
@@ -56,12 +51,6 @@
             @include flex-box(row);
             justify-content: space-between;
         }
-    }
-    
-    @include tablet {
-        width: 50%;
-        padding-block: 0.5rem;
-        padding-inline: 2rem;
     }
 
     &__link {
