@@ -54,8 +54,15 @@ footer {
     }
 
     &__modal {
-        font-size: 0.8rem;
+        @include m-body($global-text);
 
+        @include tablet {
+            @include td-body($global-text);
+        }
+
+        @include desktop {
+            @include td-body($global-text);
+        }
     }
 }
 
@@ -72,7 +79,16 @@ footer {
     }
     
     &__link {
-        color: $modal-text-link;
+        @include m-body($modal-text-link);
+        font-weight: normal;
         text-decoration: none;
+
+        @include tablet {
+            @include td-body($modal-text-link);
+        }
+
+        @include desktop {
+            @include td-body($modal-text-link);
+        }
     }
 }
