@@ -2,6 +2,8 @@ $white: #FFFFFF;
 $black: #000000;
 $black-medium: #222831;
 $black-light: #31363F;
+
+$grey: #4d4d4f;
 $light-grey: #EEEEEE;
 $oat: #FBFBFB;
 $dark-lavender: #6962AD;
@@ -26,12 +28,21 @@ $navbar-secondary-link-hover: $black-medium;
 /* hero descriptive variable */
 $hero-header: $dark-lavender;
 
-/* footer descriptive variable */
+/* footer descriptive variables */
 $footer-text: $white;
 $footer-button-text: $black-medium;
 $footer-button: $white;
 $footer-hover-text: $light-blue;
 $footer-hover-border: $light-blue;
+
+/* contact descriptive variables */
+$screen-background: $oat;
+$screen-border: $light-grey;
+$screen-header: $grey;
+$screen-ellipsis: $light-grey;
+$form-label: $dark-lavender;
+$form-button: $grey;
+$form-button-border: $grey;
 
 /* button descriptive variables */
 $button-primary-color: $dark-lavender;
