@@ -53,11 +53,11 @@
             }
         }
 
-        &--texts-avatar {
+        &--description {
             @include tablet {
                 @include flex-box(row);
                 align-items: center;
-                // background: red;
+                justify-content: space-between;
             }
 
             @include desktop {
@@ -67,25 +67,12 @@
             }
         }
 
-        &--avatar-description {
+        &--avatar{
             @include flex-box(column);
             align-items: center;
 
             @include desktop {
                 width: 35%;
-            }
-
-            // @include tablet {
-            //     @include flex-box(column);
-            //     align-items: center;
-            // }
-        }
-
-        &--desktop {
-            @include desktop {
-                width: 100%;
-                @include flex-box(row);
-                justify-content: space-between;
             }
         }
 
@@ -93,6 +80,15 @@
             @include desktop {
                 width: 100%;
                 margin-top: 1rem;
+            }
+        }
+
+        /* wrapper for desktop breakpoint */
+        &--desktop {
+            @include desktop {
+                width: 100%;
+                @include flex-box(row);
+                justify-content: space-between;
             }
         }
     }
