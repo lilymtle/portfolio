@@ -5,8 +5,8 @@
 
 .contact {
     margin-bottom: 1rem;
-    
-        &__header {
+
+    &__header {
         @include m-page-header($global-header);
 
         @include tablet {
@@ -39,22 +39,13 @@
 
 .input {
     &__wrapper {
-        margin-bottom: 15px;
+        margin-bottom: .9375rem;
     }
 
     &__field {
         width: 100%;
-        padding: 10px 0;
-        background: none;
-        border: none;
-        border-bottom: 1px solid #666;
+        padding: .625rem 0;
         text-transform: uppercase;
-        outline: none;
-        transition: border-color .2s;
-
-        &::placeholder {
-            font-family: "Garet", sans-serif;
-        }
     }
 }
 
@@ -64,8 +55,7 @@
     font-size: 1rem;
     font-weight: bold;
     border-radius: 1.25rem;
-    padding-block: 0.25rem;
-    padding-inline: 0.5rem;
+    padding: 0.25rem 0.5rem;
 
     @include tablet {
         font-size: 1.5rem;
@@ -77,9 +67,9 @@
         border: .0625rem solid $button-secondary-color;
 
         &:hover {
-            background-color: #4d4d4f;
+            background-color: $form-button;
             color: $light-grey;
-            border: .0625rem solid #4d4d4f;
+            border: .0625rem solid $form-button-border;
             transition: 0.5s ease-in-out;
             cursor: pointer;
         }
@@ -87,7 +77,7 @@
 }
 
 .container {
-    flex: 0 1 700px;
+    flex: 0 1 43.75rem;
     margin: auto;
     padding-block: 0.5rem;
     padding-inline: 1.5rem;
@@ -105,30 +95,30 @@
 
 .screen {
     position: relative;
-    background: $oat;
-    border: .0625rem solid $light-grey;
-    border-radius: 15px;
+    background-color: $screen-background;
+    border: .0625rem solid $screen-border;
+    border-radius: .9375rem;
 
     &:after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         top: 0;
-        left: 20px;
-        right: 20px;
+        left: 1.25rem;
+        right: 1.25rem;
         bottom: 0;
-        border-radius: 15px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+        border-radius: .9375rem;
+        box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, .4);
         z-index: -1;
     }
 
     &__header {
         display: flex;
         align-items: center;
-        padding: 10px 20px;
-        background: #4d4d4f;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        padding: .625rem 1.25rem;
+        background-color: $screen-header;
+        border-top-left-radius: .9375rem;
+        border-top-right-radius: .9375rem;
 
         &--left {
             margin-right: auto;
@@ -140,11 +130,10 @@
 
         &-button {
             display: inline-block;
-            width: 8px;
-            height: 8px;
-            margin-right: 3px;
-            border-radius: 8px;
-            background: white;
+            width: .5rem;
+            height: .5rem;
+            margin-right: .1875rem;
+            border-radius: .5rem;
 
             &--close {
                 background-color: $light-blue;
@@ -160,11 +149,11 @@
         }
 
         &-ellipsis {
-            width: 3px;
-            height: 3px;
-            margin-left: 2px;
-            border-radius: 8px;
-            background: #999;
+            width: .1875rem;
+            height: .1875rem;
+            margin-left: .125rem;
+            border-radius: .5rem;
+            background-color: $screen-ellipsis;
         }
     }
 
@@ -206,7 +195,7 @@
 .MuiFormLabel-root {
     font-family: "Garet", sans-serif !important;
     font-size: 1rem !important;
-    color: $dark-lavender !important;
+    color: $form-label !important;
 
     @include tablet {
         font-size: 1.3rem !important;
