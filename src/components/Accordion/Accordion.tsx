@@ -6,6 +6,8 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+// import type
 import { ReactNode } from "react";
 
 interface AccordionProps {
@@ -13,7 +15,7 @@ interface AccordionProps {
     children: ReactNode;
 }
 
-export default function AccordionBox({title, children}: AccordionProps): JSX.Element {
+export default function AccordionBox({ title, children }: AccordionProps): JSX.Element {
     return (
             <Accordion className="accordion">
                 <AccordionSummary
@@ -28,4 +30,4 @@ export default function AccordionBox({title, children}: AccordionProps): JSX.Ele
                 </AccordionDetails>
             </Accordion>
     );
-}
+};
