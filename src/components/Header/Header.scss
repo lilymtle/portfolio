@@ -13,12 +13,22 @@
         @include flex-box(row);
         align-items: center;
     }
+
+    @include desktop {
+        @include flex-box(row);
+        align-items: center;
+    }
     
     &__icon {
         width: auto;
         height: 40px;
 
         @include tablet {
+            width: auto;
+            height: 60px;
+        }
+
+        @include desktop {
             width: auto;
             height: 60px;
         }
@@ -40,6 +50,10 @@
 
     @include tablet {
         width: 60%;
+    }
+
+    @include desktop { 
+        width: 40%;
     }
 
     &__hamburger {
@@ -65,6 +79,11 @@
             @include flex-box(row);
             justify-content: space-between;
         }
+
+        @include desktop {
+            @include flex-box(row);
+            justify-content: space-between;
+        }
     }
 
     &__link {
@@ -78,6 +97,10 @@
 
         @include tablet {
             font-size: 1.5rem;
+        }
+
+        @include desktop {
+            font-size: 1.8rem;
         }
 
         &:hover {

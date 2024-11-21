@@ -20,7 +20,15 @@
     &__header {
         @include m-page-header($global-header);
 
-        @include td-page-header($global-header);
+        @include tablet {
+            @include td-page-header($global-header);
+            margin-bottom: 3rem;
+        }
+
+        @include desktop {
+            @include td-page-header($global-header);
+            margin-bottom: 3rem;
+        }
     }
 
     &__list {

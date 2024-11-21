@@ -17,10 +17,18 @@
         max-width: 100%;
     }
 
+    @include desktop {
+        max-width: 100%;
+    }
+
     &__container {
         margin-bottom: 1.5rem;
 
         @include tablet {
+            margin-bottom: 0;
+        }
+
+        @include desktop {
             margin-bottom: 0;
         }
     }
@@ -41,7 +49,6 @@
         background-color: #fff;
         transform: translateY(100%) translateY(-5.5rem) translateZ(0);
         transition: transform 0.5s ease-out;
-
 
         &:before {
             z-index: -1;
@@ -68,6 +75,10 @@
         @include tablet {
             @include td-sub-header($global-primary-subheader);
         }
+
+        @include desktop {
+            @include td-sub-header($global-primary-subheader);
+        }
     }
     
     &__description {
@@ -81,6 +92,11 @@
         @include tablet {
             height: 72%;
             @include td-body($global-text);
+        }
+
+        @include desktop {
+            height: 72%;
+            @include td-body-medium($global-text);
         }
 
         &--text {
