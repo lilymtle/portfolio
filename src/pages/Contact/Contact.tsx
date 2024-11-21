@@ -71,7 +71,7 @@ export function ContactPage() {
     });
 
     const [formMessage, setFormMessage] = useState<FormMessage>({
-        message: "Fill out this form to send me a message. 😊"
+        message: "I'm glad you're here! If you'd like to connect or have any questions, ideas, or feedback, please fill out the form below. I'll get back to you soon! 😊"
     })
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
