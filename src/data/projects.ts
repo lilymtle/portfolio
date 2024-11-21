@@ -72,7 +72,7 @@ export const projects: Projects[] = [
     {
         id: 4,
         name: "TELUS",
-        description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle. The quiz is engaging and short in order to reduce option paralysis and decision fatigue.",
+        description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle.",
         tools: [
             "/assets/icons/react-shield.svg",
             "/assets/icons/javascript-shield.svg",
