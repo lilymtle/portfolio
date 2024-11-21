@@ -13,8 +13,16 @@
         0rem .0625rem .875rem 0rem rgba(0, 0, 0, 0.12);
     overflow: hidden;
 
+    @include tablet {
+        max-width: 100%;
+    }
+
     &__container {
         margin-bottom: 1.5rem;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
 
     &__wrapper {

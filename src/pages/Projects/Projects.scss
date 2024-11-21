@@ -7,12 +7,47 @@
     padding-block: 0.5rem;
     padding-inline: 1.5rem;
 
+    @include tablet {
+        padding-block: 1rem;
+        padding-inline: 7rem;
+    }
+
+    @include desktop {
+        padding-block: 1rem;
+        padding-inline: 15rem;
+    }
+
     &__header {
         @include m-page-header($global-header);
     }
 
     &__list {
+        width: 100%;
         list-style: none;
         padding: 0;
+
+        @include tablet {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+    }
+}
+
+.project {
+    &__item {
+        @include tablet {
+            width: 46%;
+        }
+
+        @include desktop {
+            width: 30%;
+        }
     }
 }

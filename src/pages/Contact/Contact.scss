@@ -6,7 +6,7 @@
 .contact {
     margin-bottom: 1rem;
     
-    &__header {
+        &__header {
         @include m-page-header($global-header);
     }
 
@@ -20,6 +20,12 @@
         justify-content: flex-end;
         gap: 0.5rem;
         margin-bottom: 0;
+    }
+
+    &__form {
+        @include desktop {
+            width: 50%;
+        }
     }
 }
 
@@ -89,6 +95,16 @@
     margin: auto;
     padding-block: 0.5rem;
     padding-inline: 1.5rem;
+
+    @include tablet {
+        padding-block: 1rem;
+        padding-inline: 7rem;
+    }
+
+    @include desktop {
+        padding-block: 1rem;
+        padding-inline: 15rem;
+    }
 }
 
 .screen {
@@ -160,9 +176,27 @@
         @include flex-box(column);
         padding: 1.5rem;
 
+        @include tablet {
+            padding: 2.5rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            padding: 2.5rem;
+        }
+
         &-item {
             flex: 1;
             padding-block: 1.5625rem;
+
+            @include tablet {
+                padding-block: 2.5rem;
+            }
+
+            @include desktop {
+                padding-block: 2.5rem;
+            }
 
             &--left {
                 @include flex-box(column);

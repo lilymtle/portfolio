@@ -7,9 +7,94 @@
     padding-block: 0.5rem;
     padding-inline: 1.5rem;
 
+    @include tablet {
+        padding-block: 1rem;
+        padding-inline: 7rem;
+    }
+
+    @include desktop {
+        padding-block: 1rem;
+        padding-inline: 15rem;
+    }
+
+    /* change to in-line styling for avatar?? */
+    &__avatar {
+        width: 150px !important;
+        height: 150px !important;
+
+        @include tablet {
+            width: 175px !important;
+            height: 175px !important;
+        }
+
+        @include desktop {
+            width: 200px !important;
+            height: 200px !important;
+        }
+
+        &-description {
+            font-size: 0.75rem;
+            font-style: italic;
+        }
+    }
+
     &__wrapper {
         @include flex-box(column);
         gap: 1rem;
+
+        &--texts {
+            @include tablet {
+                width: 50%;
+                // background: blue;
+            }
+
+            @include desktop {
+                width: 50%;
+            }
+        }
+
+        &--texts-avatar {
+            @include tablet {
+                @include flex-box(row);
+                align-items: center;
+                // background: red;
+            }
+
+            @include desktop {
+                @include flex-box(row);
+                gap: 2rem;
+                margin-top: 1rem;
+            }
+        }
+
+        &--avatar-description {
+            @include flex-box(column);
+            align-items: center;
+
+            @include desktop {
+                width: 35%;
+            }
+
+            // @include tablet {
+            //     @include flex-box(column);
+            //     align-items: center;
+            // }
+        }
+
+        &--desktop {
+            @include desktop {
+                width: 100%;
+                @include flex-box(row);
+                justify-content: space-between;
+            }
+        }
+
+        &--experience {
+            @include desktop {
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
     }
 
     &__header {
@@ -19,9 +104,35 @@
     &__subheader {
         @include m-sub-header($global-primary-subheader);
         margin-bottom: 1rem;
+        // background: green;
+
+        @include desktop {
+            width: 100%;
+            margin-block: 0 1rem;
+        }
 
         &--small {
             @include m-sub-header-small($global-secondary-subheader);
+            margin-top: 0;
+        }
+    }
+
+    &__experience {
+        &--columned-rows {
+            @include tablet {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            @include desktop {
+                width: 100%;
+                @include flex-box(row);
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1rem;
+                // background: red;
+            }
         }
     }
 
@@ -39,6 +150,12 @@
         &--soft-skills {
             color: white;
             margin: 0 auto;
+        }
+    }
+
+    &__skills {
+        @include desktop {
+            padding-inline: 4rem;
         }
     }
 
