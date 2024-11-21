@@ -1,3 +1,6 @@
+// import partials
+@use "../../styles/partials/variables.scss" as *;
+
 @keyframes levitate {
     0% {
         transform: translateY(0);
@@ -10,10 +13,9 @@
     }
 }
 
-
 .floating-button {
     position: fixed;
-    background-color: #A67B5B;
+    background-color: $floating-button;
     border-radius: 50%;
     padding: 0.8rem 1rem;
     bottom: 0;
@@ -25,7 +27,7 @@
 }
 
 .floating-button:hover {
-    background-color: #6F4E37;
+    background-color: $floating-button-hover;
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
