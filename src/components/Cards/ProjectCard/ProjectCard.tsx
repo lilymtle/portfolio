@@ -1,11 +1,15 @@
 // import styling
-import { ReactNode } from "react";
 import "../ProjectCard/ProjectCard.scss"
+
+// import hook 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
+// import components
 import Marquee from "react-fast-marquee";
 import BasicModal from "../../Modal/Modal";
 
+// import type
+import { ReactNode } from "react";
 interface Card {
     image: string;
     title: string;
@@ -16,7 +20,7 @@ interface Card {
     video?: string;
     github?: string;
     notes?: string;
-}
+};
 
 export function ProjectCard({ image, title, description, tools, live, video, github, notes }: Card): JSX.Element {
     const [open, setOpen] = useState(false);
@@ -25,7 +29,7 @@ export function ProjectCard({ image, title, description, tools, live, video, git
 
     return (
         <div className="card__container">
-            <div className="card" style={{backgroundImage: `url(${image})`, backgroundSize: "cover"}}>
+            <div className="card" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}>
                 <div className="card__info">
                     <h3 className="card__title">
                         {title}
@@ -52,9 +56,9 @@ export function ProjectCard({ image, title, description, tools, live, video, git
                     </section>
                 </div>
             </div>
-            <BasicModal 
-                open={open} 
-                handleClose={handleClose} 
+            <BasicModal
+                open={open}
+                handleClose={handleClose}
                 modalClassName="project__modal"
                 title={title}
             >
