@@ -1,8 +1,11 @@
-$white: #FFFFFF;
-$black: #000000;
+@use "./fonts.scss" as *;
+
 $black-medium: #222831;
 $black-light: #31363F;
 
+/* color variables */
+$white: #FFFFFF;
+$black: #000000;
 $grey: #4d4d4f;
 $light-grey: #EEEEEE;
 $oat: #FBFBFB;
@@ -10,6 +13,10 @@ $dark-lavender: #6962AD;
 $light-blue: #789DBC;
 $pale-orange: #FFB26F;
 $pale-red: #C5705D;
+
+/* font variables */
+$primary-font: "Garet" sans-serif;
+$secondary-font: "Gaegu", sans-serif;
 
 /* global descriptive variables */
 $global-background: $oat;
@@ -28,12 +35,12 @@ $navbar-secondary-link-hover: $black-medium;
 /* hero descriptive variable */
 $hero-header: $dark-lavender;
 
-/* footer descriptive variables */
-$footer-text: $white;
-$footer-button-text: $black-medium;
-$footer-button: $white;
-$footer-hover-text: $light-blue;
-$footer-hover-border: $light-blue;
+/* project card descriptive variables */
+$project-header-font: $secondary-font;
+$project-link: $white;
+$project-button: $grey;
+$project-button-text: $light-grey;
+$project-button-border: $grey;
 
 /* contact descriptive variables */
 $screen-background: $oat;
@@ -43,6 +50,13 @@ $screen-ellipsis: $light-grey;
 $form-label: $dark-lavender;
 $form-button: $grey;
 $form-button-border: $grey;
+
+/* footer descriptive variables */
+$footer-text: $white;
+$footer-button-text: $black-medium;
+$footer-button: $white;
+$footer-hover-text: $light-blue;
+$footer-hover-border: $light-blue;
 
 /* button descriptive variables */
 $button-primary-color: $dark-lavender;
