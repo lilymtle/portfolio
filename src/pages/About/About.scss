@@ -17,21 +17,7 @@
         padding-inline: 15rem;
     }
 
-    /* change to in-line styling for avatar?? */
     &__avatar {
-        width: 150px !important;
-        height: 150px !important;
-
-        @include tablet {
-            width: 175px !important;
-            height: 175px !important;
-        }
-
-        @include desktop {
-            width: 200px !important;
-            height: 200px !important;
-        }
-
         &-description {
             font-size: 0.75rem;
             font-style: italic;
