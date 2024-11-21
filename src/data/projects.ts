@@ -14,7 +14,7 @@ export const projects: Projects[] = [
     {
         id: 1,
         name: "MoodCompass",
-        description: "MoodCompass offers a safe space for managing negative moods through educational resources. Users can access resources without an account, but must sign up to favorite them.",
+        description: "MoodCompass offers a safe space for managing negative moods through educational resources.",
         tools: [
             "/assets/icons/react-shield.svg",
             "/assets/icons/nodejs-shield.svg",
@@ -72,7 +72,7 @@ export const projects: Projects[] = [
     {
         id: 4,
         name: "TELUS",
-        description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle. The quiz is engaging and short in order to reduce option paralysis and decision fatigue. Developed using Agile (Scrum) methodology.",
+        description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle. The quiz is engaging and short in order to reduce option paralysis and decision fatigue.",
         tools: [
             "/assets/icons/react-shield.svg",
             "/assets/icons/javascript-shield.svg",
@@ -88,7 +88,7 @@ export const projects: Projects[] = [
     {
         id: 5,
         name: "InStock",
-        description: "InStock is a fully responsive full-stack web app providing an inventory management system for a Fortune 500 client. It displays a list of warehouse inventory items and was developed using Agile (Scrum) methodology.",
+        description: "InStock is a fully responsive full-stack web app providing an inventory management system for a Fortune 500 client. It displays a list of warehouse inventory.",
         tools: [
             "/assets/icons/react-shield.svg",
             "/assets/icons/nodejs-shield.svg",
