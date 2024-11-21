@@ -1,6 +1,7 @@
 interface HardSkills {
     id: number;
     icon: string;
+    name: string;
     alt: string;
 };
 
@@ -14,57 +15,68 @@ export const techLanguages: HardSkills[] = [
     {
         id: 1,
         icon: "/assets/icons/html.svg",
-        alt: "HTML"
+        name: "HTML",
+        alt: "HTML icon"
     },
     {
         id: 2,
         icon: "/assets/icons/css.svg",
-        alt: "CSS",
+        name: "CSS",
+        alt: "CSS icon",
     },
     {
         id: 3,
         icon: "/assets/icons/sass.svg",
-        alt: "SASS"
+        name: "SASS",
+        alt: "SASS icon"
     },
     {
         id: 4,
         icon: "/assets/icons/tailwind.svg",
-        alt: "Tailwind CSS"
+        name: "Tailwind CSS",
+        alt: "Tailwind CSS icon"
     },
     {
         id: 5,
         icon: "/assets/icons/javascript.svg",
-        alt: "JavaScript"
+        name: "JavaScript",
+        alt: "JavaScript icon"
     },
     {
         id: 6,
         icon: "/assets/icons/typescript.svg",
-        alt: "TypeScript"
+        name: "TypeScript",
+        alt: "TypeScript icon"
     },
     {
         id: 7,
         icon: "/assets/icons/react.svg",
-        alt: "React"
+        name: "React",
+        alt: "React icon"
     },
     {
         id: 8,
         icon: "/assets/icons/nextjs.svg",
-        alt: "Next.js"
+        name: "Next.js",
+        alt: "Next.js icon"
     },
     {
         id: 9,
         icon: "/assets/icons/nodejs.svg",
-        alt: "Node.js"
+        name: "Node.js",
+        alt: "Node.js icon"
     },
     {
         id: 10,
         icon: "/assets/icons/express.svg",
-        alt: "Express"
+        name: "Express",
+        alt: "Express icon"
     },
     {
         id: 11,
         icon: "/assets/icons/mysql.svg",
-        alt: "MySQL"
+        name: "MySQL",
+        alt: "MySQL icon"
     }
 ];
 
@@ -72,27 +84,32 @@ export const techTools: HardSkills[] = [
     {
         id: 1,
         icon: "/assets/icons/git.svg",
-        alt: "Git"
+        name: "Git",
+        alt: "Git icon"
     },
     {
         id: 2,
         icon: "/assets/icons/github.svg",
-        alt: "GitHub"
+        name: "GitHub icon",
+        alt: "GitHub icon"
     },
     {
         id: 3,
         icon: "/assets/icons/firebase.svg",
-        alt: "Firebase"
+        name: "Firebase",
+        alt: "Firebase icon"
     },
     {
         id: 4,
         icon: "/assets/icons/postman.svg",
-        alt: "Postman"
+        name: "Postman",
+        alt: "Postman icon"
     },
     {
         id: 5,
         icon: "/assets/icons/material-ui.svg",
-        alt: "Material UI"
+        name: "Material UI",
+        alt: "Material UI icon"
     }
 ];
 
