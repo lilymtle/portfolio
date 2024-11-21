@@ -143,6 +143,9 @@ export function AboutPage() {
                                     src={techLanguage.icon}
                                     alt={techLanguage.alt}
                                 />
+                                <p className="skill__name">
+                                    {techLanguage.name}
+                                </p>
                             </li>
                         ))}
                     </ul>
@@ -159,6 +162,9 @@ export function AboutPage() {
                                     src={techTool.icon}
                                     alt={techTool.alt}
                                 />
+                                <p className="skill__name">
+                                    {techTool.name}
+                                </p>
                             </li>
                         ))}
                     </ul>
