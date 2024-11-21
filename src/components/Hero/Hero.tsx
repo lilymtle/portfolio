@@ -1,7 +1,7 @@
 // import styling
 import "./Hero.scss";
 
-// import components
+// import component
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 export function Hero() {
