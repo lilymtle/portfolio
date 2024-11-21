@@ -15,7 +15,6 @@ interface AccordionProps {
 
 export default function AccordionBox({title, children}: AccordionProps): JSX.Element {
     return (
-        <div>
             <Accordion className="accordion">
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
@@ -28,6 +27,5 @@ export default function AccordionBox({title, children}: AccordionProps): JSX.Ele
                     {children}
                 </AccordionDetails>
             </Accordion>
-        </div>
     );
 }
