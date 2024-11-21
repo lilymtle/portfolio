@@ -1,8 +1,10 @@
 // import styling
 import "./Footer.scss";
 
-// import components
+// import hook
 import { useState } from "react";
+
+// import components
 import { Link } from "react-router-dom";
 import BasicModal from "../Modal/Modal";
 
@@ -10,7 +12,7 @@ import BasicModal from "../Modal/Modal";
 import { attributions } from "../../data/attributions";
 
 export function Footer() {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState<boolean>(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -20,7 +22,7 @@ export function Footer() {
                 <p className="footer__text">
                     © Crafted with 💜 (and also React, TypeScript + SASS) by Lily.
                 </p>
-                <p 
+                <p
                     className="footer__text footer__text--credits"
                     onClick={handleOpen}
                 >
@@ -28,9 +30,9 @@ export function Footer() {
                 </p>
             </footer>
 
-            <BasicModal 
-                open={open} 
-                handleClose={handleClose} 
+            <BasicModal
+                open={open}
+                handleClose={handleClose}
                 modalClassName="footer__modal"
                 title="Credits"
             >
