@@ -24,6 +24,10 @@
     &__container {
         margin-bottom: 1.5rem;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @include tablet {
             margin-bottom: 0;
         }
