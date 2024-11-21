@@ -121,6 +121,10 @@
     &__text {
         @include m-body($global-text);
 
+        @include tablet {
+            @include td-body($global-text);
+        }
+
         &--experience {
             margin: 0.25rem;
         }
@@ -133,6 +137,10 @@
             @include m-body($global-text);
             text-align: center;
             margin: 0;
+
+            @include tablet {
+                @include td-body($global-text);
+            }
         }
     }
 
@@ -182,6 +190,10 @@
             width: 40%;
             @include flex-box(column);
             justify-content: center;
+
+            @include tablet {
+                width: 20%;
+            }
         }
     }
 
@@ -198,8 +210,11 @@
     }
 
     &__name {
-        @include m-label($global-text);
-        font-size: 0.6rem;
+        @include m-label-small($global-text);
         margin: 0;
+
+        @include tablet {
+            @include td-label($global-text);
+        }
     }
 }
