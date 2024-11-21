@@ -1,4 +1,4 @@
-// import styling
+// import partials
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 @use "../../styles/partials/fonts.scss" as *;
@@ -40,7 +40,6 @@
 
 .hero {
     @include flex-box(column);
-    // justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100vh;
@@ -53,8 +52,7 @@
         justify-content: flex-start;
         align-items: center;
         flex-wrap: no-wrap;
-        padding-block: 2rem;
-        padding-inline: 1.5rem;
+        padding: 2rem 1.5rem;
 
         @include tablet {
             height: 93%;
@@ -75,7 +73,7 @@
 
     &__overlay::before {
         content: "";
-        background-color: white;
+        background-color: $hero-overlay;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -87,7 +85,7 @@
     }
 
     &__header {
-        font-family: "Gaegu", sans-serif;
+        font-family: $hero-header-font;
         font-size: 5rem;
         line-height: 4.5rem;
         margin: 0;
@@ -113,19 +111,18 @@
         z-index: 2;
 
         &--lavender {
-            color: $dark-lavender;
+            color: $hero-name-text;
         }
     }
 
     &__cta {
-        // width: 100%;
         @include flex-box(row);
         justify-content: center;
         gap: 1rem;
     }
 
     &__button {
-        font-family: "Gaegu", sans-serif;
+        font-family: $hero-button-font;
         font-size: 1.5rem;
         text-transform: uppercase;
         font-weight: bold;
@@ -176,7 +173,6 @@
         width: auto;
         height: 40%;
         animation: levitate 3s ease-in-out infinite;
-        // margin-top: 5rem;
 
         @include tablet {
             height: 50%;
