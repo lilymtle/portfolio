@@ -179,6 +179,7 @@
         @include desktop {
             @include flex-box(row);
             flex-wrap: wrap;
+            gap: 6.5rem;
             padding: 2.5rem;
         }
 
