@@ -61,6 +61,12 @@
     text-transform: uppercase;
 }
 
+@mixin m-label-small ($color) {
+    font-size: .6rem;
+    color: $color;
+    text-transform: uppercase;
+}
+
 @mixin m-body($color) {
     font-size: .75rem;
     color: $color;
@@ -78,8 +84,20 @@
     color: $color;
 }
 
+@mixin td-label($color) {
+    font-size: .7rem;
+    color: $color;
+    text-transform: uppercase;
+}
+
+@mixin td-label-small($color) {
+    font-size: .75rem;
+    color: $color;
+    text-transform: uppercase;
+}
+
 @mixin td-body($color) {
-    font-size: .875rem;
+    font-size: .8125rem;
     color: $color;
 }
 
