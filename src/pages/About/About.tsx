@@ -20,11 +20,9 @@ export function AboutPage() {
                 About Me
             </h2>
 
-            <section className="about__wrapper--desktop">
-                
-                <div className="about__wrapper--texts-avatar">
-
-                    <div className="about__wrapper--avatar-description">
+            <div className="about__wrapper--desktop">
+                <div className="about__wrapper--description">
+                    <div className="about__wrapper--avatar">
                         <Avatar 
                             className="about__avatar"
                             src="/assets/images/catrick-and-bib.png"
@@ -123,7 +121,7 @@ export function AboutPage() {
                             </div>
                     </section>
                 </div>
-            </section>
+            </div>
             
             <section className="about__skills">
                 <h3 className="about__subheader--small">
