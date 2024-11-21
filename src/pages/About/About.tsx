@@ -8,10 +8,9 @@ import { techLanguages } from "../../data/skills";
 import { techTools } from "../../data/skills";
 import { softSkills } from "../../data/skills";
 
-import { Avatar } from "@mui/material";
-
-// import component
+// import components
 import AccordionBox from "../../components/Accordion/Accordion";
+import { Avatar } from "@mui/material";
 
 export function AboutPage() {
     return (
@@ -27,6 +26,20 @@ export function AboutPage() {
                             className="about__avatar"
                             src="/assets/images/catrick-and-bib.png"
                             alt="orange tabby and black cat"
+                            sx={{
+                                width: {
+                                    xs: 150,
+                                    sm: 175,
+                                    md: 175,
+                                    lg: 200
+                                },
+                                height: {
+                                    xs: 150,
+                                    sm: 175,
+                                    md: 175,
+                                    lg: 200
+                                },
+                            }}
                         />
 
                         <p className="about__avatar-description">
