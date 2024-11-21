@@ -1,8 +1,9 @@
 // import styling
 import "./Header.scss";
 
-// import component
+// import components
 import NavDrawer from "../NavDrawer/NavDrawer";
+import { Link } from "react-router-dom";
 
 export function Header() {
     const handleNavigate = (path:string): void => {
@@ -11,10 +12,12 @@ export function Header() {
 
     return (
         <header className="header">
+            <Link className="header__icon-link" to="/">
                 <img
                     className="header__icon"
                     src="assets/icons/cat-icon.gif"
                 />
+            </Link>
 
             <nav className="navbar">
                 <div className="navbar__hamburger">
