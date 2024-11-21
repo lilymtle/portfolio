@@ -10,7 +10,7 @@ a {
 }
 
 .navbar__text {
-    font-family: "Gaegu", sans-serif;
+    font-family: $navbar-font;
     font-size: 1.4rem; 
     color: $global-text;
     font-weight: bold;
