@@ -84,10 +84,12 @@
 
         @include tablet {
             @include td-page-header($global-header);
+            margin-bottom: 2rem;
         }
 
         @include desktop {
             @include td-page-header($global-header);
+            margin-bottom: 2rem;
         }
     }
 
