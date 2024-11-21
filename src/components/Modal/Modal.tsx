@@ -11,18 +11,18 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 
+// import type
 import { ReactNode } from "react";
 
 interface ModalProps {
     open: boolean;
-    handleClose: ()=> void;
+    handleClose: () => void;
     modalClassName?: string;
     title: string;
     children: ReactNode;
-    index?: ReactNode;
 }
 
-const BasicModal = ({ open, handleClose, modalClassName, title, children, index }: ModalProps): JSX.Element => {
+const BasicModal = ({ open, handleClose, modalClassName, title, children }: ModalProps): JSX.Element => {
 
     return (
         <div className="modal">
