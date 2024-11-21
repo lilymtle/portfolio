@@ -9,7 +9,7 @@ interface SoftSkills {
     id: number;
     emoji: string;
     skill: string;
-}
+};
 
 export const techLanguages: HardSkills[] = [
     {
@@ -184,4 +184,4 @@ export const softSkills: SoftSkills[] = [
         emoji: "📝",
         skill: "Documentation"
     }
-]
+];

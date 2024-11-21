@@ -14,7 +14,7 @@ interface ProfessionalExperience {
     date: string;
     role: string;
     logo: string;
-}
+};
 
 export const educationExperience: EducationExperience[] = [
     {
