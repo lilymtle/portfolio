@@ -79,16 +79,16 @@ footer {
     }
     
     &__link {
-        @include m-body($modal-text-link);
+        @include m-body($modal-link);
         font-weight: normal;
         text-decoration: none;
 
         @include tablet {
-            @include td-body($modal-text-link);
+            @include td-body($modal-link);
         }
 
         @include desktop {
-            @include td-body($modal-text-link);
+            @include td-body($modal-link);
         }
     }
 }
