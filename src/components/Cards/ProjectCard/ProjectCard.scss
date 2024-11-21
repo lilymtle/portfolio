@@ -42,6 +42,7 @@
         transform: translateY(100%) translateY(-5.5rem) translateZ(0);
         transition: transform 0.5s ease-out;
 
+
         &:before {
             z-index: -1;
             display: block;
@@ -66,9 +67,17 @@
     }
     
     &__description {
+        height: 72%;
+        @include flex-box(column);
+        justify-content: space-between;
         @include m-body($global-text);
         margin: 0;
         padding: 0 1.5rem 1.5rem;
+
+        @include tablet {
+            height: 72%;
+            @include td-body($global-text);
+        }
 
         &--text {
             margin-top: 0;
