@@ -20,9 +20,11 @@ function App() {
       <FloatingButton />
       <main>
         <Hero />
-        <AboutPage />
-        <ProjectsPage />
-        <ContactPage />
+        <div className="app-container">
+          <AboutPage />
+          <ProjectsPage />
+          <ContactPage />
+        </div>
       </main>
       <Footer />
       <click-spark />
