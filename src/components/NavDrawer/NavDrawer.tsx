@@ -4,8 +4,6 @@ import "./NavDrawer.scss";
 // import hook
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
-
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -15,21 +13,20 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from "@mui/icons-material/Menu";
-
 interface navDrawerLinks {
     id: number;
     text: string;
     link?: string;
-}
+};
 
 export default function TemporaryDrawer() {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState<boolean>(false);
 
     const toggleDrawer = (newOpen: boolean) => () => {
         setOpen(newOpen);
     };
 
-    const handleResumeClick = (path:string): void => {
+    const handleResumeClick = (path: string): void => {
         window.open(path, "_blank");
     };
 
@@ -63,15 +60,15 @@ export default function TemporaryDrawer() {
                         <ListItem disablePadding>
                             <ListItemButton>
                                 {navDrawerLink.id === 3 ? (
-                                        <ListItemText
-                                            primary={navDrawerLink.text}
-                                            className="navbar__text"
-                                            sx={{
-                                                color: "#FFB26F"
-                                            }}
-                                            disableTypography={true}
-                                            onClick={() => handleResumeClick("/files/lily-le-resume.pdf")}
-                                        />
+                                    <ListItemText
+                                        primary={navDrawerLink.text}
+                                        className="navbar__text"
+                                        sx={{
+                                            color: "#FFB26F"
+                                        }}
+                                        disableTypography={true}
+                                        onClick={() => handleResumeClick("/files/lily-le-resume.pdf")}
+                                    />
                                 ) : (
                                     <a href={navDrawerLink.link}>
                                         <ListItemText
@@ -96,7 +93,7 @@ export default function TemporaryDrawer() {
     return (
         <div>
             <Button onClick={toggleDrawer(true)}>
-                <MenuIcon sx={{color: "black"}}/>
+                <MenuIcon sx={{ color: "black" }} />
             </Button>
             <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
                 {NavDrawer}
