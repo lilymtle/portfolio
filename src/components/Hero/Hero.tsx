@@ -50,7 +50,7 @@ export function Hero() {
                         className="hero__arrow-icon"
                         sx={{
                             fontSize: {
-                                sm: "2.5rem"
+                                sm: "2rem"
                             }
                         }}
                     />
