@@ -48,7 +48,7 @@
 
             @include desktop {
                 @include flex-box(row);
-                gap: 2rem;
+                gap: 3rem;
                 margin-top: 1rem;
             }
         }
@@ -69,6 +69,10 @@
             }
         }
 
+        &--accordion {
+            margin-top: 1rem;
+        }
+
         /* wrapper for desktop breakpoint */
         &--desktop {
             @include desktop {
@@ -85,18 +89,22 @@
         @include tablet {
             @include td-page-header($global-header);
         }
+
+        @include desktop {
+            @include td-page-header($global-header);
+        }
     }
 
     &__subheader {
         @include m-sub-header($global-primary-subheader);
         margin-bottom: 1rem;
-        // background: green;
 
         @include tablet {
             @include td-sub-header($global-primary-subheader);
         }
 
         @include desktop {
+            @include td-sub-header($global-primary-subheader);
             width: 100%;
             margin-block: 0 1rem;
         }
@@ -105,7 +113,15 @@
             @include m-sub-header-small($global-secondary-subheader);
             margin-top: 0;
 
-            @include td-sub-header-small($global-secondary-subheader);
+            @include tablet {
+                @include td-sub-header-small($global-secondary-subheader);
+                margin-bottom: 0;
+            }
+
+            @include desktop {
+                @include td-sub-header-small($global-secondary-subheader);
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -135,6 +151,10 @@
             @include td-body($global-text);
         }
 
+        @include desktop {
+            @include td-body($global-text);
+        }
+
         &--experience {
             margin: 0.25rem;
         }
@@ -149,6 +169,10 @@
             margin: 0;
 
             @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
                 @include td-body($global-text);
             }
         }
@@ -182,6 +206,10 @@
                 flex-wrap: wrap;
                 gap: 1rem;
             }
+
+            @include desktop {
+                width: 100%;
+            }
         }
     }
 
@@ -204,6 +232,10 @@
             @include tablet {
                 width: 20%;
             }
+
+            @include desktop {
+                width: 15%;
+            }
         }
     }
 
@@ -224,6 +256,10 @@
         margin: 0;
 
         @include tablet {
+            @include td-label($global-text);
+        }
+
+        @include desktop {
             @include td-label($global-text);
         }
     }
