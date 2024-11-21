@@ -90,7 +90,7 @@ export const techTools: HardSkills[] = [
     {
         id: 2,
         icon: "/assets/icons/github.svg",
-        name: "GitHub icon",
+        name: "GitHub",
         alt: "GitHub icon"
     },
     {
