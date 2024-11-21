@@ -18,20 +18,20 @@
         @include flex-box(row);
         align-items: center;
     }
-    
+
     &__icon {
         width: auto;
-        height: 50px;
+        height: 3.125rem;
 
         @include tablet {
             width: auto;
-            height: 50px;
+            height: 3.125rem;
             margin-left: 1.5rem;
         }
 
         @include desktop {
             width: auto;
-            height: 50px;
+            height: 3.125rem;
             margin-left: 2rem;
         }
     }
@@ -56,7 +56,7 @@
         width: 60%;
     }
 
-    @include desktop { 
+    @include desktop {
         width: 60%;
     }
 
@@ -64,7 +64,7 @@
         @include tablet {
             display: none;
         }
-        
+
         @include desktop {
             display: none;
         }
@@ -78,7 +78,7 @@
         @include between-mobile-tablet {
             display: none;
         }
-        
+
         @include tablet {
             @include flex-box(row);
             justify-content: space-between;
@@ -92,7 +92,7 @@
 
     &__link {
         color: $navbar-primary-text;
-        font-family: "Gaegu", sans-serif;
+        font-family: $navbar-font;
         font-size: 1.2rem;
         text-transform: uppercase;
         text-decoration: none;
