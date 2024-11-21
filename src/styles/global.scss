@@ -2,13 +2,14 @@
 @use "./partials/variables.scss" as *;
 @use "./partials/mixins.scss" as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    // background:
-    //     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png"),
-    //     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png"),
-    //     $black;
+    background-color: $global-background;
     color: $global-text;
-    font-family: "Garet Book", sans-serif;
+    font-family: "Garet", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

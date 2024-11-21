@@ -1,19 +1,91 @@
 // import styling
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
 
-footer { 
-    @include m-body($global-text);
-    text-align: center;
-    padding: 1rem;
+footer {
+    background-image: url("/assets/images/footer-background.png");
+    background-size: cover;
+    background-position: center;
+    @include flex-box(row);
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
 
     @include tablet {
-        @include td-body($global-text);
-        padding: 2rem;
+        padding: 0.5rem 1.5rem;
     }
 
     @include desktop {
-        @include td-body($global-text);
-        padding: 2.5rem;
+        padding: 0.5rem 1.5rem;
+
+    }
+}
+
+.footer {
+    &__text {
+        @include m-body($footer-text);
+        font-size: 0.75rem;
+        margin: 0;
+
+        &--credits {
+            background-color: $footer-button;
+            @include m-body($footer-button-text);
+            font-family: $secondary-font;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: .0625rem solid $footer-button;
+            border-radius: 1.25rem;
+            padding: 0.25rem 1rem;
+
+            &:hover {
+                background-color: $footer-hover-button;
+                color: $footer-hover-text;
+                border: .0625rem solid $footer-hover-border;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__modal {
+        @include m-body($global-text);
+
+        @include tablet {
+            @include td-body($global-text);
+        }
+
+        @include desktop {
+            @include td-body($global-text);
+        }
+    }
+}
+
+.modal {
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        &-item {
+            @include flex-box(row);
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+    
+    &__link {
+        @include m-body($modal-link);
+        font-weight: normal;
+        text-decoration: none;
+
+        @include tablet {
+            @include td-body($modal-link);
+        }
+
+        @include desktop {
+            @include td-body($modal-link);
+        }
     }
 }

@@ -1,0 +1,214 @@
+// import partials
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.contact {
+    margin-bottom: 1rem;
+
+    &__header {
+        @include m-page-header($global-header);
+
+        @include tablet {
+            @include td-page-header($global-header);
+        }
+    }
+
+    &__text {
+        @include m-body($global-text);
+        text-align: center;
+
+        @include tablet {
+            @include td-body($global-text);
+        }
+    }
+
+    &__buttons {
+        @include flex-box(row);
+        justify-content: flex-end;
+        gap: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    &__form {
+        @include desktop {
+            width: 50%;
+        }
+    }
+}
+
+.input {
+    &__wrapper {
+        margin-bottom: .9375rem;
+    }
+
+    &__field {
+        width: 100%;
+        padding: .625rem 0;
+        text-transform: uppercase;
+    }
+}
+
+.button {
+    width: 100%;
+    font-family: "Gaegu", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1.25rem;
+    padding: 0.25rem 0.5rem;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
+
+    &--send {
+        background-color: $button-primary-color;
+        color: white;
+        border: .0625rem solid $button-secondary-color;
+
+        &:hover {
+            background-color: $form-button;
+            color: $light-grey;
+            border: .0625rem solid $form-button-border;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}
+
+.container {
+    flex: 0 1 43.75rem;
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+
+    @include tablet {
+        padding: 1rem 7rem;
+    }
+
+    @include desktop {
+        padding: 1rem 15rem;
+    }
+}
+
+.screen {
+    position: relative;
+    background-color: $screen-background;
+    border: .0625rem solid $screen-border;
+    border-radius: .9375rem;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 1.25rem;
+        right: 1.25rem;
+        bottom: 0;
+        border-radius: .9375rem;
+        box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, .4);
+        z-index: -1;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: .625rem 1.25rem;
+        background-color: $screen-header;
+        border-top-left-radius: .9375rem;
+        border-top-right-radius: .9375rem;
+
+        &--left {
+            margin-right: auto;
+        }
+
+        &--right {
+            display: flex;
+        }
+
+        &-button {
+            display: inline-block;
+            width: .5rem;
+            height: .5rem;
+            margin-right: .1875rem;
+            border-radius: .5rem;
+
+            &--close {
+                background-color: $light-blue;
+            }
+
+            &--maximize {
+                background-color: $pale-orange;
+            }
+
+            &--minimize {
+                background-color: $pale-red;
+            }
+        }
+
+        &-ellipsis {
+            width: .1875rem;
+            height: .1875rem;
+            margin-left: .125rem;
+            border-radius: .5rem;
+            background-color: $screen-ellipsis;
+        }
+    }
+
+    &__content {
+        @include flex-box(column);
+        padding: 1.5rem;
+
+        @include tablet {
+            padding: 2.5rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            gap: 6.5rem;
+            padding: 2.5rem;
+        }
+
+        &-item {
+            flex: 1;
+            padding-block: 1.5625rem;
+
+            @include tablet {
+                padding-block: 2.5rem;
+            }
+
+            @include desktop {
+                padding-block: 2.5rem;
+            }
+
+            &--left {
+                @include flex-box(column);
+                align-items: center;
+            }
+        }
+    }
+}
+
+.MuiFormLabel-root {
+    font-family: "Garet", sans-serif !important;
+    font-size: 1rem !important;
+    color: $form-label !important;
+
+    @include tablet {
+        font-size: 1.3rem !important;
+    }
+}
+
+.MuiInputBase-input {
+    font-family: "Garet", sans-serif !important;
+    font-size: 0.75rem !important;
+    padding-top: 2rem !important;
+
+    @include tablet {
+        font-size: 0.8rem !important;
+    }
+}
+
+#message {
+    padding: 0 !important;
+}

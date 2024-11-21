@@ -1,11 +1,11 @@
-// import styling
+// import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
 .modal {
     &__box {
-        background-color: $modal-bg;
+        background-color: $modal-background;
         border-radius: 0.25rem;
         padding: 1rem;
         position: absolute;
@@ -36,19 +36,23 @@
     &__wrapper {
         @include flex-box(row);
         justify-content: space-between;
+        margin-bottom: 1rem;
     }
 
     &__title {
-        font-family: "Garet Book", sans-serif !important;
-        @include m-body($teal !important);
+        font-family: $modal-font !important;
+        font-size: 1.8rem !important;
+        color: $modal-title !important;
+        font-weight: bold !important;
+        text-transform: uppercase;
         margin-bottom: 0.5rem;
 
         @include tablet {
-            @include td-sub-header($teal !important);
+            @include td-sub-header($modal-title !important);
         }
 
         @include desktop {
-            @include td-sub-header($teal !important);
+            @include td-sub-header($modal-title !important);
         }
     }
 
@@ -65,34 +69,17 @@
     }
 
     &__close-btn {
-        font-family: "Garet Book", sans-serif !important;
-        background-color: $modal-close-btn-bg !important;
-        @include m-body($teal !important);
+        background-color: $modal-button !important;
+        @include m-body($modal-title !important);
         display: block;
         margin: 0 auto;
 
         @include tablet {
-            @include td-body($teal !important);
+            @include td-body($modal-title !important);
         }
 
         @include desktop {
-            @include td-body($teal !important);
-        }
-    }
-
-    &__cat-btn {
-        font-family: "Garet Book", sans-serif !important;
-        background-color: $modal-close-btn-bg !important;
-        @include m-body($teal !important);
-        margin-left: 1rem !important;
-        text-transform: none; 
-
-        @include tablet {
-            @include td-body($teal !important);
-        }
-
-        @include desktop {
-            @include td-body($teal !important);
+            @include td-body($modal-title !important);
         }
     }
 }

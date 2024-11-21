@@ -1,14 +1,5 @@
 @font-face {
-    font-family: "Garet Book";
-    src: url("../../assets/fonts/Garet-Book.woff2") format("woff2"),
-        url("../../assets/fonts/Garet-Book.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Garet Book";
+    font-family: "Garet";
     src: url("../../assets/fonts/Garet-Book.woff2") format("woff2"),
         url("../../assets/fonts/Garet-Book.woff") format("woff");
     font-weight: 300;
@@ -24,48 +15,29 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
-    font-family: "Garet";
-    src: url("../../assets/fonts/Garet-Heavy.woff2") format("woff2"),
-        url("../../assets/fonts/Garet-Heavy.woff") format("woff");
-    font-weight: 900;
+    font-family: "Gaegu";
+    src: url("../../assets/fonts/Gaegu-Bold.woff2") format("woff2"),
+        url("../../assets/fonts/Gaegu-Bold.woff") format("woff");
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Garet Book";
-    src: url("../../assets/fonts/Garet-Book.woff2") format("woff2"),
-        url("../../assets/fonts/Garet-Book.woff") format("woff");
+    font-family: "Gaegu";
+    src: url("../../assets/fonts/Gaegu-Light.woff2") format("woff2"),
+        url("../../assets/fonts/Gaegu-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Garet";
-    src: url("../../assets/fonts/Garet-Heavy.woff2") format("woff2"),
-        url("../../assets/fonts/Garet-Heavy.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Garet";
-    src: url("../../assets/fonts/Garet-Heavy.woff2") format("woff2"),
-        url("../../assets/fonts/Garet-Heavy.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Garet Book";
-    src: url("../../assets/fonts/Garet-Book.woff2") format("woff2"),
-        url("../../assets/fonts/Garet-Book.woff") format("woff");
-    font-weight: 300;
+    font-family: "Gaegu";
+    src: url("../../assets/fonts/Gaegu-Regular.woff2") format("woff2"),
+        url("../../assets/fonts/Gaegu-Regular.woff") format("woff");
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

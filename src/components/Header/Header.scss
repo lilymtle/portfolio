@@ -1,46 +1,125 @@
-// import styling
+// import partials
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
 
-header {
-    width: 100%;
-    height: auto;
-    @include flex-box(column);
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem;
-    z-index: 1000;
-    box-sizing: border-box;
+.header {
+    @include flex-box(row);
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
 
     @include tablet {
         @include flex-box(row);
-        justify-content: space-between;
         align-items: center;
-        padding: 2rem;
     }
 
     @include desktop {
         @include flex-box(row);
-        justify-content: space-between;
         align-items: center;
-        padding: 2.5rem;
+    }
+
+    &__icon {
+        width: auto;
+        height: 3.125rem;
+
+        @include tablet {
+            width: auto;
+            height: 3.125rem;
+            margin-left: 1.5rem;
+        }
+
+        @include desktop {
+            width: auto;
+            height: 3.125rem;
+            margin-left: 2rem;
+        }
     }
 }
 
-.portfolio-logo {
-    width: auto;
-    height: 3.125rem;
-    transition: opacity 0.3s ease;
-    order: 1;
+.navbar {
+    width: 100%;
 
-    &:hover {
-        opacity: 0.5;
-        cursor: pointer;
+    @include mobile {
+        @include flex-box(row);
+        justify-content: end;
+        align-items: center;
     }
-}
 
-.nav-bar {
-    order: 2;
+    @include between-mobile-tablet {
+        @include flex-box(row);
+        justify-content: end;
+        align-items: center;
+    }
+
+    @include tablet {
+        width: 60%;
+    }
+
+    @include desktop {
+        width: 60%;
+    }
+
+    &__hamburger {
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__full {
+        @include mobile {
+            display: none;
+        }
+
+        @include between-mobile-tablet {
+            display: none;
+        }
+
+        @include tablet {
+            @include flex-box(row);
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            justify-content: space-between;
+        }
+    }
+
+    &__link {
+        color: $navbar-primary-text;
+        font-family: $navbar-font;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0;
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
+
+        @include desktop {
+            font-size: 1.8rem;
+        }
+
+        &:hover {
+            color: $navbar-link-hover;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+
+        &--resume {
+            color: $navbar-accent-text;
+
+            &:hover {
+                color: $navbar-secondary-link-hover;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
+        }
+    }
 }

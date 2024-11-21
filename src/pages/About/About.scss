@@ -1,0 +1,261 @@
+// import partials
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+.about {
+    padding: 0.5rem 1.5rem;
+
+    @include tablet {
+        padding: 1rem 7rem;
+    }
+
+    @include desktop {
+        padding: 1rem 15rem;
+    }
+
+    &__avatar {
+        &-description {
+            font-size: 0.75rem;
+            font-style: italic;
+        }
+    }
+
+    &__wrapper {
+        @include flex-box(column);
+        gap: 1rem;
+
+        &--texts {
+            @include tablet {
+                width: 50%;
+            }
+
+            @include desktop {
+                width: 50%;
+            }
+        }
+
+        &--description {
+            @include tablet {
+                @include flex-box(row);
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            @include desktop {
+                @include flex-box(row);
+                gap: 3rem;
+                margin-top: 1rem;
+            }
+        }
+
+        &--avatar {
+            @include flex-box(column);
+            align-items: center;
+
+            @include desktop {
+                width: 35%;
+            }
+        }
+
+        &--experience {
+            @include desktop {
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+
+        &--accordion {
+            margin-top: 1rem;
+        }
+
+        /* wrapper for desktop breakpoint */
+        &--desktop {
+            @include desktop {
+                width: 100%;
+                @include flex-box(row);
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__header {
+        @include m-page-header($global-header);
+
+        @include tablet {
+            @include td-page-header($global-header);
+        }
+
+        @include desktop {
+            @include td-page-header($global-header);
+        }
+    }
+
+    &__subheader {
+        @include m-sub-header($global-primary-subheader);
+        margin-bottom: 1rem;
+
+        @include tablet {
+            @include td-sub-header($global-primary-subheader);
+        }
+
+        @include desktop {
+            @include td-sub-header($global-primary-subheader);
+            width: 100%;
+            margin-block: 0 1rem;
+        }
+
+        &--small {
+            @include m-sub-header-small($global-secondary-subheader);
+            margin-top: 0;
+
+            @include tablet {
+                @include td-sub-header-small($global-secondary-subheader);
+                margin-bottom: 0;
+            }
+
+            @include desktop {
+                @include td-sub-header-small($global-secondary-subheader);
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__experience {
+        &--columned-rows {
+            @include tablet {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            @include desktop {
+                width: 100%;
+                @include flex-box(row);
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+        }
+    }
+
+    &__text {
+        @include m-body($global-text);
+
+        @include tablet {
+            @include td-body($global-text);
+        }
+
+        @include desktop {
+            @include td-body($global-text);
+        }
+
+        &--experience {
+            margin: 0.25rem;
+        }
+
+        &--tech-skills {
+            text-align: center;
+        }
+
+        &--soft-skills {
+            @include m-body($global-text);
+            text-align: center;
+            margin: 0;
+
+            @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
+                @include td-body($global-text);
+            }
+        }
+    }
+
+    &__skills {
+        @include desktop {
+            padding-inline: 4rem;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+
+        &--tech-skills {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        &--soft-skills {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+
+            @include tablet {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            @include desktop {
+                width: 100%;
+            }
+        }
+    }
+
+    &__item {
+        @include flex-box(row);
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        &--tech-skills {
+            @include flex-box(column);
+            margin: 0;
+        }
+
+        &--soft-skills {
+            width: 40%;
+            @include flex-box(column);
+            justify-content: center;
+
+            @include tablet {
+                width: 20%;
+            }
+
+            @include desktop {
+                width: 15%;
+            }
+        }
+    }
+
+    &__logo {
+        width: auto;
+        height: 2.5rem;
+    }
+}
+
+.skill {
+    &__icon {
+        width: auto;
+        height: 3.125rem;
+    }
+
+    &__name {
+        @include m-label-small($global-text);
+        margin: 0;
+
+        @include tablet {
+            @include td-label($global-text);
+        }
+
+        @include desktop {
+            @include td-label($global-text);
+        }
+    }
+}

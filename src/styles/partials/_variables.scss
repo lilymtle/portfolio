@@ -1,45 +1,87 @@
-$navy: #2C394B;
-$space-navy: #334756;
-$orange-red: #FF4C29;
-$white: #FFFFFF;
-$black: #000000;
+@use "./fonts.scss" as *;
+
 $black-medium: #222831;
 $black-light: #31363F;
+
+/* color variables */
+$white: #FFFFFF;
+$black: #000000;
+$grey: #4d4d4f;
 $light-grey: #EEEEEE;
-$teal: #76ABAE;
+$oat: #FBFBFB;
+$dark-lavender: #6962AD;
+$light-blue: #789DBC;
+$pale-orange: #FFB26F;
+$pale-red: #C5705D;
+$brown: #6F4E37;
+$light-brown: #A67B5B;
+
+/* font variables */
+$primary-font: "Garet" sans-serif;
+$secondary-font: "Gaegu", sans-serif;
 
 /* global descriptive variables */
-$global-background: $black;
-$global-header: $teal;
-$global-subheader: $teal;
+$global-background: $oat;
+$global-header: $dark-lavender;
+$global-primary-subheader: $light-blue;
+$global-secondary-subheader: $pale-orange;
 $global-text: $black-medium;
+$global-label: $black-medium;
 
-/* nav bar descriptive varibales */
-$navbar-link-hover: $teal;
-$navbar-btn-bg: $teal;
+/* header navbar descriptive variables */
+$navbar-font: $secondary-font;
+$navbar-primary-text: $black-medium;
+$navbar-accent-text: $pale-orange;
+$navbar-link-hover: $pale-orange;
+$navbar-secondary-link-hover: $black-medium;
 
-/* tab descriptive variables */
-$tab-panel-bg: $light-grey;
-$tab-text: $black-medium;
-$tab-text-title: $teal;
-$tab-text-italics: $teal;
-$tab-hover: $black-light;
-$tab-selected-bg: $teal;
-$tab-hover-border: $white;
+/* hero descriptive variables */
+$hero-header-font: $secondary-font;
+$hero-button-font: $secondary-font;
+$hero-name-text: $dark-lavender;
+$hero-overlay: $white;
 
-/* card slide descriptive variables */
-$card-background: $white;
-$card-subheader: $teal;
-$card-text: $black-medium;
-$card-tools-bg: $teal;
-$card-tools-text: $white;
-$card-preview-btn-bg: $light-grey;
-$card-preview-btn-hover: $teal;
-$card-live-btn-bg: $teal;
-$card-live-btn-hover: $light-grey;
-$slide-btn-border: $black-medium;
-$slide-dot-border: $black-medium;
+/* project card descriptive variables */
+$project-header-font: $secondary-font;
+$project-link: $white;
+$project-button: $grey;
+$project-button-text: $light-grey;
+$project-button-border: $grey;
+
+/* contact descriptive variables */
+$screen-background: $oat;
+$screen-border: $light-grey;
+$screen-header: $grey;
+$screen-ellipsis: $light-grey;
+$form-label: $dark-lavender;
+$form-button: $grey;
+$form-button-border: $grey;
+
+/* footer descriptive variables */
+$footer-text: $white;
+$footer-button-font: $secondary-font;
+$footer-button-text: $black-medium;
+$footer-button: $white;
+$footer-hover-text: $light-grey;
+$footer-hover-button: $grey;
+$footer-hover-border: $grey;
+
+/* floating button descriptive variables */
+$floating-button: $light-brown;
+$floating-button-hover: $brown;
+
+/* button descriptive variables */
+$button-primary-color: $dark-lavender;
+$button-secondary-color: $light-blue;
+$button-tertiary-color: $pale-orange;
+$button-primary-text: $white;
+$button-secondary-text: $black;
+$button-hover-text: $black-medium;
+$button-hover-border: $black-medium;
 
 /* modal descriptive variables */
-$modal-bg: $white;
-$modal-close-btn-bg: $light-grey;
+$modal-background: $white;
+$modal-font: $secondary-font;
+$modal-title: $pale-red;
+$modal-button: $light-grey;
+$modal-link: $dark-lavender;

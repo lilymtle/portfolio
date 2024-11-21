@@ -1,20 +1,15 @@
-// import styling
-@use "../../styles/partials/variables.scss" as *;
+// import partials
 @use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
 
-.accordion {
-    &__text {
-        color: $black;
-        margin: 0;
+.MuiAccordion-heading {
+    font-size: 0.75rem !important;
 
-        &--tools {
-            padding-top: 1.5rem;
-        }
+    @include tablet {
+        font-size: .8125rem !important;
+    }
 
-        &--bold {
-            color: $black;
-            font-weight: bold;
-            margin: 0 0 0.5rem 0;
-        }
+    @include desktop {
+        font-size: .8125rem !important;
     }
 }

@@ -1,117 +1,199 @@
-// import styling
+// import partials
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
 
-
-@keyframes move-background {
-    from {
-        -webkit-transform: translate3d(0rem, 0rem, 0rem);
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
     }
-    to {
-        -webkit-transform: translate3d(62.5rem, 0rem, 0rem);
+    50% {
+        transform: translateY(-0.625rem);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
-.stars {
-    background: black url("../../assets/images/stars.png") repeat;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    z-index: 0;
-}
+@keyframes wiggle {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
 
-.twinkling {
-    width: 625rem;
-    height: 100%;
-    background: transparent url("../../assets/images/twinkling.png") repeat;
-    background-size: 62.5rem 62.5rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    animation: move-background 70s linear infinite;
-}
+    20% {
+        transform: rotate(5deg);
+    }
 
-.clouds {
-    width: 625rem;
-    height: 100%;
-    background: transparent url("../../assets/images/clouds_repeat.png") repeat;
-    background-size: 62.5rem 62.5rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 3;
-    animation: move-background 150s linear infinite;
+    40% {
+        transform: rotate(-5deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
 }
 
 .hero {
-    position: relative;
+    @include flex-box(column);
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/images/hero-background.jpg");
+    background-size: cover;
 
-    &__background-container {
-        position: relative;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 0;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    &__img {
-        height: 70vh;
-        width: 70vh;
-        position: absolute;
-        top: 9rem;
-        z-index: 3;
-        right: 1.25rem;
-    }
-
-    &__content-container {
-        width: 100%;
-        @include flex-box(row);
+    &__container {
+        height: 100%;
+        @include flex-box(column);
+        justify-content: flex-start;
         align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        position: absolute;
-        bottom: 0;
-        padding: 1rem;
-        box-sizing: border-box;
-        z-index: 1000;
+        flex-wrap: no-wrap;
+        padding: 2rem 1.5rem;
 
         @include tablet {
-            gap: 1rem;
+            height: 93%;
+            justify-content: flex-start;
+            padding-inline: 10rem;
+        }
+        
+        @include desktop {
+            height: 93%;
+            justify-content: flex-start;
+            padding-inline: 10rem;
+        }
+    }
+
+    &__overlay {
+        position: relative;
+    }
+
+    &__overlay::before {
+        content: "";
+        background-color: $hero-overlay;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        border-radius: 1.25rem;
+        opacity: 60%;
+        z-index: 1;
+    }
+
+    &__header {
+        font-family: $hero-header-font;
+        font-size: 5rem;
+        line-height: 4.5rem;
+        margin: 0;
+
+        @include tablet {
+            text-align: center;
+            font-size: 6rem;
         }
 
         @include desktop {
-            gap: 1rem;
+            text-align: center;
+            font-size: 6rem;
         }
     }
 
     &__text {
-        @include m-body($white);
+        position: relative;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 1.25rem;
+        padding: 0.25rem 1rem;
+        z-index: 2;
+
+        &--lavender {
+            color: $hero-name-text;
+        }
+    }
+
+    &__cta {
+        @include flex-box(row);
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__button {
+        font-family: $hero-button-font;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        flex: 1;
+
+        &-link {
+            display: inline-block;
+        }
+
+        &--linkedin {
+            background-color: $button-secondary-color;
+            color: $button-primary-text;
+            border: .0625rem solid $button-secondary-color;
+            border-radius: 1.25rem;
+            padding: 0.25rem 1rem;
+
+            &:hover {
+                background-color: transparent;
+                color: $button-hover-text;
+                border: .0625rem solid $button-hover-border;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
+        }
+
+        &--github {
+            background-color: $button-primary-color;
+            color: $button-primary-text;
+            border: .0625rem solid $button-primary-color;
+            border-radius: 1.25rem;
+            padding: 0.25rem 1rem;
+
+            &:hover {
+                background-color: transparent;
+                color: $button-hover-text;
+                border: .0625rem solid $button-hover-border;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__character {
+        width: auto;
+        height: 40%;
+        animation: levitate 3s ease-in-out infinite;
 
         @include tablet {
-            @include td-body($white);
+            height: 50%;
+            margin-bottom: 1rem;
         }
 
         @include desktop {
-            @include td-body($white);
+            height: 55%;
+            margin-bottom: 1rem;
         }
     }
 
-    &__icon {
-        width: 1rem;
-        height: 1rem;
-        transition: opacity 0.3s ease;
+    &__arrow-icon {
+        color: $global-text;
+        animation: wiggle 3s ease-in-out infinite;
+        margin-top: 3rem;
 
-        &:hover {
-            opacity: 0.6;
+        @include tablet {
+            margin-top: 4rem;
         }
     }
+}
+
+/* aligns down arrow icon */
+a {
+    text-align: center;
 }

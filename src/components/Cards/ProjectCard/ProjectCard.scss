@@ -1,0 +1,153 @@
+// import partials
+@use "../../../styles/partials/fonts.scss" as *;
+@use "../../../styles/partials/mixins.scss" as *;
+@use "../../../styles/partials/variables.scss" as *;
+
+.card {
+    border-radius: 1rem;
+    max-width: 100%;
+    min-height: 25rem;
+    box-shadow: 0rem .1875rem .3125rem -0.0625rem rgba(0, 0, 0, 0.2),
+        0rem .3125rem .5rem 0rem rgba(0, 0, 0, 0.14),
+        0rem .0625rem .875rem 0rem rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+
+    @include tablet {
+        max-width: 100%;
+    }
+
+    @include desktop {
+        max-width: 100%;
+    }
+
+    &__container {
+        margin-bottom: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+
+        @include desktop {
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrapper {
+        &--buttons {
+            @include flex-box(row);
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__info {
+        position: relative;
+        width: 100%;
+        height: 25rem;
+        background-color: #fff;
+        transform: translateY(100%) translateY(-5.5rem) translateZ(0);
+        transition: transform 0.5s ease-out;
+
+        &:before {
+            z-index: -1;
+            display: block;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            filter: blur(.625rem);
+            background-size: cover;
+            opacity: 0.25;
+            transform: translateY(-100%) translateY(5.5rem) translateZ(0);
+            transition: transform 0.5s ease-out;
+        }
+    }
+
+    &__title {
+        @include m-sub-header($global-primary-subheader);
+        font-size: 2rem;
+        margin: 0;
+        padding: 1.5rem;
+
+        @include tablet {
+            @include td-sub-header($global-primary-subheader);
+        }
+
+        @include desktop {
+            @include td-sub-header($global-primary-subheader);
+        }
+    }
+
+    &__description {
+        height: 72%;
+        @include flex-box(column);
+        justify-content: space-between;
+        @include m-body($global-text);
+        margin: 0;
+        padding: 0 1.5rem 1.5rem;
+
+        @include tablet {
+            height: 72%;
+            @include td-body($global-text);
+        }
+
+        @include desktop {
+            height: 72%;
+            @include td-body-medium($global-text);
+        }
+
+        &--text {
+            margin-top: 0;
+
+            &-small {
+                font-size: 0.6rem;
+                font-style: italic;
+            }
+
+            &-blue {
+                font-family: $project-header-font;
+                font-size: 1.2rem;
+                color: $light-blue;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 0;
+            }
+        }
+    }
+
+    &__button,
+    &__link {
+        width: 100%;
+        background-color: $button-tertiary-color;
+        font-family: $project-header-font;
+        font-size: 1rem;
+        color: $project-link;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        border: .0625rem solid $button-tertiary-color;
+        border-radius: 1.25rem;
+        padding: 0.25rem 0.5rem;
+        margin: 0;
+
+        &:hover {
+            background-color: $project-button;
+            color: $project-button-text;
+            border: .0625rem solid $project-button-border;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}
+
+.card:hover .card__info,
+.card:hover .card__info:before {
+    transform: translateY(0) translateZ(0);
+}

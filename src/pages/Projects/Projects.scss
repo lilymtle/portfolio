@@ -1,0 +1,60 @@
+// import partials
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables" as *;
+
+.projects {
+    padding: 0.5rem 1.5rem;
+
+    @include tablet {
+        padding: 1rem 7rem;
+    }
+
+    @include desktop {
+        padding: 1rem 15rem;
+    }
+
+    &__header {
+        @include m-page-header($global-header);
+
+        @include tablet {
+            @include td-page-header($global-header);
+            margin-bottom: 3rem;
+        }
+
+        @include desktop {
+            @include td-page-header($global-header);
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        list-style: none;
+        padding: 0;
+
+        @include tablet {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+    }
+}
+
+.project {
+    &__item {
+        @include tablet {
+            width: 46%;
+        }
+
+        @include desktop {
+            width: 30%;
+        }
+    }
+}
