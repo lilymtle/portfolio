@@ -13,7 +13,7 @@ import { ReactNode } from "react";
 interface AccordionProps {
     title: string;
     children: ReactNode;
-}
+};
 
 export default function AccordionBox({ title, children }: AccordionProps): JSX.Element {
     return (
