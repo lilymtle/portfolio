@@ -141,67 +141,66 @@ export function AboutPage() {
                     Skills
                 </h3>
 
-                <div className="about__wrapper">
+                <div className="about__wrapper--accordion">
+                    <AccordionBox
+                        title="Technical"
+                    >
+                        <ul className="about__list about__list--tech-skills">
+                            {techLanguages.map((techLanguage, index) => (
+                                <li key={index} className="about__item about__item--tech-skills">                                    
+                                    <img 
+                                        className="skill__icon"
+                                        src={techLanguage.icon}
+                                        alt={techLanguage.alt}
+                                    />
+                                    <p className="skill__name">
+                                        {techLanguage.name}
+                                    </p>
+                                </li>
+                            ))}
+                        </ul>
+                    </AccordionBox>
 
-                <AccordionBox
-                    title="Technical"
-                >
-                    <ul className="about__list about__list--tech-skills">
-                        {techLanguages.map((techLanguage, index) => (
-                            <li key={index} className="about__item about__item--tech-skills">                                    
-                                <img 
-                                    className="skill__icon"
-                                    src={techLanguage.icon}
-                                    alt={techLanguage.alt}
-                                />
-                                <p className="skill__name">
-                                    {techLanguage.name}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </AccordionBox>
+                    <AccordionBox
+                        title="Tools"
+                    >
+                        <ul className="about__list about__list--tech-skills">
+                            {techTools.map((techTool, index) => (
+                                <li key={index} className="about__item about__item--tech-skills">                                    
+                                    <img 
+                                        className="skill__icon"
+                                        src={techTool.icon}
+                                        alt={techTool.alt}
+                                    />
+                                    <p className="skill__name">
+                                        {techTool.name}
+                                    </p>
+                                </li>
+                            ))}
+                        </ul>
 
-                <AccordionBox
-                    title="Tools"
-                >
-                    <ul className="about__list about__list--tech-skills">
-                        {techTools.map((techTool, index) => (
-                            <li key={index} className="about__item about__item--tech-skills">                                    
-                                <img 
-                                    className="skill__icon"
-                                    src={techTool.icon}
-                                    alt={techTool.alt}
-                                />
-                                <p className="skill__name">
-                                    {techTool.name}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
+                        <p className="about__text">
+                            Others:
+                        </p>
 
-                    <p className="about__text">
-                        Others:
-                    </p>
+                        <p className="about__text about__text--tech-skills">
+                            Agile (Scrum), Jira, RESTful API Development and Integration, Axios,
+                            Microsoft Office, Articulate 360
+                        </p>
+                    </AccordionBox>
 
-                    <p className="about__text about__text--tech-skills">
-                        Agile (Scrum), Jira, RESTful API Development and Integration, Axios,
-                        Microsoft Office, Articulate 360
-                    </p>
-                </AccordionBox>
-
-                <AccordionBox title="Soft">
-                    <ul className="about__list about__list--soft-skills">
-                        {softSkills.map((softSkill, index) => (
-                            <li key={index} className="about__item about__item--soft-skills"> 
-                                {softSkill.emoji}                                    
-                                <p className="about__text about__text--soft-skills">
-                                    {softSkill.skill}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </AccordionBox>
+                    <AccordionBox title="Soft">
+                        <ul className="about__list about__list--soft-skills">
+                            {softSkills.map((softSkill, index) => (
+                                <li key={index} className="about__item about__item--soft-skills"> 
+                                    {softSkill.emoji}                                    
+                                    <p className="about__text about__text--soft-skills">
+                                        {softSkill.skill}
+                                    </p>
+                                </li>
+                            ))}
+                        </ul>
+                    </AccordionBox>
                 </div>
             </section>
         </section>
