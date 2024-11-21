@@ -148,8 +148,9 @@
         }
 
         &--soft-skills {
-            color: white;
-            margin: 0 auto;
+            @include m-body($global-text);
+            text-align: center;
+            margin: 0;
         }
     }
 
@@ -171,9 +172,9 @@
         }
 
         &--soft-skills {
-            @include flex-box(column);
+            @include flex-box(row);
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
             gap: 1rem;
 
             @include tablet {
@@ -192,19 +193,13 @@
 
         &--tech-skills {
             @include flex-box(column);
-            // background: red;
-            // @include flex-box(row);
-            // flex-wrap: wrap;
             margin: 0;
         }
 
         &--soft-skills {
-            background-color: #C5705D;
-            width: 75%;
-            border-radius: 1.25rem;
-            padding-block: 0.25rem;
-            padding-inline: 1rem;
-            margin-bottom: 0;
+            width: 40%;
+            @include flex-box(column);
+            justify-content: center;
         }
     }
 
