@@ -191,8 +191,10 @@
         margin-bottom: 1rem;
 
         &--tech-skills {
-            @include flex-box(row);
-            flex-wrap: wrap;
+            @include flex-box(column);
+            // background: red;
+            // @include flex-box(row);
+            // flex-wrap: wrap;
             margin: 0;
         }
 
@@ -216,5 +218,11 @@
     &__icon {
         width: auto;
         height: 3.125rem;
+    }
+
+    &__name {
+        @include m-label($global-text);
+        font-size: 0.6rem;
+        margin: 0;
     }
 }
