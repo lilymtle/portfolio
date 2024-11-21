@@ -48,14 +48,22 @@
     background-size: cover;
 
     &__container {
-        height: 91%;
+        height: 100%;
         @include flex-box(column);
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: no-wrap;
-        padding: 1.5rem;
+        padding-block: 2rem;
+        padding-inline: 1.5rem;
 
         @include tablet {
+            height: 93%;
+            justify-content: flex-start;
+            padding-inline: 10rem;
+        }
+        
+        @include desktop {
+            height: 93%;
             justify-content: flex-start;
             padding-inline: 10rem;
         }
@@ -88,6 +96,11 @@
             text-align: center;
             font-size: 6rem;
         }
+
+        @include desktop {
+            text-align: center;
+            font-size: 6rem;
+        }
     }
 
     &__text {
@@ -98,9 +111,6 @@
         padding-block: 0.25rem;
         padding-inline: 1rem;
         z-index: 2;
-
-        @include tablet {
-        }
 
         &--lavender {
             color: $dark-lavender;
@@ -170,6 +180,11 @@
 
         @include tablet {
             height: 50%;
+            margin-bottom: 1rem;
+        }
+
+        @include desktop {
+            height: 55%;
             margin-bottom: 1rem;
         }
     }
