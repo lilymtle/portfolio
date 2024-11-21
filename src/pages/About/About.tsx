@@ -182,9 +182,10 @@ export function AboutPage() {
                 <AccordionBox title="Soft">
                     <ul className="about__list about__list--soft-skills">
                         {softSkills.map((softSkill, index) => (
-                            <li key={index} className="about__item about__item--soft-skills">                                    
+                            <li key={index} className="about__item about__item--soft-skills"> 
+                                {softSkill.emoji}                                    
                                 <p className="about__text about__text--soft-skills">
-                                {softSkill.emoji} {softSkill.skill}
+                                    {softSkill.skill}
                                 </p>
                             </li>
                         ))}
