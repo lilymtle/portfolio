@@ -1,11 +1,10 @@
+// import partials
 @use "../../../styles/partials/fonts.scss" as *;
 @use "../../../styles/partials/mixins.scss" as *;
 @use "../../../styles/partials/variables.scss" as *;
 
 .card {
     border-radius: 1rem;
-    // margin: 0 auto;
-    // width: 31.25rem;
     max-width: 100%;
     min-height: 25rem;
     box-shadow: 0rem .1875rem .3125rem -0.0625rem rgba(0, 0, 0, 0.2),
@@ -49,7 +48,7 @@
     &__info {
         position: relative;
         width: 100%;
-        height: 25rem; // or 31.25rem?
+        height: 25rem;
         background-color: #fff;
         transform: translateY(100%) translateY(-5.5rem) translateZ(0);
         transition: transform 0.5s ease-out;
@@ -84,7 +83,7 @@
             @include td-sub-header($global-primary-subheader);
         }
     }
-    
+
     &__description {
         height: 72%;
         @include flex-box(column);
@@ -112,7 +111,7 @@
             }
 
             &-blue {
-                font-family: "Gaegu", sans-serif;
+                font-family: $project-header-font;
                 font-size: 1.2rem;
                 color: $light-blue;
                 font-weight: bold;
@@ -121,27 +120,27 @@
             }
         }
     }
-    
-    &__button, &__link {
+
+    &__button,
+    &__link {
         width: 100%;
         background-color: $button-tertiary-color;
-        font-family: "Gaegu", sans-serif;
+        font-family: $project-header-font;
         font-size: 1rem;
-        color: white;
+        color: $project-link;
         font-weight: bold;
         text-decoration: none;
         text-align: center;
         text-transform: uppercase;
         border: .0625rem solid $button-tertiary-color;
         border-radius: 1.25rem;
-        padding-block: 0.25rem;
-        padding-inline: 0.5rem;
+        padding: 0.25rem 0.5rem;
         margin: 0;
 
         &:hover {
-            background-color: #4d4d4f;
-            color: $light-grey;
-            border: .0625rem solid #4d4d4f;
+            background-color: $project-button;
+            color: $project-button-text;
+            border: .0625rem solid $project-button-border;
             transition: 0.5s ease-in-out;
             cursor: pointer;
         }
