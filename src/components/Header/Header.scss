@@ -28,6 +28,16 @@
 .navbar {
     width: 100%;
 
+    @include mobile {
+        @include flex-box(row);
+        justify-content: end;
+    }
+
+    @include between-mobile-tablet {
+        @include flex-box(row);
+        justify-content: end;
+    }
+
     @include tablet {
         width: 60%;
     }
@@ -44,6 +54,10 @@
 
     &__full {
         @include mobile {
+            display: none;
+        }
+
+        @include between-mobile-tablet {
             display: none;
         }
         
