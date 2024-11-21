@@ -17,19 +17,13 @@ footer {
 
 .footer {
     &__text {
-        color: $footer-text;
+        @include m-body($footer-text);
         font-size: 0.75rem;
         margin: 0;
 
-        &--bold {
-            font-family: "Gaegu", sans-serif;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
         &--credits {
             background-color: $footer-button;
-            color: $footer-button-text;
+            @include m-body($footer-button-text);
             font-family: "Gaegu", sans-serif;
             font-size: 1rem;
             font-weight: bold;
