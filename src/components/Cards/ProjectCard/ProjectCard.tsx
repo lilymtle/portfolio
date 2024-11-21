@@ -32,15 +32,17 @@ export function ProjectCard({ image, title, description, tools, live, video, git
                     </h3>
 
                     <section className="card__description">
-                        <p className="card__description--text">{description}</p>
+                        <div className="card__wrapper--description-text">
+                            <p className="card__description--text">{description}</p>
 
-                        <p className="card__description--text-small">{notes}</p>
+                            <p className="card__description--text-small">{notes}</p>
 
-                        <p className="card__description--text-blue">Built with:</p>
+                            <p className="card__description--text-blue">Built with:</p>
 
-                        <Marquee>
-                            {tools}
-                        </Marquee>
+                            <Marquee>
+                                {tools}
+                            </Marquee>
+                        </div>
 
                         <div className="card__wrapper--buttons">
                             {live && <a className="card__link" href={live} target="blank">Live</a>}
