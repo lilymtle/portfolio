@@ -4,4 +4,12 @@
 
 .MuiAccordion-heading {
     font-size: 0.75rem !important;
+
+    @include tablet {
+        font-size: .8125rem !important;
+    }
+
+    @include desktop {
+        font-size: .8125rem !important;
+    }
 }
