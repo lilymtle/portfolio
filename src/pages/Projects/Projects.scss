@@ -19,6 +19,8 @@
 
     &__header {
         @include m-page-header($global-header);
+
+        @include td-page-header($global-header);
     }
 
     &__list {

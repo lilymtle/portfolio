@@ -81,12 +81,20 @@
 
     &__header {
         @include m-page-header($global-header);
+        
+        @include tablet {
+            @include td-page-header($global-header);
+        }
     }
 
     &__subheader {
         @include m-sub-header($global-primary-subheader);
         margin-bottom: 1rem;
         // background: green;
+
+        @include tablet {
+            @include td-sub-header($global-primary-subheader);
+        }
 
         @include desktop {
             width: 100%;
@@ -96,6 +104,8 @@
         &--small {
             @include m-sub-header-small($global-secondary-subheader);
             margin-top: 0;
+
+            @include td-sub-header-small($global-secondary-subheader);
         }
     }
 

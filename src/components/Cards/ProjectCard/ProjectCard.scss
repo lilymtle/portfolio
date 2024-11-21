@@ -64,6 +64,10 @@
         font-size: 2rem;
         margin: 0;
         padding: 1.5rem;
+
+        @include tablet {
+            @include td-sub-header($global-primary-subheader);
+        }
     }
     
     &__description {
