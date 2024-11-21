@@ -61,20 +61,6 @@
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
 
-    &--cancel {
-        background-color: $light-grey;
-        color: $black-medium;
-        border: .0625rem solid $light-grey;
-
-        &:hover {
-            background-color: #4d4d4f;
-            color: $light-grey;
-            border: .0625rem solid #4d4d4f;
-            transition: 0.5s ease-in-out;
-            cursor: pointer;
-        }
-    }
-
     &--send {
         background-color: $button-primary-color;
         color: white;

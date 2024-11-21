@@ -136,12 +136,6 @@ export function ContactPage() {
         }
     };
 
-    const handleCancel = (e: FormEvent) => {
-        e.preventDefault();
-        setErrors({ name: "", email: "", message: "" });
-        setFormData({ name: "", email: "", message: ""});
-    };
-
     return (
         <section id="contact" className="contact">
             <div className="container">
@@ -235,9 +229,7 @@ export function ContactPage() {
                                 />
                             </div>
 
-                            <div className="contact__buttons">
-                                <button className="button button--cancel" type="reset" onClick={handleCancel}>CANCEL</button>
-                                
+                            <div className="contact__buttons">                                
                                 <button className="button button--send" type="submit">SEND</button>
                             </div>
                         </form>
