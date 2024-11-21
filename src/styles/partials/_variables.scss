@@ -29,13 +29,17 @@ $global-text: $black-medium;
 $global-label: $black-medium;
 
 /* header navbar descriptive variables */
+$navbar-font: $secondary-font;
 $navbar-primary-text: $black-medium;
 $navbar-accent-text: $pale-orange;
 $navbar-link-hover: $pale-orange;
 $navbar-secondary-link-hover: $black-medium;
 
-/* hero descriptive variable */
-$hero-header: $dark-lavender;
+/* hero descriptive variables */
+$hero-header-font: $secondary-font;
+$hero-button-font: $secondary-font;
+$hero-name-text: $dark-lavender;
+$hero-overlay: $white;
 
 /* project card descriptive variables */
 $project-header-font: $secondary-font;
@@ -76,7 +80,8 @@ $button-hover-text: $black-medium;
 $button-hover-border: $black-medium;
 
 /* modal descriptive variables */
-$modal-bg: $white;
+$modal-background: $white;
+$modal-font: $secondary-font;
 $modal-title: $pale-red;
-$modal-close-btn-bg: $light-grey;
-$modal-text-link: $dark-lavender;
+$modal-button: $light-grey;
+$modal-link: $dark-lavender;
