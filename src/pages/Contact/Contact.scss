@@ -8,11 +8,19 @@
     
         &__header {
         @include m-page-header($global-header);
+
+        @include tablet {
+            @include td-page-header($global-header);
+        }
     }
 
     &__text {
         @include m-body($global-text);
         text-align: center;
+
+        @include tablet {
+            @include td-body($global-text);
+        }
     }
 
     &__buttons {
@@ -36,8 +44,6 @@
 
     &__field {
         width: 100%;
-        font-family: "Garet", sans-serif;
-        @include m-body($global-text);
         padding: 10px 0;
         background: none;
         border: none;
@@ -60,6 +66,10 @@
     border-radius: 1.25rem;
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
 
     &--send {
         background-color: $button-primary-color;
@@ -196,12 +206,20 @@
     font-family: "Garet", sans-serif !important;
     font-size: 1rem !important;
     color: $dark-lavender !important;
+
+    @include tablet {
+        font-size: 1.3rem !important;
+    }
 }
 
 .MuiInputBase-input {
     font-family: "Garet", sans-serif !important;
     font-size: 0.75rem !important;
     padding-top: 2rem !important;
+
+    @include tablet {
+        font-size: 0.8rem !important;
+    }
 }
 
 #message {
