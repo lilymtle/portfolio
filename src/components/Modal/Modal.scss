@@ -1,11 +1,11 @@
-// import styling
+// import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
 .modal {
     &__box {
-        background-color: $modal-bg;
+        background-color: $modal-background;
         border-radius: 0.25rem;
         padding: 1rem;
         position: absolute;
@@ -40,7 +40,7 @@
     }
 
     &__title {
-        font-family: "Gaegu", sans-serif !important;
+        font-family: $modal-font !important;
         font-size: 1.8rem !important;
         color: $modal-title !important;
         font-weight: bold !important;
@@ -69,8 +69,7 @@
     }
 
     &__close-btn {
-        font-family: "Garet Book", sans-serif !important;
-        background-color: $modal-close-btn-bg !important;
+        background-color: $modal-button !important;
         @include m-body($modal-title !important);
         display: block;
         margin: 0 auto;
