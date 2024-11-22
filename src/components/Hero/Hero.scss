@@ -52,13 +52,13 @@
         height: 100%;
         @include flex-box(column);
         justify-content: space-between;
+        align-items: center;
         padding: 2rem 1.5rem 0 1.5rem;
         overflow: hidden;
 
         @include tablet {
-            // height: 93%;
-            // justify-content: flex-start;
-            // padding-inline: 10rem;
+            height: 100%;
+            padding-inline: 10rem;
         }
         
         @include desktop {
@@ -169,16 +169,17 @@
 
     &__character {
         width: auto;
-        height: 50%;
+        max-height: 50%;
         animation: levitate 3s ease-in-out infinite;
 
         @include tablet {
-            height: 50%;
+            width: auto;
+            max-height: 55%;
             margin-bottom: 1rem;
         }
 
         @include desktop {
-            height: 55%;
+            max-height: 60%;
             margin-bottom: 1rem;
         }
     }
