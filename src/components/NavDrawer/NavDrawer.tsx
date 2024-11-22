@@ -52,7 +52,7 @@ export default function TemporaryDrawer() {
     ];
 
     const NavDrawer = (
-        <Box sx={{ width: 320 }} role="presentation" onClick={toggleDrawer(false)}>
+        <Box sx={{ width: "100%" }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
                 {navDrawerLinks.map((navDrawerLink, index) => (
                     <div key={index}>
