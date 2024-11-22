@@ -10,6 +10,8 @@ import { AboutPage } from "./pages/About/About";
 import { ProjectsPage } from "./pages/Projects/Projects";
 import { ContactPage } from "./pages/Contact/Contact";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
+
+// import hook
 import { useEffect } from "react";
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
     const hero = document.querySelector(".hero") as HTMLElement;
     if (hero) {
       const vh = window.innerHeight * 0.01;
-      hero.style.height = `${vh * 92.6}px`;
+      hero.style.height = `${vh * 92.52}px`;
     };
   };
 
