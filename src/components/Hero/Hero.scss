@@ -48,7 +48,6 @@
     background-size: cover;
 
     &__container {
-        // background: red;
         height: 100%;
         @include flex-box(column);
         justify-content: space-between;
@@ -62,9 +61,8 @@
         }
         
         @include desktop {
-            // height: 93%;
-            // justify-content: flex-start;
-            // padding-inline: 10rem;
+            height: 90%;
+            padding-inline: 10rem;
         }
     }
 
@@ -187,7 +185,6 @@
     &__arrow-icon {
         color: $global-text;
         animation: wiggle 3s ease-in-out infinite;
-        // margin-top: 3rem;
 
         @include tablet {
             margin-top: 4rem;
