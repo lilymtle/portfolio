@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -80,10 +79,6 @@ export default function TemporaryDrawer() {
                                 )}
                             </ListItemButton>
                         </ListItem>
-
-                        {index !== navDrawerLinks.length - 1 && (
-                            <Divider sx={{ marginLeft: "2rem", marginRight: "2rem" }} />
-                        )}
                     </div>
                 ))}
             </List>
