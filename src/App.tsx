@@ -17,7 +17,7 @@ function App() {
     const hero = document.querySelector(".hero") as HTMLElement;
     if (hero) {
       const vh = window.innerHeight * 0.01;
-      hero.style.height = `${vh * 90}px`;
+      hero.style.height = `${vh * 92}px`;
     };
   };
 
