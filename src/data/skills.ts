@@ -152,7 +152,7 @@ export const softSkills: SoftSkills[] = [
     {
         id: 8,
         emoji: "🔧",
-        skill: "Problen Solving"
+        skill: "Problem Solving"
     },
     {
         id: 9,
