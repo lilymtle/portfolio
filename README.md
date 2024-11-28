@@ -6,12 +6,12 @@ Hi, I'm Lily, a passionate developer with an interest in front-end development a
 
 ## Portfolio Overview
 
-This porfolio showcases a selection of my projects as well as me as a person!
+This portfolio showcases a selection of my projects as well as me as a person!
 
 ## Featured Projects
 
 ### MoodCompass
-- **Description:** MoodCompass, a way to navigate your emotions with insightful learning. Capstone project for BrainStation's July 2024 Software Engineering program.
+- **Description:** MoodCompass is a way to navigate your emotions with insightful learning. Capstone project for BrainStation's July 2024 Software Engineering program.
 
 - **Technologies Used**: SASS, React, JavaScript, Node.js, Express, Knex.js, MySQL, Firebase, Material UI
 
