@@ -36,7 +36,7 @@ For a detailed list of my *hard* and *soft* skills, please visit the [about sect
 
 This portfolio has undergone two major design updates:
 
-- **First Design:** Initial design can be viewed in the [project section](http://lilyle.dev/#projects)
+- **First Design:** Initial design can be viewed in the [projects section](http://lilyle.dev/#projects)
 of my portfolio.
     - **Technologies Used:** React, SASS, JavaScript, Material UI
 - **Current Design**: The current design is a revamped version that reflects my growth and skills in UI/UX design.
