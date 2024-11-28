@@ -32,6 +32,16 @@ For a complete list of my projects, please visit the [projects section](http://l
 
 For a detailed list of my *hard* and *soft* skills, please visit the [about section](http://lilyle.dev/#about) of my portfolio.
 
+## Portfolio Updates
+
+This portfolio has undergone two major design updates:
+
+- **First Design:** Initial design can be viewed in the [project section](http://lilyle.dev/#projects)
+of my portfolio.
+    - **Technologies Used:** React, SASS, JavaScript, Material UI
+- **Current Design**: The current design is a revamped version that reflects my growth and skills in UI/UX design.
+    - **Technologies Used:** React, SASS, TypeScript, Material UI
+
 ## Contact Information
 
 Please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/lilymtle/), or use the contact form found on my [portfolio](https://lilyle.dev).
