@@ -71,6 +71,21 @@ export const projects: Projects[] = [
     },
     {
         id: 4,
+        name: "CheerBot",
+        description: "CheerBot is a positivity-driven Discord bot designed to spread good vibes and uplift your community.",
+        tools: [
+            "./assets/badges/javascript.svg",
+            "./assets/badges/discordjs.png",
+            "/assets/badges/axios.png",
+            "/assets/badges/git.svg",
+            "assets/badges/github.svg"
+        ],
+        image: "/assets/images/cheerbot.png",
+        video: "/assets/videos/cheerbot.mp4",
+        github: "https://github.com/lilymtle/cheerbot"
+    },
+    {
+        id: 5,
         name: "TELUS",
         description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle.",
         tools: [
@@ -86,7 +101,7 @@ export const projects: Projects[] = [
         video: "/assets/videos/telus.mp4"
     },
     {
-        id: 5,
+        id: 6,
         name: "InStock",
         description: "InStock is a fully responsive full-stack web app providing an inventory management system for a Fortune 500 client. It displays a list of warehouse inventory.",
         tools: [
@@ -107,7 +122,7 @@ export const projects: Projects[] = [
         notes: "GitHub repo not publicly available per institution request."
     },
     {
-        id: 6,
+        id: 7,
         name: "BrainFlix",
         description: "BrainFlix is a fully responsive video streaming platform with its own API service.",
         tools: [
@@ -125,7 +140,7 @@ export const projects: Projects[] = [
 
     },
     {
-        id: 7,
+        id: 8,
         name: "BandSite",
         description: "A fully responsive website for an emerging band, featuring two pages: the main page with band information and a photo gallery, and a shows page listing upcoming performances.",
         tools: [
@@ -141,7 +156,7 @@ export const projects: Projects[] = [
         notes: "GitHub repo not publicly available per institution request."
     },
     {
-        id: 8,
+        id: 9,
         name: "CoffeeShop",
         description: "CoffeeShop is a static, multi-page web app with two pages: a landing page featuring product information and a menu page detailing the shop's offerings.",
         tools: [
@@ -155,7 +170,7 @@ export const projects: Projects[] = [
         notes: "GitHub repo not publicly available per institution request."
     },
     {
-        id: 9,
+        id: 10,
         name: "CINEMATICATS",
         description: "CINEMATICATs is a static web application that help users find movie recommendations with a cat companion.",
         tools: [
@@ -169,5 +184,5 @@ export const projects: Projects[] = [
         ],
         image: "/assets/images/cinematicats.png",
         video: "/assets/videos/cinematicats.mp4"
-    }
+    },
 ];
