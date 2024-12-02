@@ -11,70 +11,72 @@ interface SoftSkills {
     skill: string;
 };
 
+const iconPath = "/assets/icons";
+
 export const techLanguages: HardSkills[] = [
     {
         id: 1,
-        icon: "/assets/icons/html.svg",
+        icon: `${iconPath}/html.svg`,
         name: "HTML",
         alt: "HTML icon"
     },
     {
         id: 2,
-        icon: "/assets/icons/css.svg",
+        icon: `${iconPath}/css.svg`,
         name: "CSS",
         alt: "CSS icon",
     },
     {
         id: 3,
-        icon: "/assets/icons/sass.svg",
+        icon: `${iconPath}/sass.svg`,
         name: "SASS",
         alt: "SASS icon"
     },
     {
         id: 4,
-        icon: "/assets/icons/tailwind.svg",
+        icon: `${iconPath}/tailwind.svg`,
         name: "Tailwind CSS",
         alt: "Tailwind CSS icon"
     },
     {
         id: 5,
-        icon: "/assets/icons/javascript.svg",
+        icon: `${iconPath}/javascript.svg`,
         name: "JavaScript",
         alt: "JavaScript icon"
     },
     {
         id: 6,
-        icon: "/assets/icons/typescript.svg",
+        icon: `${iconPath}/typescript.svg`,
         name: "TypeScript",
         alt: "TypeScript icon"
     },
     {
         id: 7,
-        icon: "/assets/icons/react.svg",
+        icon: `${iconPath}/react.svg`,
         name: "React",
         alt: "React icon"
     },
     {
         id: 8,
-        icon: "/assets/icons/nextjs.svg",
+        icon: `${iconPath}/nextjs.svg`,
         name: "Next.js",
         alt: "Next.js icon"
     },
     {
         id: 9,
-        icon: "/assets/icons/nodejs.svg",
+        icon: `${iconPath}/nodejs.svg`,
         name: "Node.js",
         alt: "Node.js icon"
     },
     {
         id: 10,
-        icon: "/assets/icons/express.svg",
+        icon: `${iconPath}/express.svg`,
         name: "Express",
         alt: "Express icon"
     },
     {
         id: 11,
-        icon: "/assets/icons/mysql.svg",
+        icon: `${iconPath}/mysql.svg`,
         name: "MySQL",
         alt: "MySQL icon"
     }
@@ -83,37 +85,37 @@ export const techLanguages: HardSkills[] = [
 export const techTools: HardSkills[] = [
     {
         id: 1,
-        icon: "/assets/icons/git.svg",
+        icon: `${iconPath}/git.svg`,
         name: "Git",
         alt: "Git icon"
     },
     {
         id: 2,
-        icon: "/assets/icons/github.svg",
+        icon: `${iconPath}/github.svg`,
         name: "GitHub",
         alt: "GitHub icon"
     },
     {
         id: 3,
-        icon: "/assets/icons/firebase.svg",
+        icon: `${iconPath}/firebase.svg`,
         name: "Firebase",
         alt: "Firebase icon"
     },
     {
         id: 4,
-        icon: "/assets/icons/postman.svg",
+        icon: `${iconPath}/postman.svg`,
         name: "Postman",
         alt: "Postman icon"
     },
     {
         id: 5,
-        icon: "/assets/icons/material-ui.svg",
+        icon: `${iconPath}/material-ui.svg`,
         name: "Material UI",
         alt: "Material UI icon"
     },
     {
         id: 6,
-        icon: "/assets/icons/jest.svg",
+        icon: `${iconPath}/jest.svg`,
         name: "Jest",
         alt: "Jest icon"
     }
