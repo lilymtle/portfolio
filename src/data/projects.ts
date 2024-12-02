@@ -11,7 +11,9 @@ interface Projects {
 };
 
 const githubPath = "https://www.github.com/lilymtle";
-const badgePath = "/assets/badges"
+const imagePath = "/assets/images";
+const badgePath = "/assets/badges";
+const videoPath = "/assets/videos";
 
 export const projects: Projects[] = [
     {
@@ -32,7 +34,7 @@ export const projects: Projects[] = [
             `${badgePath}/git.svg`,
             `${badgePath}/github.svg`
         ],
-        image: "/assets/images/mood-compass.png",
+        image: `${imagePath}/mood-compass.png`,
         live: "https://mood-compass.vercel.app/",
         github: `${githubPath}/mood-compass`,
         notes: "MoodCompass is still a work in progress. Feel free to check the GitHub repo for updates."
@@ -52,8 +54,8 @@ export const projects: Projects[] = [
             `${badgePath}/git.svg`,
             `${badgePath}/github.svg`
         ],
-        image: "/assets/images/koru.png",
-        github: "https://github.com/lilymtle/koru",
+        image: `${imagePath}/koru.png`,
+        github: `${githubPath}/koru`,
         notes: "Koru is still a work in progress. Feel free to check the GitHub repo for updates."
     },
     {
@@ -68,9 +70,9 @@ export const projects: Projects[] = [
             `${badgePath}/git.svg`,
             `${badgePath}/github.svg`
         ],
-        image: "/assets/images/portfolio.png",
-        video: "/assets/videos/portfolio.mp4",
-        github: "https://github.com/lilymtle/portfolio"
+        image: `${imagePath}/portfolio.png`,
+        video: `${videoPath}/portfolio.mp4`,
+        github: `${githubPath}/portfolio`
     },
     {
         id: 4,
@@ -83,9 +85,9 @@ export const projects: Projects[] = [
             `${badgePath}/git.svg`,
             `${badgePath}/github.svg`
         ],
-        image: "/assets/images/cheerbot.png",
-        video: "/assets/videos/cheerbot.mp4",
-        github: "https://github.com/lilymtle/cheerbot"
+        image: `${imagePath}/cheerbot.png`,
+        video: `${videoPath}/cheerbot.mp4`,
+        github: `${githubPath}/cheerbot`
     },
     {
         id: 5,
@@ -100,8 +102,8 @@ export const projects: Projects[] = [
             `${badgePath}/github.svg`,
             `${badgePath}/jira.svg`
         ],
-        image: "/assets/images/telus.png",
-        video: "/assets/videos/telus.mp4"
+        image: `${imagePath}/telus.png`,
+        video: `${videoPath}/telus.mp4`
     },
     {
         id: 6,
@@ -120,8 +122,8 @@ export const projects: Projects[] = [
             `${badgePath}/jira.svg`,
             `${badgePath}/postman.svg`
         ],
-        image: "/assets/images/instock.png",
-        video: "/assets/videos/instock.mp4",
+        image: `${imagePath}/instock.png`,
+        video: `${videoPath}/instock.mp4`,
         notes: "GitHub repo not publicly available per institution request."
     },
     {
@@ -137,8 +139,8 @@ export const projects: Projects[] = [
             `${badgePath}/github.svg`,
             `${badgePath}/postman.svg`
         ],
-        image: "/assets/images/brainflix.png",
-        video: "/assets/videos/brainflix.mp4",
+        image: `${imagePath}/brainflix.png`,
+        video: `${videoPath}/brainflix.mp4`,
         notes: "GitHub repo not publicly available per institution request."
 
     },
@@ -154,8 +156,8 @@ export const projects: Projects[] = [
             `${badgePath}/git.svg`,
             `${badgePath}/github.svg`,
         ],
-        image: "/assets/images/bandsite.png",
-        video: "/assets/videos/bandsite.mp4",
+        image: `${imagePath}/bandsite.png`,
+        video: `${videoPath}/bandsite.mp4`,
         notes: "GitHub repo not publicly available per institution request."
     },
     {
@@ -168,8 +170,8 @@ export const projects: Projects[] = [
             `${badgePath}/git.svg`,
             `${badgePath}/github.svg`,
         ],
-        image: "/assets/images/coffeeshop.png",
-        video: "/assets/videos/coffeeshop.mp4",
+        image: `${imagePath}/coffeeshop.png`,
+        video: `${videoPath}/coffeeshop.mp4`,
         notes: "GitHub repo not publicly available per institution request."
     },
     {
@@ -185,7 +187,7 @@ export const projects: Projects[] = [
             `${badgePath}/github.svg`,
             `${badgePath}/figma.svg`
         ],
-        image: "/assets/images/cinematicats.png",
-        video: "/assets/videos/cinematicats.mp4"
+        image: `${imagePath}/cinematicats.png`,
+        video: `${videoPath}/cinematicats.mp4`
     },
 ];
