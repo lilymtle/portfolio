@@ -110,6 +110,12 @@ export const techTools: HardSkills[] = [
         icon: "/assets/icons/material-ui.svg",
         name: "Material UI",
         alt: "Material UI icon"
+    },
+    {
+        id: 6,
+        icon: "/assets/icons/jest.svg",
+        name: "Jest",
+        alt: "Jest icon"
     }
 ];
 
