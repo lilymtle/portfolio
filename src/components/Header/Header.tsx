@@ -16,6 +16,7 @@ export function Header() {
                 <img
                     className="header__icon"
                     src="assets/icons/cat-icon.gif"
+                    alt="Animated tuxedo cat pixel art"
                 />
             </Link>
 
