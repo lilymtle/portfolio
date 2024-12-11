@@ -42,7 +42,7 @@ export const professionalExperience: ProfessionalExperience[] = [
         index: 1,
         company: "The Verse",
         date: "Nov 2024 - Present",
-        role: "Web Developer Intern",
+        role: "Web Developer",
         logo: "/assets/logos/the-verse.jpeg"
     }
 ];
