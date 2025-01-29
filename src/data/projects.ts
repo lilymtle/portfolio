@@ -23,7 +23,10 @@ export const projects: Projects[] = [
         tools: [
             `${badgePath}/react.svg`,
             `${badgePath}/typescript.svg`,
-            `${badgePath}/sass.svg`
+            `${badgePath}/sass.svg`,
+            `${badgePath}/material-ui.svg`,
+            `${badgePath}/git.svg`,
+            `${badgePath}/github.svg`
         ],
         image: `${imagePath}/the-verse.png`,
         live: "https://versebuilding.com"
