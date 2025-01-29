@@ -19,7 +19,7 @@ export const projects: Projects[] = [
     {
         id: 1,
         name: "The Verse",
-        description: "As the intern and primary developer for the main site of The Verse, I collaborated with the designer, project manager, and founder to develop a website that showcases the company's mission and the innovative games they are creating. Currently, the project is focused on front-end development, with plans to implement a back end in the future.",
+        description: "As the intern and primary developer for the main site of The Verse, I collaborated with the designer, project manager, and founder to develop a website that showcases the company's mission and the innovative games they are creating. Currently, the project is focused on front-end development.",
         tools: [
             `${badgePath}/react.svg`,
             `${badgePath}/typescript.svg`,
