@@ -40,8 +40,15 @@ export const educationExperience: EducationExperience[] = [
 export const professionalExperience: ProfessionalExperience[] = [
     {
         index: 1,
+        company: "Ontario Ministry of Health",
+        date: "Feb 2025 - Present",
+        role: "Health Analyst & Developer",
+        logo: "/assets/logos/ontario-government.jpeg"
+    },
+    {
+        index: 2,
         company: "The Verse",
-        date: "Nov 2024 - Present",
+        date: "Nov 2024 - Feb 2025",
         role: "Web Developer",
         logo: "/assets/logos/the-verse.jpeg"
     }
