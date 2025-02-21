@@ -31,7 +31,7 @@ export const educationExperience: EducationExperience[] = [
         institution: "Toronto Metropolitan University",
         date: "Sep 2021 - Jun 2023",
         qualification: "Master's Degree",
-        discipline: "Nursing",
+        discipline: "Nursing, Leadership",
         gpa: 4.0,
         logo: "/assets/logos/tmu.jpg"
     }
