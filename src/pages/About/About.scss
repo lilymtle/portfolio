@@ -186,7 +186,7 @@
 
         @include desktop {
             @include flex-box(row);
-            justify-content: space-evenly;
+            justify-content: flex-start;
             flex-wrap: wrap;
             gap: 1.5rem;
         }
