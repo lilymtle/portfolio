@@ -16,6 +16,8 @@ interface ProfessionalExperience {
     logo: string;
 };
 
+const imgPath = "/assets/logos";
+
 export const educationExperience: EducationExperience[] = [
     {
         id: 1,
@@ -24,7 +26,7 @@ export const educationExperience: EducationExperience[] = [
         qualification: "Diploma",
         discipline: "Software Engineering",
         gpa: 4.0,
-        logo: "/assets/logos/brainstation.png"
+        logo: `${imgPath}/brainstation.png`
     },
     {
         id: 2,
@@ -33,7 +35,7 @@ export const educationExperience: EducationExperience[] = [
         qualification: "Master's Degree",
         discipline: "Nursing, Leadership",
         gpa: 4.0,
-        logo: "/assets/logos/tmu.jpg"
+        logo: `${imgPath}/tmu.jpg`
     },
     {
         id: 3,
@@ -42,7 +44,7 @@ export const educationExperience: EducationExperience[] = [
         qualification: "Bachelor's Degree",
         discipline: "Nursing",
         gpa: 3.3,
-        logo: "/assets/logos/tmu.jpg"
+        logo: `${imgPath}/tmu.jpg`
     }
 ];
 
@@ -52,34 +54,34 @@ export const professionalExperience: ProfessionalExperience[] = [
         company: "Ontario Ministry of Health",
         date: "Feb 2025 - Present",
         role: "Health Analyst & Developer",
-        logo: "/assets/logos/ontario-government.jpeg"
+        logo: `${imgPath}/ontario-government.jpeg`
     },
     {
         id: 2,
         company: "The Verse",
         date: "Nov 2024 - Feb 2025",
         role: "Web Developer",
-        logo: "/assets/logos/the-verse.jpeg"
+        logo: `${imgPath}/the-verse.jpeg`
     },
     {
         id: 3,
         company: "Lakeridge Health",
         date: "Aug 2023 - Jul 2024",
         role: "Clinical Practice Leader",
-        logo: "/assets/logos/lakeridge-health.jpeg"
+        logo: `${imgPath}/lakeridge-health.jpeg`
     },
     {
         id: 4,
         company: "CAMH",
         date: "Sep 2018 - Aug 2023",
         role: "Registered Nurse",
-        logo: "/assets/logos/camh.jpeg"
+        logo: `${imgPath}/camh.jpeg`
     },
     {
         id: 5,
         company: "University of Toronto",
         date: "Nov 2022 - Dec 2022",
         role: "Clinical Instructor (Secondment)",
-        logo: "/assets/logos/uoft.jpeg"
+        logo: `${imgPath}/uoft.jpeg`
     }
 ];
