@@ -73,8 +73,8 @@
         &--desktop {
             @include desktop {
                 width: 100%;
-                @include flex-box(row);
-                justify-content: space-between;
+                // @include flex-box(row);
+                // justify-content: space-between;
             }
         }
     }
@@ -133,10 +133,10 @@
 
             @include desktop {
                 width: 100%;
-                @include flex-box(row);
-                flex-wrap: wrap;
-                justify-content: space-between;
-                gap: 1rem;
+                // @include flex-box(row);
+                // flex-wrap: wrap;
+                // justify-content: space-between;
+                // gap: 1rem;
             }
         }
     }
@@ -184,6 +184,10 @@
     &__list {
         list-style-type: none;
         padding: 0;
+
+        @include desktop {
+            @include flex-box(row);
+        }
 
         &--tech-skills {
             @include flex-box(row);
