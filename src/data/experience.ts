@@ -39,7 +39,7 @@ export const educationExperience: EducationExperience[] = [
         id: 3,
         institution: "Toronto Metropolitan University",
         date: "Sep 2013 - Jun 2018",
-        qualification: "Bachleor's Degree",
+        qualification: "Bachelor's Degree",
         discipline: "Nursing",
         gpa: 3.3,
         logo: "/assets/logos/tmu.jpg"
