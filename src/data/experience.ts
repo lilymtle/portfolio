@@ -51,5 +51,12 @@ export const professionalExperience: ProfessionalExperience[] = [
         date: "Nov 2024 - Feb 2025",
         role: "Web Developer",
         logo: "/assets/logos/the-verse.jpeg"
+    },
+    {
+        index: 3,
+        company: "Lakeridge Health",
+        date: "Aug 2023 - Jul 2024",
+        role: "Clinical Practice Leader",
+        logo: "/assets/logos/lakeridge-health.jpeg"
     }
 ];
