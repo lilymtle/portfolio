@@ -70,13 +70,13 @@
         }
 
         /* wrapper for desktop breakpoint */
-        &--desktop {
-            @include desktop {
-                width: 100%;
-                // @include flex-box(row);
-                // justify-content: space-between;
-            }
-        }
+        // &--desktop {
+        //     @include desktop {
+        //         width: 100%;
+        //         // @include flex-box(row);
+        //         // justify-content: space-between;
+        //     }
+        // }
     }
 
     &__header {
@@ -124,19 +124,18 @@
     }
 
     &__experience {
+        &-wrapper {
+            @include desktop {
+                width: 15rem;
+                text-align: center;
+            }
+        }
+
         &--columned-rows {
             @include tablet {
                 @include flex-box(row);
                 flex-wrap: wrap;
                 justify-content: space-between;
-            }
-
-            @include desktop {
-                width: 100%;
-                // @include flex-box(row);
-                // flex-wrap: wrap;
-                // justify-content: space-between;
-                // gap: 1rem;
             }
         }
     }
@@ -187,6 +186,9 @@
 
         @include desktop {
             @include flex-box(row);
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 1.5rem;
         }
 
         &--tech-skills {
@@ -219,6 +221,12 @@
         align-items: center;
         gap: 1rem;
         margin-bottom: 1rem;
+
+        @include desktop {
+            @include flex-box(column);
+            align-items: center;
+            
+        }
 
         &--tech-skills {
             @include flex-box(column);
