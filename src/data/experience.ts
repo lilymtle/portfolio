@@ -65,5 +65,12 @@ export const professionalExperience: ProfessionalExperience[] = [
         date: "Sep 2018 - Aug 2023",
         role: "Registered Nurse",
         logo: "/assets/logos/camh.jpeg"
+    },
+    {
+        id: 5,
+        company: "University of Toronto",
+        date: "Nov 2022 - Dec 2022",
+        role: "Clinical Instructor (Secondment)",
+        logo: "/assets/logos/uoft.jpeg"
     }
 ];
