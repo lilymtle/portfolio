@@ -70,7 +70,7 @@ export const professionalExperience: ProfessionalExperience[] = [
     },
     {
         id: 4,
-        company: "Centre for Addiction and Mental Health",
+        company: "CAMH",
         date: "Sep 2018 - Aug 2023",
         role: "Registered Nurse",
         logo: "/assets/logos/camh.jpeg"
