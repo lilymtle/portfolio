@@ -34,6 +34,15 @@ export const educationExperience: EducationExperience[] = [
         discipline: "Nursing, Leadership",
         gpa: 4.0,
         logo: "/assets/logos/tmu.jpg"
+    },
+    {
+        id: 3,
+        institution: "Toronto Metropolitan University",
+        date: "Sep 2013 - Jun 2018",
+        qualification: "Bachleor's Degree",
+        discipline: "Nursing",
+        gpa: 3.3,
+        logo: "/assets/logos/tmu.jpg"
     }
 ];
 
