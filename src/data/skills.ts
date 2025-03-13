@@ -118,6 +118,24 @@ export const techTools: HardSkills[] = [
         icon: `${iconPath}/figma.svg`,
         name: "Figma",
         alt: "Figma icon"
+    },
+    {
+        id: 7,
+        icon: `${iconPath}/notion.svg`,
+        name: "Notion",
+        alt: "Notion icon"
+    },
+    {
+        id: 8,
+        icon: `${iconPath}/vercel.svg`,
+        name: "Vercel",
+        alt: "Vercel Icon"
+    },
+    {
+        id: 9,
+        icon: `${iconPath}/vs-code.svg`,
+        name: "VSCode",
+        alt: "VSCode Icon"
     }
 ];
 
