@@ -35,8 +35,8 @@ export const techLanguages: HardSkills[] = [
     {
         id: 4,
         icon: `${iconPath}/tailwind.svg`,
-        name: "Tailwind CSS",
-        alt: "Tailwind CSS icon"
+        name: "Tailwind",
+        alt: "Tailwind icon"
     },
     {
         id: 5,
