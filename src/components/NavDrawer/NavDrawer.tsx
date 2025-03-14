@@ -1,9 +1,10 @@
-// import styling
+// styling
 import "./NavDrawer.scss";
 
-// import hook
+// hook
 import { useState } from "react";
 
+// components
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -42,10 +43,15 @@ export default function TemporaryDrawer() {
         },
         {
             id: 3,
-            text: "Resume",
+            text: "Blog",
+            link: "/blog"
         },
         {
             id: 4,
+            text: "Resume",
+        },
+        {
+            id: 5,
             text: "Contact",
             link: "#contact"
         }
@@ -58,7 +64,7 @@ export default function TemporaryDrawer() {
                     <div key={index}>
                         <ListItem disablePadding>
                             <ListItemButton>
-                                {navDrawerLink.id === 3 ? (
+                                {navDrawerLink.id === 4 ? (
                                     <ListItemText
                                         primary={navDrawerLink.text}
                                         className="navbar__text"
