@@ -1,8 +1,8 @@
-// import global styling
+// global styling
 import "./styles/global.scss";
 
-// import components
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// components
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import { Footer } from "./components/Footer/Footer";
@@ -11,9 +11,27 @@ import { ProjectsPage } from "./pages/Projects/Projects";
 import { ContactPage } from "./pages/Contact/Contact";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
 
-// import hook
+// hook
 import { useEffect } from "react";
 import { BlogPage } from "./pages/Blog/Blog";
+
+// layout for portfolio page
+function Layout({ children }: { children: React.ReactNode }) {
+    const location = useLocation();
+    const isBlogPage = location.pathname.startsWith("/blog");
+
+    return (
+      <>
+      <Header />
+      <FloatingButton />
+      <main>
+        <Hero />
+        <div className="app-container">{children}</div>
+      </main>
+      <Footer />
+      </>
+    );
+};
 
 function App() {
   const setHeroHeight = (): void => {
@@ -36,24 +54,18 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
-      <FloatingButton />
-      <main>
-        <Hero />
-        <div className="app-container">
-          <Routes>
-            <Route path="/" element={
-              <>
-                <AboutPage />
-                <ProjectsPage />
-                <ContactPage />
-              </>
-            } />
-            <Route path ="/blog" element={ <BlogPage />} />
-          </Routes>
-        </div>
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Layout>
+              <AboutPage />
+              <ProjectsPage />
+              <ContactPage />
+            </Layout>
+          </>
+        } />
+        <Route path ="/blog" element={ <BlogPage />} />
+      </Routes>
     </BrowserRouter>
   )
 };
