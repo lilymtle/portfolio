@@ -14,23 +14,35 @@ import FloatingButton from "./components/FloatingButton/FloatingButton";
 // hook
 import { useEffect } from "react";
 import { BlogPage } from "./pages/Blog/Blog";
+import { BlogHeader } from "./components/BlogHeader/BlogHeader";
+import { BlogHero } from "./components/BlogHero/BlogHero";
+import { BlogFooter } from "./components/BlogFooter/BlogFooter";
 
-// layout for portfolio page
-function Layout({ children }: { children: React.ReactNode }) {
-    const location = useLocation();
-    const isBlogPage = location.pathname.startsWith("/blog");
 
+function PortfolioLayout({ children }: { children: React.ReactNode }) {
     return (
       <>
-      <Header />
-      <FloatingButton />
-      <main>
-        <Hero />
-        <div className="app-container">{children}</div>
-      </main>
-      <Footer />
+        <Header />
+        <FloatingButton />
+        <main>
+          <Hero />
+          <div className="portfolio-container">{children}</div>
+        </main>
+        <Footer />
       </>
     );
+};
+
+function BlogLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <BlogHeader />
+      <main>
+        <div className="blog-container">{children}</div>
+      </main>
+      <BlogFooter />
+    </>
+  )
 };
 
 function App() {
@@ -57,14 +69,18 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-            <Layout>
+            <PortfolioLayout>
               <AboutPage />
               <ProjectsPage />
               <ContactPage />
-            </Layout>
+            </PortfolioLayout>
           </>
         } />
-        <Route path ="/blog" element={ <BlogPage />} />
+        <Route path ="/blog" element={ 
+          <BlogLayout>
+            <BlogPage />
+          </BlogLayout>
+          } />
       </Routes>
     </BrowserRouter>
   )
