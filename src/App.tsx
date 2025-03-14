@@ -2,7 +2,7 @@
 import "./styles/global.scss";
 
 // import components
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import { Footer } from "./components/Footer/Footer";
@@ -13,6 +13,7 @@ import FloatingButton from "./components/FloatingButton/FloatingButton";
 
 // import hook
 import { useEffect } from "react";
+import { BlogPage } from "./pages/Blog/Blog";
 
 function App() {
   const setHeroHeight = (): void => {
@@ -40,9 +41,16 @@ function App() {
       <main>
         <Hero />
         <div className="app-container">
-          <AboutPage />
-          <ProjectsPage />
-          <ContactPage />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <AboutPage />
+                <ProjectsPage />
+                <ContactPage />
+              </>
+            } />
+            <Route path ="/blog" element={ <BlogPage />} />
+          </Routes>
         </div>
       </main>
       <Footer />
