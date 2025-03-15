@@ -4,16 +4,29 @@
 
 Hi, I'm Lily, a passionate developer with an interest in front-end development and UI/UX design. 👋🏻
 
+## Updates
+
+<blockquote>
+    <strong>March 14, 2025:</strong> After several months of contemplating, I decided to add a blog to my portfolio. I have added the route to the app and been brainstorming on the design. I also did some work on the logo/hero and footer but... I think I'll go with a different design. 😅 I am starting to feel web design with good UX/UI is more difficult than writing code. Kudos to all the designers out there!
+</blockquote>
+
 ## Portfolio Overview
 
 This portfolio showcases a selection of my projects as well as me as a person!
 
 ## Featured Projects
 
+### The Verse
+- **Description:** The Verse is a company that explores the intersection of games and overall well-being. During my internship there, I was the sole developer for company's main website.
+
+- **Technologies Used:** SASS, React, TypeScript, Material UI
+ 
+- **Links:** [Live](https://versebuilding.com)
+
 ### MoodCompass
 - **Description:** MoodCompass is a way to navigate your emotions with insightful learning. Capstone project for BrainStation's July 2024 Software Engineering program.
 
-- **Technologies Used**: SASS, React, JavaScript, Node.js, Express, Knex.js, MySQL, Firebase, Material UI
+- **Technologies Used:** SASS, React, JavaScript, Node.js, Express, Knex.js, MySQL, Firebase, Material UI
 
 - **Links:** [Live Demo](https://github.com/lilymtle/mood-compass), [GitHub](https://mood-compass.vercel.app/)
 
