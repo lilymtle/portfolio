@@ -45,12 +45,22 @@
             color: #FFFFFF;
             font-size: 0.8rem;
             font-weight: 400;
+
+            &:hover {
+                color: #788E99;
+                transition: 0.5s ease-in-out;
+            }
         }
 
         &-icon {
             width: auto;
             height: 1.5rem;
             margin-top: 0.5rem;
+
+            &:hover {
+                opacity: 60%;
+                transition: 0.5s ease-in-out;
+            }
         }
     }
 }
