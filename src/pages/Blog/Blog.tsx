@@ -15,7 +15,7 @@ export function BlogPage() {
             </HelmetProvider>
 
             <main>
-                <section className="blog__home">
+                <section id="welcome" className="blog__home">
                     <h1 className="blog__home-header">
                         A Little Nook
                     </h1>
@@ -34,7 +34,6 @@ export function BlogPage() {
                         Playlist
                     </h2>
 
-                    <iframe src="https://open.spotify.com/embed/playlist/2noyZgg466AcWSAJo0HSEh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </section>
             </main>
         </>
