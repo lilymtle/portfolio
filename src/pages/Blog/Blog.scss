@@ -1,3 +1,21 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
+.blog {
+    &__home {
+        padding: 1rem;
+
+        &-header {
+            font-family: "Playfair Display", sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+        }
+
+        &-subheader {
+            font-family: "Playfair Display", sans-serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+        }
+    }
+}
