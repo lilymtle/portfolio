@@ -32,7 +32,8 @@ export function BlogMenu() {
 
                 <div className="menu__container">
                     <div className="menu__wrapper">
-                        <a className="menu__link--portfolio" href="/">Porfolio</a>
+                        <a className="menu__link--home" href="/blog">Home</a>
+                        <article><a className="menu__link--portfolio" href="/">Porfolio</a></article>
                         
                         <label className="menu__label">
                             <p className="menu__label-text">
@@ -42,11 +43,11 @@ export function BlogMenu() {
 
                         <ul className="menu__list">
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">Home</a>
+                                <a className="menu__link" href="/">About</a>
                             </li>
 
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">About</a>
+                                <a className="menu__link" href="/">Archives</a>
                             </li>
 
                             <li className="menu__list-item">
@@ -100,19 +101,37 @@ export function BlogMenu() {
                             <li className="menu__list-item">
                                 <a className="menu__link" href="/">Courses</a>
                             </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">FAQs</a>
+                            </li>
                         </ul>
                     </div>
                     
                     <div className="menu__wrapper--socials">
-                        <img
-                            className="menu__social-icon"
-                            alt="LinkedIn Logo"
-                            src="/assets/logos/linkedin-logo-blue.png" />
-                        
-                        <img 
-                            className="menu__social-icon"
-                            alt="GitHub Logo"
-                            src="/assets/logos/github-logo-black.svg" />
+                        <a 
+                            className="menu__social-link" 
+                            href="https://linkedin.com/in/lilymtle" 
+                            target="_blank"
+                        >
+                            <img
+                                className="menu__social-icon"
+                                alt="LinkedIn Logo"
+                                src="/assets/logos/linkedin-logo-blue.png"
+                            />
+                        </a>
+
+                        <a 
+                            className="menu__social-link" 
+                            href="https://github.com/lilymtle" 
+                            target="_blank"
+                        >
+                            <img 
+                                className="menu__social-icon"
+                                alt="GitHub Logo"
+                                src="/assets/logos/github-logo-black.svg"
+                            />
+                        </a>
                     </div>
                 </div>
             </nav>
