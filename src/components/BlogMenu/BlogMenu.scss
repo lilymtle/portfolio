@@ -1,0 +1,57 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.96);
+        @include flex-box(column);
+
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+
+        &__close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        &__hamburger {
+            background: transparent;
+            color: #FFFFFF;
+            border: none;
+        }
+
+        &__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__label {
+            &-text {
+                margin-bottom: 0;
+            }
+        }
+
+        &__link {
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+
+        &--open {
+            transform: translateY(0);
+        }
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
