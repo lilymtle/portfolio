@@ -17,12 +17,10 @@
         z-index: 1;
 
         &-text {
+            color: #FFFFFF;
             font-size: 0.8rem;
             letter-spacing: .125rem;
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
+            margin-bottom: 2rem;
             opacity: 0.7;
             animation: fadeInOut 2s infinite alternate;
         }
@@ -50,9 +48,8 @@
     &__container {
         width: 90%;
         height: 100%;
-        color: #FFFFFF;
         @include flex-box(column);
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 1rem;
         position: absolute;
