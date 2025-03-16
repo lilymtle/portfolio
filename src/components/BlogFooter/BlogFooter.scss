@@ -4,7 +4,7 @@
 .blog {
     &__footer {
         background-image: none;
-        background-color: #86BF75;
+        background-color: #23272B;
         color: #FFFFFF;
         @include flex-box(column);
         gap: 0;
@@ -14,7 +14,7 @@
         }
 
         &-label {
-            color: #576BC4;
+            color: #B5907B;
             font-weight: 400;
             text-align: center;
             margin-bottom: 0.5rem;
