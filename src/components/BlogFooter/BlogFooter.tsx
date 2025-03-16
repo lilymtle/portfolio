@@ -26,7 +26,7 @@ export function BlogFooter() {
 
             <div className="blog__footer-container">
                 <h4 className="blog__footer-label">
-                    Topics
+                    Categories
                 </h4>
 
                 <ul className="blog__footer-nav-list">
