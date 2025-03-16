@@ -22,34 +22,6 @@ export function BlogHeader() {
                     Explore
                 </p>
             </div>
-
-            {/* <nav className="blog__nav">
-                <ul className="blog__nav-list">
-                    <li className="blog__nav-list-item">
-                        <a className="blog__nav-link" href="/">Home</a>
-                    </li>
-
-                    <li className="blog__nav-list-item">
-                        <a className="blog__nav-link" href="/">Books</a>
-                    </li>
-
-                    <li className="blog__nav-list-item">
-                        <a className="blog__nav-link" href="/">Health</a>
-                    </li>
-
-                    <li className="blog__nav-list-item">
-                        <a className="blog__nav-link" href="/">Lifestyle</a>
-                    </li>
-
-                    <li className="blog__nav-list-item">
-                        <a className="blog__nav-link" href="/">Travel</a>
-                    </li>
-
-                    <li className="blog__nav-list-item">
-                        <a className="blog__nav-link" href="/">Technology</a>
-                    </li>
-                </ul>
-            </nav> */}
         </header>
     );
 };
