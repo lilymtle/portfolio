@@ -30,16 +30,91 @@ export function BlogMenu() {
                     <CloseIcon />
                 </button>
 
-                <ul className="menu__list">
-                    <label className="menu__label">
-                        <p className="menu__label-text">
-                            Blog
-                        </p>
-                    </label>
-                    <li className="menu__list-item">
-                        <a className="menu__link" href="/">Home</a>
-                    </li>
-                </ul>
+                <div className="menu__container">
+                    <div className="menu__wrapper">
+                        <a className="menu__link--portfolio" href="/">Porfolio</a>
+                        
+                        <label className="menu__label">
+                            <p className="menu__label-text">
+                                Blog
+                            </p>
+                        </label>
+
+                        <ul className="menu__list">
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Home</a>
+                            </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">About</a>
+                            </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Recent Posts</a>
+                            </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="menu__wrapper">
+                        <label className="menu__label">
+                            <p className="menu__label-text">
+                                Categories
+                            </p>
+                        </label>
+
+                        <ul className="menu__list">
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Books</a>
+                            </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Health</a>
+                            </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Lifestyle</a>
+                            </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Travel</a>
+                            </li>
+
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Technology</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="menu__wrapper">
+                        <label className="menu__label">
+                            <p className="menu__label-text">
+                                Resources
+                            </p>
+                        </label>
+
+                        <ul className="menu__list">
+                            <li className="menu__list-item">
+                                <a className="menu__link" href="/">Courses</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div className="menu__wrapper--socials">
+                        <img
+                            className="menu__social-icon"
+                            alt="LinkedIn Logo"
+                            src="/assets/logos/linkedin-logo-blue.png" />
+                        
+                        <img 
+                            className="menu__social-icon"
+                            alt="GitHub Logo"
+                            src="/assets/logos/github-logo-black.svg" />
+                    </div>
+                </div>
             </nav>
         </>
     );
