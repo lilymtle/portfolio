@@ -5,12 +5,36 @@ import { Header } from "../../components/Header/Header";
 
 export function BlogPage() {
     return (
-        <HelmetProvider>
-            <Helmet>
-                <title>
-                    Blog | Lily Le
-                </title>
-            </Helmet>
-        </HelmetProvider>
+        <>
+            <HelmetProvider>
+                <Helmet>
+                    <title>
+                        Blog | Lily Le
+                    </title>
+                </Helmet>
+            </HelmetProvider>
+
+            <main>
+                <section className="blog__home">
+                    <h1 className="blog__home-header">
+                        A Little Nook
+                    </h1>
+
+                    <p className="blog__text">
+                        After months of contemplation, I decided to create this space for me
+                        to pour my thoughts into. This wee corner of mine will include my
+                        ramblings on various topics, both technical and non-technical.
+                    </p>
+
+                    <h2 className="blog__home-subheader">
+                        Latest Post
+                    </h2>
+
+                    <h2 className="blog__home-subheader">
+                        Playlist
+                    </h2>
+                </section>
+            </main>
+        </>
     );
 };
