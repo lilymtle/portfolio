@@ -1,9 +1,8 @@
 // styling
 import "./BlogHeader.scss";
 
-/// components
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { Box } from "@mui/material";
+// components
+import { BlogMenu } from "../BlogMenu/BlogMenu";
 
 export function BlogHeader() {
     return (
@@ -12,6 +11,10 @@ export function BlogHeader() {
             <div className="blog__overlay"></div>
 
             <div className="blog__container">
+                <div className="blog__nav-wrapper">
+                    <BlogMenu />
+                </div>
+
                 <img
                     className="blog__logo"
                     alt='Logo of a mountain with the text "Lilys Corner for Thoughts"'
