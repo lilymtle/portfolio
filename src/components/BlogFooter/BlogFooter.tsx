@@ -15,6 +15,10 @@ export function BlogFooter() {
                     </li>
 
                     <li className="blog__footer-nav-list-item">
+                        <a className="blog__footer-nav-link" href="/">Archives</a>
+                    </li>
+
+                    <li className="blog__footer-nav-list-item">
                         <a className="blog__footer-nav-link" href="/">Recent Posts</a>
                     </li>
 
@@ -75,17 +79,21 @@ export function BlogFooter() {
 
                 <ul className="blog__footer-nav-list--socials">
                     <li className="blog__footer-nav-list-item">
-                        <img 
-                            className="blog__footer-icon"
-                            alt="LinkedIn Icon"
-                            src="/assets/logos/linkedin-logo.png" />
+                        <a href="https://linkedin.com/in/lilymtle" target="_blank">
+                            <img 
+                                className="blog__footer-icon"
+                                alt="LinkedIn Icon"
+                                src="/assets/logos/linkedin-logo.png" />
+                        </a>
                     </li>
 
                     <li className="blog__footer-nav-list-item">
-                        <img 
-                            className="blog__footer-icon"
-                            alt="GitHub Icon"
-                            src="/assets/logos/github-logo.svg" />
+                        <a href="https://github.com/lilymtle" target="_blank">
+                            <img 
+                                className="blog__footer-icon"
+                                alt="GitHub Icon"
+                                src="/assets/logos/github-logo.svg" />
+                        </a>
                     </li>
                 </ul>
             </div>
