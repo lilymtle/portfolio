@@ -6,9 +6,18 @@ Hi, I'm Lily, a passionate developer with an interest in front-end development a
 
 ## Updates
 
-<blockquote>
-    <strong>March 14, 2025:</strong> After several months of contemplating, I decided to add a blog to my portfolio. I have added the route to the app and been brainstorming on the design. I also did some work on the logo/hero and footer but... I think I'll go with a different design. 😅 I am starting to feel web design with good UX/UI is more difficult than writing code. Kudos to all the designers out there!
-</blockquote>
+
+<details>
+    <summary>March 15, 2025</summary>
+    <p>I finally settled on a design, but it's pretty much similar to my portfolio. I love having a huge hero that takes up the entire viewport. 🫣 But I'll try to make my blog a bit more different from my portfolio. Finished the navigation menu, hero, and footer. Now... I will have to learn about headless CMS!
+    </p>
+</details>
+
+<details>
+    <summary>March 14, 2025</summary>
+    <p>After several months of contemplating, I decided to add a blog to my portfolio. I have added the route to the app and been brainstorming on the design. I also did some work on the logo/hero and footer but... I think I'll go with a different design. 😅 I am starting to feel web design with good UX/UI is more difficult than writing code. Kudos to all the designers out there!
+    </p>
+</details>
 
 ## Portfolio Overview
 
