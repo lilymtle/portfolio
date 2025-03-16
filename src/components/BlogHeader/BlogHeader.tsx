@@ -15,15 +15,19 @@ export function BlogHeader() {
                     <BlogMenu />
                 </div>
 
-                <img
-                    className="blog__logo"
-                    alt='Logo of a mountain with the text "Lilys Corner for Thoughts"'
-                    src="/assets/logos/blog-logo.png"
-                />
+                <div className="blog__container--logo">
+                    <a href="/blog">
+                        <img
+                            className="blog__logo"
+                            alt='Logo of a mountain with the text "Lilys Corner for Thoughts"'
+                            src="/assets/logos/blog-logo.png"
+                        />
+                    </a>
+                </div>
 
-                <p className="blog__header-text">
+                <a className="blog__header-link" href="#welcome">
                     Explore
-                </p>
+                </a>
             </div>
         </header>
     );
