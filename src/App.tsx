@@ -10,14 +10,13 @@ import { AboutPage } from "./pages/About/About";
 import { ProjectsPage } from "./pages/Projects/Projects";
 import { ContactPage } from "./pages/Contact/Contact";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
+import { BlogPage } from "./pages/Blog/Blog";
+import { BlogHeader } from "./components/BlogHeader/BlogHeader";
+import { BlogFooter } from "./components/BlogFooter/BlogFooter";
 
 // hook
 import { useEffect } from "react";
-import { BlogPage } from "./pages/Blog/Blog";
-import { BlogHeader } from "./components/BlogHeader/BlogHeader";
-import { BlogHero } from "./components/BlogHero/BlogHero";
-import { BlogFooter } from "./components/BlogFooter/BlogFooter";
-
+import { BlogAbout } from "./pages/BlogAbout/BlogAbout";
 
 function PortfolioLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -76,11 +75,16 @@ function App() {
             </PortfolioLayout>
           </>
         } />
-        <Route path ="/blog" element={ 
+        <Route path="/blog" element={ 
           <BlogLayout>
             <BlogPage />
           </BlogLayout>
-          } />
+        } />
+        <Route path="/blog/about" element={
+          <BlogLayout>
+            <BlogAbout />
+          </BlogLayout>
+        } />
       </Routes>
     </BrowserRouter>
   )
