@@ -103,7 +103,7 @@ export function BlogMenu() {
                             </li>
 
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">FAQs</a>
+                                <a className="menu__link" href="/blog/faqs">FAQs</a>
                             </li>
                         </ul>
                     </div>

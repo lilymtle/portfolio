@@ -67,7 +67,7 @@ export function BlogFooter() {
                     </li>
 
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">FAQs</a>
+                        <a className="blog__footer-nav-link" href="/blog/faqs">FAQs</a>
                     </li>
                 </ul>
             </div>
