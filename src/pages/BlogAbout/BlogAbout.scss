@@ -10,6 +10,10 @@
             padding: 2rem;
         }
 
+        @include desktop {
+            padding-inline: 15rem;
+        }
+
         &-header {
             font-family: "Playfair Display", sans-serif;
         }
@@ -29,9 +33,15 @@
                 gap: 2rem;
             }
 
+            @include desktop {
+                @include flex-box(row);
+                align-items: center;
+                gap: 2rem;
+            }
+
             &--disclaimer {
                 background-color: #527392;
-                margin-top: 1rem;
+                margin-block: 1rem;
                 padding: 1rem;
             }
         }
@@ -44,7 +54,7 @@
                 object-position: center top;
                 border-radius: 50%;
                 align-self: center;
-                margin-block: 1rem;
+                margin-block: 1.5rem;
             }
 
             &--illustration {
@@ -80,8 +90,18 @@
     };
 
     &__wrapper {
+        &--subheader-image {
+            @include flex-box(column);
+        }
+        
         &--image {
+            @include flex-box(column);
+
             @include tablet {
+                order: 2;
+            }
+
+            @include desktop {
                 order: 2;
             }
         }
