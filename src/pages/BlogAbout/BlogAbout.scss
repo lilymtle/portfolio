@@ -6,6 +6,10 @@
     &__about {
         padding: 1rem;
 
+        @include tablet {
+            padding: 2rem;
+        }
+
         &-header {
             font-family: "Playfair Display", sans-serif;
         }
@@ -19,6 +23,12 @@
         &-container {
             @include flex-box(column);
 
+            @include tablet {
+                @include flex-box(row);
+                align-items: center;
+                gap: 2rem;
+            }
+
             &--disclaimer {
                 background-color: #527392;
                 margin-top: 1rem;
@@ -27,7 +37,6 @@
         }
 
         &-image {
-
             &--me {
                 width: 15rem;
                 height: 15rem;
@@ -69,4 +78,12 @@
             }
         }
     };
+
+    &__wrapper {
+        &--image {
+            @include tablet {
+                order: 2;
+            }
+        }
+    }
 };
