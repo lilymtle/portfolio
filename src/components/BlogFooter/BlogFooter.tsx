@@ -11,7 +11,7 @@ export function BlogFooter() {
 
                 <ul className="blog__footer-nav-list">
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">About</a>
+                        <a className="blog__footer-nav-link" href="/blog/about">About</a>
                     </li>
 
                     <li className="blog__footer-nav-list-item">

@@ -43,7 +43,7 @@ export function BlogMenu() {
 
                         <ul className="menu__list">
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">About</a>
+                                <a className="menu__link" href="/blog/about">About</a>
                             </li>
 
                             <li className="menu__list-item">
