@@ -17,7 +17,7 @@ export function BlogPage() {
             <main>
                 <section id="welcome" className="blog__home">
                     <h1 className="blog__home-header">
-                        A Little Nook
+                        Hi there 👋🏻
                     </h1>
 
                     <p className="blog__text">
