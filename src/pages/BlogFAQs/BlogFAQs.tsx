@@ -15,9 +15,7 @@ export function BlogFAQs() {
             </h1>
 
             <p className="blog__faqs-text">
-                I have compiled a list of questions that I have been 
-                asked about—<span className="blog__faqs-text--italics">frequently</span>. Check out
-                the categories below.
+                If you have any questions that aren't answered here, you can contact me here {/* add link later */}.
             </p>
 
             <div className="blog__faqs-container">
