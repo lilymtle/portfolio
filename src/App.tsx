@@ -13,10 +13,10 @@ import FloatingButton from "./components/FloatingButton/FloatingButton";
 import { BlogPage } from "./pages/Blog/Blog";
 import { BlogHeader } from "./components/BlogHeader/BlogHeader";
 import { BlogFooter } from "./components/BlogFooter/BlogFooter";
-
+import { BlogAbout } from "./pages/BlogAbout/BlogAbout";
+import { BlogFAQs } from "./pages/BlogFAQs/BlogFAQs";
 // hook
 import { useEffect } from "react";
-import { BlogAbout } from "./pages/BlogAbout/BlogAbout";
 
 function PortfolioLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -83,6 +83,11 @@ function App() {
         <Route path="/blog/about" element={
           <BlogLayout>
             <BlogAbout />
+          </BlogLayout>
+        } />
+        <Route path="/blog/faqs" element={
+          <BlogLayout>
+            <BlogFAQs />
           </BlogLayout>
         } />
       </Routes>
