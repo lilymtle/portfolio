@@ -15,8 +15,12 @@ import { BlogHeader } from "./components/BlogHeader/BlogHeader";
 import { BlogFooter } from "./components/BlogFooter/BlogFooter";
 import { BlogAbout } from "./pages/BlogAbout/BlogAbout";
 import { BlogFAQs } from "./pages/BlogFAQs/BlogFAQs";
+import { BlogContactPage } from "./pages/BlogContact/BlogContact";
+import { BlogLearningPage } from "./pages/BlogLearning/BlogLearning";
+
 // hook
 import { useEffect } from "react";
+
 
 function PortfolioLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -88,6 +92,16 @@ function App() {
         <Route path="/blog/faqs" element={
           <BlogLayout>
             <BlogFAQs />
+          </BlogLayout>
+        } />
+        <Route path="/blog/contact" element={
+          <BlogLayout>
+            <BlogContactPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/learning" element={
+          <BlogLayout>
+            <BlogLearningPage />
           </BlogLayout>
         } />
       </Routes>
