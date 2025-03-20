@@ -11,8 +11,17 @@
         @include flex-box(column);
         gap: 0;
 
-        &-container {
-            // @include flex-box(column);
+        @include tablet {
+            @include flex-box(row);
+            align-items: flex-start;
+            padding: 2rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            align-items: flex-start;
+            padding-block: 2rem;
+            padding-inline: 5rem;
         }
 
         &-label {
