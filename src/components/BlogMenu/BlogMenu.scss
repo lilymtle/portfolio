@@ -16,6 +16,14 @@
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
 
+        @include tablet { 
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+
         &__close {
             position: absolute;
             top: 1rem;
@@ -29,6 +37,16 @@
             background: transparent;
             color: #FFFFFF;
             border: none;
+
+            @include tablet { 
+                visibility: hidden;
+                opacity: 0;
+            }
+    
+            @include desktop {
+                visibility: hidden;
+                opacity: 0;
+            }
         }
 
         &__container {
