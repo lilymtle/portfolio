@@ -67,4 +67,43 @@
             cursor: pointer;
         }
     }
+
+    &__nav {
+        &-wrapper {
+            width: 100%;
+            @include flex-box(column);
+        }
+
+        &-full {
+            visibility: hidden;
+
+            @include tablet {
+                visibility: visible;
+            }
+
+            @include desktop {
+                visibility: visible;
+            }
+        }
+
+        &-list {
+            @include flex-box(row);
+            justify-content: space-evenly;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-link {
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            &:hover {
+                opacity: 60%;
+                transition: 0.5s ease-in-out;
+            }
+        }
+    }
 }
