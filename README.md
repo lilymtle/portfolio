@@ -5,7 +5,10 @@
 Hi, I'm Lily, a passionate developer with an interest in front-end development and UI/UX design. 👋🏻
 
 ## Updates
-
+<details>
+    <summary>March 19, 2025</summary>
+    <p>Great news! I finished applying the tablet and desktop breakpoints for the header and footer. I also finished making my FAQs and About page. Made them responsive as well. 🥹 Going to work on the Contact and Learning pages later. Oh, I decided on Sanity will be my headless CMS of choice!</p>
+</details>
 
 <details>
     <summary>March 15, 2025</summary>
