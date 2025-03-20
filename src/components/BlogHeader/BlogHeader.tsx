@@ -23,7 +23,7 @@ export function BlogHeader() {
                             </li>
 
                             <li className="blog__nav-list-item">
-                                <a className="blog__nav-link" href="/">Posts</a>
+                                <a className="blog__nav-link" href="/blog/posts">Posts</a>
                             </li>
 
                             <li className="blog__nav-list-item">

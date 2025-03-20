@@ -17,7 +17,7 @@ export function BlogFooter() {
                     </li>
 
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">Posts</a>
+                        <a className="blog__footer-nav-link" href="/blog/posts">Posts</a>
                     </li>
 
                     <li className="blog__footer-nav-list-item">
