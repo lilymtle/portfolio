@@ -45,17 +45,16 @@ export function BlogMenu() {
                             <li className="menu__list-item">
                                 <a className="menu__link" href="/blog/about">About</a>
                             </li>
-
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">Archives</a>
+                                <a className="menu__link" href="/">Posts</a>
                             </li>
 
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">Recent Posts</a>
+                                <a className="menu__link" href="/blog/faqs">FAQs</a>
                             </li>
 
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">Contact</a>
+                                <a className="menu__link" href="/blog/contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -99,11 +98,7 @@ export function BlogMenu() {
 
                         <ul className="menu__list">
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/">Courses</a>
-                            </li>
-
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/blog/faqs">FAQs</a>
+                                <a className="menu__link" href="/blog/learning">Learning</a>
                             </li>
                         </ul>
                     </div>

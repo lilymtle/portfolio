@@ -31,7 +31,7 @@ export function BlogHeader() {
                             </li>
 
                             <li className="blog__nav-list-item">
-                                <a className="blog__nav-link" href="/blog">Contact</a>
+                                <a className="blog__nav-link" href="/blog/contact">Contact</a>
                             </li>
 
                             <li className="blog__nav-list-item">

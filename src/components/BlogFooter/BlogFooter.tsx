@@ -25,7 +25,7 @@ export function BlogFooter() {
                     </li>
 
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">Contact</a>
+                        <a className="blog__footer-nav-link" href="/blog/contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +65,7 @@ export function BlogFooter() {
 
                 <ul className="blog__footer-nav-list">
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">Learning</a>
+                        <a className="blog__footer-nav-link" href="/blog/learning">Learning</a>
                     </li>
                 </ul>
             </div>
