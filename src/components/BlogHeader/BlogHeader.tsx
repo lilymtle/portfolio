@@ -12,7 +12,33 @@ export function BlogHeader() {
 
             <div className="blog__container">
                 <div className="blog__nav-wrapper">
+                    {/* navigation for mobile */}
                     <BlogMenu />
+
+                    {/* navigation for tablet and desktop */}
+                    <nav className="blog__nav-full">
+                        <ul className="blog__nav-list">
+                            <li className="blog__nav-list-item">
+                                <a className="blog__nav-link" href="/blog/about">About</a>
+                            </li>
+
+                            <li className="blog__nav-list-item">
+                                <a className="blog__nav-link" href="/">Posts</a>
+                            </li>
+
+                            <li className="blog__nav-list-item">
+                                <a className="blog__nav-link" href="/blog/about">FAQs</a>
+                            </li>
+
+                            <li className="blog__nav-list-item">
+                                <a className="blog__nav-link" href="/blog">Contact</a>
+                            </li>
+
+                            <li className="blog__nav-list-item">
+                                <a className="blog__nav-link" href="/">Portfolio</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
                 <div className="blog__container--logo">
