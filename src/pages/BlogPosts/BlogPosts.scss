@@ -8,6 +8,33 @@
             @include flex-box(column);
             align-items: center;
             gap: 0.5rem;
+
+            @include tablet {
+                @include flex-box(row);
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            @include desktop {
+                @include flex-box(row);
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+    }
+
+    &__wrapper {
+        &-heading {
+            @include flex-box(row);
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__sort {
+        &-container {
+            @include flex-box(row);
+            gap: 0.5rem;
         }
     }
 
@@ -23,11 +50,45 @@
             list-style: none;
             margin: 0;
             padding: 0;
+
+            @include tablet {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            @include desktop {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+        }
+
+        &-item {
+            @include tablet {
+                flex: 1 1 calc(51% - 1.6rem);
+                max-width: calc(51% - 1.6rem);
+            }
+
+            @include desktop {
+                flex: 1 1 calc(51% - 1.6rem);
+                max-width: calc(51% - 1.6rem);
+            }
         }
     }
 
     &__post {
         &-card {
+            @include tablet {
+                @include flex-box(column);
+                justify-content: space-between;
+            }
+
+            @include desktop {
+                @include flex-box(column);
+                justify-content: space-between;
+            }
+
             &-container {
                 background-color: #f2f5f8;
                 padding: 1rem;
@@ -42,10 +103,18 @@
                 }
             }
 
-            &-footer {
-                @include flex-box(row);
-                align-items: center;
-                gap: 1rem;
+            &-content {
+                @include tablet {
+                    height: 12rem;
+                    @include flex-box(column);
+                    justify-content: space-between;
+                }
+
+                @include desktop {
+                    height: 12rem;
+                    @include flex-box(column);
+                    justify-content: space-between;
+                }
             }
 
             &-image {
@@ -90,9 +159,16 @@
             }
 
             &-link {
+                color: #762D1C;
                 font-size: 0.85rem;
                 font-style: italic;
                 font-weight: 400;
+            }
+
+            &-footer {
+                @include flex-box(row);
+                align-items: center;
+                gap: 1rem;
             }
         }
     }
