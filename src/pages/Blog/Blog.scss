@@ -5,6 +5,14 @@
     &__home {
         padding: 1rem;
 
+        @include tablet { 
+            padding: 2rem;
+        }
+
+        @include desktop {
+            padding-inline: 15rem;
+        }
+
         &-header {
             font-family: "Playfair Display", sans-serif;
             font-weight: 500;
