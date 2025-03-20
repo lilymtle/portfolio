@@ -23,7 +23,7 @@ body {
 
 .blog {
     // section padding
-    &__contact, &__learning {
+    &__posts, &__contact, &__learning {
         padding: 1rem;
 
         @include tablet {
@@ -45,6 +45,12 @@ body {
         font-family: "Playfair Display", sans-serif;
         font-size: 1.25rem;
         font-weight: 500;
+        letter-spacing: 0.1rem;
+    }
+
+    &__label {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 0.9rem;
         letter-spacing: 0.1rem;
     }
 }
