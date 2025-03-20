@@ -5,6 +5,8 @@ export function BlogFooter() {
     return (
         <footer className="blog__footer">
             <div className="blog__footer-container">
+
+
                 <h4 className="blog__footer-label">
                     Blog
                 </h4>
@@ -15,11 +17,11 @@ export function BlogFooter() {
                     </li>
 
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">Archives</a>
+                        <a className="blog__footer-nav-link" href="/">Posts</a>
                     </li>
 
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">Recent Posts</a>
+                        <a className="blog__footer-nav-link" href="/blog/faqs">FAQs</a>
                     </li>
 
                     <li className="blog__footer-nav-list-item">
@@ -30,7 +32,7 @@ export function BlogFooter() {
 
             <div className="blog__footer-container">
                 <h4 className="blog__footer-label">
-                    Categories
+                    Browse
                 </h4>
 
                 <ul className="blog__footer-nav-list">
@@ -63,11 +65,7 @@ export function BlogFooter() {
 
                 <ul className="blog__footer-nav-list">
                     <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/">Courses</a>
-                    </li>
-
-                    <li className="blog__footer-nav-list-item">
-                        <a className="blog__footer-nav-link" href="/blog/faqs">FAQs</a>
+                        <a className="blog__footer-nav-link" href="/">Learning</a>
                     </li>
                 </ul>
             </div>
