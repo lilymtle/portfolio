@@ -17,6 +17,7 @@ import { BlogAbout } from "./pages/BlogAbout/BlogAbout";
 import { BlogFAQs } from "./pages/BlogFAQs/BlogFAQs";
 import { BlogContactPage } from "./pages/BlogContact/BlogContact";
 import { BlogLearningPage } from "./pages/BlogLearning/BlogLearning";
+import { BlogPostsPage } from "./pages/BlogPosts/BlogPosts";
 
 // hook
 import { useEffect } from "react";
@@ -87,6 +88,11 @@ function App() {
         <Route path="/blog/about" element={
           <BlogLayout>
             <BlogAbout />
+          </BlogLayout>
+        } />
+        <Route path="/blog/posts" element={
+          <BlogLayout>
+            <BlogPostsPage />
           </BlogLayout>
         } />
         <Route path="/blog/faqs" element={
