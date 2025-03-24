@@ -1,9 +1,36 @@
 // styling
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Blog.scss";
-import { Header } from "../../components/Header/Header";
+
+// components
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { BlogPostCard } from "../../components/BlogPostCard/BlogPostCard";
+
+// util & hooks
+import { timeAgo } from "../../utils/timeAgo";
+import { getExcerpt } from "../../utils/getExcerpt";
+import { useEffect, useState } from "react";
+
+// sanity
+import { getLatestBlogPost } from "../../sanity/fetchBlogPosts";
+import { urlFor } from "../../sanity/sanityImage";
 
 export function BlogPage() {
+    const [latestPost, setLatestPost] = useState<any>(null);
+
+    useEffect(() => {
+        const fetchBlogPost = async () => {
+            try {
+                const data = await getLatestBlogPost();
+                if (!data) throw new Error("No latest post found");
+                setLatestPost(data);
+                console.log(data);
+            } catch (error) {
+                console.error("Error fetching latest post:", error);
+            }
+        };
+        fetchBlogPost();
+    }, []);
+
     return (
         <>
             <HelmetProvider>
@@ -20,6 +47,7 @@ export function BlogPage() {
                         Hi there 👋🏻
                     </h1>
 
+
                     <p className="blog__text">
                         After months of contemplation, I decided to create this space for me
                         to pour my thoughts into. This wee corner of mine will include my
@@ -29,6 +57,18 @@ export function BlogPage() {
                     <h2 className="blog__home-subheader">
                         Latest Post
                     </h2>
+
+                    <article className="blog__post">
+                        {latestPost ? (
+                            <BlogPostCard
+                                title={latestPost.title}
+                                image={urlFor(latestPost.mainImage)}
+                                excerpt={getExcerpt(latestPost.body, 150)}
+                                categories={latestPost.categories}
+                                publishedAt={timeAgo(latestPost.publishedAt)}
+                            />
+                        ) : <p>Loading latest post...</p>}
+                    </article>
 
                     <h2 className="blog__home-subheader">
                         Playlist
