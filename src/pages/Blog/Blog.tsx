@@ -23,7 +23,6 @@ export function BlogPage() {
                 const data = await getLatestBlogPost();
                 if (!data) throw new Error("No latest post found");
                 setLatestPost(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching latest post:", error);
             }
