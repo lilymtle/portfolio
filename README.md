@@ -6,6 +6,11 @@ Hi, I'm Lily, a passionate developer with an interest in front-end development a
 
 ## Updates
 <details>
+    <summary>March 24, 2025</summary>
+    <p>Sanity has been installed! It took some time to figure out. I was able to fetch my blog posts via Sanity's API. Worked on sorting logic, pagination, and familiarizing myself with Sanity. Will need to spend some more time with getting more acquainted with Sanity, but this is a great start!</p>
+</details>
+
+<details>
     <summary>March 20, 2025</summary>
     <p>Okay, making some progress! I started working on the page that will display all the posts. Got a few card placeholders up to work on the layout and also played around with what the cards for blog posts will consist of. Added a "Sort by" dropdown and will add functionality into it later. Need to work on the Resources and Error page. Hoping this weekend I can learn more about Sanity and publish my first post. Once that's done, I'll have to go back and refactor code where I can. Almost done! Cannot wait to share it. 😁</p>
 </details>
