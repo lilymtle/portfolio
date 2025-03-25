@@ -1,9 +1,12 @@
+// styling
+import "./BlogPostCard.scss";
+
 interface Category {
     _id: string;
     title: string;
 }
 
-interface BlogPostCardProps {
+export interface BlogPostCard {
     title: string;
     image: string;
     excerpt: string;
@@ -12,42 +15,44 @@ interface BlogPostCardProps {
 };
 
 
-export function BlogPostCard({ title, image, excerpt, categories, publishedAt }: BlogPostCardProps): JSX.Element {
+export function BlogPostCard({ title, image, excerpt, categories, publishedAt }: BlogPostCard): JSX.Element {
     return (
-        <div className="blog__post-card">
-            <div className="blog__post-card-image-wrapper">
-                <img
-                    className="blog__post-card-image"
-                    src={image}
-                    alt="Placeholder"
-                />
-            </div>
-
-            <div className="blog__post-card-content">
-                <div className="blog__post-card-title-description">
-                    <h2 className="blog__subheading">
-                        {title}
-                    </h2>
-
-                    <p className="blog__post-card-text">
-                        {excerpt} <a className="blog__post-card-link" href="/">read more</a>
-                    </p>
+        <div className="blog__post-card-container">
+            <div className="blog__post-card">
+                <div className="blog__post-card-image-wrapper">
+                    <img
+                        className="blog__post-card-image"
+                        src={image}
+                        alt="Placeholder"
+                    />
                 </div>
 
-                <div className="blog__post-card-footer">
-                    {categories.map((category) => (
-                        <p key={category._id} className="blog__post-card-category">
-                            {category.title}
+                <div className="blog__post-card-content">
+                    <div className="blog__post-card-title-description">
+                        <h2 className="blog__subheading">
+                            {title}
+                        </h2>
+
+                        <p className="blog__post-card-text">
+                            {excerpt} <a className="blog__post-card-link" href="/">read more</a>
                         </p>
-                    ))}
+                    </div>
 
-                    <p className="blog__post-card-divider">
-                        |
-                    </p>
+                    <div className="blog__post-card-footer">
+                        {categories.map((category) => (
+                            <p key={category._id} className="blog__post-card-category">
+                                {category.title}
+                            </p>
+                        ))}
 
-                    <p className="blog__post-card-date">
-                        {publishedAt}
-                    </p>
+                        <p className="blog__post-card-divider">
+                            |
+                        </p>
+
+                        <p className="blog__post-card-date">
+                            {publishedAt}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
