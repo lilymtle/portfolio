@@ -23,7 +23,7 @@ body {
 
 .blog {
     // section padding
-    &__posts, &__contact, &__learning {
+    &__posts, &__contact, &__resources {
         padding: 1rem;
 
         @include tablet {
@@ -46,6 +46,10 @@ body {
         font-size: 1.25rem;
         font-weight: 500;
         letter-spacing: 0.1rem;
+
+        &--remove-top-margin {
+            margin-top: 0;
+        }
     }
 
     &__label {
