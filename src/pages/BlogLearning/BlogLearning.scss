@@ -9,15 +9,18 @@
             &-number {
                 width: 40px;
                 height: 40px;
+                background-color: white;
                 @include flex-box(row);
-                justify-content: center;
                 align-items: center;
                 border-radius: 50%;
-                flex-shrink: 0;
             }
 
             &-subheading-text {
                 width: 70%;
+                height: 100%;
+                @include flex-box(column);
+                justify-content: space-between;
+                // background: green;
             }
         }
     }
@@ -29,20 +32,50 @@
             list-style: none;
             margin: 0;
             padding: 0;
+
+            @include tablet {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+
+            @include desktop {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2.5rem;
+                margin-top: 2.5rem;
+            }
         }
     }
 
     &__resource {
         &-card {
             background-color: #EEE;
+            width: auto;
+            height: 10rem;
             @include flex-box(row);
             justify-content: space-between;
             border-radius: .25rem;
             padding: 1rem;
+
+            @include tablet {
+                width: 16.5rem;
+                height: 10rem;
+                padding: 2rem;
+            }
+
+            @include desktop {
+                width: 17rem;
+                height: 10rem;
+                padding: 2rem;
+            }
         }
 
-        &-arrow-icon {
-            color: red; // change later
+        &-arrow-link {
+            color: $pale-taupe; // change later
+            margin-top: 0.25rem;
         }
     }
 }
