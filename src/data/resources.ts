@@ -36,7 +36,7 @@ export const learningResources = [
     {
         id: 6,
         name: "Accessibility Fundamentals Overview",
-        website: "W3C Web Accessibility Initiative (WAI)",
+        website: "W3C Web Accessibility Initiative",
         link: "https://www.w3.org/WAI/fundamentals/"
     }
 ]
