@@ -7,7 +7,7 @@ export function BlogFooter() {
             <div className="blog__footer-container">
 
 
-                <h4 className="blog__footer-label">
+                <h4 className="blog__subheading blog__subheading--small">
                     Blog
                 </h4>
 
@@ -31,7 +31,7 @@ export function BlogFooter() {
             </div>
 
             <div className="blog__footer-container">
-                <h4 className="blog__footer-label">
+                <h4 className="blog__subheading blog__subheading--small">
                     Browse
                 </h4>
 
@@ -59,7 +59,7 @@ export function BlogFooter() {
             </div>
 
             <div className="blog__footer-container">
-                <h4 className="blog__footer-label">
+                <h4 className="blog__subheading blog__subheading--small">
                     Resources
                 </h4>
 
@@ -71,7 +71,7 @@ export function BlogFooter() {
             </div>
 
             <div className="blog__footer-container">
-                <h4 className="blog__footer-label">
+                <h4 className="blog__subheading blog__subheading--small">
                     Connect
                 </h4>
 
