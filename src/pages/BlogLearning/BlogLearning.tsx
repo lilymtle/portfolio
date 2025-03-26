@@ -12,7 +12,9 @@ export function BlogLearningPage() {
             </h1>
 
             <p className="blog__text">
-                Text 
+                Here you will find various learning resources, all of which are free or have free options.
+                Some of these are resources I've used, while others are resources I stumbled upon and think is worth sharing.
+                I will try to update this list periodically.
             </p>
             
             <ul className="blog__resources-list">
@@ -21,11 +23,11 @@ export function BlogLearningPage() {
                         <article className="blog__resource-card">
                             <div className="blog__container--resource-subheading-text">
                                 <h2 className="blog__subheading blog__subheading--remove-top-margin">{learningResource.name}</h2>
-                                <p className="blog__text">{learningResource.website}</p>
+                                <p className="blog__text blog__text--remove-bottom-margin">{learningResource.website}</p>
                             </div>
 
                             <div className="blog__container--resource-number">
-                                <a className="blog__resource-arrow-icon" href={learningResource.link}><ArrowForwardIcon /></a>
+                                <a className="blog__resource-arrow-link" href={learningResource.link}><ArrowForwardIcon /></a>
                             </div>
                         </article>
                     </li>
