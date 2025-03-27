@@ -46,7 +46,6 @@ export function BlogPostsPage() {
     const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
     const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
 
-
     return (
         <section className="blog__posts">
             <div className="blog__sub-nav-container">
@@ -82,9 +81,11 @@ export function BlogPostsPage() {
                                 <BlogPostCard
                                     title={post.title}
                                     image={urlFor(post.mainImage)}
-                                    excerpt={getExcerpt(post.body, 150)}
+                                    excerpt={getExcerpt(post.body, 100)}
+                                    body={post.body}
                                     categories={post.categories}
                                     publishedAt={timeAgo(post.publishedAt)}
+                                    slug={post.slug.current}
                                 />
                             </li>
                         ))
