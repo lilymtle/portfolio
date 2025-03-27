@@ -1,4 +1,5 @@
 // styling
+import { Link } from "react-router-dom";
 import "./BlogPostCard.scss";
 
 interface Category {
@@ -10,13 +11,16 @@ export interface BlogPostCard {
     title: string;
     image: string;
     excerpt: string;
+    body: string;
     categories: Category[];
     publishedAt: string;
+    slug?: string;
 };
 
 
-export function BlogPostCard({ title, image, excerpt, categories, publishedAt }: BlogPostCard): JSX.Element {
+export function BlogPostCard({ title, image, excerpt, body, categories, publishedAt, slug}: BlogPostCard): JSX.Element {
     return (
+        <Link className="blog__post-card-link" to={`/blog/post/${slug}`} state={{ title, image, body, categories, publishedAt }}>
         <div className="blog__post-card-container">
             <div className="blog__post-card">
                 <div className="blog__post-card-image-wrapper">
@@ -34,15 +38,18 @@ export function BlogPostCard({ title, image, excerpt, categories, publishedAt }:
                         </h2>
 
                         <p className="blog__post-card-text">
-                            {excerpt} <a className="blog__post-card-link" href="/">read more</a>
+                            {excerpt}
                         </p>
                     </div>
 
                     <div className="blog__post-card-footer">
                         {categories.map((category) => (
-                            <p key={category._id} className="blog__post-card-category">
+                            <Link
+                                className="blog__post-card-category"
+                                to={`/blog/category/${category.title}`}
+                            >
                                 {category.title}
-                            </p>
+                            </Link>
                         ))}
 
                         <p className="blog__post-card-divider">
@@ -56,5 +63,6 @@ export function BlogPostCard({ title, image, excerpt, categories, publishedAt }:
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
