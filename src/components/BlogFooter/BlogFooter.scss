@@ -24,6 +24,10 @@
             padding-inline: 5rem;
         }
 
+        @include widescreen {
+            padding-inline: 45rem;
+        }
+
         &-nav-list {
             text-align: center;
             list-style: none;
