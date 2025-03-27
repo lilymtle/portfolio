@@ -1,0 +1,66 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+.blog {
+    &__container {
+        &--post {
+            @include tablet {
+                margin-bottom: 2rem;
+            }
+
+            @include desktop {
+                margin-bottom: 2.5rem;
+            }
+
+            &-image {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                overflow: hidden;
+            }
+
+            &-nav {
+                @include flex-box(row);
+                justify-content: space-between;
+            }
+        }
+
+        &--date-category {
+            @include flex-box(row);
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__post {
+        &-image {
+            width: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        &-category {
+            display: inline-block;
+            font-family: $blog-secondary-font;
+            letter-spacing: 0.1rem;
+            flex: 0;
+        }
+
+        &-date {
+            font-style: italic;
+        }
+
+        &-nav {
+            &-link {
+                @include flex-box(row);
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            &-label {
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+}
