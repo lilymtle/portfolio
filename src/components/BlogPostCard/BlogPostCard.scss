@@ -12,6 +12,8 @@
 
     &__post {
         &-card {
+            margin-top: 0.5rem; 
+
             @include tablet {
                 @include flex-box(column);
                 justify-content: space-between;
@@ -23,14 +25,15 @@
             }
 
             &-container {
-                background-color: #f2f5f8;
-                padding: 1rem;
+                background-color: #FFFFFF;
+                border: 1px solid #F8F8F8;
+                padding: 1rem 1.5rem;
                 border-radius: .5rem;
 
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.015) translateZ(0);
-                    box-shadow: 0 2px 50px -5px #ccc;
+                    box-shadow: 10px 10px 10px -5px #EEE;
                     transition: 0.3s ease-in-out;
                     backface-visibility: hidden;
                 }
@@ -84,7 +87,12 @@
                 font-size: 0.8rem;
                 font-weight: 500;
                 letter-spacing: 0.1rem;
-                margin-bottom: 0;
+            }
+
+            &-category {
+                color: #2E485A;
+                font-weight: 600;
+                flex: 0;
             }
 
             &-text {
@@ -92,9 +100,10 @@
             }
 
             &-link {
-                color: #762D1C;
-                font-size: 0.85rem;
-                font-style: italic;
+                // color: #762D1C;
+                // font-size: 0.85rem;
+                // font-style: italic;
+                color: black;
                 font-weight: 400;
             }
 
