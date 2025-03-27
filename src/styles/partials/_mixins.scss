@@ -31,6 +31,12 @@
     }
 }
 
+@mixin widescreen {
+    @media (min-width: 2500px) {
+        @content
+    }
+}
+
 /* mobile text style mixins */
 @mixin m-page-header($color) {
     font-family: "Gaegu", sans-serif;
