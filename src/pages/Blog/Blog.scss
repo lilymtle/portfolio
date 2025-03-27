@@ -26,4 +26,57 @@
             letter-spacing: 0.1rem;
         }
     }
+
+    &__current {
+        &-items {
+            @include flex-box(column);
+            gap: 1rem;
+        }
+
+        &-item {
+            &-overlay {
+                background: black;
+                opacity: 60%;
+                padding: 0.5rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            &-text {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                color: white;
+                z-index: 9999;
+                padding: 0.25rem 1rem;
+            }
+
+            &--game {
+                background-image: url("/assets/images/current-game.jpg");
+            }
+
+            &--show {
+                background-image: url("/assets/images/current-show.jpg");
+            }
+
+            &--book {
+                background-image: url("/assets/images/current-book.jpg");
+            }
+
+            &--game, &--show, &--book  {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+                aspect-ratio: 16 / 5;
+                position: relative;
+            }
+        }
+    }
 }
