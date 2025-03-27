@@ -23,7 +23,7 @@ body {
 
 .blog {
     // section padding
-    &__posts, &__contact, &__resources {
+    &__post, &__posts, &__category, &__contact, &__resources {
         padding: 1rem;
 
         @include tablet {
@@ -32,29 +32,60 @@ body {
 
         @include desktop {
             padding-inline: 15rem;
+            padding-bottom: 2.5rem;
         }
     }
 
     &__heading {
-        font-family: "Playfair Display", sans-serif;
+        font-family: $blog-secondary-font;
         font-weight: 500;
         letter-spacing: 0.1rem;
     }
 
     &__subheading {
-        font-family: "Playfair Display", sans-serif;
+        font-family: $blog-secondary-font;
         font-size: 1.25rem;
         font-weight: 500;
         letter-spacing: 0.1rem;
+
+        &--small {
+            font-family: $blog-secondary-font;
+            color: #B5907B;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        &--white {
+            color: white;
+        }
 
         &--remove-top-margin {
             margin-top: 0;
         }
     }
 
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
     &__label {
-        font-family: "Playfair Display", sans-serif;
+        font-family: $blog-secondary-font;
         font-size: 0.9rem;
         letter-spacing: 0.1rem;
+    }
+
+    &__text {
+        &--remove-bottom-margin {
+            margin-bottom: 0;
+        }
+    }
+
+    &__divider {
+        padding-top: 1.5rem;
     }
 }
