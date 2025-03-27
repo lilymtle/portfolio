@@ -18,10 +18,11 @@ import { BlogFAQs } from "./pages/BlogFAQs/BlogFAQs";
 import { BlogContactPage } from "./pages/BlogContact/BlogContact";
 import { BlogLearningPage } from "./pages/BlogLearning/BlogLearning";
 import { BlogPostsPage } from "./pages/BlogPosts/BlogPosts";
+import { BlogPostPage } from "./pages/BlogPost/BlogPost";
+import { BlogCategoryPage } from "./pages/BlogCategory/BlogCategory";
 
 // hook
 import { useEffect } from "react";
-
 
 function PortfolioLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -30,7 +31,7 @@ function PortfolioLayout({ children }: { children: React.ReactNode }) {
         <FloatingButton />
         <main>
           <Hero />
-          <div className="portfolio-container">{children}</div>
+          <div className="portfolio-container app-container">{children}</div>
         </main>
         <Footer />
       </>
@@ -42,7 +43,7 @@ function BlogLayout({ children }: { children: React.ReactNode }) {
     <>
       <BlogHeader />
       <main>
-        <div className="blog-container">{children}</div>
+        <div className="blog-container app-container">{children}</div>
       </main>
       <BlogFooter />
     </>
@@ -93,6 +94,16 @@ function App() {
         <Route path="/blog/posts" element={
           <BlogLayout>
             <BlogPostsPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/post/:slug" element={
+          <BlogLayout>
+            <BlogPostPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/category/:category" element={
+          <BlogLayout>
+            <BlogCategoryPage />
           </BlogLayout>
         } />
         <Route path="/blog/faqs" element={
