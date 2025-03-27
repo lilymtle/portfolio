@@ -23,3 +23,16 @@ export const latestPostQuery = `*[_type == "post"] | order(_createdAt desc)[0] {
         title
     }
 }`;
+
+export const postsByCategoryQuery =  `*[_type == "post" && $category in categories[]->title] | order(_createdAt desc) {
+    _id,
+    title,
+    slug,
+    mainImage,
+    publishedAt,
+    body,
+    categories[]->{
+        _id,
+        title
+    }
+}`;
