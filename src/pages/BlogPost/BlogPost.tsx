@@ -2,13 +2,16 @@
 import { Link, useLocation } from "react-router-dom";
 import "./BlogPost.scss";
 
-
+// components
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { getAllBlogPosts } from "../../sanity/fetchBlogPosts";
+import { useEffect, useState } from "react";
 
 export function BlogPostPage(): JSX.Element {
     const location = useLocation();
     const post = location.state;
+    console.log(post);
 
     return (
         <section className="blog__post">
@@ -52,7 +55,7 @@ export function BlogPostPage(): JSX.Element {
             <section className="blog__post-nav">
                 <nav className="blog__container--post-nav">
                     <div className="blog__post-nav-item">
-                        <a className="blog__post-nav-link" href="/">
+                        <Link className="blog__post-nav-link" to="/">
                             <ArrowBackIosIcon 
                                 className="blog__post-nav-icon"
                                 sx={{
@@ -64,11 +67,11 @@ export function BlogPostPage(): JSX.Element {
                                 }}
                             />
                             <p className="blog__post-nav-label">Previous</p>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="blog__post-nav-item">
-                        <a className="blog__post-nav-link" href="/">
+                        <Link className="blog__post-nav-link" to="/">
                             <p className="blog__post-nav-label">Next</p>
                             <ArrowForwardIosIcon 
                                 className="blog__post-nav-icon"
@@ -80,7 +83,7 @@ export function BlogPostPage(): JSX.Element {
                                     }
                                 }}
                             />
-                            </a>
+                            </Link>
                     </div>
                 </nav>
             </section>
