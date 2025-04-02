@@ -96,7 +96,7 @@ export function BlogPage() {
                             <article className="blog__current-item blog__current-item--show">
                                 <div className="blog__current-item-overlay"></div>
                                 <p className="blog__current-item-text">
-                                    Watching Dandadan
+                                    Watching The First Frost (难哄)
                                 </p>
                             </article>
 
