@@ -6,6 +6,11 @@ Hi, I'm Lily, a passionate developer with an interest in front-end development a
 
 ## Updates
 <details>
+    <summary>April 3, 2025</summary>
+    <p>Oh boy, Sanity is a huge learning curve. Still learning but managed to get my blog finished and live! You can check it out here: https://lilyle.dev/blog. Still need to refactor and work on some minor details, but it is useable! 🙂</p>
+</details>
+
+<details>
     <summary>March 24, 2025</summary>
     <p>Sanity has been installed! It took some time to figure out. I was able to fetch my blog posts via Sanity's API. Worked on sorting logic, pagination, and familiarizing myself with Sanity. Will need to spend some more time with getting more acquainted with Sanity, but this is a great start!</p>
 </details>
