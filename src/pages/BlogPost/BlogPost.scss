@@ -9,44 +9,26 @@
             
         }
 
-        &--post {
-            @include tablet {
-                margin-bottom: 2rem;
-            }
-
-            @include desktop {
-                margin-bottom: 2.5rem;
-            }
-
+        &-post {
             &-image {
                 width: 100%;
                 aspect-ratio: 16 / 9;
                 overflow: hidden;
             }
 
-            &-nav {
+            &-date-category {
                 @include flex-box(row);
                 justify-content: space-between;
+                align-items: center;
             }
-        }
-
-        &--date-category {
-            @include flex-box(row);
-            justify-content: space-between;
-            align-items: center;
         }
     }
 
     &__back-link {
+        @include m-link($global-blog-link-color);
         @include flex-box(row);
         align-items: center;
         gap: 0.5rem;
-        color: $pale-taupe;
-
-        &:hover {
-            color: $black-medium;
-            transition: 0.5s ease-in-out;
-        }
 
         &-label {
             font-weight: 400;
@@ -55,6 +37,32 @@
     }
 
     &__post {
+        &-heading {
+            @include m-page-heading($blog-secondary-font, 1.5rem, $global-blog-heading-color);
+            letter-spacing: 0.1rem;
+            line-height: 2rem;
+
+            @include tablet {
+                @include td-page-heading($blog-secondary-font, 2rem, $global-blog-heading-color);
+            }
+
+            @include desktop {
+                @include td-page-heading($blog-secondary-font, 2rem, $global-blog-heading-color);
+            }
+        }
+
+        &-subheading {
+            @include m-sub-heading($blog-secondary-font, 1.25rem, $global-blog-subheading-color);
+
+            @include tablet {
+                @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
+            }
+
+            @include desktop {
+                @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
+            }
+        }
+
         &-image {
             width: 100%;
             object-fit: cover;
@@ -63,19 +71,22 @@
 
         &-category {
             display: inline-block;
-            font-family: $blog-secondary-font;
-            letter-spacing: 0.1rem;
             flex: 0;
-            color: $pale-taupe;
-
-            &:hover {
-                color: $black-medium;
-                transition: 0.5s ease-in-out;
-            }
         }
 
         &-date {
             font-style: italic;
+        }
+
+        &-link {
+            @include m-link($global-blog-link-color);
+        }
+    }
+
+    &-back-link, &__post-link {
+        &:hover {
+            color: $black-medium;
+            transition: 0.5s ease-in-out;
         }
     }
 }
