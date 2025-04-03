@@ -102,26 +102,42 @@ export function BlogPostPage(): JSX.Element {
                                 case "h2":
                                     return (
                                         <h2 key={block._key} className="blog__post-subheading">
-                                            {block.children.map((child: any) => formatText(child, block))}
+                                            {block.children.map((child: any, childIndex: number) => (
+                                                <span key={child._key || `child-${childIndex}`}>
+                                                    {formatText(child, block)}
+                                                </span>
+                                            ))}
                                         </h2>
                                     );
                                 case "h3":
                                     return (
                                         <h3 key={block._key} className="blog__post-subheading blog__post-subheading--medium">
-                                            {block.children.map((child: any) => formatText(child, block))}
-                                        </h3>
+                                        {block.children.map((child: any, childIndex: number) => (
+                                            <span key={child._key || `child-${childIndex}`}>
+                                                {formatText(child, block)}
+                                            </span>
+                                        ))}
+                                    </h3>
                                     );
                                 case "blockquote":
                                     return (
                                         <blockquote key={block._key} className="blog__post-quote">
-                                            {block.children.map((child: any) => formatText(child, block))}
-                                        </blockquote>
+                                        {block.children.map((child: any, childIndex: number) => (
+                                            <span key={child._key || `child-${childIndex}`}>
+                                                {formatText(child, block)}
+                                            </span>
+                                        ))}
+                                    </blockquote>
                                     );
                                 default:
                                     return (
                                         <p key={block._key} className="blog__post-text">
-                                            {block.children.map((child: any) => formatText(child, block))}
-                                        </p>
+                                        {block.children.map((child: any, childIndex: number) => (
+                                            <span key={child._key || `child-${childIndex}`}>
+                                                {formatText(child, block)}
+                                            </span>
+                                        ))}
+                                    </p>
                                     );
                             }
                         }
