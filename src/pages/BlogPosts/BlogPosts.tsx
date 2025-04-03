@@ -16,6 +16,7 @@ import { getAllBlogPosts } from "../../sanity/fetchBlogPosts";
 import { urlFor } from "../../sanity/sanityImage";
 import { useSearchParams } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Divider } from "@mui/material";
 
 export function BlogPostsPage() {
     const [posts, setPosts] = useState<any>(null);
@@ -48,6 +49,7 @@ export function BlogPostsPage() {
     const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
     const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
 
+
     return (
         <>
                     <HelmetProvider>
@@ -59,9 +61,9 @@ export function BlogPostsPage() {
                     </HelmetProvider>
 
         <section className="blog__posts">
-            <div className="blog__sub-nav-container">
-                <BlogSubNav />
-            </div>
+            <BlogSubNav />
+
+            <Divider className="blog__divider" />
 
             <div className="blog__wrapper-heading">
                 <h1 className="blog__heading">
