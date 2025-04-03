@@ -20,7 +20,6 @@ const [categories, setCategories] = useState<string[]>([]);
             };
         };
         fetchCategories();
-        console.log(categories);
     }, []);
 
     return (
@@ -33,7 +32,7 @@ const [categories, setCategories] = useState<string[]>([]);
                         <li key={category} className="blog__sub-nav-list-item">
                             <Link
                                 className="blog__sub-nav-link"
-                                to={`/blog/category/${category}#top`}
+                                to={`/blog/category/${category.toLowerCase()}`}
                             >
                                 {category}
                             </Link>
