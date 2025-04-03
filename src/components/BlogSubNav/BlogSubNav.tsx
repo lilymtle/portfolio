@@ -24,21 +24,23 @@ const [categories, setCategories] = useState<string[]>([]);
     }, []);
 
     return (
-        <nav className="blog__sub-nav">
-            <p className="blog__sub-nav-label">Browse:</p>
+        <div className="blog__sub-nav-container">
+            <nav className="blog__sub-nav">
+                <p className="blog__sub-nav-label">Browse:</p>
 
-            <ul className="blog__sub-nav-list">
-                {categories.map((category) => (
-                    <li key={category} className="blog__sub-nav-list-item">
-                        <Link
-                            className="blog__sub-nav-link"
-                            to={`/blog/category/${category}#top`}
-                        >
-                            {category}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+                <ul className="blog__sub-nav-list">
+                    {categories.map((category) => (
+                        <li key={category} className="blog__sub-nav-list-item">
+                            <Link
+                                className="blog__sub-nav-link"
+                                to={`/blog/category/${category}#top`}
+                            >
+                                {category}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </div>
     );
 };
