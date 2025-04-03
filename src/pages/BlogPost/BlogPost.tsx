@@ -11,6 +11,26 @@ export function BlogPostPage(): JSX.Element {
     const post = location.state;
     const previousPage = location.state?.from || "/blog";
 
+    const formatText = (child: any, block: any) => {
+        let textElement = <>{child.text}</>;
+        const linkMark = block.markDefs?.find((mark: any) => child.marks.includes(mark._key));
+
+        if (child.marks?.includes("strong")) {
+            textElement = <strong>{textElement}</strong>;
+        }
+        if (child.marks?.includes("em")) {
+            textElement = <em>{textElement}</em>;
+        }
+
+        if (linkMark?.href) { 
+            textElement = <a href={linkMark.href} target="_blank" rel="noopener noreferrer">{textElement}</a>;
+        }
+
+        console.log("Full Post Object:", post);
+
+        return textElement;
+    };
+
     return (
         <>
             <HelmetProvider>
@@ -66,15 +86,44 @@ export function BlogPostPage(): JSX.Element {
                         <p className="blog__post-date">Published {post.publishedAt}</p>
                     </div>
 
-                    {post.body.map((block: any, index: number) => (
-                        <div key={block._key} className="blog__container-post">
-                            {block.children.map((child: any, childIndex: number) => (
-                                <p key={`${block._key}-${childIndex}`} className="blog__post-text">
-                                    {child.text}
-                                </p>
-                            ))}
-                        </div>
-                    ))}
+                    {post.body.map((block: any) => {
+                        if (block._type === "block") {
+                            switch (block.style) {
+                                case "h1":
+                                    return (
+                                        <h1 key={block._key} className="blog__post-heading">
+                                            {block.children.map((child: any) => formatText(child, block))}
+                                        </h1>
+                                    );
+                                case "h2":
+                                    return (
+                                        <h2 key={block._key} className="blog__post-heading">
+                                            {block.children.map((child: any) => formatText(child, block))}
+                                        </h2>
+                                    );
+                                case "h3":
+                                    return (
+                                        <h3 key={block._key} className="blog__post-heading">
+                                            {block.children.map((child: any) => formatText(child, block))}
+                                        </h3>
+                                    );
+                                case "blockquote":
+                                    return (
+                                        <blockquote key={block._key} className="blog__post-quote">
+                                            {block.children.map((child: any) => formatText(child, block))}
+                                        </blockquote>
+                                    );
+                                default:
+                                    return (
+                                        <p key={block._key} className="blog__post-text">
+                                            {block.children.map((child: any) => formatText(child, block))}
+                                        </p>
+                                    );
+                            }
+                        }
+                        return null;
+                    })}
+
                 </article>
             </section>
         </>
