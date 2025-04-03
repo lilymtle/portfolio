@@ -57,6 +57,7 @@ export function BlogPostsPage() {
                             </title>
                         </Helmet>
                     </HelmetProvider>
+
         <section className="blog__posts">
             <div className="blog__sub-nav-container">
                 <BlogSubNav />
