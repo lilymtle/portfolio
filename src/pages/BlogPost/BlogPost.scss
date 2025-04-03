@@ -53,6 +53,7 @@
 
         &-subheading {
             @include m-sub-heading($blog-secondary-font, 1.25rem, $global-blog-subheading-color);
+            letter-spacing: 0.1rem;
 
             @include tablet {
                 @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
