@@ -4,10 +4,27 @@
 
 .blog {
     &__sub-nav {
-        @include flex-box(row);
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        @include flex-box(column);
+
+        @include tablet {
+            @include flex-box(row);
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &-container {
+            margin-bottom: 1rem;
+
+            @include desktop {
+                margin-block: -2rem 1rem;
+            }
+        }
 
         &-label {
             font-family: "Playfair Display", sans-serif;
@@ -17,11 +34,18 @@
         &-list {
             @include flex-box(row);
             flex-wrap: wrap;
-            justify-content: center;
             gap: 1rem;
             list-style: none;
             margin: 0;
             padding: 0;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            @include desktop {
+                justify-content: center;
+            }
         }
 
         &-link {
