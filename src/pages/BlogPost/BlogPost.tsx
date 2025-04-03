@@ -58,25 +58,25 @@ export function BlogPostPage(): JSX.Element {
                         </p>
                     </Link>
                 </div>
-                <article className="blog__container--post">
-                    <h1 className="blog__heading">
+                <article className="blog__container-post">
+                    <h1 className="blog__post-heading">
                         {post.title}
                     </h1>
 
-                    <div className="blog__container--post-image">
+                    <div className="blog__container-post-image--header">
                         <img
-                            className="blog__post-image"
+                            className="blog__post-image blog-post-image--header"
                             src={post.image}
                             alt={post.title}
                         />
                     </div>
 
-                    <div className="blog__container--date-category">
+                    <div className="blog__container-post-date-category">
                         {post.categories.map((category: any) => (
                             <Link
                                 key={category._id}
                                 to={`/blog/category/${category.title}`}
-                                className="blog__post-category"
+                                className="blog__post-category blog__post-link"
                             >
                                 {category.title}
                             </Link>
@@ -87,11 +87,11 @@ export function BlogPostPage(): JSX.Element {
                     {post.body.map((block: any) => {
                         if (block._type === "image" && block.asset?.url) {
                             return (
-                                <div key={block._key} className="blog__post-image-container">
+                                <div key={block._key} className="blog__container-post-image blog__container-post-image--inline">
                                     <img
-                                        className="blog__post-image"
+                                        className="blog__post-image blog__post-image--inline"
                                         src={block.asset.url}
-                                        alt={block.alt || "Default alt text"}
+                                        alt={block.alt}
                                     />
                                 </div>
                             );
@@ -99,21 +99,15 @@ export function BlogPostPage(): JSX.Element {
 
                         if (block._type === "block") {
                             switch (block.style) {
-                                case "h1":
-                                    return (
-                                        <h1 key={block._key} className="blog__post-heading">
-                                            {block.children.map((child: any) => formatText(child, block))}
-                                        </h1>
-                                    );
                                 case "h2":
                                     return (
-                                        <h2 key={block._key} className="blog__post-heading">
+                                        <h2 key={block._key} className="blog__post-subheading">
                                             {block.children.map((child: any) => formatText(child, block))}
                                         </h2>
                                     );
                                 case "h3":
                                     return (
-                                        <h3 key={block._key} className="blog__post-heading">
+                                        <h3 key={block._key} className="blog__post-subheading blog__post-subheading--medium">
                                             {block.children.map((child: any) => formatText(child, block))}
                                         </h3>
                                     );
