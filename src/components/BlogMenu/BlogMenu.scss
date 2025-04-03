@@ -1,0 +1,140 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+.menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 1);
+        @include flex-box(row);
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+
+        @include tablet { 
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+
+        &__close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        &__hamburger {
+            background: transparent;
+            color: #FFFFFF;
+            border: none;
+
+            @include tablet { 
+                visibility: hidden;
+                opacity: 0;
+            }
+    
+            @include desktop {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        &__container {
+            @include flex-box(column);
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 1rem;
+        }
+
+        &__wrapper {
+            &--socials {
+                @include flex-box(row);
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+        }
+
+        &__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__label {
+            &-text {
+                font-family: "Playfair Display", sans-serif;
+                color: #527392;
+                font-weight: 500;
+                letter-spacing: 0.1rem;
+                margin-bottom: 0.25rem;
+            }
+        }
+
+        &__link {
+            color: #23272B;
+            font-size: 0.85rem;
+            font-weight: 400;
+
+            &:hover {
+                opacity: 60%;
+                transition: 0.5s ease-in-out;
+            }
+
+            &--home {
+                color: #23272B;
+                font-weight: 400;
+                display: inline;
+
+                &:hover {
+                    opacity: 60%;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+
+            &--portfolio {
+                color: #B5907B;
+                font-weight: 400;
+                display: inline;
+
+                &:hover {
+                    color: #23272B;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+        }
+
+        &--open {
+            transform: translateY(0);
+        }
+
+        &__social {
+            &-icon {
+                width: auto;
+                height: 1.25rem;
+
+                &:hover {
+                    opacity: 60%;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+
+            &-link {
+                display: contents;
+            }
+        }
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}

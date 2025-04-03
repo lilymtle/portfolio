@@ -1,0 +1,69 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+
+.blog {
+    &__footer {
+        background-image: none;
+        background-color: #23272B;
+        color: $blog-footer-text;
+        @include flex-box(column);
+        gap: 0;
+
+        @include tablet {
+            @include flex-box(row);
+            align-items: flex-start;
+            padding: 2rem;
+        }
+
+        @include desktop {
+            @include flex-box(row);
+            align-items: flex-start;
+            padding-block: 2rem;
+            padding-inline: 5rem;
+        }
+
+        @include widescreen {
+            padding-inline: 45rem;
+        }
+
+        &-nav-list {
+            text-align: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            &--socials {
+                @include flex-box(row);
+                gap: 1rem;
+                text-align: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &-nav-link {
+            color: $blog-footer-link;
+            font-size: 0.8rem;
+            font-weight: 400;
+
+            &:hover {
+                color: #788E99;
+                transition: 0.5s ease-in-out;
+            }
+        }
+
+        &-icon {
+            width: auto;
+            height: 1.5rem;
+            margin-top: 0.5rem;
+
+            &:hover {
+                opacity: 60%;
+                transition: 0.5s ease-in-out;
+            }
+        }
+    }
+}

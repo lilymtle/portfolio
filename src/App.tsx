@@ -1,8 +1,8 @@
-// import global styling
+// global styling
 import "./styles/global.scss";
 
-// import components
-import { BrowserRouter } from "react-router-dom";
+// components
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import { Footer } from "./components/Footer/Footer";
@@ -10,9 +10,45 @@ import { AboutPage } from "./pages/About/About";
 import { ProjectsPage } from "./pages/Projects/Projects";
 import { ContactPage } from "./pages/Contact/Contact";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
+import { BlogPage } from "./pages/Blog/Blog";
+import { BlogHeader } from "./components/BlogHeader/BlogHeader";
+import { BlogFooter } from "./components/BlogFooter/BlogFooter";
+import { BlogAbout } from "./pages/BlogAbout/BlogAbout";
+import { BlogFAQs } from "./pages/BlogFAQs/BlogFAQs";
+import { BlogContactPage } from "./pages/BlogContact/BlogContact";
+import { BlogLearningPage } from "./pages/BlogLearning/BlogLearning";
+import { BlogPostsPage } from "./pages/BlogPosts/BlogPosts";
+import { BlogPostPage } from "./pages/BlogPost/BlogPost";
+import { BlogCategoryPage } from "./pages/BlogCategory/BlogCategory";
 
-// import hook
+// hook
 import { useEffect } from "react";
+
+function PortfolioLayout({ children }: { children: React.ReactNode }) {
+    return (
+      <>
+        <Header />
+        <FloatingButton />
+        <main>
+          <Hero />
+          <div className="portfolio-container app-container">{children}</div>
+        </main>
+        <Footer />
+      </>
+    );
+};
+
+function BlogLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <BlogHeader />
+      <main>
+        <div className="blog-container app-container">{children}</div>
+      </main>
+      <BlogFooter />
+    </>
+  )
+};
 
 function App() {
   const setHeroHeight = (): void => {
@@ -35,17 +71,57 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
-      <FloatingButton />
-      <main>
-        <Hero />
-        <div className="app-container">
-          <AboutPage />
-          <ProjectsPage />
-          <ContactPage />
-        </div>
-      </main>
-      <Footer />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <PortfolioLayout>
+              <AboutPage />
+              <ProjectsPage />
+              <ContactPage />
+            </PortfolioLayout>
+          </>
+        } />
+        <Route path="/blog" element={ 
+          <BlogLayout>
+            <BlogPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/about" element={
+          <BlogLayout>
+            <BlogAbout />
+          </BlogLayout>
+        } />
+        <Route path="/blog/posts" element={
+          <BlogLayout>
+            <BlogPostsPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/post/:slug" element={
+          <BlogLayout>
+            <BlogPostPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/category/:category" element={
+          <BlogLayout>
+            <BlogCategoryPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/faqs" element={
+          <BlogLayout>
+            <BlogFAQs />
+          </BlogLayout>
+        } />
+        <Route path="/blog/contact" element={
+          <BlogLayout>
+            <BlogContactPage />
+          </BlogLayout>
+        } />
+        <Route path="/blog/learning" element={
+          <BlogLayout>
+            <BlogLearningPage />
+          </BlogLayout>
+        } />
+      </Routes>
     </BrowserRouter>
   )
 };

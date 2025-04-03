@@ -32,7 +32,7 @@ footer {
         &--credits {
             background-color: $footer-button;
             @include m-body($footer-button-text);
-            font-family: $secondary-font;
+            font-family: $portfolio-secondary-font;
             font-size: 1rem;
             font-weight: bold;
             text-transform: uppercase;

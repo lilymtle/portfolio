@@ -20,3 +20,112 @@ body {
     max-width: 1280px;
     margin: 0 auto;
 }
+
+.blog {
+    // section padding
+    &__home, &__about, &__post, &__posts, &__category, &__faqs, &__contact, &__resources {
+
+        padding: 1rem;
+
+        @include tablet {
+            padding: 2.5rem;
+        }
+
+        @include desktop {
+            padding-inline: 15rem;
+            padding-block: 3rem;
+        }
+    }
+
+    &__wrapper {
+        &-heading {
+            margin-top: 1rem;
+
+            @include desktop {
+                margin-top: 2.5rem;
+            }
+        }
+    }
+
+    &__heading {
+        @include m-page-heading($blog-secondary-font, 1.5rem, $global-blog-heading-color);
+        letter-spacing: 0.1rem;
+
+        @include tablet {
+            @include td-page-heading($blog-secondary-font, 2.25rem, $global-blog-heading-color);
+            margin-bottom: 2rem;
+        }
+
+        @include desktop {
+            @include td-page-heading($blog-secondary-font, 2.25rem, $global-blog-heading-color);
+            margin-block: 0 2rem;
+        }
+
+        &--reduce-top-margin {
+            @include tablet {
+                margin-top: 1.5rem;
+            }
+
+            @include desktop {
+                margin-top: 0.75rem;
+            }
+        }
+    }
+
+    &__subheading {
+        @include m-sub-heading($blog-secondary-font, 1.25rem, $global-blog-subheading-color);
+        letter-spacing: 0.1rem;
+
+        @include tablet {
+            @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
+        }
+
+        @include desktop {
+            @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
+        }
+
+        &--small {
+            font-family: $blog-secondary-font;
+            color: #B5907B;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        &--white {
+            color: white;
+        }
+        
+        &--black {
+            color: $black-light;
+        }
+
+        &--remove-top-margin {
+            margin-top: 0;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__label {
+        font-family: $blog-secondary-font;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+    }
+
+    &__text {
+        &--remove-bottom-margin {
+            margin-bottom: 0;
+        }
+
+        &--white {
+            color: $white;
+        }
+    }
+}

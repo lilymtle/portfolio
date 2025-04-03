@@ -1,0 +1,93 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+.blog {
+    &__container {
+        &-back {
+            @include flex-box(row);
+            
+        }
+
+        &-post {
+            &-image {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                overflow: hidden;
+            }
+
+            &-date-category {
+                @include flex-box(row);
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    &__back-link {
+        @include m-link($global-blog-link-color);
+        @include flex-box(row);
+        align-items: center;
+        gap: 0.5rem;
+
+        &-label {
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    &__post {
+        &-heading {
+            @include m-page-heading($blog-secondary-font, 1.5rem, $global-blog-heading-color);
+            letter-spacing: 0.1rem;
+            line-height: 2rem;
+
+            @include tablet {
+                @include td-page-heading($blog-secondary-font, 2rem, $global-blog-heading-color);
+            }
+
+            @include desktop {
+                @include td-page-heading($blog-secondary-font, 2rem, $global-blog-heading-color);
+            }
+        }
+
+        &-subheading {
+            @include m-sub-heading($blog-secondary-font, 1.25rem, $global-blog-subheading-color);
+            letter-spacing: 0.1rem;
+
+            @include tablet {
+                @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
+            }
+
+            @include desktop {
+                @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
+            }
+        }
+
+        &-image {
+            width: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        &-category {
+            display: inline-block;
+            flex: 0;
+        }
+
+        &-date {
+            font-style: italic;
+        }
+
+        &-link {
+            @include m-link($global-blog-link-color);
+        }
+    }
+
+    &-back-link, &__post-link {
+        &:hover {
+            color: $black-medium;
+            transition: 0.5s ease-in-out;
+        }
+    }
+}

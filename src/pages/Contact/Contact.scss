@@ -7,10 +7,10 @@
     margin-bottom: 1rem;
 
     &__header {
-        @include m-page-header($global-header);
+        @include m-page-heading($portfolio-secondary-font, 2.5rem, $global-header);
 
         @include tablet {
-            @include td-page-header($global-header);
+            @include td-page-heading($global-primary-font, 3rem, $global-header);
         }
     }
 

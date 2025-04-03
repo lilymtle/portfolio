@@ -37,6 +37,10 @@
 
         &-link {
             width: 50%;
+
+            @include tablet {
+                width: 40%;
+            }
         }
     }
 }
@@ -57,7 +61,7 @@
     }
 
     @include tablet {
-        width: 60%;
+        width: 100%;
     }
 
     @include desktop {
@@ -74,6 +78,14 @@
         }
     }
 
+    &__list {
+        @include flex-box(row);
+        justify-content: space-evenly;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
     &__full {
         @include mobile {
             display: none;
@@ -83,15 +95,14 @@
             display: none;
         }
 
-        @include tablet {
-            @include flex-box(row);
-            justify-content: space-between;
-        }
+        // @include tablet {
+        //     @include flex-box(row);
+        // }
 
-        @include desktop {
-            @include flex-box(row);
-            justify-content: space-between;
-        }
+        // @include desktop {
+        //     @include flex-box(row);
+        //     justify-content: space-between;
+        // }
     }
 
     &__link {

@@ -1,0 +1,94 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.blog {
+    &__container {
+        &-resource {
+            &-arrow {
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                @include flex-box(row);
+                align-items: center;
+                border-radius: 50%;
+            }
+
+            &-subheading-text {
+                width: 70%;
+                height: 100%;
+                @include flex-box(column);
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__resources {
+        &-list {
+            @include flex-box(column);
+            gap: 1rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @include tablet {
+                @include flex-box(row);
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 4.5rem;
+                margin-top: 2rem;
+            }
+
+            @include desktop {
+                @include flex-box(row);
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2.5rem;
+                margin-top: 2.5rem;
+            }
+        }
+    }
+
+    &__resource {
+        &-card {
+            background-color: #EEE;
+            width: auto;
+            height: 10rem;
+            @include flex-box(row);
+            justify-content: space-between;
+            border-radius: .25rem;
+            padding: 1rem;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.025);
+                transition: 0.3s ease;
+
+                @include tablet {
+                    transform: scale(1.1);
+                }
+
+                @include desktop {
+                    transform: scale(1.1);
+                }
+            }
+
+            @include tablet {
+                width: 16.5rem;
+                height: 15rem;
+                padding: 2rem;
+            }
+
+            @include desktop {
+                width: 19.7rem;
+                height: 15rem;
+                padding: 2rem;
+            }
+        }
+
+        &-arrow-link {
+            color: $pale-taupe; // change later
+            margin-top: 0.25rem;
+        }
+    }
+}

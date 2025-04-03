@@ -1,24 +1,26 @@
 @use "./fonts.scss" as *;
 
-$black-medium: #222831;
-$black-light: #31363F;
-
 /* color variables */
 $white: #FFFFFF;
 $black: #000000;
+$black-medium: #222831;
+$black-light: #31363F;
 $grey: #4d4d4f;
 $light-grey: #EEEEEE;
 $oat: #FBFBFB;
 $dark-lavender: #6962AD;
+$blue-medium: #527392;
 $light-blue: #789DBC;
 $pale-orange: #FFB26F;
 $pale-red: #C5705D;
 $brown: #6F4E37;
 $light-brown: #A67B5B;
+$pale-taupe: #B5907B;
 
 /* font variables */
-$primary-font: "Garet" sans-serif;
-$secondary-font: "Gaegu", sans-serif;
+$global-primary-font: "Garet" sans-serif;
+$portfolio-secondary-font: "Gaegu", sans-serif;
+$blog-secondary-font: "Playfair Display", sans-serif;
 
 /* global descriptive variables */
 $global-background: $oat;
@@ -28,21 +30,25 @@ $global-secondary-subheader: $pale-orange;
 $global-text: $black-medium;
 $global-label: $black-medium;
 
+$global-blog-heading-color: $black-light;
+$global-blog-subheading-color: $blue-medium;
+$global-blog-link-color: $pale-taupe;
+
 /* header navbar descriptive variables */
-$navbar-font: $secondary-font;
+$navbar-font: $portfolio-secondary-font;
 $navbar-primary-text: $black-medium;
 $navbar-accent-text: $pale-orange;
 $navbar-link-hover: $pale-orange;
 $navbar-secondary-link-hover: $black-medium;
 
 /* hero descriptive variables */
-$hero-header-font: $secondary-font;
-$hero-button-font: $secondary-font;
+$hero-header-font: $portfolio-secondary-font;
+$hero-button-font: $portfolio-secondary-font;
 $hero-name-text: $dark-lavender;
 $hero-overlay: $white;
 
 /* project card descriptive variables */
-$project-header-font: $secondary-font;
+$project-header-font: $portfolio-secondary-font;
 $project-link: $white;
 $project-button: $grey;
 $project-button-text: $light-grey;
@@ -59,12 +65,15 @@ $form-button-border: $grey;
 
 /* footer descriptive variables */
 $footer-text: $white;
-$footer-button-font: $secondary-font;
+$footer-button-font: $portfolio-secondary-font;
 $footer-button-text: $black-medium;
 $footer-button: $white;
 $footer-hover-text: $light-grey;
 $footer-hover-button: $grey;
 $footer-hover-border: $grey;
+
+$blog-footer-text: $white;
+$blog-footer-link: $white;
 
 /* floating button descriptive variables */
 $floating-button: $light-brown;
@@ -81,7 +90,7 @@ $button-hover-border: $black-medium;
 
 /* modal descriptive variables */
 $modal-background: $white;
-$modal-font: $secondary-font;
+$modal-font: $portfolio-secondary-font;
 $modal-title: $pale-red;
 $modal-button: $light-grey;
 $modal-link: $dark-lavender;

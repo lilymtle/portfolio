@@ -1,0 +1,106 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+@keyframes fadeInOut {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.blog {
+    &__header {
+        background-image: url("/assets/images/blog-hero.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 50vh;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        @include flex-box(column);
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        position: absolute;
+        box-sizing: border-box;
+        z-index: 9999;
+    }
+
+    &__wrapper {
+        &-spotify {
+            @include flex-box(column);
+            align-items: flex-start;
+        }
+    }
+
+    &__logo {
+        width: auto;
+        height: auto;
+        animation: fadeInOut 2s infinite alternate;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__nav {
+        &-wrapper {
+            width: 100%;
+            @include flex-box(column);
+        }
+
+        &-full {
+            visibility: hidden;
+
+            @include tablet {
+                visibility: visible;
+            }
+
+            @include desktop {
+                visibility: visible;
+            }
+        }
+
+        &-list {
+            @include flex-box(row);
+            justify-content: space-evenly;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-link {
+            color: #FFFFFF;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            &:hover {
+                opacity: 60%;
+                transition: 0.5s ease-in-out;
+            }
+        }
+    }
+}

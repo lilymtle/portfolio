@@ -31,28 +31,35 @@
     }
 }
 
+@mixin widescreen {
+    @media (min-width: 2500px) {
+        @content
+    }
+}
+
 /* mobile text style mixins */
-@mixin m-page-header($color) {
-    font-family: "Gaegu", sans-serif;
-    font-size: 2.5rem;
+
+@mixin m-page-heading($font-family, $font-size, $color) {
+    font-family: $font-family;
+    font-size: $font-size; // 2.5rem for portfolio, 1.5rem for blog
     color: $color;
     line-height: 0;
 }
 
-@mixin m-sub-header($color) {
-    font-family: "Gaegu", sans-serif;
-    font-size: 1.7rem;
+@mixin m-sub-heading($font-family, $font-size, $color) {
+    font-family: $font-family;
+    font-size: $font-size; // 1.7rem for portfolio, 1.25rem for blog
     color: $color;
     font-weight: bold;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
-@mixin m-sub-header-small($color) {
-    font-family: "Gaegu", sans-serif;
+@mixin m-sub-heading-small($font-family, $color) {
+    font-family: $font-family;
     font-size: 1.3rem;
     color: $color;
     font-weight: bold;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 @mixin m-label($color) {
@@ -67,24 +74,31 @@
     text-transform: uppercase;
 }
 
+@mixin m-link($color) {
+    color: $color;
+    font-weight: 400;
+}
+
 @mixin m-body($color) {
     font-size: .75rem;
     color: $color;
 }
 
 /* tablet and desktop text style mixins */
-@mixin td-page-header($color) {
-    font-size: 3rem;
+@mixin td-page-heading($font-family, $font-size, $color) {
+    $font-family: $font-family;
+    font-size: $font-size; // 3rem for portfolio, 2.5rem for blog
     color: $color;
     margin-bottom: 1rem;
 }
 
-@mixin td-sub-header($color) {
-    font-size: 2rem;
+@mixin td-sub-heading($font-family, $font-size, $color) {
+    $font-family: $font-family;
+    font-size: $font-size; // 2 rem for portfolio, 1.5rem for blog
     color: $color;
 }
 
-@mixin td-sub-header-small($color) {
+@mixin td-sub-heading-small($color) {
     font-size: 1.5rem;
     color: $color;
 }

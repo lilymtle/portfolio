@@ -1,0 +1,90 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.blog {
+    &__about {
+
+        &-container {
+            @include flex-box(column);
+
+            @include tablet {
+                @include flex-box(row);
+                align-items: center;
+                gap: 2rem;
+            }
+
+            @include desktop {
+                @include flex-box(row);
+                align-items: center;
+                gap: 2rem;
+            }
+
+            &--disclaimer {
+                background-color: $black-light;
+                margin-block: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        &-image {
+            &--me {
+                width: 15rem;
+                height: 15rem;
+                object-fit: cover;
+                object-position: center top;
+                border-radius: 50%;
+                align-self: center;
+                margin-block: 1.5rem;
+            }
+
+            &--illustration {
+                width: 15rem;
+                height: auto;
+                align-self: center;
+                margin-top: 1rem;
+            }
+        }
+
+        &-text {
+            margin-block: 0.5rem;
+            
+            &--italics {
+                font-style: italic;
+            }
+
+            &--disclaimer {
+                color: #FFFFFF;
+            }
+        }
+
+        &-link {
+            color: #B5907B;
+            font-weight: 400;
+            display: inline;
+
+            &:hover {
+                color: #23272B;
+                transition: 0.5s ease-in-out;
+            }
+        }
+    };
+
+    &__wrapper {
+        &--subheader-image {
+            @include flex-box(column);
+        }
+        
+        &--image {
+            @include flex-box(column);
+
+            @include tablet {
+                order: 2;
+            }
+
+            @include desktop {
+                order: 2;
+            }
+        }
+    }
+}

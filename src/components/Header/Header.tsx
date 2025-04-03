@@ -1,7 +1,7 @@
-// import styling
+// styling
 import "./Header.scss";
 
-// import components
+// components
 import NavDrawer from "../NavDrawer/NavDrawer";
 import { Link } from "react-router-dom";
 
@@ -26,21 +26,37 @@ export function Header() {
                 </div>
 
                 <div className="navbar__full">
-                    <a className="navbar__link" href="#about">
-                        About
-                    </a>
+                    <ul className="navbar__list">
+                        <li className="navbar__list-item">
+                            <a className="navbar__link" href="#about">
+                                About
+                            </a>
+                        </li>
 
-                    <a className="navbar__link" href="#projects">
-                        Projects
-                    </a>
+                        <li className="navbar__list-item">
+                            <a className="navbar__link" href="#projects">
+                                Projects
+                            </a>
+                        </li>
 
-                    <a className="navbar__link navbar__link--resume" onClick={() => handleNavigate("/files/lily-le-resume.pdf")}>
-                        Resume
-                    </a>
+                        <li className="navbar__list-item">
+                            <a className="navbar__link navbar" href="/blog">
+                                Blog
+                            </a>
+                        </li>
 
-                    <a className="navbar__link" href="#contact">
-                        Contact
-                    </a>
+                        <li className="navbar__list-item">
+                            <a className="navbar__link navbar__link--resume" onClick={() => handleNavigate("/files/lily-le-resume.pdf")}>
+                                Resume
+                            </a>
+                        </li>
+
+                        <li className="navbar__list-item">
+                        <a className="navbar__link" href="#contact">
+                            Contact
+                        </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </header>

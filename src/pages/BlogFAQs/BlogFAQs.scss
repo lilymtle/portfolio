@@ -1,0 +1,27 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+.blog {
+    &__faqs {
+        &-container {
+            margin-bottom: 1rem;
+
+            @include desktop {
+                margin-bottom: 0;
+            }
+        }
+        
+        &-text {
+            margin-block: 0.5rem;
+            
+            &--italics {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.MuiAccordion-heading {
+    font-size: 1rem !important;
+}

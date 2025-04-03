@@ -48,11 +48,11 @@
         margin-bottom: 0.5rem;
 
         @include tablet {
-            @include td-sub-header($modal-title !important);
+            @include td-sub-heading($modal-font, 2rem, $modal-title !important);
         }
 
         @include desktop {
-            @include td-sub-header($modal-title !important);
+            @include td-sub-heading($modal-font, 2rem, $modal-title !important);
         }
     }
 

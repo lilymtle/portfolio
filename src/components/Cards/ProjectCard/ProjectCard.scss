@@ -70,17 +70,18 @@
     }
 
     &__title {
-        @include m-sub-header($global-primary-subheader);
+        @include m-sub-heading($portfolio-secondary-font, 1.7rem, $global-primary-subheader);
         font-size: 2rem;
         margin: 0;
         padding: 1.5rem;
+        text-transform: uppercase;
 
         @include tablet {
-            @include td-sub-header($global-primary-subheader);
+            @include td-sub-heading($global-primary-font, 2rem, $global-primary-subheader);
         }
 
         @include desktop {
-            @include td-sub-header($global-primary-subheader);
+            @include td-sub-heading($global-primary-font, 2rem, $global-primary-subheader);
         }
     }
 
