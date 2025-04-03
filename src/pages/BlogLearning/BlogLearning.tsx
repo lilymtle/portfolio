@@ -1,4 +1,5 @@
 // styling
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { learningResources } from "../../data/resources";
 import "./BlogLearning.scss";
 
@@ -6,6 +7,15 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export function BlogLearningPage() {
     return (
+        <>
+                    <HelmetProvider>
+                        <Helmet>
+                            <title>
+                                Blog | Learning
+                            </title>
+                        </Helmet>
+                    </HelmetProvider>
+
         <section className="blog__resources">
             <h1 className="blog__heading">
                 Learning Resources
@@ -34,5 +44,6 @@ export function BlogLearningPage() {
                 ))}
             </ul>
         </section>
+        </>
     );
 };
