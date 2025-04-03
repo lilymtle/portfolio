@@ -22,13 +22,13 @@ export function BlogPostCard({ title, image, excerpt, body, categories, publishe
     const location = useLocation();
 
     return (
-        <Link 
-            className="blog__post-card-link" 
-            to={`/blog/post/${slug}`} 
-            state={{ title, image, body, categories, publishedAt, from: location.pathname + location.search }}
-        >
-            <div className="blog__post-card-container">
-                <div className="blog__post-card">
+        <div className="blog__post-card-container">
+            <Link 
+                className="blog__post-card-link" 
+                to={`/blog/post/${slug}`} 
+                state={{ title, image, body, categories, publishedAt, from: location.pathname + location.search }}
+            >
+                <article className="blog__post-card">
                     <div className="blog__post-card-image-wrapper">
                         <img
                             className="blog__post-card-image"
@@ -40,7 +40,7 @@ export function BlogPostCard({ title, image, excerpt, body, categories, publishe
 
                     <div className="blog__post-card-content">
                         <div className="blog__post-card-title-description">
-                            <h2 className="blog__subheading">
+                            <h2 className="blog__subheading blog__subheading--black">
                                 {title}
                             </h2>
 
@@ -48,28 +48,24 @@ export function BlogPostCard({ title, image, excerpt, body, categories, publishe
                                 {excerpt}
                             </p>
                         </div>
-
-                        <div className="blog__post-card-footer">
-                            {categories.map((category) => (
-                                <Link
-                                    className="blog__post-card-category"
-                                    to={`/blog/category/${category.title}`}
-                                >
-                                    {category.title}
-                                </Link>
-                            ))}
-
-                            <p className="blog__post-card-divider">
-                                |
-                            </p>
-
-                            <p className="blog__post-card-date">
-                                {publishedAt}
-                            </p>
-                        </div>
                     </div>
-                </div>
+                </article>
+            </Link>
+
+            <div className="blog__post-card-footer">
+                {categories.map((category) => (
+                    <Link
+                        key={category._id}
+                        className="blog__post-card-category"
+                        to={`/blog/category/${category.title}`}
+                    >
+                        {category.title}
+                    </Link>
+                ))}
+
+                <p className="blog__post-card-divider">|</p>
+                <p className="blog__post-card-date">{publishedAt}</p>
             </div>
-        </Link>
+        </div>
     );
 };
