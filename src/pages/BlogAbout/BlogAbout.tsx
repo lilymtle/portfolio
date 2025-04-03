@@ -14,7 +14,7 @@ export function BlogAbout() {
             </HelmetProvider>
             
             <section className="blog__about">
-                <h1 className="blog__about-header">
+                <h1 className="blog__heading">
                     A Little Nook
                 </h1>
 
@@ -26,7 +26,7 @@ export function BlogAbout() {
 
                 <div className="blog__about-container">
                     <div className="blog__wrapper--subheader-image">
-                        <h2 className="blog__about-subheader">
+                        <h2 className="blog__subheading">
                             Hi, I'm Lily
                         </h2>
 
@@ -51,7 +51,7 @@ export function BlogAbout() {
                     </div>
                 </div>
 
-                <h2 className="blog__about-subheader">
+                <h2 className="blog__subheading">
                     The Why
                 </h2>
 
@@ -100,7 +100,7 @@ export function BlogAbout() {
                     </div>
                 </div>
 
-                <h3 className="blog__about-subheader">
+                <h3 className="blog__subheading">
                     Disclaimer
                 </h3>
 

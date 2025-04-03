@@ -21,7 +21,7 @@ export function BlogFAQs() {
             </HelmetProvider>
 
             <section className="blog__faqs">
-                <h1 className="blog__faqs-header">
+                <h1 className="blog__heading">
                     FAQs
                 </h1>
 
@@ -30,7 +30,7 @@ export function BlogFAQs() {
                 </p>
 
                 <div className="blog__faqs-container">
-                    <h2 className="blog__faqs-subheader">
+                    <h2 className="blog__subheading">
                         Blog
                     </h2>
 
@@ -47,7 +47,7 @@ export function BlogFAQs() {
                 </div>
 
                 <div className="blog__faqs-container">
-                    <h2 className="blog__faqs-subheader">
+                    <h2 className="blog__subheading">
                         Career
                     </h2>
 
