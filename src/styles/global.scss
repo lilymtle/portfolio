@@ -77,11 +77,11 @@ body {
         letter-spacing: 0.1rem;
 
         @include tablet {
-            @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-heading-color);
+            @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
         }
 
         @include desktop {
-            @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-heading-color);
+            @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
         }
 
         &--small {
