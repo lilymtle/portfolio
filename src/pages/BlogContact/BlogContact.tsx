@@ -7,6 +7,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
 
 import { useContactForm } from "../../utils/useContactForm";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function BlogContactPage() {
     const { errors, formData, formMessage, handleInputChange, handleSubmit } = useContactForm(
@@ -14,6 +15,14 @@ export function BlogContactPage() {
     );
 
     return (
+        <>
+                    <HelmetProvider>
+                        <Helmet>
+                            <title>
+                                Blog | Contact
+                            </title>
+                        </Helmet>
+                    </HelmetProvider>
         <section className="blog__contact">
             <h1 className="blog__heading">
                 Send a Message
@@ -120,5 +129,6 @@ export function BlogContactPage() {
                 </form>
             </div>
         </section>
+        </>
     );
 };
