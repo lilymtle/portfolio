@@ -11,6 +11,10 @@
         {
             "source": "/blog/post/:slug",
             "destination": "/"
+        },
+        {
+            "source": "/blog/category/:category",
+            "destination": "/index.html"
         }
     ]
 }
