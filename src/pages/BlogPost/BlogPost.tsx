@@ -22,11 +22,9 @@ export function BlogPostPage(): JSX.Element {
             textElement = <em>{textElement}</em>;
         }
 
-        if (linkMark?.href) { 
-            textElement = <a href={linkMark.href} target="_blank" rel="noopener noreferrer">{textElement}</a>;
+        if (linkMark?.href) {
+            textElement = <a className="blog__post-link" href={linkMark.href} target="_blank" rel="noopener noreferrer">{textElement}</a>;
         }
-
-        console.log("Full Post Object:", post);
 
         return textElement;
     };
@@ -87,6 +85,18 @@ export function BlogPostPage(): JSX.Element {
                     </div>
 
                     {post.body.map((block: any) => {
+                        if (block._type === "image" && block.asset?.url) {
+                            return (
+                                <div key={block._key} className="blog__post-image-container">
+                                    <img
+                                        className="blog__post-image"
+                                        src={block.asset.url}
+                                        alt={block.alt || "Default alt text"}
+                                    />
+                                </div>
+                            );
+                        }
+
                         if (block._type === "block") {
                             switch (block.style) {
                                 case "h1":
