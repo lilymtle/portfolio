@@ -4,6 +4,11 @@
 
 .blog {
     &__container {
+        &-back {
+            @include flex-box(row);
+            
+        }
+
         &--post {
             @include tablet {
                 margin-bottom: 2rem;
@@ -32,6 +37,23 @@
         }
     }
 
+    &__back-link {
+        @include flex-box(row);
+        align-items: center;
+        gap: 0.5rem;
+        color: $pale-taupe;
+
+        &:hover {
+            color: $black-medium;
+            transition: 0.5s ease-in-out;
+        }
+
+        &-label {
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
     &__post {
         &-image {
             width: 100%;
@@ -44,23 +66,16 @@
             font-family: $blog-secondary-font;
             letter-spacing: 0.1rem;
             flex: 0;
+            color: $pale-taupe;
+
+            &:hover {
+                color: $black-medium;
+                transition: 0.5s ease-in-out;
+            }
         }
 
         &-date {
             font-style: italic;
-        }
-
-        &-nav {
-            &-link {
-                @include flex-box(row);
-                align-items: center;
-                gap: 0.5rem;
-            }
-
-            &-label {
-                font-weight: 400;
-                margin: 0;
-            }
         }
     }
 }
