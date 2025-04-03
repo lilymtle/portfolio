@@ -43,9 +43,9 @@ export function BlogPage() {
             </HelmetProvider>
 
             <main>
-                <section id="welcome" className="blog__home">
+                <section className="blog__home">
                     <section className="blog__intro">
-                        <h1 className="blog__home-header">
+                        <h1 className="blog__heading">
                             Hi there 👋🏻
                         </h1>
 
@@ -56,7 +56,7 @@ export function BlogPage() {
                         </p>
                     </section>
 
-                    <h2 className="blog__home-subheader">
+                    <h2 className="blog__subheading blog__subheading--black">
                         Latest Post
                     </h2>
 
@@ -73,6 +73,7 @@ export function BlogPage() {
                                         body={latestPost.body}
                                         categories={latestPost.categories}
                                         publishedAt={timeAgo(latestPost.publishedAt)}
+                                        slug={latestPost.slug.current}
                                     />
                                 ) : <p>Loading latest post...</p>}
                         </article>
@@ -81,7 +82,7 @@ export function BlogPage() {
                     <Divider className="blog__divider" />
 
                     <section className="blog__current-activities">
-                        <h2 className="blog__home-subheader">
+                        <h2 className="blog__subheading blog__subheading--black">
                             Currently I am...
                         </h2>
                         
