@@ -4,89 +4,79 @@ import "./BlogPost.scss";
 
 // components
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { getAllBlogPosts } from "../../sanity/fetchBlogPosts";
-import { useEffect, useState } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function BlogPostPage(): JSX.Element {
     const location = useLocation();
     const post = location.state;
-    console.log(post);
+    const previousPage = location.state?.from || "/blog";
 
     return (
-        <section className="blog__post">
-            <article className="blog__container--post">
-            <h1 className="blog__heading">
-                {post.title}
-            </h1>
+        <>
+            <HelmetProvider>
+                <Helmet>
+                    <title>
+                        Blog | {post.title}
+                    </title>
+                </Helmet>
+            </HelmetProvider>
 
-            <div className="blog__container--post-image">
-                <img
-                    className="blog__post-image"
-                    src={post.image}
-                    alt={post.title}
-                />
-            </div>
+            <section className="blog__post">
+                <div className="blog__container-back">
+                    <Link className="blog__back-link" to={previousPage}>
+                        <ArrowBackIosIcon
+                            className="blog__post-nav-icon"
+                            sx={{
+                                fontSize: {
+                                    xs: 15,
+                                    sm: 15,
+                                    md: 15
+                                }
+                            }}
+                        />
 
-            <div className="blog__container--date-category">
-                {post.categories.map((category: any) => (
-                    <Link
-                        key={category._id}
-                        to={`/blog/category/${category.title}`}
-                        className="blog__post-category"
-                    >
-                            {category.title}
-                    </Link>
-                ))}
-                <p className="blog__post-date">Published {post.publishedAt}</p>
-            </div>
-
-            {post.body.map((block: any, index: number) => (
-                <div key={block._key} className="blog__container-post">
-                    {block.children.map((child: any, childIndex: number) => (
-                        <p key={`${block._key}-${childIndex}`}  className="blog__post-text">
-                            {child.text}
+                        <p className="blog__back-link-label">
+                            Back
                         </p>
-                    ))}
+                    </Link>
                 </div>
-            ))}
-            </article>
+                <article className="blog__container--post">
+                    <h1 className="blog__heading">
+                        {post.title}
+                    </h1>
 
-            <section className="blog__post-nav">
-                <nav className="blog__container--post-nav">
-                    <div className="blog__post-nav-item">
-                        <Link className="blog__post-nav-link" to="/">
-                            <ArrowBackIosIcon 
-                                className="blog__post-nav-icon"
-                                sx={{
-                                    fontSize: {
-                                        xs: 15,
-                                        sm: 15,
-                                        md: 15
-                                    }
-                                }}
-                            />
-                            <p className="blog__post-nav-label">Previous</p>
-                        </Link>
+                    <div className="blog__container--post-image">
+                        <img
+                            className="blog__post-image"
+                            src={post.image}
+                            alt={post.title}
+                        />
                     </div>
 
-                    <div className="blog__post-nav-item">
-                        <Link className="blog__post-nav-link" to="/">
-                            <p className="blog__post-nav-label">Next</p>
-                            <ArrowForwardIosIcon 
-                                className="blog__post-nav-icon"
-                                sx={{
-                                    fontSize: {
-                                        xs: 15,
-                                        sm: 15,
-                                        md: 15
-                                    }
-                                }}
-                            />
+                    <div className="blog__container--date-category">
+                        {post.categories.map((category: any) => (
+                            <Link
+                                key={category._id}
+                                to={`/blog/category/${category.title}`}
+                                className="blog__post-category"
+                            >
+                                {category.title}
                             </Link>
+                        ))}
+                        <p className="blog__post-date">Published {post.publishedAt}</p>
                     </div>
-                </nav>
+
+                    {post.body.map((block: any, index: number) => (
+                        <div key={block._key} className="blog__container-post">
+                            {block.children.map((child: any, childIndex: number) => (
+                                <p key={`${block._key}-${childIndex}`} className="blog__post-text">
+                                    {child.text}
+                                </p>
+                            ))}
+                        </div>
+                    ))}
+                </article>
             </section>
-        </section>
+        </>
     );
 };
