@@ -4,15 +4,19 @@
 
 .blog {
     &__faqs {
+        &-container {
+            margin-bottom: 1rem;
+
+            @include desktop {
+                margin-bottom: 0;
+            }
+        }
+        
         &-text {
             margin-block: 0.5rem;
             
             &--italics {
                 font-style: italic;
-            }
-
-            &--answer {
-                color: #B5907B;
             }
         }
     }
