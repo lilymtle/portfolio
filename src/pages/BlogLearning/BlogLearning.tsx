@@ -29,14 +29,14 @@ export function BlogLearningPage() {
             
             <ul className="blog__resources-list">
                 {learningResources.map((learningResource) => (
-                    <li className="blog__resources-list-item">
+                    <li key={learningResource.id} className="blog__resources-list-item">
                         <article className="blog__resource-card">
-                            <div className="blog__container--resource-subheading-text">
-                                <h2 className="blog__subheading blog__subheading--remove-top-margin">{learningResource.name}</h2>
+                            <div className="blog__container-resource-subheading-text">
+                                <h2 className="blog__subheading blog__subheading--black blog__subheading--remove-top-margin">{learningResource.name}</h2>
                                 <p className="blog__text blog__text--remove-bottom-margin">{learningResource.website}</p>
                             </div>
 
-                            <div className="blog__container--resource-number">
+                            <div className="blog__container-resource-arrow">
                                 <a className="blog__resource-arrow-link" href={learningResource.link}><ArrowForwardIcon /></a>
                             </div>
                         </article>
