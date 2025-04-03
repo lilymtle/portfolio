@@ -6,10 +6,36 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 // hook
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+import { sanityClient } from "../../sanity/sanity";
+
+import { Link } from "react-router-dom";
+
+import { navigationLinks } from "../../data/navigationLinks";
 
 export function BlogMenu() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [categories, setCategories] = useState<string[]>([]);
+    
+        useEffect(() => {
+            const fetchCategories = async () => {
+                try {
+                    const query = `*[_type == "category"]{ title}`;
+                    const data = await sanityClient.fetch(query);
+                    const categoryTitles = data.map((category: any) => category.title);
+                    setCategories(categoryTitles);
+                } catch (error) {
+                    console.error("Error fetching categories:", error);
+                };
+            };
+            fetchCategories();
+            console.log(categories);
+        }, []);
+
+        const handleCloseMenu = () => {
+            setIsOpen(false);
+        };
 
     return (
         <>
@@ -32,7 +58,6 @@ export function BlogMenu() {
 
                 <div className="menu__container">
                     <div className="menu__wrapper">
-                        <a className="menu__link--home" href="/blog">Home</a>
                         <article><a className="menu__link--portfolio" href="/">Porfolio</a></article>
                         
                         <label className="menu__label">
@@ -42,20 +67,17 @@ export function BlogMenu() {
                         </label>
 
                         <ul className="menu__list">
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/blog/about">About</a>
-                            </li>
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/blog/posts">Posts</a>
-                            </li>
-
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/blog/faqs">FAQs</a>
-                            </li>
-
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/blog/contact">Contact</a>
-                            </li>
+                            {navigationLinks.slice(0, -1).map((navigationLink) => (
+                                <li key={navigationLink.id} className="menu__list-item">
+                                    <Link 
+                                        className="menu__link"
+                                        to={navigationLink.url}
+                                        onClick={handleCloseMenu}
+                                    >
+                                        {navigationLink.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -67,25 +89,18 @@ export function BlogMenu() {
                         </label>
 
                         <ul className="menu__list">
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/">Books</a>
-                            </li>
 
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/">Health</a>
-                            </li>
-
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/">Lifestyle</a>
-                            </li>
-
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/">Travel</a>
-                            </li>
-
-                            <li className="menu__list-item">
-                                <a className="menu__link" href="/">Technology</a>
-                            </li>
+                            {categories.map((category) => (
+                                <li key={category} className="menu__list-item">
+                                    <Link
+                                        className="menu__link"
+                                        to={`/blog/category/${category.toLowerCase()}`}
+                                        onClick={handleCloseMenu}
+                                    >
+                                        {category}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -98,7 +113,7 @@ export function BlogMenu() {
 
                         <ul className="menu__list">
                             <li className="menu__list-item">
-                                <a className="menu__link" href="/blog/learning">Learning</a>
+                                <Link className="menu__link" to="/blog/learning" onClick={handleCloseMenu}>Learning</Link>
                             </li>
                         </ul>
                     </div>
