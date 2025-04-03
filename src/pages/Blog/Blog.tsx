@@ -51,9 +51,18 @@ export function BlogPage() {
                         </h1>
 
                         <p className="blog__text">
-                            After months of contemplation, I decided to create this space for me
-                            to pour my thoughts into. This wee corner of mine will include my
-                            ramblings on various topics, both technical and non-technical.
+                            After months of contemplation, I decided to create this space to pour my thoughts 
+                            into—a quiet corner where creativity and curiosity meet. Here, you'll find my 
+                            musings on everything that fascinates me, whether technical or non-technical. 
+                            This blog is a home for my thoughts, personal reflections, and the things I care about most.
+                        </p>
+
+                        <p className="blog__text">
+                            My hope is that this space becomes more than a collection of ramblings; instead, 
+                            I want it to spark inspiration, provide insights, and create a connection. Whether 
+                            you're here to learn something new, share in an opinion, or simply stumble across 
+                            an interesting thought, I welcome you to this little corner of mine. Let’s explore 
+                            together.
                         </p>
                     </section>
 
@@ -61,24 +70,18 @@ export function BlogPage() {
                         Latest Post
                     </h2>
 
-                    {/* <Link
-                        className="blog__latest-post-link"
-                        to={`/post/${latestPost?.slug?.current}`}
-                    > */}
+                    {latestPost ? (
+                        <BlogPostCard
+                            title={latestPost.title}
+                            image={urlFor(latestPost.mainImage)}
+                            excerpt={getExcerpt(latestPost.body, 150)}
+                            body={latestPost.body}
+                            categories={latestPost.categories}
+                            publishedAt={timeAgo(latestPost.publishedAt)}
+                            slug={latestPost.slug.current}
+                        />
+                    ) : <p>Loading latest post...</p>}
 
-                        {latestPost ? (
-                            <BlogPostCard
-                                title={latestPost.title}
-                                image={urlFor(latestPost.mainImage)}
-                                excerpt={getExcerpt(latestPost.body, 150)}
-                                body={latestPost.body}
-                                categories={latestPost.categories}
-                                publishedAt={timeAgo(latestPost.publishedAt)}
-                                slug={latestPost.slug.current}
-                            />
-                        ) : <p>Loading latest post...</p>}
-
-                    {/* </Link> */}
 
                     <Divider className="blog__divider" />
 
