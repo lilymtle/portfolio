@@ -2,11 +2,10 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
-
 .blog {
     &__container {
-        &--resource {
-            &-number {
+        &-resource {
+            &-arrow {
                 width: 40px;
                 height: 40px;
                 background-color: white;
@@ -20,7 +19,6 @@
                 height: 100%;
                 @include flex-box(column);
                 justify-content: space-between;
-                // background: green;
             }
         }
     }
@@ -35,8 +33,9 @@
 
             @include tablet {
                 @include flex-box(row);
+                justify-content: center;
                 flex-wrap: wrap;
-                gap: 2rem;
+                gap: 4.5rem;
                 margin-top: 2rem;
             }
 
@@ -60,15 +59,29 @@
             border-radius: .25rem;
             padding: 1rem;
 
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.025);
+                transition: 0.3s ease;
+
+                @include tablet {
+                    transform: scale(1.1);
+                }
+
+                @include desktop {
+                    transform: scale(1.1);
+                }
+            }
+
             @include tablet {
                 width: 16.5rem;
-                height: 10rem;
+                height: 15rem;
                 padding: 2rem;
             }
 
             @include desktop {
-                width: 17rem;
-                height: 10rem;
+                width: 19.7rem;
+                height: 15rem;
                 padding: 2rem;
             }
         }
