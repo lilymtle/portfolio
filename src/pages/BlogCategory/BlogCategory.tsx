@@ -12,7 +12,7 @@ import { BlogSubNav } from "../../components/BlogSubNav/BlogSubNav";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function BlogCategoryPage() {
-    const { category } = useParams<{ category : string }>();
+    const { category } = useParams<{ category: string }>();
 
     const [posts, setPosts] = useState<any[]>([]);
     const [sortOrder, setSortOrder] = useState<string>("latest");
@@ -53,64 +53,63 @@ export function BlogCategoryPage() {
 
     return (
         <>
-                    <HelmetProvider>
-                        <Helmet>
-                            <title>
-                                Blog | {category}
-                            </title>
-                        </Helmet>
-                    </HelmetProvider>
+            <HelmetProvider>
+                <Helmet>
+                    <title>
+                        Blog | {category}
+                    </title>
+                </Helmet>
+            </HelmetProvider>
 
-        <section className="blog__category">
+            <section className="blog__category">
                 <BlogSubNav />
-            <div className="blog__wrapper-heading">                
-                <h1 className="blog__heading">
-                    {category}
-                </h1>
+                <div className="blog__wrapper-heading">
+                    <h1 className="blog__heading">
+                        {category}
+                    </h1>
 
-                <div className="blog__sort-container">
-                    <label className="blog__label">Sort by:</label>
+                    <div className="blog__sort-container">
+                        <label className="blog__label">Sort by:</label>
 
-                    <select
-                        className="blog__sort-dropdown"
-                        value={sortOrder}
-                        onChange={(e) => setSortOrder(e.target.value)}
-                    >
-                        <option value="latest">Latest</option>
-                        <option value="oldest">Oldest</option>
-                    </select>
+                        <select
+                            className="blog__sort-dropdown"
+                            value={sortOrder}
+                            onChange={(e) => setSortOrder(e.target.value)}
+                        >
+                            <option value="latest">Latest</option>
+                            <option value="oldest">Oldest</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <section className="blog__posts-cards">
-                <ul className="blog__posts-list">
-                    {currentPosts.length > 0 ? (
-                        currentPosts.map((post) => (
-                            <li key={post._id} className="blog__posts-list-item">
-                                <BlogPostCard
-                                    title={post.title}
-                                    image={urlFor(post.mainImage)}
-                                    excerpt={getExcerpt(post.body, 150)}
-                                    body={post.body}
-                                    categories={post.categories}
-                                    publishedAt={timeAgo(post.publishedAt)}
-                                    slug={post.slug.current}
-                                    currentPage={currentPage}
-                                />
-                            </li>
-                        ))
-                    ) : (
-                        <p>Loading posts...</p>
-                    )}
-                </ul>
+                <section className="blog__posts-cards">
+                    <ul className="blog__posts-list">
+                        {currentPosts.length > 0 ? (
+                            currentPosts.map((post) => (
+                                <li key={post._id} className="blog__posts-list-item">
+                                    <BlogPostCard
+                                        title={post.title}
+                                        image={urlFor(post.mainImage)}
+                                        excerpt={getExcerpt(post.body, 150)}
+                                        body={post.body}
+                                        categories={post.categories}
+                                        publishedAt={timeAgo(post.publishedAt)}
+                                        slug={post.slug.current}
+                                    />
+                                </li>
+                            ))
+                        ) : (
+                            <p>Looks like there is nothing posted on this, yet. 🙃</p>
+                        )}
+                    </ul>
+                </section>
+
+                <PaginationOutlined
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={setCurrentPage}
+                />
             </section>
-
-            <PaginationOutlined
-                count={totalPages}
-                page={currentPage}
-                onChange={setCurrentPage}
-            />
-        </section>
         </>
     );
 };
