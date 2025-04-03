@@ -2,31 +2,6 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .blog {
-    &__home {
-        padding: 1rem;
-
-        @include tablet { 
-            padding: 2rem;
-        }
-
-        @include desktop {
-            padding-inline: 15rem;
-        }
-
-        &-header {
-            font-family: "Playfair Display", sans-serif;
-            font-weight: 500;
-            letter-spacing: 0.1rem;
-        }
-
-        &-subheader {
-            font-family: "Playfair Display", sans-serif;
-            font-size: 1.25rem;
-            font-weight: 500;
-            letter-spacing: 0.1rem;
-        }
-    }
-
     &__current {
         &-items {
             @include flex-box(column);
@@ -35,7 +10,7 @@
 
         &-item {
             &-overlay {
-                background: black;
+                background-color: $black;
                 opacity: 60%;
                 padding: 0.5rem;
                 position: absolute;
@@ -47,12 +22,12 @@
             }
 
             &-text {
+                color: $white;
                 position: absolute;
                 left: 0;
                 top: 0;
                 right: 0;
                 bottom: 0;
-                color: white;
                 z-index: 9999;
                 padding: 0.25rem 1rem;
             }

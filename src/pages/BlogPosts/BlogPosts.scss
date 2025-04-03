@@ -3,26 +3,6 @@
 @use "../../styles/partials/fonts.scss" as *;
 
 .blog {
-    &__sub-nav {
-        &-container {
-            @include flex-box(column);
-            align-items: center;
-            gap: 0.5rem;
-
-            @include tablet {
-                @include flex-box(row);
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            @include desktop {
-                @include flex-box(row);
-                justify-content: center;
-                gap: 1rem;
-            }
-        }
-    }
-
     &__wrapper {
         &-heading {
             @include flex-box(row);

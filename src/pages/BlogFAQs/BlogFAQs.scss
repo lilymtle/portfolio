@@ -4,26 +4,6 @@
 
 .blog {
     &__faqs {
-        padding: 1rem;
-
-        @include tablet {
-            padding: 2rem;
-        }
-
-        @include desktop {
-            padding-inline: 15rem;
-        }
-
-        &-header {
-            font-family: "Playfair Display", sans-serif;
-        }
-
-        &-subheader {
-            font-family: "Playfair Display", sans-serif;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
         &-text {
             margin-block: 0.5rem;
             
