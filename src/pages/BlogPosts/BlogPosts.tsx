@@ -14,14 +14,16 @@ import { useState, useEffect } from "react";
 // sanity
 import { getAllBlogPosts } from "../../sanity/fetchBlogPosts";
 import { urlFor } from "../../sanity/sanityImage";
-
+import { useSearchParams } from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function BlogPostsPage() {
     const [posts, setPosts] = useState<any>(null);
     const [sortOrder, setSortOrder] = useState<string>("latest");
-    const [currentPage, setCurrentPage] = useState<number>(1);
-    const postsPerPage: number = 5;
-
+    const postsPerPage: number = 4;
+    const [searchParams, setSearchParams] = useSearchParams();
+    const currentPage = Number(searchParams.get("page")) || 1;
+    
     useEffect(() => {
         const fetchBlogPosts = async () => {
             try {
@@ -47,10 +49,16 @@ export function BlogPostsPage() {
     const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
 
     return (
+        <>
+                    <HelmetProvider>
+                        <Helmet>
+                            <title>
+                                Blog | Posts
+                            </title>
+                        </Helmet>
+                    </HelmetProvider>
         <section className="blog__posts">
             <div className="blog__sub-nav-container">
-                <p className="blog__label">Browse:</p>
-
                 <BlogSubNav />
             </div>
 
@@ -99,8 +107,10 @@ export function BlogPostsPage() {
             <PaginationOutlined
                 count={totalPages}
                 page={currentPage}
-                onChange={setCurrentPage}
-            />
+                onChange={(page) => setSearchParams({ page: page.toString() })}
+                />
         </section>
+
+        </>
     );
 };
