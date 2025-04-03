@@ -32,7 +32,7 @@ const [categories, setCategories] = useState<string[]>([]);
                         <li key={category} className="blog__sub-nav-list-item">
                             <Link
                                 className="blog__sub-nav-link"
-                                to={`/blog/category/${category.toLowerCase()}`}
+                                to={`/blog/category/${category}`}
                             >
                                 {category}
                             </Link>

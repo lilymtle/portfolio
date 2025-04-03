@@ -51,14 +51,12 @@ export function BlogCategoryPage() {
     const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
     const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
 
-    const capitalizedCategoryName = category ? category.charAt(0).toUpperCase() + category.slice(1) : "";
-
     return (
         <>
             <HelmetProvider>
                 <Helmet>
                     <title>
-                        Blog | {capitalizedCategoryName}
+                        Blog | {category}
                     </title>
                 </Helmet>
             </HelmetProvider>
@@ -67,7 +65,7 @@ export function BlogCategoryPage() {
                 <BlogSubNav />
                 <div className="blog__wrapper-heading">
                     <h1 className="blog__heading">
-                        {capitalizedCategoryName}
+                        {category}
                     </h1>
 
                     <div className="blog__sort-container">

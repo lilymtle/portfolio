@@ -94,7 +94,7 @@ export function BlogMenu() {
                                 <li key={category} className="menu__list-item">
                                     <Link
                                         className="menu__link"
-                                        to={`/blog/category/${category.toLowerCase()}`}
+                                        to={`/blog/category/${category}`}
                                         onClick={handleCloseMenu}
                                     >
                                         {category}

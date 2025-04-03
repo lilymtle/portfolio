@@ -61,7 +61,7 @@ export function BlogFooter() {
                         <li key={category} className="blog__footer-nav-list-item">
                             <Link
                                 className="blog__footer-nav-link"
-                                to={`/blog/category/${category.toLowerCase()}`}
+                                to={`/blog/category/${category}`}
                             >
                                 {category}
                             </Link>
