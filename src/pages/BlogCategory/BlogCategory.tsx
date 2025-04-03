@@ -8,14 +8,17 @@ import { urlFor } from "../../sanity/sanityImage";
 import { getExcerpt } from "../../utils/getExcerpt";
 import { timeAgo } from "../../utils/timeAgo";
 import PaginationOutlined from "../../components/Pagination/Pagination";
+import { BlogSubNav } from "../../components/BlogSubNav/BlogSubNav";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function BlogCategoryPage() {
     const { category } = useParams<{ category : string }>();
 
-    const [posts, setPosts] = useState<any>(null);
+    const [posts, setPosts] = useState<any[]>([]);
     const [sortOrder, setSortOrder] = useState<string>("latest");
     const [currentPage, setCurrentPage] = useState<number>(1);
     const postsPerPage: number = 5;
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         if (!category) {
@@ -30,10 +33,12 @@ export function BlogCategoryPage() {
                 setPosts(posts);
             } catch (error) {
                 console.error("Error fetching posts:", error);
-            };
+            } finally {
+                setLoading(false);
+            }
         };
         fetchPostsByCategory();
-    }, []);
+    }, [category]);
 
     const sortedPosts = posts ? [...posts].sort((a, b) => {
         return sortOrder === "latest"
@@ -47,8 +52,18 @@ export function BlogCategoryPage() {
     const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
 
     return (
+        <>
+                    <HelmetProvider>
+                        <Helmet>
+                            <title>
+                                Blog | {category}
+                            </title>
+                        </Helmet>
+                    </HelmetProvider>
+
         <section className="blog__category">
-            <div className="blog__wrapper-heading">
+                <BlogSubNav />
+            <div className="blog__wrapper-heading">                
                 <h1 className="blog__heading">
                     {category}
                 </h1>
@@ -80,6 +95,7 @@ export function BlogCategoryPage() {
                                     categories={post.categories}
                                     publishedAt={timeAgo(post.publishedAt)}
                                     slug={post.slug.current}
+                                    currentPage={currentPage}
                                 />
                             </li>
                         ))
@@ -95,5 +111,6 @@ export function BlogCategoryPage() {
                 onChange={setCurrentPage}
             />
         </section>
+        </>
     );
 };
