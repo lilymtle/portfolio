@@ -4,6 +4,7 @@ import "./BlogFooter.scss";
 
 import { Link } from "react-router-dom";
 import { sanityClient } from "../../sanity/sanity";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
 export function BlogFooter() {
     const [categories, setCategories] = useState<string[]>([]);
@@ -63,7 +64,7 @@ export function BlogFooter() {
                                 className="blog__footer-nav-link"
                                 to={`/blog/category/${category}`}
                             >
-                                {category}
+                                {capitalizeFirstLetter(category)}
                             </Link>
                         </li>
                     ))}

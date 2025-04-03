@@ -1,6 +1,7 @@
 // styling
 import { Link, useLocation } from "react-router-dom";
 import "./BlogPostCard.scss";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
 interface Category {
     _id: string;
@@ -59,7 +60,7 @@ export function BlogPostCard({ title, image, excerpt, body, categories, publishe
                         className="blog__post-card-category"
                         to={`/blog/category/${category.title}`}
                     >
-                        {category.title}
+                        {capitalizeFirstLetter(category.title)}
                     </Link>
                 ))}
 

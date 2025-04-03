@@ -10,6 +10,7 @@ import { timeAgo } from "../../utils/timeAgo";
 import PaginationOutlined from "../../components/Pagination/Pagination";
 import { BlogSubNav } from "../../components/BlogSubNav/BlogSubNav";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
 export function BlogCategoryPage() {
     const { category } = useParams<{ category: string }>();
@@ -65,7 +66,7 @@ export function BlogCategoryPage() {
                 <BlogSubNav />
                 <div className="blog__wrapper-heading">
                     <h1 className="blog__heading">
-                        {category}
+                        {capitalizeFirstLetter(category)}
                     </h1>
 
                     <div className="blog__sort-container">

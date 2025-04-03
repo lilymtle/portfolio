@@ -5,6 +5,7 @@ import "./BlogPost.scss";
 // components
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
 export function BlogPostPage(): JSX.Element {
     const location = useLocation();
@@ -78,7 +79,7 @@ export function BlogPostPage(): JSX.Element {
                                 to={`/blog/category/${category.title}`}
                                 className="blog__post-category blog__post-link"
                             >
-                                {category.title}
+                                {capitalizeFirstLetter(category.title)}
                             </Link>
                         ))}
                         <p className="blog__post-date">Published {post.publishedAt}</p>

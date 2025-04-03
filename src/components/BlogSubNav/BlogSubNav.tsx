@@ -4,6 +4,7 @@ import "./BlogSubNav.scss";
 import { useEffect, useState } from "react";
 import { sanityClient } from "../../sanity/sanity";
 import { Link } from "react-router-dom";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
 export function BlogSubNav(): JSX.Element {
 const [categories, setCategories] = useState<string[]>([]);
@@ -34,7 +35,7 @@ const [categories, setCategories] = useState<string[]>([]);
                                 className="blog__sub-nav-link"
                                 to={`/blog/category/${category}`}
                             >
-                                {category}
+                                {capitalizeFirstLetter(category)}
                             </Link>
                         </li>
                     ))}

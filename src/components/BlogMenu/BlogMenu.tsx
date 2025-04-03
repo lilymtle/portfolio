@@ -13,6 +13,7 @@ import { sanityClient } from "../../sanity/sanity";
 import { Link } from "react-router-dom";
 
 import { navigationLinks } from "../../data/navigationLinks";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
 export function BlogMenu() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -97,7 +98,7 @@ export function BlogMenu() {
                                         to={`/blog/category/${category}`}
                                         onClick={handleCloseMenu}
                                     >
-                                        {category}
+                                        {capitalizeFirstLetter(category)}
                                     </Link>
                                 </li>
                             ))}
