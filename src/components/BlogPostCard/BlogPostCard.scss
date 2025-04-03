@@ -97,6 +97,14 @@
 
             &-text {
                 font-size: 0.85rem;
+
+                @include tablet {
+                    font-size: 0.95rem;
+                }
+
+                @include desktop {
+                    font-size: 1rem;
+                }
             }
 
             &-link {
