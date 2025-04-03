@@ -37,7 +37,7 @@ export function BlogPage() {
             <HelmetProvider>
                 <Helmet>
                     <title>
-                        Blog | Lily Le
+                        Blog | Lily's Corner
                     </title>
                 </Helmet>
             </HelmetProvider>
