@@ -15,7 +15,10 @@ const [categories, setCategories] = useState<string[]>([]);
                 const query = `*[_type == "category"]{ title}`;
                 const data = await sanityClient.fetch(query);
                 const categoryTitles = data.map((category: any) => category.title);
-                setCategories(categoryTitles);
+                const sortedCategories = categoryTitles.sort((a: string, b: string) =>
+                    a.localeCompare(b)
+                );
+                setCategories(sortedCategories);
             } catch (error) {
                 console.error("Error fetching categories:", error);
             };
