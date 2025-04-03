@@ -25,6 +25,7 @@ export function BlogPage() {
                 const data = await getLatestBlogPost();
                 if (!data) throw new Error("No latest post found");
                 setLatestPost(data);
+                console.log("Latest Post:", data);
             } catch (error) {
                 console.error("Error fetching latest post:", error);
             }
@@ -60,24 +61,24 @@ export function BlogPage() {
                         Latest Post
                     </h2>
 
-                    <Link
+                    {/* <Link
                         className="blog__latest-post-link"
                         to={`/post/${latestPost?.slug?.current}`}
-                    >
-                            <article className="blog__post-card">
-                                {latestPost ? (
-                                    <BlogPostCard
-                                        title={latestPost.title}
-                                        image={urlFor(latestPost.mainImage)}
-                                        excerpt={getExcerpt(latestPost.body, 150)}
-                                        body={latestPost.body}
-                                        categories={latestPost.categories}
-                                        publishedAt={timeAgo(latestPost.publishedAt)}
-                                        slug={latestPost.slug.current}
-                                    />
-                                ) : <p>Loading latest post...</p>}
-                        </article>
-                    </Link>
+                    > */}
+
+                        {latestPost ? (
+                            <BlogPostCard
+                                title={latestPost.title}
+                                image={urlFor(latestPost.mainImage)}
+                                excerpt={getExcerpt(latestPost.body, 150)}
+                                body={latestPost.body}
+                                categories={latestPost.categories}
+                                publishedAt={timeAgo(latestPost.publishedAt)}
+                                slug={latestPost.slug.current}
+                            />
+                        ) : <p>Loading latest post...</p>}
+
+                    {/* </Link> */}
 
                     <Divider className="blog__divider" />
 
@@ -85,7 +86,7 @@ export function BlogPage() {
                         <h2 className="blog__subheading blog__subheading--black">
                             Currently I am...
                         </h2>
-                        
+
                         <div className="blog__current-items">
                             <article className="blog__current-item blog__current-item--game">
                                 <div className="blog__current-item-overlay"></div>
