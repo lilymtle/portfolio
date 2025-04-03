@@ -87,13 +87,7 @@ export function BlogHeader(): JSX.Element {
                     </a>
                 </div>
 
-                <div className="blog__wrapper-spotify">
-                    <p className="spotify-text">
-                        Now Playing
-                    </p>
-
-                    <iframe className="spotify" src="https://open.spotify.com/embed/track/7f85n3GoES8ODzpXmyzRpl?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
+                <div className="blog__spacer"></div>
             </div>
         </header>
     );
