@@ -29,12 +29,12 @@
     }
 }
 
-
 .MuiFormLabel-root {
     font-size: 1rem !important;
     color: #527392!important;
     letter-spacing: 0.1rem !important;
     text-transform: uppercase;
+    z-index: 0 !important;
 
     @include tablet {
         font-size: 1.3rem !important;
