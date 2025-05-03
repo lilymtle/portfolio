@@ -53,7 +53,7 @@ export const professionalExperience: ProfessionalExperience[] = [
         id: 1,
         company: "Ontario Ministry of Health",
         date: "Feb 2025 - Present",
-        role: "Health Analyst & Developer",
+        role: "Software Developer",
         logo: `${imgPath}/ontario-government.jpeg`
     },
     {
