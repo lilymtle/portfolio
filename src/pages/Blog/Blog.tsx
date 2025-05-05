@@ -101,14 +101,14 @@ export function BlogPage() {
                             <article className="blog__current-item blog__current-item--show">
                                 <div className="blog__current-item-overlay"></div>
                                 <p className="blog__current-item-text">
-                                    Watching The First Frost (难哄)
+                                    Watching The Apothecary Diaries (薬屋のひとりごと)
                                 </p>
                             </article>
 
                             <article className="blog__current-item blog__current-item--book">
                                 <div className="blog__current-item-overlay"></div>
                                 <p className="blog__current-item-text">
-                                    Reading Kitchen by Yoshimoto, Banana
+                                    Reading The Pumpkin Spice Café by Laurie Gilmore
                                 </p>
                             </article>
                         </div>
