@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 // sanity
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { getPostBySlug } from "../../sanity/fetchBlogPosts";
+import { urlFor } from "../../sanity/sanityImage";
 
 export function BlogPostPage(): JSX.Element {
     useEffect(() => {
@@ -26,7 +27,7 @@ export function BlogPostPage(): JSX.Element {
     const location = useLocation();
     const previousPage = location.state?.from || "/blog";
     const { slug } = useParams();
-    const [post, setPost] = useState(null);
+    const [post, setPost] = useState(location.state || null);
 
     useEffect(() => {
         if (!slug) return;
@@ -35,15 +36,11 @@ export function BlogPostPage(): JSX.Element {
                 const result = await getPostBySlug(slug);
                 setPost(result);
             } catch (error) {
-                console.error("Failed to fetch post by slug:", error);
+                console.error("Failed to fetch post:", error);
             }
         };
-        if (location.state) {
-            setPost(location.state);
-        } else if (!post) {
-            fetchPost();
-        }
-    }, [location.state, post, slug]);
+        fetchPost();
+    }, [slug]);
 
     if (!post) {
         return <p className="blog__loading">Loading blog post...</p>;
@@ -91,6 +88,10 @@ export function BlogPostPage(): JSX.Element {
         },
     };
 
+    useEffect(() => {
+        console.log("Post data:", post);
+    }, [post]);
+
 
     return (
         <>
@@ -127,10 +128,10 @@ export function BlogPostPage(): JSX.Element {
                     </h1>
 
                     <div className="blog__container-post-image--header">
-                        <img
-                            className="blog__post-image blog-post-image--header"
-                            src={post.image}
-                            alt={post.title}
+                    <img
+                        className="blog__post-image blog-post-image--header"
+                        src={post.imageUrl}
+                        alt={post.title}
                         />
                     </div>
 
