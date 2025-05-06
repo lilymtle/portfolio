@@ -59,7 +59,7 @@ export const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0] {
     _id,
     title,
     slug,
-    mainImage,
+    "imageUrl": mainImage.asset->url,
     publishedAt,
     body[]{
         ...,
