@@ -5,14 +5,47 @@ import "./BlogPost.scss";
 // components
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
+// util
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
+import { handleScrollToTop } from "../../utils/handleScrollToTop";
+
+// hooks
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+// sanity
 import { PortableText, PortableTextComponents } from "@portabletext/react";
+import { getPostBySlug } from "../../sanity/fetchBlogPosts";
 
 export function BlogPostPage(): JSX.Element {
+    useEffect(() => {
+        handleScrollToTop();
+    }, []);
+
     const location = useLocation();
-    const post = location.state;
     const previousPage = location.state?.from || "/blog";
+    const { slug } = useParams();
+    const [post, setPost] = useState(location.state || null);
+
+    useEffect(() => {
+        if (post || !slug) return;
+
+        const fetchPost = async () => {
+            try {
+                const result = await getPostBySlug(slug);
+                setPost(result);
+            } catch (error) {
+                console.error("Failed to fetch post by slug:", error);
+            }
+        };
+
+        fetchPost();
+    }, [post, slug]);
+
+    if (!post) {
+        return <p className="blog__loading">Loading blog post...</p>;
+    }
 
     const components: PortableTextComponents = {
         block: {
