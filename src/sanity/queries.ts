@@ -54,3 +54,22 @@ export const postsByCategoryQuery =  `*[_type == "post" && $category in categori
         title
     }
 }`;
+
+export const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0] {
+    _id,
+    title,
+    slug,
+    mainImage,
+    publishedAt,
+    body[]{
+        ...,
+        asset->{
+            url
+        },
+        alt
+    },
+    categories[]->{
+        _id,
+        title
+    }
+}`;
