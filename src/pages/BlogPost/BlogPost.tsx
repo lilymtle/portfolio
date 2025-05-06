@@ -88,11 +88,6 @@ export function BlogPostPage(): JSX.Element {
         },
     };
 
-    useEffect(() => {
-        console.log("Post data:", post);
-    }, [post]);
-
-
     return (
         <>
             <HelmetProvider>
