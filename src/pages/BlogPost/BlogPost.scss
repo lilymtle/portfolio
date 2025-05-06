@@ -12,7 +12,7 @@
         &-post {
             &-image {
                 width: 100%;
-                aspect-ratio: 16 / 9;
+                height: auto;
                 overflow: hidden;
             }
 
@@ -61,6 +61,19 @@
 
             @include desktop {
                 @include td-sub-heading($blog-secondary-font, 1.5rem, $global-blog-subheading-color);
+            }
+
+            &--medium {
+                @include m-page-heading($blog-secondary-font, 1.15rem, $global-blog-subheading-color);
+                line-height: 1.6rem;
+
+                @include tablet {
+                    @include td-sub-heading($blog-secondary-font, 1.25rem, $global-blog-subheading-color);
+                }
+
+                @include desktop {
+                    @include td-sub-heading($blog-secondary-font, 1.25rem, $global-blog-subheading-color);
+                }
             }
         }
 
