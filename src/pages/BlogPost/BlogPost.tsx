@@ -38,10 +38,10 @@ export function BlogPostPage(): JSX.Element {
                 console.error("Failed to fetch post by slug:", error);
             }
         };
-        if (!post && !location.state) {
+        if (location.state) {
+            setPost(location.state);
+        } else if (!post) {
             fetchPost();
-        } else if (location.state) {
-            setPost(location.state)
         }
     }, [location.state, post, slug]);
 
