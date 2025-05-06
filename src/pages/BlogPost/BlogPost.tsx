@@ -29,8 +29,7 @@ export function BlogPostPage(): JSX.Element {
     const [post, setPost] = useState(location.state || null);
 
     useEffect(() => {
-        if (post || !slug) return;
-
+        if (!slug) return;
         const fetchPost = async () => {
             try {
                 const result = await getPostBySlug(slug);
@@ -39,8 +38,9 @@ export function BlogPostPage(): JSX.Element {
                 console.error("Failed to fetch post by slug:", error);
             }
         };
-
-        fetchPost();
+        if (!post) {
+            fetchPost();
+        }
     }, [slug]);
 
     if (!post) {
