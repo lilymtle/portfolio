@@ -30,7 +30,10 @@ export default defineType({
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [
+        {title: 'Bullet', value: 'bullet'},
+        {title: 'Numbered', value: 'number'},
+      ],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -38,6 +41,7 @@ export default defineType({
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
+          {title: 'Inline Code', value: 'code'}, 
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -59,6 +63,13 @@ export default defineType({
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
+    defineArrayMember({
+      type: 'code',
+      options: {
+        language: 'javascript', // default language
+        theme: 'github',        // optional
+      }
+    }),
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
