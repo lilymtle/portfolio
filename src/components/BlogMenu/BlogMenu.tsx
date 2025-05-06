@@ -42,6 +42,8 @@ export function BlogMenu() {
             setIsOpen(false);
         };
 
+        isOpen === true ? document.body.classList.add("overflow-y-hidden") : document.body.classList.remove("overflow-y-hidden");
+
     return (
         <>
             <button
