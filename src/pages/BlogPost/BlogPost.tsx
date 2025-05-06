@@ -26,7 +26,7 @@ export function BlogPostPage(): JSX.Element {
     const location = useLocation();
     const previousPage = location.state?.from || "/blog";
     const { slug } = useParams();
-    const [post, setPost] = useState(location.state || null);
+    const [post, setPost] = useState(null);
 
     useEffect(() => {
         if (!slug) return;
@@ -38,10 +38,12 @@ export function BlogPostPage(): JSX.Element {
                 console.error("Failed to fetch post by slug:", error);
             }
         };
-        if (!post) {
+        if (!post && !location.state) {
             fetchPost();
+        } else if (location.state) {
+            setPost(location.state)
         }
-    }, [slug]);
+    }, [location.state, post, slug]);
 
     if (!post) {
         return <p className="blog__loading">Loading blog post...</p>;
