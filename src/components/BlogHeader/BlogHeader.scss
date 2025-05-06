@@ -72,14 +72,14 @@
         }
 
         &-full {
-            visibility: hidden;
+            display: none;
 
             @include tablet {
-                visibility: visible;
+                display: inline-block;
             }
 
             @include desktop {
-                visibility: visible;
+                display: inline-block;
             }
         }
 
