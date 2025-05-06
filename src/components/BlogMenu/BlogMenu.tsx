@@ -18,31 +18,40 @@ import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 export function BlogMenu() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [categories, setCategories] = useState<string[]>([]);
-    
-        useEffect(() => {
-            const fetchCategories = async () => {
-                try {
-                    const query = `*[_type == "category"]{ title}`;
-                    const data = await sanityClient.fetch(query);
-                    const categoryTitles = data.map((category: any) => category.title);
-                    const sortedCategories = categoryTitles.sort((a: string, b: string) =>
-                        a.localeCompare(b)
-                    );
-    
-                    setCategories(sortedCategories);
-                } catch (error) {
-                    console.error("Error fetching categories:", error);
-                };
+
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const query = `*[_type == "category"]{ title}`;
+                const data = await sanityClient.fetch(query);
+                const categoryTitles = data.map((category: any) => category.title);
+                const sortedCategories = categoryTitles.sort((a: string, b: string) =>
+                    a.localeCompare(b)
+                );
+
+                setCategories(sortedCategories);
+            } catch (error) {
+                console.error("Error fetching categories:", error);
             };
-            fetchCategories();
-            console.log(categories);
-        }, []);
-
-        const handleCloseMenu = () => {
-            setIsOpen(false);
         };
+        fetchCategories();
+        console.log(categories);
+    }, []);
 
-        isOpen === true ? document.body.classList.add("overflow-y-hidden") : document.body.classList.remove("overflow-y-hidden");
+    const handleCloseMenu = () => {
+        setIsOpen(false);
+    };
+
+    useEffect(() => {
+        document.body.classList.toggle("overflow-y-hidden", isOpen);
+        document.documentElement.classList.toggle("overflow-y-hidden", isOpen);
+
+        return () => {
+            document.body.classList.remove("overflow-y-hidden");
+            document.documentElement.classList.remove("overflow-y-hidden");
+        };
+    }, [isOpen]);
+
 
     return (
         <>
@@ -66,7 +75,7 @@ export function BlogMenu() {
                 <div className="menu__container">
                     <div className="menu__wrapper">
                         <article><a className="menu__link--portfolio" href="/">Porfolio</a></article>
-                        
+
                         <label className="menu__label">
                             <p className="menu__label-text">
                                 Blog
@@ -76,7 +85,7 @@ export function BlogMenu() {
                         <ul className="menu__list">
                             {navigationLinks.slice(0, -1).map((navigationLink) => (
                                 <li key={navigationLink.id} className="menu__list-item">
-                                    <Link 
+                                    <Link
                                         className="menu__link"
                                         to={navigationLink.url}
                                         onClick={handleCloseMenu}
@@ -124,11 +133,11 @@ export function BlogMenu() {
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div className="menu__wrapper--socials">
-                        <a 
-                            className="menu__social-link" 
-                            href="https://linkedin.com/in/lilymtle" 
+                        <a
+                            className="menu__social-link"
+                            href="https://linkedin.com/in/lilymtle"
                             target="_blank"
                         >
                             <img
@@ -138,12 +147,12 @@ export function BlogMenu() {
                             />
                         </a>
 
-                        <a 
-                            className="menu__social-link" 
-                            href="https://github.com/lilymtle" 
+                        <a
+                            className="menu__social-link"
+                            href="https://github.com/lilymtle"
                             target="_blank"
                         >
-                            <img 
+                            <img
                                 className="menu__social-icon"
                                 alt="GitHub Logo"
                                 src="/assets/logos/github-logo-black.svg"
