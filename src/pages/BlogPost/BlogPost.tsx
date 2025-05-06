@@ -7,28 +7,55 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
+import { PortableText, PortableTextComponents } from "@portabletext/react";
+
 export function BlogPostPage(): JSX.Element {
     const location = useLocation();
     const post = location.state;
     const previousPage = location.state?.from || "/blog";
 
-    const formatText = (child: any, block: any) => {
-        let textElement = <>{child.text}</>;
-        const linkMark = block.markDefs?.find((mark: any) => child.marks.includes(mark._key));
-
-        if (child.marks?.includes("strong")) {
-            textElement = <strong>{textElement}</strong>;
-        }
-        if (child.marks?.includes("em")) {
-            textElement = <em>{textElement}</em>;
-        }
-
-        if (linkMark?.href) {
-            textElement = <a className="blog__post-link" href={linkMark.href} target="_blank" rel="noopener noreferrer">{textElement}</a>;
-        }
-
-        return textElement;
+    const components: PortableTextComponents = {
+        block: {
+            h2: ({ children }) => <h2 className="blog__post-subheading">{children}</h2>,
+            h3: ({ children }) => <h3 className="blog__post-subheading blog__post-subheading--medium">{children}</h3>,
+            blockquote: ({ children }) => <blockquote className="blog__post-quote">{children}</blockquote>,
+            normal: ({ children }) => <p className="blog__post-text">{children}</p>,
+        },
+        list: {
+            bullet: ({ children }) => <ul className="blog__post-list">{children}</ul>,
+            number: ({ children }) => <ol className="blog__post-list">{children}</ol>,
+        },
+        listItem: {
+            bullet: ({ children }) => <li className="blog__post-list-item">{children}</li>,
+            number: ({ children }) => <li className="blog__post-list-item">{children}</li>,
+        },
+        marks: {
+            strong: ({ children }) => <strong>{children}</strong>,
+            em: ({ children }) => <em>{children}</em>,
+            link: ({ value, children }) => (
+                <a
+                    className="blog__post-link"
+                    href={value.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {children}
+                </a>
+            ),
+        },
+        types: {
+            image: ({ value }) => (
+                <div className="blog__container-post-image blog__container-post-image--inline">
+                    <img
+                        className="blog__post-image blog__post-image--inline"
+                        src={value.asset.url}
+                        alt={value.alt || 'Blog image'}
+                    />
+                </div>
+            ),
+        },
     };
+
 
     return (
         <>
@@ -85,65 +112,7 @@ export function BlogPostPage(): JSX.Element {
                         <p className="blog__post-date">Published {post.publishedAt}</p>
                     </div>
 
-                    {post.body.map((block: any) => {
-                        if (block._type === "image" && block.asset?.url) {
-                            return (
-                                <div key={block._key} className="blog__container-post-image blog__container-post-image--inline">
-                                    <img
-                                        className="blog__post-image blog__post-image--inline"
-                                        src={block.asset.url}
-                                        alt={block.alt}
-                                    />
-                                </div>
-                            );
-                        }
-
-                        if (block._type === "block") {
-                            switch (block.style) {
-                                case "h2":
-                                    return (
-                                        <h2 key={block._key} className="blog__post-subheading">
-                                            {block.children.map((child: any, childIndex: number) => (
-                                                <span key={child._key || `child-${childIndex}`}>
-                                                    {formatText(child, block)}
-                                                </span>
-                                            ))}
-                                        </h2>
-                                    );
-                                case "h3":
-                                    return (
-                                        <h3 key={block._key} className="blog__post-subheading blog__post-subheading--medium">
-                                        {block.children.map((child: any, childIndex: number) => (
-                                            <span key={child._key || `child-${childIndex}`}>
-                                                {formatText(child, block)}
-                                            </span>
-                                        ))}
-                                    </h3>
-                                    );
-                                case "blockquote":
-                                    return (
-                                        <blockquote key={block._key} className="blog__post-quote">
-                                        {block.children.map((child: any, childIndex: number) => (
-                                            <span key={child._key || `child-${childIndex}`}>
-                                                {formatText(child, block)}
-                                            </span>
-                                        ))}
-                                    </blockquote>
-                                    );
-                                default:
-                                    return (
-                                        <p key={block._key} className="blog__post-text">
-                                        {block.children.map((child: any, childIndex: number) => (
-                                            <span key={child._key || `child-${childIndex}`}>
-                                                {formatText(child, block)}
-                                            </span>
-                                        ))}
-                                    </p>
-                                    );
-                            }
-                        }
-                        return null;
-                    })}
+                    <PortableText value={post.body} components={components} />
 
                 </article>
             </section>
