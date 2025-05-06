@@ -41,7 +41,7 @@ export function BlogPostPage(): JSX.Element {
         };
 
         fetchPost();
-    }, [post, slug]);
+    }, [slug]);
 
     if (!post) {
         return <p className="blog__loading">Loading blog post...</p>;
