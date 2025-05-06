@@ -43,12 +43,12 @@ export function BlogMenu() {
     };
 
     useEffect(() => {
-        document.body.classList.toggle("overflow-y-hidden", isOpen);
-        document.documentElement.classList.toggle("overflow-y-hidden", isOpen);
+        document.body.classList.toggle("fixed-position", isOpen);
+        document.documentElement.classList.toggle("fixed-position", isOpen);
 
         return () => {
-            document.body.classList.remove("overflow-y-hidden");
-            document.documentElement.classList.remove("overflow-y-hidden");
+            document.body.classList.remove("fixed-position");
+            document.documentElement.classList.remove("fixed-position");
         };
     }, [isOpen]);
 
