@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 // sanity
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { getPostBySlug } from "../../sanity/fetchBlogPosts";
-import { urlFor } from "../../sanity/sanityImage";
+import { timeAgo } from "../../utils/timeAgo";
 
 export function BlogPostPage(): JSX.Element {
     useEffect(() => {
@@ -140,7 +140,7 @@ export function BlogPostPage(): JSX.Element {
                                 {capitalizeFirstLetter(category.title)}
                             </Link>
                         ))}
-                        <p className="blog__post-date">Published {post.publishedAt}</p>
+                        <p className="blog__post-date">Published {timeAgo(post.publishedAt)}</p>
                     </div>
 
                     <PortableText value={post.body} components={components} />
