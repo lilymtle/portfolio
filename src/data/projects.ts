@@ -46,7 +46,7 @@ export const projects: Projects[] = [
         video: `${videoPath}/bandsite.mp4`,
         notes: "GitHub repo not publicly available per institution request."
     },
-        {
+    {
         id: 3,
         name: "BrainFlix",
         description: "BrainFlix is a fully responsive video streaming platform with its own API service.",
@@ -79,7 +79,7 @@ export const projects: Projects[] = [
         image: `${imagePath}/cinematicats.png`,
         video: `${videoPath}/cinematicats.mp4`
     },
-        {
+    {
         id: 5,
         name: "InStock",
         description: "InStock is a fully responsive full-stack web app providing an inventory management system for a Fortune 500 client. It displays a list of warehouse inventory.",
@@ -100,7 +100,7 @@ export const projects: Projects[] = [
         video: `${videoPath}/instock.mp4`,
         notes: "GitHub repo not publicly available per institution request."
     },
-        {
+    {
         id: 6,
         name: "TELUS",
         description: "TELUS What Your Preference Is an interactive quiz new and existing TELUS users can use to receive their personalized TV bundle.",
@@ -116,7 +116,7 @@ export const projects: Projects[] = [
         image: `${imagePath}/telus.png`,
         video: `${videoPath}/telus.mp4`
     },
-        {
+    {
         id: 7,
         name: "Koru",
         description: "Koru connects you to the Māori concept of growth and renewal, inviting daily reflections to foster gratitude and mindfulness.",
@@ -135,7 +135,7 @@ export const projects: Projects[] = [
         github: `${githubPath}/koru`,
         notes: "Koru is on hiatus due to a design roadblock. :("
     },
-        {
+    {
         id: 8,
         name: "CheerBot",
         description: "CheerBot is a positivity-driven Discord bot designed to spread good vibes and uplift your community.",
@@ -150,7 +150,7 @@ export const projects: Projects[] = [
         video: `${videoPath}/cheerbot.mp4`,
         github: `${githubPath}/cheerbot`
     },
-        {
+    {
         id: 9,
         name: "MoodCompass",
         description: "MoodCompass offers a safe space for managing negative moods through educational resources.",
@@ -172,7 +172,7 @@ export const projects: Projects[] = [
         live: "https://mood-compass.vercel.app/",
         github: `${githubPath}/mood-compass`,
     },
-        {
+    {
         id: 10,
         name: "Portfolio",
         description: "My personal portfolio, offering a glimpse into who I am and the projects I've worked on. The thumbnail and preview display the previous version of my porfolio.",
@@ -188,7 +188,7 @@ export const projects: Projects[] = [
         video: `${videoPath}/portfolio.mp4`,
         github: `${githubPath}/portfolio`
     },
-        {
+    {
         id: 11,
         name: "The Verse",
         description: "As the intern and primary developer for The Verse main site, I worked with the team to create a website showcasing the company's mission and innovative games, focusing on front-end development with future back-end plans.",
@@ -204,7 +204,25 @@ export const projects: Projects[] = [
         live: "https://versebuilding.com"
     },
     {
-        id: 12,
+        id: 13,
+        name: "Lily's Corner",
+        description: "My personal blog where you'll find my musings on things I like to talk about: books, health, lifestyle, technology, and travel! ",
+        tools: [
+            `${badgePath}/react.svg`,
+            `${badgePath}/typescript.svg`,
+            `${badgePath}/sass.svg`,
+            `${badgePath}/material-ui.svg`,
+            `${badgePath}/sanity.png`,
+            `${badgePath}/git.svg`,
+            `${badgePath}/github.svg`
+        ],
+        image: `${imagePath}/lilys-corner.png`,
+        live: "/blog",
+        github: `${githubPath}/https://github.com/lilymtle/portfolio/tree/main/lilys-corner`,
+        notes: "Currently updated on a monthly basis. Hoping to publish more posts in the near future. I'm just so busy. :("
+    },
+    {
+        id: 14,
         name: "Oshawa Connect",
         description: "A community-based project that strives to connect locals with each other and their community.",
         tools: [
@@ -221,6 +239,5 @@ export const projects: Projects[] = [
         image: `${imagePath}/oshawa-connect.png`,
         github: `${githubPath}/oshawa-connect`,
         notes: "Oshawa Connect is still a work in progress. Feel free to check the GitHub repo for updates."
-
     }
 ];
