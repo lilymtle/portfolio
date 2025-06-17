@@ -13,7 +13,7 @@ export function ProjectsPage() {
             </h2>
 
             <ul className="projects__list">
-                {projects.map((project, index) => (
+                {[...projects].sort((a, b) => b.id - a.id).map((project, index) => ( 
                     <li key={index} className="project__item">
                         <ProjectCard 
                             image={project.image}
