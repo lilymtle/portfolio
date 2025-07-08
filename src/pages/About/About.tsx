@@ -185,7 +185,7 @@ export function AboutPage() {
 
                         <p className="about__text about__text--tech-skills">
                             Agile (Scrum), Jira, ClickUp, Azure DevOps, RESTful API Development and Integration, 
-                            Axios, Power Apps, Articulate 360
+                            Axios, Power Apps, Power Automate, Dataverse, Articulate 360
                         </p>
                     </AccordionBox>
 
